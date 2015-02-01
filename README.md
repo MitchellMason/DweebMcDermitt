@@ -9,11 +9,16 @@ Students
 - Caleb Leger
 - Donoven Williams
 - Mena Baldwin
+- Cody Rogers
+- Andrew Kemp
 
 Description
 ===========
 You play as a local 14 year old dweeb in a no-name Ohio town. The game opens with Billy "Dweeb" Mcdermmit (and his lovely mother) visiting your optomitrist to replace your glasses broken by a bully at school. That's when Dr. Salamander (a man you've met many times for new spectacles) shows you into the back room for a special invention he's been working on: Doc Op. It is a set of special glasses that allow you to see like never before, and (most importantly) shoot laser beams from your eyeballs. You get to keep them, but with a twist: you must elminate his rival, Dr. Newt.
 
+
+The primary game mechanic will utilize the Oculus Rift as the Doc Op glasses. You can get information about objectives, but more importantly, fire lasers. 
+
 Technology
 ==========
-The game is built with Unity, and requires the Oculus Rift DK2. Built for both Mac and Windows. 
+The game is built with Unity 4.6, and requires the Oculus Rift DK2. Built for both Mac and Windows. 
