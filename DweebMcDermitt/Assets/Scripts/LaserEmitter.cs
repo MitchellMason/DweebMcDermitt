@@ -7,7 +7,7 @@ public class LaserEmitter : MonoBehaviour {
 	//<summary>
 	//The distance after which the laser doesn't hit anything.
 	//</summary>
-	[SerializeField] private float laserClipDistance;
+	[SerializeField] private float laserClipDistance = 10.0f;
 
 	//The direction of fire
 	private Vector3 forward;
@@ -25,6 +25,7 @@ public class LaserEmitter : MonoBehaviour {
 			if(lasered != null){
 				//next, see if we hit something that reacts to lasers
 				LaserTarget possibleHit = lasered.GetComponent<LaserTarget>();
+
 				if(possibleHit != null){
 					Debug.Log ("Hit valid laser target " + lasered.name);
 					possibleHit.onLaserShot();
