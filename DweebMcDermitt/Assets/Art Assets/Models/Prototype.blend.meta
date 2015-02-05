@@ -1,8 +1,49 @@
 fileFormatVersion: 2
-guid: 46fc0afd7b82da34e92fec2f738dcaf7
+guid: fd7da510e8cdc0349be789d97ab045a9
 ModelImporter:
   serializedVersion: 16
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: Pedistal
+    100002: //RootNode
+    100004: Room
+    100006: Suzanne
+    100008: Suzanne_MeshPart0
+    100010: Suzanne_MeshPart1
+    100012: Target
+    100014: Floor
+    100016: Ceiling
+    400000: Pedistal
+    400002: //RootNode
+    400004: Room
+    400006: Suzanne
+    400008: Suzanne_MeshPart0
+    400010: Suzanne_MeshPart1
+    400012: Target
+    400014: Floor
+    400016: Ceiling
+    2300000: Pedistal
+    2300002: Room
+    2300004: Suzanne_MeshPart0
+    2300006: Suzanne_MeshPart1
+    2300008: Target
+    2300010: Floor
+    2300012: Ceiling
+    3300000: Pedistal
+    3300002: Room
+    3300004: Suzanne_MeshPart0
+    3300006: Suzanne_MeshPart1
+    3300008: Target
+    3300010: Floor
+    3300012: Ceiling
+    4300000: Suzanne_MeshPart0
+    4300002: Suzanne_MeshPart1
+    4300004: Pedistal
+    4300006: Room
+    4300008: Target
+    4300010: Floor
+    4300012: Ceiling
+    7400000: Default Take
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -40,7 +81,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
