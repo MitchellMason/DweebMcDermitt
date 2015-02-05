@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Monkey : LaserTarget {
+public class PedestalTarget : LaserTarget {
 	//<summary>
 	//When hit by a laser, the color the object turns
 	//</summary>
@@ -15,4 +15,6 @@ public class Monkey : LaserTarget {
 		
 		wonderful.Play ();
 	}
+
+	override public void onLaserFocusLost(){}
 }

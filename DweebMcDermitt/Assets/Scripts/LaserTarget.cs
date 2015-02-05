@@ -5,4 +5,5 @@ using System.Collections;
 //act on it in some way. For this example, we change the color
 public abstract class LaserTarget : MonoBehaviour {
 	public abstract void onLaserShot ();
+	public abstract void onLaserFocusLost();
 }

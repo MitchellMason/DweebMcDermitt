@@ -3,11 +3,13 @@ using System.Collections;
 
 public class LaserEffectControl : MonoBehaviour {
 	
-	public ParticleSystem laser;
+	private ParticleSystem laser;
 	
-	// Update is called once per frame
+	void Start(){
+		laser = this.gameObject.particleSystem;
+	}
 	void Update () {
-		if(Input.GetKey(KeyCode.Space)){
+		if(Input.GetAxis("FireLaser") >= 0.1f){
 			laser.Play();
 		}
 		else{

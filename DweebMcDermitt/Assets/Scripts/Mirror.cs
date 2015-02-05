@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class Mirror : LaserTarget {
-	public LaserTarget Monkey;
+	public LaserTarget Target;
 
 	override public void onLaserShot(){
-		Monkey.onLaserShot ();
+		Target.onLaserShot ();
 	}
+	override public void onLaserFocusLost(){}
 }

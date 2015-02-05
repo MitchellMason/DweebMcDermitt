@@ -14,7 +14,7 @@ public class LaserEmitter : MonoBehaviour {
 
 	private bool fireButtonStateThisFrame = false;
 	private bool fireButtonStateLastFrame = false;
-
+	
 	void Update () {
 		fireButtonStateThisFrame = Input.GetAxis("FireLaser") <= 0.1f;
 		forward = transform.TransformVector (Vector3.forward);
