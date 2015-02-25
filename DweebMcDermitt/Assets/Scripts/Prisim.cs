@@ -5,6 +5,7 @@ public class Prisim : LaserTarget {
 
 	[SerializeField] private LaserTarget t1;
 	[SerializeField] private LaserTarget t2;
+	public int blah;
 
 	override public void onLaserShot (){
 		t1.onLaserShot ();
