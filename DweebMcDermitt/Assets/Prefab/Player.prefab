@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 415070}
   - 81: {fileID: 8115070}
-  - 114: {fileID: 11415070}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: Untagged
@@ -99,7 +98,7 @@ GameObject:
   - 198: {fileID: 19815072}
   - 199: {fileID: 19915072}
   - 114: {fileID: 11415086}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L Eye Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +107,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &115082
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -116,23 +115,10 @@ GameObject:
   - 4: {fileID: 415082}
   - 33: {fileID: 3315070}
   - 23: {fileID: 2315070}
-  m_Layer: 0
+  - 114: {fileID: 11442100}
+  - 114: {fileID: 11490534}
+  m_Layer: 5
   m_Name: Crosshair
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &115084
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 415084}
-  m_Layer: 0
-  m_Name: ForwardDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,8 +150,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 415082}
+  m_Children: []
   m_Father: {fileID: 415074}
   m_RootOrder: 1
 --- !u!4 &415072
@@ -214,11 +199,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115078}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 0, y: 1.09000003, z: 17.6650009}
+  m_LocalRotation: {x: 0, y: -.00312975468, z: 0, w: -.999995112}
+  m_LocalPosition: {x: -0, y: 1.10000002, z: -6.19999981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 415084}
+  - {fileID: 415082}
   - {fileID: 415074}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -242,19 +227,7 @@ Transform:
   m_GameObject: {fileID: 115082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 1}
-  m_LocalScale: {x: .0500000007, y: .0500000007, z: 1}
-  m_Children: []
-  m_Father: {fileID: 415070}
-  m_RootOrder: 0
---- !u!4 &415084
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 115084}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .104211479, y: .104211532, z: 2.08423114}
   m_Children: []
   m_Father: {fileID: 415078}
   m_RootOrder: 0
@@ -369,18 +342,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115070}
   m_Enabled: 1
---- !u!114 &11415070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 115070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b73379c900b9a62438affc22999715aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserClipDistance: 10
 --- !u!114 &11415072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -517,6 +478,32 @@ MonoBehaviour:
   fadeTime: 2
   fadeColor: {r: .00999999978, g: .00999999978, b: .00999999978, a: 1}
   fadeShader: {fileID: 30, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &11442100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1731aa9909455343b8320d0ce5fb3fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CenterEyeAnchor: {fileID: 115070}
+  DistanceFromPlayer: 1000
+--- !u!114 &11490534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73379c900b9a62438affc22999715aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserClipDistance: 10
+  CenterEyeAnchor: {fileID: 415070}
 --- !u!143 &14315070
 CharacterController:
   m_ObjectHideFlags: 1
@@ -1757,7 +1744,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4294902015
+        rgba: 4294967295
       minMaxState: 0
     startSize:
       scalar: 1
