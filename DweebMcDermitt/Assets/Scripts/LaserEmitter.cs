@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 //For use in prototype. Not yet for actual game use
@@ -9,19 +9,16 @@ public class LaserEmitter : MonoBehaviour {
 	//</summary>
 	[SerializeField] private float laserClipDistance = 10.0f;
 
-	//The direction of fire
-	private Vector3 forward;
+	private bool fireButtonStateThisFrame = false;
+	private bool fireButtonStateLastFrame = false;
 	
 	//the object the laser is firing on
 	LaserTarget storedLaserTarget;
 	
 	void Update () {
-		forward = transform.TransformVector (Vector3.forward);
-		Debug.DrawRay (transform.position, forward * 10);
-		
-		if (Input.GetAxis("FireLaser") >= 0.1f) {
-			Debug.Log ("Firing.");
-			
+		fireButtonStateThisFrame = Input.GetAxis("FireLaser") <= 0.1f;
+		Debug.DrawRay (transform.position, crosshair.transform.position);
+		if (fireButtonStateThisFrame && !fireButtonStateLastFrame) {
 			//first, see if we hit anything
 			GameObject justHit = getObjectHit();
 			
@@ -60,7 +57,7 @@ public class LaserEmitter : MonoBehaviour {
 
 	GameObject getObjectHit(){
 		RaycastHit hit;
-		if (Physics.Raycast (transform.position, forward, out hit, laserClipDistance)) {
+		if (Physics.Raycast (transform.position, crosshair.transform.position, out hit, laserClipDistance)) {
 			return hit.collider.gameObject;
 		}
 		else{
