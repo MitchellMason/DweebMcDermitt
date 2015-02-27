@@ -149,8 +149,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 0, y: 1.09000003, z: 17.6650009}
+  m_LocalRotation: {x: 0, y: -.00312975468, z: 0, w: -.999995112}
+  m_LocalPosition: {x: -0, y: 1.10000002, z: -6.19999981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -492,6 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserClipDistance: 10
+  crosshair: {fileID: 11406502}
 --- !u!114 &11406502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -504,7 +505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CenterEyeAnchor: {fileID: 100012}
-  DistanceFromPlayer: 1
+  DistanceFromPlayer: 1000
 --- !u!114 &11406504
 MonoBehaviour:
   m_ObjectHideFlags: 1
