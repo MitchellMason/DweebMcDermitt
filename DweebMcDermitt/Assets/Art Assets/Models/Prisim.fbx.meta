@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5be021ba98880c346af34f9d100e4e55
+guid: 8eee4eb2591a741e7a43cb2a6b68e42d
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -8,7 +8,6 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Prisim
-    7400000: Default Take
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -29,7 +28,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -47,7 +46,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []

@@ -11,34 +11,51 @@ public class LaserEmitter : MonoBehaviour {
 
 	//The direction of fire
 	private Vector3 forward;
-
-	private bool fireButtonStateThisFrame = false;
-	private bool fireButtonStateLastFrame = false;
+	
+	//the object the laser is firing on
+	LaserTarget storedLaserTarget;
 	
 	void Update () {
-		fireButtonStateThisFrame = Input.GetAxis("FireLaser") <= 0.1f;
 		forward = transform.TransformVector (Vector3.forward);
 		Debug.DrawRay (transform.position, forward * 10);
-		if (fireButtonStateThisFrame && !fireButtonStateLastFrame) {
+		
+		if (Input.GetAxis("FireLaser") >= 0.1f) {
+			Debug.Log ("Firing.");
+			
 			//first, see if we hit anything
-			GameObject lasered = getObjectHit();
-			if(lasered != null){
-				//next, see if we hit something that reacts to lasers
-				LaserTarget possibleHit = lasered.GetComponent<LaserTarget>();
-
-				if(possibleHit != null){
-					Debug.Log ("Hit valid laser target " + lasered.name);
-					possibleHit.onLaserShot();
-				}
-				else{
-					Debug.Log ("Hit " + lasered.name + " but not a laser target.");
+			GameObject justHit = getObjectHit();
+			
+			//Check to be sure we hit something
+			if(justHit != null){
+				Debug.Log ("Hit " + justHit.name);
+				LaserTarget justHitLaserTarget = justHit.GetComponent<LaserTarget>();
+				
+				//is it a laserTarget? 
+				if(justHitLaserTarget != null){
+					Debug.Log (justHit.name + " is a laser Target.");
+					//have we hit this thing already?
+					if(justHitLaserTarget == storedLaserTarget){
+						storedLaserTarget.onLaserStay(this.transform);
+					} 
+					else{
+						justHitLaserTarget.onLaserShot(this.transform);
+						storedLaserTarget = justHitLaserTarget;
+					}
 				}
 			}
 			else{
-				Debug.Log ("Nothing hit.");
+				if(storedLaserTarget != null){
+					storedLaserTarget.onLaserLeave();
+					storedLaserTarget = null;
+				}
 			}
 		}
-		fireButtonStateLastFrame = fireButtonStateThisFrame;
+		else{
+			if(storedLaserTarget != null){
+				storedLaserTarget.onLaserLeave();
+				storedLaserTarget = null;
+			}
+		}
 	}
 
 	GameObject getObjectHit(){

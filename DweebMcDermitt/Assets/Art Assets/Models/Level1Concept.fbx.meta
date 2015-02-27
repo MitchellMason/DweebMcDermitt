@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: b4ddea76eeeb9403a9d5d5c2bab84a15
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Button
+    100002: Button.001
+    100004: Door
+    100006: Door.001
+    100008: Door.002
+    100010: Laser receptor
+    100012: //RootNode
+    100014: Mirror
+    100016: Mirror.001
+    100018: Mirror.002
+    100020: Mirror.003
+    100022: Mirror.004
+    100024: Mirror.005
+    100026: Mirror.006
+    100028: Mirror.007
+    100030: Mirror.008
+    100032: Mirror.009
+    100034: Mirror.010
+    100036: Mirror.011
+    100038: Mirror.012
+    100040: Plane
+    100042: Text
+    400000: Button
+    400002: Button.001
+    400004: Door
+    400006: Door.001
+    400008: Door.002
+    400010: Laser receptor
+    400012: //RootNode
+    400014: Mirror
+    400016: Mirror.001
+    400018: Mirror.002
+    400020: Mirror.003
+    400022: Mirror.004
+    400024: Mirror.005
+    400026: Mirror.006
+    400028: Mirror.007
+    400030: Mirror.008
+    400032: Mirror.009
+    400034: Mirror.010
+    400036: Mirror.011
+    400038: Mirror.012
+    400040: Plane
+    400042: Text
+    2300000: Button
+    2300002: Button.001
+    2300004: Door
+    2300006: Door.001
+    2300008: Door.002
+    2300010: Laser receptor
+    2300012: Mirror
+    2300014: Mirror.001
+    2300016: Mirror.002
+    2300018: Mirror.003
+    2300020: Mirror.004
+    2300022: Mirror.005
+    2300024: Mirror.006
+    2300026: Mirror.007
+    2300028: Mirror.008
+    2300030: Mirror.009
+    2300032: Mirror.010
+    2300034: Mirror.011
+    2300036: Mirror.012
+    2300038: Plane
+    2300040: Text
+    3300000: Button
+    3300002: Button.001
+    3300004: Door
+    3300006: Door.001
+    3300008: Door.002
+    3300010: Laser receptor
+    3300012: Mirror
+    3300014: Mirror.001
+    3300016: Mirror.002
+    3300018: Mirror.003
+    3300020: Mirror.004
+    3300022: Mirror.005
+    3300024: Mirror.006
+    3300026: Mirror.007
+    3300028: Mirror.008
+    3300030: Mirror.009
+    3300032: Mirror.010
+    3300034: Mirror.011
+    3300036: Mirror.012
+    3300038: Plane
+    3300040: Text
+    4300000: Door.002
+    4300002: Door.001
+    4300004: Door
+    4300006: Button.001
+    4300008: Mirror.012
+    4300010: Mirror.011
+    4300012: Button
+    4300014: Text
+    4300016: Laser receptor
+    4300018: Mirror.010
+    4300020: Mirror.009
+    4300022: Mirror.008
+    4300024: Mirror.007
+    4300026: Mirror.006
+    4300028: Mirror.005
+    4300030: Mirror.004
+    4300032: Mirror.003
+    4300034: Mirror.002
+    4300036: Mirror.001
+    4300038: Mirror
+    4300040: Plane
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
