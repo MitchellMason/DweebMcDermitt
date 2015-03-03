@@ -17,17 +17,16 @@ public class Crosshair : MonoBehaviour {
 		float distance;
 		if(Physics.Raycast( new Ray(CenterEyeAnchor.transform.position,
 		                            CenterEyeAnchor.transform.rotation * Vector3.forward),
-		                    out hit)){
+		                    		out hit)){
 			distance = hit.distance;
 		}
 		else{
 			distance = DistanceFromPlayer;
 		}
 
-		transform.position = CenterEyeAnchor.transform.position + 
-			CenterEyeAnchor.transform.rotation * Vector3.forward * distance;
-		transform.LookAt (CenterEyeAnchor.transform.position);
-		transform.Rotate (0.0f, 180.0f, 0.0f);
-		transform.localScale = originalScale * distance;
+		this.gameObject.transform.position = CenterEyeAnchor.transform.position + CenterEyeAnchor.transform.rotation * Vector3.forward * distance;
+		this.gameObject.transform.LookAt (CenterEyeAnchor.transform.position);
+		this.gameObject.transform.Rotate (0.0f, 180.0f, 0.0f);
+		this.gameObject.transform.localScale = originalScale * distance;
 	}
 }

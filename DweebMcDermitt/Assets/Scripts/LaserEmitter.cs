@@ -8,19 +8,15 @@ public class LaserEmitter : MonoBehaviour {
 	//The distance after which the laser doesn't hit anything.
 	//</summary>
 	[SerializeField] private float laserClipDistance = 10.0f;
-
-	private bool fireButtonStateThisFrame = false;
-	private bool fireButtonStateLastFrame = false;
 	
 	//the object the laser is firing on
 	LaserTarget storedLaserTarget;
-	[SerializeField] private Crosshair crosshair;
+	[SerializeField] private Transform CenterEyeAnchor;
 	
 	void Update () {
-		fireButtonStateThisFrame = Input.GetAxis("FireLaser") >= 0.1f;
-		Debug.DrawRay (transform.position, crosshair.transform.localPosition);
 		
-		if (fireButtonStateThisFrame && !fireButtonStateLastFrame) {
+		//If we're firing the laser
+		if (Input.GetAxis("FireLaser") >= 0.1f) {
 			//first, see if we hit anything
 			GameObject justHit = getObjectHit();
 			
@@ -41,6 +37,12 @@ public class LaserEmitter : MonoBehaviour {
 						storedLaserTarget = justHitLaserTarget;
 					}
 				}
+				else{
+					if(storedLaserTarget != null){
+						storedLaserTarget.onLaserLeave();
+						storedLaserTarget = null;
+					}
+				}
 			}
 			else{
 				if(storedLaserTarget != null){
@@ -59,7 +61,8 @@ public class LaserEmitter : MonoBehaviour {
 
 	GameObject getObjectHit(){
 		RaycastHit hit;
-		if (Physics.Raycast (transform.position, crosshair.transform.position, out hit, laserClipDistance)) {
+		Debug.DrawLine (CenterEyeAnchor.position, transform.position);
+		if (Physics.Raycast (CenterEyeAnchor.position, transform.position - CenterEyeAnchor.position, out hit, laserClipDistance)) {
 			return hit.collider.gameObject;
 		}
 		else{
