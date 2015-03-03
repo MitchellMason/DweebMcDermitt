@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[ExecuteInEditMode]
 public class CinematicFrame : MonoBehaviour {
 	[Tooltip("reflects the position of the player so the slides know where to look")]
 	[SerializeField] private Transform playerPosition;

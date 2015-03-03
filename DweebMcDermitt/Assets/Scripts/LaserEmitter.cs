@@ -12,7 +12,6 @@ public class LaserEmitter : MonoBehaviour {
 	[SerializeField] private Transform CenterEyeAnchor;
 	
 	void Update () {
-		
 		//If we're firing the laser
 		if (Input.GetAxis("FireLaser") >= 0.1f) {
 			//first, see if we hit anything
