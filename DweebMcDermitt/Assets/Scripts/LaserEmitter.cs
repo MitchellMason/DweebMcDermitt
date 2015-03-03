@@ -4,9 +4,7 @@ using System.Collections;
 //For use in prototype. Not yet for actual game use
 public class LaserEmitter : MonoBehaviour {
 	
-	//<summary>
 	//The distance after which the laser doesn't hit anything.
-	//</summary>
 	[SerializeField] private float laserClipDistance = 10.0f;
 	
 	//the object the laser is firing on
@@ -22,12 +20,10 @@ public class LaserEmitter : MonoBehaviour {
 			
 			//Check to be sure we hit something
 			if(justHit != null){
-				Debug.Log ("Hit " + justHit.name);
 				LaserTarget justHitLaserTarget = justHit.GetComponent<LaserTarget>();
 				
 				//is it a laserTarget? 
 				if(justHitLaserTarget != null){
-					Debug.Log (justHit.name + " is a laser Target.");
 					//have we hit this thing already?
 					if(justHitLaserTarget == storedLaserTarget){
 						storedLaserTarget.onLaserStay(this.transform);
@@ -37,6 +33,7 @@ public class LaserEmitter : MonoBehaviour {
 						storedLaserTarget = justHitLaserTarget;
 					}
 				}
+				//if the target isn't a laser target, call laserleave on the stored object, if it exists
 				else{
 					if(storedLaserTarget != null){
 						storedLaserTarget.onLaserLeave();
@@ -44,6 +41,7 @@ public class LaserEmitter : MonoBehaviour {
 					}
 				}
 			}
+			//if we didn't hit anything, call laserleave on the stored object, if it exists
 			else{
 				if(storedLaserTarget != null){
 					storedLaserTarget.onLaserLeave();
@@ -51,6 +49,7 @@ public class LaserEmitter : MonoBehaviour {
 				}
 			}
 		}
+		//if we aren't firing the laser, call laserleave on the stored object, if it exists
 		else{
 			if(storedLaserTarget != null){
 				storedLaserTarget.onLaserLeave();
@@ -59,6 +58,7 @@ public class LaserEmitter : MonoBehaviour {
 		}
 	}
 
+	//casts a ray from the center eye anchor to the crosshair and returns the game object hit
 	GameObject getObjectHit(){
 		RaycastHit hit;
 		Debug.DrawLine (CenterEyeAnchor.position, transform.position);

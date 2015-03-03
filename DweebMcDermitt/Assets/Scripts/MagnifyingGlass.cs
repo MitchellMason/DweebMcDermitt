@@ -2,10 +2,7 @@
 using System.Collections;
 
 public class MagnifyingGlass : LaserTarget {
-	public LaserTarget Target;
-	
-	override public void onLaserShot() {
-		Target.onLaserShot ();
-	}
-	override public void onLaserFocusLost(){}
+	override public void onLaserShot(Transform laserEmmitter){}
+	override public void onLaserStay(Transform laserEmmitter){}
+	override public void onLaserLeave(){}
 }

@@ -2,10 +2,20 @@
 using System.Collections;
 
 public class Missile : LaserTarget {
-	
-	public override void onLaserShot() {
+	[SerializeField] float speed;
 
-
+	void Start(){}
+	void Update(){
+		transform.Translate (Vector3.forward * speed);
 	}
-	public override void onLaserFocusLost(){}
+
+	override public void onLaserShot(Transform laserEmmitter){
+		Destroy (this.gameObject);
+	}
+	override public void onLaserStay(Transform laserEmmitter){
+		Destroy (this.gameObject);
+	}
+	override public void onLaserLeave(){
+		Destroy (this.gameObject);
+	}
 }
