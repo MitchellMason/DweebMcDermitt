@@ -406,7 +406,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Default-Diffuse (Instance) (Instance)
-  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 30, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -431,7 +431,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: .5}
+        second: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &927054772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,7 +1696,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1111217448}
-  m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381661, w: .875426114}
+  m_LocalRotation: {x: -.197665691, y: -.25909096, z: -.197772056, w: .924492538}
   m_LocalPosition: {x: -.0399999991, y: 14.3400002, z: -23.8999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1714,6 +1714,7 @@ GameObject:
   - 23: {fileID: 1122640110}
   - 114: {fileID: 1122640109}
   - 114: {fileID: 1122640108}
+  - 114: {fileID: 1122640112}
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
@@ -1790,6 +1791,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 19957545}
   m_GameObject: {fileID: 1122640106}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1122640112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11437142, guid: 660271135b3984be19620204b3f63bef,
+    type: 2}
+  m_PrefabInternal: {fileID: 19957545}
+  m_GameObject: {fileID: 1122640106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa632e287b3a80a4f827c926feebe6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionClipDistance: 1
+  CenterEyeAnchor: {fileID: 1325833351}
 --- !u!1 &1325833350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,7 +1921,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Default-Diffuse (Instance) (Instance)
-  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 30, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -1931,7 +1946,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: .5}
+        second: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &1571910813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,7 +2125,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: .5}
+        second: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &1776746977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2156,11 +2171,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPosition: {fileID: 584687204}
-  voice: {fileID: 0}
+  voice: {fileID: 1776746980}
   secondsUntilNext: 100
-  foregroundTexture: {fileID: 2800000, guid: 01c752d3827eca74da6709eb435416eb, type: 3}
-  midgroundTexure: {fileID: 0}
-  backgroundTexure: {fileID: 0}
+  foregroundTexture: {fileID: 2800000, guid: 10ec8673067ac4a3d8b6ed21b64a01b7, type: 3}
+  midgroundTexure: {fileID: 2800000, guid: 581ac91ae11ed40babaf5bb450670e92, type: 3}
+  backgroundTexure: {fileID: 2800000, guid: 7c1e4497abb834dc0b12a36c5612139c, type: 3}
   nextFramePrefab: {fileID: 0}
 --- !u!82 &1776746980
 AudioSource:
@@ -3517,7 +3532,7 @@ Prefab:
     - target: {fileID: 11452102, guid: 13d7d2d5fbc27e44faee8eed20c6f1ee, type: 2}
       propertyPath: foregroundTexture
       value: 
-      objectReference: {fileID: 2800000, guid: 01c752d3827eca74da6709eb435416eb, type: 3}
+      objectReference: {fileID: 2800000, guid: 10ec8673067ac4a3d8b6ed21b64a01b7, type: 3}
     - target: {fileID: 452100, guid: 13d7d2d5fbc27e44faee8eed20c6f1ee, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
@@ -3526,6 +3541,18 @@ Prefab:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11452102, guid: 13d7d2d5fbc27e44faee8eed20c6f1ee, type: 2}
+      propertyPath: backgroundTexure
+      value: 
+      objectReference: {fileID: 2800000, guid: 7c1e4497abb834dc0b12a36c5612139c, type: 3}
+    - target: {fileID: 11452102, guid: 13d7d2d5fbc27e44faee8eed20c6f1ee, type: 2}
+      propertyPath: midgroundTexure
+      value: 
+      objectReference: {fileID: 2800000, guid: 581ac91ae11ed40babaf5bb450670e92, type: 3}
+    - target: {fileID: 11452102, guid: 13d7d2d5fbc27e44faee8eed20c6f1ee, type: 2}
+      propertyPath: voice
+      value: 
+      objectReference: {fileID: 1776746980}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13d7d2d5fbc27e44faee8eed20c6f1ee, type: 2}
   m_RootGameObject: {fileID: 1776746977}
