@@ -8,7 +8,7 @@ public class PedestalTarget : LaserTarget {
 	public Color shotColor;
 	public AudioSource wonderful;
 
-	override public void onLaserShot(Transform laserEmmitter){
+	override public void onLaserShot(LaserHitInfo laserHitInfo){
 		Color temp = gameObject.renderer.material.color;
 		this.gameObject.renderer.material.color = shotColor;
 		shotColor = temp;
@@ -16,7 +16,7 @@ public class PedestalTarget : LaserTarget {
 		wonderful.Play ();
 	}
 
-	override public void onLaserStay(Transform laserEmmitter){}
+	override public void onLaserStay(LaserHitInfo laserHitInfo){}
 	
 	override public void onLaserLeave(){
 		Color temp = gameObject.renderer.material.color;
