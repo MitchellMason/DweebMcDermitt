@@ -1,0 +1,354 @@
+
+		public void Reduce()
+		{
+			planes = new List<PlaneEdges> ();
+
+			for (int i = 0; i < inds.Count / 3; ++i)
+			{
+				Vector3[] trig = new Vector3[3];
+				for (int j = 0; j < 3; ++j)
+				{
+					trig[j] = verts[inds[i*3+j]];
+				}
+				Vector3 e1 = trig[1]-trig[0];
+				Vector3 e2 = trig[2]-trig[0];
+
+				if (Vector3.Distance(Vector3.Cross(e1, e2), new Vector3(0,0,0)) < 0.001f)
+				{
+					continue;
+				}
+
+				PlaneEdges p = new PlaneEdges(trig[0], trig[1], trig[2]);
+				bool contains = false;
+				for (int j = 0; j < planes.Count; ++j)
+				{
+					if ((Vector3.Distance(planes[j].n,p.n) < 0.01f) && Mathf.Abs (planes[j].dist - p.dist) < 0.01f)
+					{
+						contains = true;
+						planes[j].polys.Add (new Poly(trig));
+						break;
+					}
+				}
+				if (!contains)
+				{
+					p.polys.Add (new Poly(trig));
+					planes.Add (p);
+				}
+			}
+
+			// Create an instance of the tessellator. Can be reused.
+			List<Vector3> nverts = new List<Vector3> ();
+			List<int> ninds = new List<int> ();
+			for (int i = 0; i < planes.Count; ++i)
+			{
+				planes[i].RemoveDuplicates();
+				List<HalfEdge> halfEdges = new List<HalfEdge> ();
+				List<Vector2> positions = new List<Vector2>();
+				Paths paths = planes[i].polysToPaths();
+				for (int j = 0; j < paths.Count; ++j)
+				{
+					Path path = paths[j];
+					for (int k = 0; k < path.Count; ++k)
+					{
+						Vector2 v0 = path[k];
+						Vector2 v1 = path[(k+1)%path.Count];
+						int i0 = -1, i1 = -1;
+						bool contained = true;
+						bool contains = false;
+						for (int l = 0; l < positions.Count; ++l)
+						{
+							if (Vector2.Distance(positions[l], v0) < 0.0001f)
+							{
+								contains = true;
+								i0 = l;
+								break;
+							}
+						}
+						if (!contains)
+						{
+							i0 = positions.Count;
+							positions.Add(v0);
+							contained = false;
+						}
+						contains = false;
+						for (int l = 0; l < positions.Count; ++l)
+						{
+							if (Vector2.Distance(positions[l], v1) < 0.0001f)
+							{
+								contains = true;
+								i1 = l;
+								break;
+							}
+						}
+						if (!contains)
+						{
+							i1 = positions.Count;
+							positions.Add(v1);
+							contained = false;
+						}
+						HalfEdge he = new HalfEdge(i0, i1);
+						if (contained)
+						{
+							for (int l = 0; l < halfEdges.Count; ++l)
+							{
+								if (halfEdges[l].i0 == i1 && halfEdges[l].i1 == i0)
+								{
+									he.hasNeighbor = true;
+									halfEdges[l].hasNeighbor = true;
+									break;
+								}
+							}
+						}
+						halfEdges.Add(he);
+					}
+				}
+				List<HalfEdge> neighborless = new List<HalfEdge>();
+				for (int j = 0; j < halfEdges.Count; ++j)
+				{
+					if (!halfEdges[j].hasNeighbor)
+						neighborless.Add(halfEdges[j]);
+				}
+				List<List<HalfEdge>> loops = new List<List<HalfEdge>>();
+				int timeout = 100000;
+				int count = 0;
+				while (neighborless.Count > 0 && count < timeout)
+				{
+					HalfEdge he = neighborless[0];
+					List<HalfEdge> loop = new List<HalfEdge>();
+					loop.Add(he);
+					neighborless.RemoveAt(0);
+					++count;
+					while (loop[0].i0 != loop[loop.Count-1].i1 && count < timeout)
+					{
+						for (int j = 0; j < neighborless.Count; ++j)
+						{
+							if (neighborless[j].i0 == loop[loop.Count-1].i1)
+							{
+								loop.Add(neighborless[j]);
+								neighborless.RemoveAt(j);
+								--j;
+							}
+						}
+						++count;
+					}
+					loops.Add(loop);
+				}
+				if (count >= timeout)
+				{
+					Debug.Log("Timeout Error!");
+					Debug.Log(planes[i].b0 + " " + planes[i].b1 + " " + planes[i].n);
+				}
+				Paths holes = new Paths();
+				Paths polys = new Paths();
+				for (int j = 0; j < loops.Count; ++j)
+				{
+					if (loops[j][0].i0 != loops[j][loops[j].Count-1].i1)
+					{
+						List<HalfEdge> loop = loops[j];
+						Debug.Log(j);
+						for (int l = 0; l < loop.Count; ++l)
+							Debug.Log(loop[l].i0 + " " + loop[l].i1);
+					}
+					else
+					{
+						Path shape = new Path();
+						for (int k = 0; k < loops[j].Count; ++k)
+						{
+							shape.Add(positions[loops[j][k].i0]);
+						}
+						//float total = winding (shape);
+						//if (total > 0.0f)
+
+						polys.Add(shape);
+						
+					}
+				}
+				
+				for (int j = 0; j < polys.Count; ++j)
+				{
+					for (int k = 0; k < polys[j].Count; ++k)
+					{
+						int i0 = k;
+						int i1 = (k+1)%polys[j].Count;
+						Vector2 v0 = polys[j][i0];
+						Vector2 v1 = polys[j][i1];
+						Vector2 e = (v1-v0).normalized;
+						int i2 = (k+2)%polys[j].Count;
+						Vector2 v2 = polys[j][i2];
+						Vector2 et = (v2-v0).normalized;
+						if (Vector2.Distance(e, et) < 0.01f)
+						{
+							polys[j].RemoveAt(i1);
+							--k;
+						}
+					}
+					if (polys[j].Count < 3)
+					{
+						polys.RemoveAt(j);
+						--j;
+					}
+				}
+				/*
+				for (int j = 0; j < polys.Count; ++j)
+				{
+					List<PolygonPoint> pt = new List<PolygonPoint>();
+					
+					for (int k = 0; k < polys[j].Count; ++k)
+					{
+						pt.Add(new PolygonPoint(polys[j][k].x, polys[j][k].y));
+					}
+					var poly = new Poly2Tri.Polygon(pt);
+					for (int k = 0; k < polys.Count; ++k)
+					{
+						if (k == j)
+							continue;
+						
+						if (poly.IsPointInside(new TriangulationPoint(polys[k][0].x,polys[k][0].y)))
+						{
+							holes.Add(polys[k]);
+							polys.RemoveAt(k);
+							--k;
+						}
+					}
+				}*/
+				int start = nverts.Count;
+				var pol = new List<Poly2Tri.Polygon>();
+				for (int j = 0; j < polys.Count; ++j)
+				{
+					float total = Mathf.Abs (winding(polys[j]));
+					List<PolygonPoint> pt = new List<PolygonPoint>();
+
+					for (int k = 0; k < polys[j].Count; ++k)
+					{
+						pt.Add(new PolygonPoint(polys[j][k].x, polys[j][k].y));
+					}
+
+					var poly = new Poly2Tri.Polygon(pt);
+
+					for (int k = 0; k < holes.Count; ++k)
+					{
+						if (poly.IsPointInside(new TriangulationPoint(holes[k][0].x,holes[k][0].y)))
+						{
+							total -= Mathf.Abs (winding(holes[k]));
+							List<PolygonPoint> pts = new List<PolygonPoint>();
+							for (int l = 0; l < holes[k].Count; ++l)
+							{
+								pts.Add(new PolygonPoint(holes[k][l].x, holes[k][l].y));
+							}
+							poly.AddHole(new Poly2Tri.Polygon(pts));
+							holes.RemoveAt(k);
+							--k;
+						}
+					}
+					if (Mathf.Abs (total) >= 0.01f)
+					{
+						P2T.Triangulate(poly);
+						List<Vector3> ptp = planes[i].pathsToPolys(poly);
+						for (int l = 0; l < ptp.Count; ++l)
+						{
+							Vector3 sample = ptp[l];
+							bool contains = false;
+							for (int m = start; m < nverts.Count; ++m)
+							{
+								if (Vector3.Distance(nverts[m], sample) < 0.001f)
+								{
+									ninds.Add(m);
+									contains = true;
+									break;
+								}
+							}
+							if (!contains)
+							{
+								ninds.Add(nverts.Count);
+								nverts.Add(sample);
+							}
+						}
+					}
+				}
+			}
+			for (int i = 0; i < nverts.Count; ++i)
+			{
+				Vector3 sample = nverts[i];
+				for (int j = i+1; j < nverts.Count; ++j)
+				{
+					if (Vector3.Distance(sample, nverts[j]) < 0.01f)
+					{
+						nverts[j] = sample;
+					}
+				}
+			}
+			inds.Clear ();
+			inds = ninds;
+			verts.Clear ();
+			verts = nverts;
+		}
+		public void SplitNormals()
+		{
+			planes = new List<PlaneEdges> ();
+			for (int i = 0; i < inds.Count / 3; ++i)
+			{
+				Vector3[] trig = new Vector3[3];
+				for (int j = 0; j < 3; ++j)
+				{
+					trig[j] = verts[inds[i*3+j]];
+				}
+				Vector3 e1 = trig[1]-trig[0];
+				Vector3 e2 = trig[2]-trig[0];
+				
+				if (Vector3.Cross(e1, e2).magnitude < 0.000001f)
+				{
+					continue;
+				}
+				
+				PlaneEdges p = new PlaneEdges(trig[0], trig[1], trig[2]);
+				bool contains = false;
+				for (int j = 0; j < planes.Count; ++j)
+				{
+					if ((Vector3.Distance(planes[j].n,p.n) < 0.0001f) && Mathf.Abs (planes[j].dist - p.dist) < 0.0001f)
+					{
+						contains = true;
+						planes[j].polys.Add (new Poly(trig));
+						break;
+					}
+				}
+				if (!contains)
+				{
+					p.polys.Add (new Poly(trig));
+					planes.Add (p);
+				}
+			}
+			var nverts = new List<Vector3> ();
+			var ninds = new List<int> ();
+			for (int i = 0; i < planes.Count; ++i)
+			{
+				int start = nverts.Count;
+				PlaneEdges p = planes[i];
+				for (int j = 0; j < p.polys.Count; ++j)
+				{
+					Poly pol = p.polys[j];
+					for (int k = 0; k < pol.boundary.Count; ++k)
+					{
+						Vector3 sample = pol.boundary[k];
+						bool contains = false;
+						for (int m = start; m < nverts.Count; ++m)
+						{
+							if (Vector3.Distance(nverts[m], sample) < 0.0001f)
+							{
+								ninds.Add(m);
+								contains = true;
+								break;
+							}
+						}
+						if (!contains)
+						{
+							ninds.Add(nverts.Count);
+							nverts.Add(sample);
+						}
+					}
+				}
+			}
+			verts.Clear ();
+			inds.Clear ();
+			verts = nverts;
+			inds = ninds;
+		}
