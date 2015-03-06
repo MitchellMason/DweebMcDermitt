@@ -29,7 +29,7 @@ public class Mirror : LaserTarget {
 		Vector3 outDir = 
 			laserHitInfo.remainingDistance * 
 				(2.0f * Vector3.Dot(inDir,laserHitInfo.hitSurfaceNormal) * laserHitInfo.hitSurfaceNormal - inDir).normalized;
-		Debug.Log (laserHitInfo.laserEmitter + " " + outDir);
+		//Debug.Log (laserHitInfo.laserEmitter + " " + outDir);
 		//fire the laser
 		LaserUtils.fireLaser (
 			lr, 
