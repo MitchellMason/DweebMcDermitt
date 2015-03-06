@@ -11,6 +11,8 @@ public class Bookshelf : InteractionTarget{
 	private float startTime;
 	private float journeyDistance;
 
+	public AudioSource door;
+
 	//store the distance between our location and the new one
 	void Start(){
 		newPosition = transform.position + newPositionRelative;
@@ -30,6 +32,7 @@ public class Bookshelf : InteractionTarget{
 		Debug.Log ("Interaction!");
 		if (!interactedOn) {
 			startTime = Time.time;
+			door.Play();
 		}
 		//prevent starting over
 		interactedOn = true;
