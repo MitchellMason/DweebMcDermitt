@@ -28,10 +28,10 @@ public class LaserEmitter : MonoBehaviour {
 				if(justHitLaserTarget != null){
 					//have we hit this thing already?
 					if(justHitLaserTarget == storedLaserTarget){
-						storedLaserTarget.onLaserStay(LaserUtils.toLaserHitInfo(hit, this.transform));
+						storedLaserTarget.onLaserStay(LaserUtils.toLaserHitInfo(hit, this.transform.parent.position));
 					} 
 					else{
-						justHitLaserTarget.onLaserShot(LaserUtils.toLaserHitInfo(hit, this.transform));
+						justHitLaserTarget.onLaserShot(LaserUtils.toLaserHitInfo(hit, this.transform.parent.position));
 						storedLaserTarget = justHitLaserTarget;
 					}
 				}
@@ -62,7 +62,7 @@ public class LaserEmitter : MonoBehaviour {
 
 	//casts a ray from the center eye anchor to the crosshair and returns the game object hit
 	GameObject getObjectHit(){
-		if (Physics.Raycast (CenterEyeAnchor.position, transform.position - CenterEyeAnchor.position, out hit, laserClipDistance)) {
+		if (Physics.Raycast (CenterEyeAnchor.position, (transform.position - CenterEyeAnchor.position).normalized, out hit, laserClipDistance)) {
 			return hit.collider.gameObject;
 		}
 		else{

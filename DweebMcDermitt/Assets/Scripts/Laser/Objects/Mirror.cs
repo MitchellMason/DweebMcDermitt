@@ -25,13 +25,16 @@ public class Mirror : LaserTarget {
 	}
 
 	private void drawLaser(LaserHitInfo laserHitInfo){
-		Vector3 inDir = (laserHitInfo.laserEmitter.position - laserHitInfo.hitPoint).normalized;
-		Vector3 outDir = inDir + (2f * Vector3.Dot(-laserHitInfo.hitSurfaceNormal, inDir) * laserHitInfo.hitSurfaceNormal);
+		Vector3 inDir = (laserHitInfo.laserEmitter-laserHitInfo.hitPoint).normalized;
+		Vector3 outDir = 
+			laserHitInfo.remainingDistance * 
+				(2.0f * Vector3.Dot(inDir,laserHitInfo.hitSurfaceNormal) * laserHitInfo.hitSurfaceNormal - inDir).normalized;
+		Debug.Log (laserHitInfo.laserEmitter + " " + outDir);
 		//fire the laser
 		LaserUtils.fireLaser (
 			lr, 
 			laserHitInfo.hitPoint, 
-			outDir
+			laserHitInfo.hitPoint + outDir
 		);
 	}
 }
