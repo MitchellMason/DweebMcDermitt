@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 //For use in prototype. Not yet for actual game use
 public class LaserEmitter : MonoBehaviour {
 	
 	//The distance after which the laser doesn't hit anything.
-	[SerializeField] private float laserClipDistance = 10.0f;
+	[SerializeField] private float laserClipDistance = 100.0f;
 	
 	//the object the laser is firing on
 	LaserTarget storedLaserTarget;
@@ -16,8 +17,13 @@ public class LaserEmitter : MonoBehaviour {
 	public Material material;
 	public AudioClip laserSound;
 	private AudioSource source;
-	
-
+	private LineRenderer lr;
+	void Start()
+	{
+		lr = gameObject.AddComponent<LineRenderer> ();
+		lr.SetWidth (LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
+		lr.enabled = false;
+	}
 	void Awake() {
 		source = GetComponent<AudioSource> ();
 		audio.Stop ();
@@ -34,51 +40,52 @@ public class LaserEmitter : MonoBehaviour {
 			// start playing the laser sound
 			source.PlayOneShot(laserSound, 1f);
 			//first, see if we hit anything
-			GameObject justHit = getObjectHit();
+			List<Vector3> points = new List<Vector3>();
+			points.Add(CenterEyeAnchor.position);
+			GameObject justHit = getObjectHit(CenterEyeAnchor.position, (transform.position - CenterEyeAnchor.position).normalized);
 			
 			//Check to be sure we hit something
 			if(justHit != null){
-				LaserTarget justHitLaserTarget = justHit.GetComponent<LaserTarget>();
-				
+				LaserTarget justHitLaserTarget = justHit.GetComponent<Mirror>();
+				points.Add(hit.point);
 				//is it a laserTarget? 
-				if(justHitLaserTarget != null){
-					//have we hit this thing already?
-					if(justHitLaserTarget == storedLaserTarget){
-						storedLaserTarget.onLaserStay(LaserUtils.toLaserHitInfo(hit, this.transform.parent.position, material));
-					} 
-					else{
-						justHitLaserTarget.onLaserShot(LaserUtils.toLaserHitInfo(hit, this.transform.parent.position, material));
-						storedLaserTarget = justHitLaserTarget;
+				while(justHitLaserTarget != null){
+					Vector3 inDir = (points[points.Count - 2]-points[points.Count - 1]).normalized;
+					Vector3 outDir = (2.0f * Vector3.Dot(inDir, hit.normal) * hit.normal - inDir).normalized;
+					justHit = getObjectHit(points[points.Count-1]+outDir*0.01f, outDir);
+					if (justHit == null)
+					{
+						points.Add (points[points.Count-1] + outDir * 100.0f);
+						break;
 					}
+					points.Add(hit.point);
+					justHitLaserTarget = justHit.GetComponent<Mirror>();
+
 				}
-				//if the target isn't a laser target, call laserleave on the stored object, if it exists
-				else{
-					if(storedLaserTarget != null){
-						storedLaserTarget.onLaserLeave();
-						storedLaserTarget = null;
-					}
+				lr.SetVertexCount (points.Count-1);
+
+				//lineRenderer.SetWidth(LASER_WIDTH, LASER_WIDTH);
+				for (int i = 1; i < points.Count; ++i)
+				{
+					lr.SetPosition(i-1, points[i]);
 				}
+				lr.enabled = true;
+
 			}
 			//if we didn't hit anything, call laserleave on the stored object, if it exists
 			else{
-				if(storedLaserTarget != null){
-					storedLaserTarget.onLaserLeave();
-					storedLaserTarget = null;
-				}
+				lr.enabled = false;
 			}
 		}
 		//if we aren't firing the laser, call laserleave on the stored object, if it exists
 		else{
-			if(storedLaserTarget != null){
-				storedLaserTarget.onLaserLeave();
-				storedLaserTarget = null;
-			}
+			lr.enabled = false;
 		}
 	}
 
 	//casts a ray from the center eye anchor to the crosshair and returns the game object hit
-	GameObject getObjectHit(){
-		if (Physics.Raycast (CenterEyeAnchor.position, (transform.position - CenterEyeAnchor.position).normalized, out hit, laserClipDistance)) {
+	GameObject getObjectHit(Vector3 emitter, Vector3 direction){
+		if (Physics.Raycast (emitter, direction, out hit, laserClipDistance)) {
 			return hit.collider.gameObject;
 		}
 		else{
