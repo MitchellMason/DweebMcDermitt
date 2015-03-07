@@ -54,8 +54,10 @@ namespace ConstructiveSolidGeometry
     /// Holds a binary space partition tree representing a 3D solid. Two solids can
     /// be combined using the `union()`, `subtract()`, and `intersect()` methods.
     /// </summary>
+
     public class CSG
     {
+		const int stack = 10000;
         public List<Polygon> polygons;
         private Bounds bounds = new Bounds();
 
@@ -155,7 +157,7 @@ namespace ConstructiveSolidGeometry
                         if (vertices[i].pos.ApproximatelyEqual(vertex.pos) && 
                             vertices[i].normal.ApproximatelyEqual(vertex.normal) &&
 						    Vector2.Distance(vertices[i].uv, vertex.uv) < 0.00001f &&
-						    Mathf.Abs (vertices[i].zone -vertex.zone) < 0.00001f)
+						    Mathf.Abs (vertices[i].zone - vertex.zone) < 0.00001f)
                         {
                             equivalentVertexAlreadyInList = true;
                             vertex.index = vertices[i].index;
@@ -290,10 +292,37 @@ namespace ConstructiveSolidGeometry
             //b.invert();
             //b.clipTo(a);
             //b.invert();
-            a.build(b.allPolygons(),100000);
+            a.build(b.allPolygons(),stack);
             return CSG.fromPolygons(a.allPolygons());
-        }
-
+		}
+		public CSG overwrite(CSG csg, float val)
+		{
+			Node a = new Node(this.polygons);
+			Node b = new Node(csg.polygons);
+			a.clipTo(b);
+			List<Polygon> polys = a.allPolygons ();
+			for (int i = 0; i < polys.Count; ++i)
+			{
+				bool cont = true;
+				for (int j = 0; j < csg.polygons.Count && cont; ++j)
+				{
+					if (polys[i].equals(csg.polygons[j]))
+					{
+						for (int k = 0; k < polys[i].vertices.Length; ++k)
+						{
+							polys[i].vertices[k].zone = val/100.0f;
+						}
+						cont = false;
+					}
+				}
+			}
+			//b.clipTo(a);
+			//b.invert();
+			//b.clipTo(a);
+			//b.invert();
+			//a.build(b.allPolygons(),stack);
+			return CSG.fromPolygons(polys);
+		}
         /// <summary>
         /// Return a new CSG solid representing space in this solid but not in the
         /// solid `csg`. Neither this solid nor the solid `csg` are modified.
@@ -323,7 +352,7 @@ namespace ConstructiveSolidGeometry
             b.invert();
             b.clipTo(a);
             b.invert();
-            a.build(b.allPolygons(),100000);
+            a.build(b.allPolygons(),stack);
             a.invert();
             return CSG.fromPolygons(a.allPolygons());
         }
@@ -354,7 +383,7 @@ namespace ConstructiveSolidGeometry
             b.invert();
             a.clipTo(b);
             b.clipTo(a);
-            a.build(b.allPolygons(),100000);
+            a.build(b.allPolygons(),stack);
             return CSG.fromPolygons(a.allPolygons()).inverse();
         }
 

@@ -62,9 +62,8 @@ namespace LevelEditor
 							var tmp = s.intersect(s2);
 							s = s.subtract(tmp);
 							tmp.setZone(adj.matindex);
-							Debug.Log(adj.matindex);
+							s = s.subtract(tmp);
 							s = s.union(tmp);
-
 						}
 					}
 				}
@@ -90,10 +89,11 @@ namespace LevelEditor
 					}
 					else if (adj.addMode == 2)
 					{
-						var tmp = s.intersect(s2);
-						s = s.subtract(tmp);
-						tmp = tmp.setZone(adj.matindex);
-						s = s.union(tmp);
+						var tmp = s2.intersect(s);
+						//s = s.subtract (tmp);
+						s = s.overwrite(tmp, adj.matindex);
+						//s = s.subtract(tmp);
+						//s = s.union(tmp);
 					}
 				}
 			}

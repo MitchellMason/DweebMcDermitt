@@ -82,7 +82,25 @@ namespace ConstructiveSolidGeometry
             front.AddRange(back);
             return front;
         }
-
+		
+		public List<Polygon> overwritePolygons(List<Polygon> polys, float val)
+		{
+			if (this.plane == null) return new List<Polygon>(polys);
+			List<Polygon> front = new List<Polygon>();
+			List<Polygon> back = new List<Polygon>();
+			for (int i = 0; i < polys.Count; i++)
+			{
+				this.plane.overwritePolygon(polys[i], ref front, ref back, ref front, ref back, val);
+			}
+			if (this.front != null) front = this.front.overwritePolygons(front, val);
+			if (this.back != null)
+			{
+				back = this.back.overwritePolygons(back, val);
+			}
+			else { back.Clear(); }
+			front.AddRange(back);
+			return front;
+		}
         /// <summary>
         /// Remove all polygons in this BSP tree that are inside the other BSP tree `bsp`.
         /// </summary>
@@ -93,6 +111,13 @@ namespace ConstructiveSolidGeometry
             if (this.front != null) this.front.clipTo(bsp);
             if (this.back != null) this.back.clipTo(bsp);
         }
+		
+		public void overwrite(Node bsp, float val)
+		{
+			this.polygons = bsp.overwritePolygons(this.polygons, val);
+			if (this.front != null) this.front.clipTo(bsp);
+			if (this.back != null) this.back.clipTo(bsp);
+		}
 
         /// <summary>
         /// Return a list of all polygons in this BSP tree.
@@ -116,9 +141,9 @@ namespace ConstructiveSolidGeometry
         /// <param name="stack"></param>
         public void build(List<Polygon> polys, int stack)
         {
-            if (stack < 0)
+            if (stack <= 0)
             {
-				stack = 10000;
+				return;
 			}
             if (polys.Count == 0) return;
             if (this.plane == null) this.plane = polys[0].plane.clone();
