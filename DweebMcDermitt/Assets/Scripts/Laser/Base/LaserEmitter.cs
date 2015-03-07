@@ -14,12 +14,20 @@ public class LaserEmitter : MonoBehaviour {
 	//Raycase information
 	private RaycastHit hit;
 
-	public AudioSource lasernew;
+	public AudioClip laserSound;
+	private AudioSource source;
 	
+
+	void Awake() {
+		source = GetComponent<AudioSource> ();
+	}
+
 	void Update () {
+		audio.Stop ();
 		//If we're firing the laser
 		if (Input.GetAxis("FireLaser") >= 0.1f) {
-			//lasernew.Play ();
+			// start playing the laser sound
+			source.PlayOneShot(laserSound, 1f);
 			//first, see if we hit anything
 			GameObject justHit = getObjectHit();
 			
