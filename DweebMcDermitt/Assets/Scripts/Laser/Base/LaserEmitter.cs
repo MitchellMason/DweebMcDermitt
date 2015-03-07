@@ -7,6 +7,7 @@ public class LaserEmitter : MonoBehaviour {
 	
 	//The distance after which the laser doesn't hit anything.
 	[SerializeField] private float laserClipDistance = 100.0f;
+	int maxbounces = 50;
 	
 	//the object the laser is firing on
 	LaserTarget storedLaserTarget;
@@ -59,6 +60,8 @@ public class LaserEmitter : MonoBehaviour {
 						break;
 					}
 					points.Add(hit.point);
+					if (points.Count >= maxbounces)
+						break;
 					justHitLaserTarget = justHit.GetComponent<Mirror>();
 
 				}
