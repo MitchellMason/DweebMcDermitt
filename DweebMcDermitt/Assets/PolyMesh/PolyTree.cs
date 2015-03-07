@@ -62,7 +62,9 @@ namespace LevelEditor
 							var tmp = s.intersect(s2);
 							s = s.subtract(tmp);
 							tmp.setZone(adj.matindex);
+							Debug.Log(adj.matindex);
 							s = s.union(tmp);
+
 						}
 					}
 				}
@@ -114,6 +116,7 @@ namespace LevelEditor
 			mesh.triangles = ind;
 			//mesh.subMeshCount = subs.Count;
 			//Material[] sharedMats = new Material[subs.Count];
+			List<int> contains = new List<int>(ind);
 			for (int i = 0; i < subs.Count; ++i)
 			{
 				List<int> subinds = new List<int>();
@@ -123,6 +126,7 @@ namespace LevelEditor
 					if ((int)Mathf.Round(sub.zones[index]) == i)
 					{
 						subinds.Add(index);
+						contains.Remove(index);
 					}
 				}
 				//mesh.SetIndices(subinds.ToArray(), MeshTopology.Triangles, i);
@@ -131,6 +135,10 @@ namespace LevelEditor
 				subs[i].verts = sub.verts;
 				subs[i].indices = subinds;
 
+			}
+			for (int i = 0; i < contains.Count; ++i)
+			{
+				Debug.Log(sub.zones[contains[i]]);
 			}
 			PolyRender[] renders = gameObject.GetComponentsInChildren<PolyRender> ();
 			for (int i = 0; i < renders.Length; ++i)

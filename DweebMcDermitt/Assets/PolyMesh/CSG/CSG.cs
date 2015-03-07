@@ -98,7 +98,7 @@ namespace ConstructiveSolidGeometry
 			{
 				for (int j = 0; j < p.vertices.Length; ++j)
 				{
-					p.vertices[j].zone = zone;
+					p.vertices[j].zone = zone/100.0f;
 				}
 			}
 			return csg;
