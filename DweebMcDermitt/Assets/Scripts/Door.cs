@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Door : TriggerTarget {
 
-	InteractionTarget trigger;
+	MonoBehaviour trigger;
 	
-	override public void onTrigger(InteractionTarget t) {
-		// Open.....OR CLOSE?
+	override public void onTrigger(MonoBehaviour t) {
+		trigger = t;
+
+
 	}
 }

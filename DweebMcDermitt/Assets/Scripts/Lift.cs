@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+/*
 public class Lift : TriggerTarget {
 
 	InteractionTarget trigger;
@@ -8,4 +8,4 @@ public class Lift : TriggerTarget {
 	override public void onTrigger(InteractionTarget t) {
 		// go up....or perhaps...down?
 	}
-}
+}*/

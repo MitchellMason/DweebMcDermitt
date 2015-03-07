@@ -25,6 +25,7 @@ using System.Collections.Generic;
 /// <summary>
 /// Controls the player's movement in virtual reality.
 /// </summary>
+
 [RequireComponent(typeof(CharacterController))]
 public class OVRPlayerController : MonoBehaviour
 {
@@ -94,8 +95,12 @@ public class OVRPlayerController : MonoBehaviour
 	private bool prevHatRight = false;
 	private float SimulationRate = 60f;
 
+	public AudioClip runningSound;
+	private AudioSource source;
+
 	void Awake()
 	{
+		source = GetComponent<AudioSource> ();
 		Controller = gameObject.GetComponent<CharacterController>();
 
 		if(Controller == null)
@@ -200,7 +205,6 @@ public class OVRPlayerController : MonoBehaviour
 		{
 			moveForward = true;
 			dpad_move   = true;
-
 		}
 		if (OVRGamepadController.GPC_GetButton(OVRGamepadController.Button.Down))
 		{
@@ -232,8 +236,10 @@ public class OVRPlayerController : MonoBehaviour
 		ortEuler.z = ortEuler.x = 0f;
 		ort = Quaternion.Euler(ortEuler);
 
-		if (moveForward)
+		if (moveForward) {
 			MoveThrottle += ort * (transform.lossyScale.z * moveInfluence * Vector3.forward);
+			//source.PlayOneShot (runningSound, 1f);
+		}
 		if (moveBack)
 			MoveThrottle += ort * (transform.lossyScale.z * moveInfluence * BackAndSideDampen * Vector3.back);
 		if (moveLeft)
@@ -323,6 +329,7 @@ public class OVRPlayerController : MonoBehaviour
 		Controller.Move(Vector3.zero);
 		MoveThrottle = Vector3.zero;
 		FallSpeed = 0.0f;
+		audio.Stop ();
 	}
 
 	/// <summary>
