@@ -2548,7 +2548,7 @@ Transform:
   m_PrefabInternal: {fileID: 1031507647}
   m_GameObject: {fileID: 565817733}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: -.707106829}
-  m_LocalPosition: {x: -2.99000001, y: 2.45000005, z: -4.42999983}
+  m_LocalPosition: {x: -2.88000011, y: 2.45000005, z: -4.42999983}
   m_LocalScale: {x: 1, y: 1, z: 5.0729785}
   m_Children:
   - {fileID: 1517856415}
@@ -3466,7 +3466,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 426936, guid: 0c4b1d78f2a873348a07a0ead18ecc4c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.99000001
+      value: -2.88000011
       objectReference: {fileID: 0}
     - target: {fileID: 426936, guid: 0c4b1d78f2a873348a07a0ead18ecc4c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6154,7 +6154,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
