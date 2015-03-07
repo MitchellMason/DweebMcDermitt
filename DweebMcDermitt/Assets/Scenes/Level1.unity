@@ -130,11 +130,11 @@ Light:
   m_DrawHalo: 0
   m_ActuallyLightmapped: 1
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2970,7 +2970,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3145,7 +3145,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3319,11 +3319,11 @@ Light:
   m_DrawHalo: 0
   m_ActuallyLightmapped: 1
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3517,7 +3517,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3577,7 +3577,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.95000005
+      value: 1.89999998
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3585,7 +3585,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalPosition.z
-      value: .790000021
+      value: -7.67999983
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3651,7 +3651,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 907841254}
   m_LocalRotation: {x: 0, y: 1, z: -0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -3.72000003, y: 2.70000005, z: -9.97000027}
+  m_LocalPosition: {x: -3.72000003, y: 1.77999997, z: -9.97000027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1033639166}
@@ -3681,11 +3681,11 @@ Light:
   m_DrawHalo: 0
   m_ActuallyLightmapped: 1
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4005,7 +4005,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4169,11 +4169,11 @@ Light:
   m_DrawHalo: 0
   m_ActuallyLightmapped: 1
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4351,7 +4351,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -5220,7 +5220,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1388425805}
   m_LocalRotation: {x: 0, y: 1, z: -0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -18.4899998, y: 3.04999995, z: -7.19999981}
+  m_LocalPosition: {x: -16.75, y: 3.04999995, z: -7.19999981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1033639166}
@@ -5250,11 +5250,11 @@ Light:
   m_DrawHalo: 0
   m_ActuallyLightmapped: 1
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -5721,7 +5721,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -6478,7 +6478,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1771047491}
   m_LocalRotation: {x: 0, y: 1, z: -0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -8.32999992, y: 2.76999998, z: -9.97000027}
+  m_LocalPosition: {x: -8.32999992, y: 2.76999998, z: -10.6899996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1033639166}
@@ -6508,11 +6508,11 @@ Light:
   m_DrawHalo: 0
   m_ActuallyLightmapped: 1
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_ShadowSamples: 50
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7196,7 +7196,7 @@ Transform:
   m_PrefabInternal: {fileID: 894262457}
   m_GameObject: {fileID: 1930507544}
   m_LocalRotation: {x: 0, y: -.00312975468, z: 0, w: -.999995112}
-  m_LocalPosition: {x: 1.95000005, y: 1.33000004, z: .790000021}
+  m_LocalPosition: {x: 1.89999998, y: 1.33000004, z: -7.67999983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1987356516}
