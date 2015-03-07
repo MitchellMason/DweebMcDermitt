@@ -13,10 +13,13 @@ public class LaserEmitter : MonoBehaviour {
 
 	//Raycase information
 	private RaycastHit hit;
+
+	public AudioSource lasernew;
 	
 	void Update () {
 		//If we're firing the laser
 		if (Input.GetAxis("FireLaser") >= 0.1f) {
+			//lasernew.Play ();
 			//first, see if we hit anything
 			GameObject justHit = getObjectHit();
 			
