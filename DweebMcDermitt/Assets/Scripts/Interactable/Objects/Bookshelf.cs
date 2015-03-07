@@ -11,12 +11,15 @@ public class Bookshelf : InteractionTarget{
 	private float startTime;
 	private float journeyDistance;
 
-	public AudioSource door;
+	//public AudioSource door;
+	[SerializeField] private AudioSource doorAudio;
+	[SerializeField] private AudioSource dweebAudio;
 
 	//store the distance between our location and the new one
 	void Start(){
 		newPosition = transform.position + newPositionRelative;
 		journeyDistance = Vector3.Distance (transform.position, newPosition);
+		//source = GetComponents<AudioSource> ();
 	}
 
 	// If we're interacted upon, start moving the object to victory
@@ -32,7 +35,8 @@ public class Bookshelf : InteractionTarget{
 		Debug.Log ("Interaction!");
 		if (!interactedOn) {
 			startTime = Time.time;
-			door.Play();
+			doorAudio.Play ();
+			dweebAudio.PlayDelayed(2f);
 		}
 		//prevent starting over
 		interactedOn = true;
