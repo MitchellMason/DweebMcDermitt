@@ -9,14 +9,17 @@ public static class LaserUtils{
 		lineRenderer.SetWidth(LASER_WIDTH, LASER_WIDTH);
 		lineRenderer.SetPosition (0, start);
 		lineRenderer.SetPosition (1, end);
+
+
 	}
 	
-	public static LaserHitInfo toLaserHitInfo(RaycastHit r, Vector3 shooterTransform){
+	public static LaserHitInfo toLaserHitInfo(RaycastHit r, Vector3 shooterTransform, Material mat){
 		LaserHitInfo l = new LaserHitInfo ();
 		l.hitPoint = r.point;
 		l.hitSurfaceNormal = r.normal;//new Vector3(r.normal.x,-r.normal.y,r.normal.z);//r.normal;
 		l.laserEmitter = shooterTransform;
-		l.remainingDistance = Vector3.Distance (shooterTransform, r.collider.transform.position);
+		l.remainingDistance = 100.0f-Vector3.Distance (shooterTransform, r.collider.transform.position);
+		l.material = mat;
 		return l;
 	}
 }
@@ -26,4 +29,5 @@ public struct LaserHitInfo{
 	public Vector3 hitPoint;
 	public Vector3 hitSurfaceNormal;
 	public float remainingDistance;
+	public Material material;
 }

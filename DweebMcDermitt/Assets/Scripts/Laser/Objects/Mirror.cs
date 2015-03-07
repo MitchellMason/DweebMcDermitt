@@ -6,7 +6,11 @@ public class Mirror : LaserTarget {
 
 	void Start(){
 		//Set the line renderer
-		lr = this.GetComponent<LineRenderer> ();
+		if (gameObject.GetComponents<LineRenderer>().Length == 0)
+		{
+			gameObject.AddComponent<LineRenderer>();
+		}
+		lr = gameObject.GetComponent<LineRenderer> ();
 		lr.SetWidth (LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
 	}
 
@@ -25,6 +29,9 @@ public class Mirror : LaserTarget {
 	}
 
 	private void drawLaser(LaserHitInfo laserHitInfo){
+		//if (lr.sharedMaterials.Length == 0)
+
+		lr.sharedMaterial = laserHitInfo.material;
 		Vector3 inDir = (laserHitInfo.laserEmitter-laserHitInfo.hitPoint).normalized;
 		Vector3 outDir = 
 			laserHitInfo.remainingDistance * 
