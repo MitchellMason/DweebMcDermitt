@@ -13,7 +13,7 @@ public class LaserEmitter : MonoBehaviour {
 
 	//Raycase information
 	private RaycastHit hit;
-
+	public Material material;
 	public AudioClip laserSound;
 	private AudioSource source;
 	
@@ -44,10 +44,10 @@ public class LaserEmitter : MonoBehaviour {
 				if(justHitLaserTarget != null){
 					//have we hit this thing already?
 					if(justHitLaserTarget == storedLaserTarget){
-						storedLaserTarget.onLaserStay(LaserUtils.toLaserHitInfo(hit, this.transform.parent.position));
+						storedLaserTarget.onLaserStay(LaserUtils.toLaserHitInfo(hit, this.transform.parent.position, material));
 					} 
 					else{
-						justHitLaserTarget.onLaserShot(LaserUtils.toLaserHitInfo(hit, this.transform.parent.position));
+						justHitLaserTarget.onLaserShot(LaserUtils.toLaserHitInfo(hit, this.transform.parent.position, material));
 						storedLaserTarget = justHitLaserTarget;
 					}
 				}
