@@ -8,8 +8,13 @@ public class Crosshair : MonoBehaviour {
 	[SerializeField] private float DistanceFromPlayer = 2.0f;
 	private Vector3 originalScale;
 
+	public AudioClip backgroundMusic;
+	private AudioSource source;
+
 	void Start(){
 		originalScale = transform.localScale;
+		source = GetComponent<AudioSource> ();
+		source.PlayOneShot(backgroundMusic, .5f);
 	}
 
 	// Simply look at the camera
