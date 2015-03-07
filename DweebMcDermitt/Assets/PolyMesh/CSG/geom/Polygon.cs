@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace ConstructiveSolidGeometry
 {
@@ -54,6 +55,28 @@ namespace ConstructiveSolidGeometry
             }
             return new Polygon(vs.ToArray(), this.shared);
         }
+		public bool equals(Polygon b)
+		{
+			if (this.vertices.Length != b.vertices.Length)
+				return false;
+			bool found = true;
+			for (int i = 0; i < this.vertices.Length && found; ++i)
+			{
+				Vector3 sample = this.vertices[i].pos;
+				bool localfound = false;
+				for (int j = 0; j < b.vertices.Length; ++j)
+				{
+					if (Vector3.Distance(b.vertices[j].pos, sample) < 0.001f)
+					{
+						localfound = true;
+						break;
+					}
+				}
+				if (!localfound)
+					found = false;
+			}
+			return found;
+		}
 
         public void flip()
         {

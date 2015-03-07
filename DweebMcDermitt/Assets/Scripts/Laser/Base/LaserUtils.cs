@@ -11,18 +11,18 @@ public static class LaserUtils{
 		lineRenderer.SetPosition (1, end);
 	}
 	
-	public static LaserHitInfo toLaserHitInfo(RaycastHit r, Transform shooterTransform){
+	public static LaserHitInfo toLaserHitInfo(RaycastHit r, Vector3 shooterTransform){
 		LaserHitInfo l = new LaserHitInfo ();
 		l.hitPoint = r.point;
-		l.hitSurfaceNormal = r.normal;
+		l.hitSurfaceNormal = r.normal;//new Vector3(r.normal.x,-r.normal.y,r.normal.z);//r.normal;
 		l.laserEmitter = shooterTransform;
-		l.remainingDistance = Vector3.Distance (shooterTransform.position, r.collider.transform.position);
+		l.remainingDistance = Vector3.Distance (shooterTransform, r.collider.transform.position);
 		return l;
 	}
 }
 
 public struct LaserHitInfo{
-	public Transform laserEmitter;
+	public Vector3 laserEmitter;
 	public Vector3 hitPoint;
 	public Vector3 hitSurfaceNormal;
 	public float remainingDistance;
