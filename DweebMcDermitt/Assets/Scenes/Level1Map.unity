@@ -73,6 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1001 &25379522
 Prefab:
@@ -3234,6 +3235,10 @@ Prefab:
       propertyPath: Acceleration
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11490534, guid: 660271135b3984be19620204b3f63bef, type: 2}
+      propertyPath: laserSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ad602256b7794d0ea4f9b9b91f4d7d4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 660271135b3984be19620204b3f63bef, type: 2}
   m_RootGameObject: {fileID: 1930507544}
@@ -7655,6 +7660,7 @@ GameObject:
   - 114: {fileID: 1987356518}
   - 114: {fileID: 1987356517}
   - 114: {fileID: 1987356521}
+  - 82: {fileID: 1987356522}
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
@@ -7688,6 +7694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserClipDistance: 10
   CenterEyeAnchor: {fileID: 2054214095}
+  laserSound: {fileID: 8300000, guid: 5ad602256b7794d0ea4f9b9b91f4d7d4, type: 3}
 --- !u!114 &1987356518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7745,6 +7752,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionClipDistance: 3
   CenterEyeAnchor: {fileID: 2054214095}
+--- !u!82 &1987356522
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1987356515}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 5ad602256b7794d0ea4f9b9b91f4d7d4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &2006334463
 GameObject:
   m_ObjectHideFlags: 0

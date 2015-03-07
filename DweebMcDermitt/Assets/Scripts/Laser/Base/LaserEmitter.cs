@@ -20,9 +20,14 @@ public class LaserEmitter : MonoBehaviour {
 
 	void Awake() {
 		source = GetComponent<AudioSource> ();
+		audio.Stop ();
 	}
 
 	void Update () {
+		/* This is the only way I can get the laserSound to stop firing at the moment. 
+		 * I know it sounds funny because the sound is starting over every frame that
+		 * the fire button is held.
+		 */
 		audio.Stop ();
 		//If we're firing the laser
 		if (Input.GetAxis("FireLaser") >= 0.1f) {
