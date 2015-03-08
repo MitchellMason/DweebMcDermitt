@@ -11,6 +11,12 @@ public class Door : TriggerTarget {
 	void Start(){
 		anim = this.GetComponent<Animation>();
 	}
+
+	void Update() {
+		if (!hasAnimated) {
+			hasAnimated = !hasAnimated;
+		}
+	}
 	
 	override public void onTrigger(MonoBehaviour t) {
 		if (!hasAnimated) {

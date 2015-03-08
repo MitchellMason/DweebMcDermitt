@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public static class LaserUtils{
 	public const float LASER_WIDTH = 0.025f;
 	public static Color LASER_COLOR = new Color(255f,255f,255f);
+	public static float LASER_DURATION = 6;
 	
 	public static LaserHitInfo toLaserHitInfo(RaycastHit r, Vector3 pos){
 		LaserHitInfo l = new LaserHitInfo ();
@@ -25,6 +26,8 @@ public class LaserShooter{
 	}
 	
 	public void fireLaser(Vector3 start, Vector3 dir, float distance){
+		Debug.Log ("firing and shit");
+
 		//Draw the laser shot
 		lineRenderer.enabled = true;
 		lineRenderer.SetVertexCount (2);

@@ -12,42 +12,50 @@ public class LaserEmitter : MonoBehaviour {
 	[SerializeField] private Transform CenterEyeAnchor;
 	//Raycase information
 	private RaycastHit hit;
-	
+
+	float timer = LaserUtils.LASER_DURATION;
+	bool okayToFire = false;
+
 	void Update () {
+		if (timer > 0) {
+			okayToFire = true;
+		} else {
+			okayToFire = false;
+		}
+
 		//If we're firing the laser
-		if (Input.GetAxis("FireLaser") >= 0.1f) {
+		if (Input.GetAxis("FireLaser") >= 0.1f  && okayToFire) {
+			timer -= Time.deltaTime;
+
+			if (timer <= 0) {
+				okayToFire = false;
+			}
+
 			//first, see if we hit anything
-			GameObject justHit = getObjectHit();
+			GameObject justHit = getObjectHit ();
 			
 			//Check to be sure we hit something
-			if(justHit != null){
-				LaserTarget justHitLaserTarget = justHit.GetComponent<LaserTarget>();
+			if (justHit != null) {
+				LaserTarget justHitLaserTarget = justHit.GetComponent<LaserTarget> ();
 				
 				//is it a laserTarget? 
-				if(justHitLaserTarget != null){
+				if (justHitLaserTarget != null) {
 					//have we hit this thing already?
-					if(justHitLaserTarget == storedLaserTarget){
-						if(hit.point.Equals(CenterEyeAnchor.position)) Debug.LogError("hitpoint and pos the same");
-						storedLaserTarget.onLaserStay(LaserUtils.toLaserHitInfo(hit, CenterEyeAnchor.position));
-					} 
-					else{
-						justHitLaserTarget.onLaserShot(LaserUtils.toLaserHitInfo(hit, CenterEyeAnchor.position));
+					if (justHitLaserTarget == storedLaserTarget) {
+						if (hit.point.Equals (CenterEyeAnchor.position))
+							Debug.LogError ("hitpoint and pos the same");
+						storedLaserTarget.onLaserStay (LaserUtils.toLaserHitInfo (hit, CenterEyeAnchor.position));
+					} else {
+						justHitLaserTarget.onLaserShot (LaserUtils.toLaserHitInfo (hit, CenterEyeAnchor.position));
 						storedLaserTarget = justHitLaserTarget;
 					}
 				}
 				//if the target isn't a laser target, call laserleave on the stored object, if it exists
-				else{
-					if(storedLaserTarget != null){
-						storedLaserTarget.onLaserLeave();
+				else {
+					if (storedLaserTarget != null) {
+						storedLaserTarget.onLaserLeave ();
 						storedLaserTarget = null;
 					}
-				}
-			}
-			//if we didn't hit anything, call laserleave on the stored object, if it exists
-			else{
-				if(storedLaserTarget != null){
-					storedLaserTarget.onLaserLeave();
-					storedLaserTarget = null;
 				}
 			}
 		}
@@ -58,7 +66,12 @@ public class LaserEmitter : MonoBehaviour {
 				storedLaserTarget = null;
 			}
 		}
+
+		if (Input.GetMouseButtonUp (0)) {
+			timer = LaserUtils.LASER_DURATION;
+		}
 	}
+
 
 	//casts a ray from the center eye anchor to the crosshair and returns the game object hit
 	GameObject getObjectHit(){
