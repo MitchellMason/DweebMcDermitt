@@ -3,12 +3,13 @@ using System.Collections;
 
 public class Mirror : LaserTarget {
 	private LaserShooter shooter;
-	
+	private LineRenderer lineRenderer;
 	Vector3 newDir;
 	Vector3 laserEndPoint;
 
 	void Start(){
-		shooter = new LaserShooter(this.GetComponent<LineRenderer>());
+		lineRenderer = this.gameObject.AddComponent<LineRenderer>();
+		shooter = new LaserShooter (lineRenderer);
 	}
 	
 	override public void onLaserShot(LaserHitInfo laserHitInfo){
@@ -20,7 +21,8 @@ public class Mirror : LaserTarget {
 	}
 	
 	override public void onLaserLeave(){
-		if(!this.Equals(shooter.getStoredLaserObject())) shooter.endFire();
+		shooter.endFire();
+		lineRenderer.SetWidth (0, 0);
 	}
 
 	void shoot(LaserHitInfo laserHitInfo){

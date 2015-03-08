@@ -28,7 +28,6 @@ GameObject:
   - 64: {fileID: 6490452}
   - 114: {fileID: 11441960}
   - 114: {fileID: 11441958}
-  - 120: {fileID: 12082106}
   m_Layer: 0
   m_Name: A_Mirror
   m_TagString: Untagged
@@ -182,37 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884258e9c50af2c47872418c41f89098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!120 &12082106
-LineRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103876}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Positions: []
-  m_Parameters:
-    startWidth: 1
-    endWidth: 1
-    m_StartColor:
-      serializedVersion: 2
-      rgba: 4294967295
-    m_EndColor:
-      serializedVersion: 2
-      rgba: 4294967295
-  m_UseWorldSpace: 1
+  shotColor: {r: 0, g: 1, b: 0, a: 1}
+  stayColor: {r: 0, g: 0, b: 1, a: 1}
+  leaveColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
