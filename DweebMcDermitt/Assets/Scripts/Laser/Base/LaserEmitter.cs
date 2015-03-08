@@ -8,6 +8,8 @@ public class LaserEmitter : MonoBehaviour {
 	[SerializeField] private float laserClipDistance = 10.0f;
 	//The origin for out shots
 	[SerializeField] private Transform CenterEyeAnchor;
+	//View for debug reasons
+	[SerializeField]float timer = LaserUtils.LASER_DURATION;
 
 	//the object the laser is firing on
 	private LaserShooter shooter;
@@ -17,15 +19,16 @@ public class LaserEmitter : MonoBehaviour {
 	//Raycast information
 	private RaycastHit hit;
 
-	float timer = LaserUtils.LASER_DURATION;
+
 	bool okayToFire = false;
 
+	void Awake(){
+		lineRenderer = this.gameObject.AddComponent<LineRenderer> ();
+		shooter = new LaserShooter (lineRenderer);
+	}
+
 	void Update () {
-		if (timer > 0) {
-			okayToFire = true;
-		} else {
-			okayToFire = false;
-		}
+		okayToFire = timer > 0;
 
 		//If we're firing the laser
 		if (Input.GetAxis("FireLaser") >= 0.1f && okayToFire) {
@@ -43,9 +46,8 @@ public class LaserEmitter : MonoBehaviour {
 		else{
 			shooter.endFire();
 
-			if (Input.GetMouseButtonUp (0)) {
-				timer = LaserUtils.LASER_DURATION;
-			}
+			timer += Time.deltaTime;
+			timer = Mathf.Min(timer, LaserUtils.LASER_DURATION);
 		}
 	}
 }

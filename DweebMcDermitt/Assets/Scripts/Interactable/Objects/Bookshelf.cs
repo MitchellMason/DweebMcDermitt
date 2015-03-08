@@ -32,7 +32,7 @@ public class Bookshelf : InteractionTarget{
 	}
 
 	public override void onInteract(){
-		Debug.Log ("Interaction!");
+		Debug.Log ("Bookshelf triggered");
 		if (!interactedOn) {
 			startTime = Time.time;
 			doorAudio.Play ();

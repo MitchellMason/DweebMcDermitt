@@ -26,6 +26,7 @@ public class LaserShooter{
 		lineRenderer.castShadows = false;
 		lineRenderer.receiveShadows = false;
 		lineRenderer.SetVertexCount (2);
+		lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
 	}
 	public void fireLaser(Ray ray, float distance){
 		fireLaser (ray, distance, true);
@@ -33,7 +34,7 @@ public class LaserShooter{
 
 	public void fireLaser(Ray ray, float distance, bool draw){
 		//Debug.Log ("Firing with origin: " + ray.origin + " direction: " + ray.direction + " distance: " + distance);
-		
+		lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
 		//Perform the shot
 		RaycastHit hit;
 		GameObject justHit;
@@ -44,10 +45,8 @@ public class LaserShooter{
 			//Draw the laser shot
 			if(draw){
 				lineRenderer.SetVertexCount (2);
-				lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
 				lineRenderer.SetPosition (0, ray.origin);
-				lineRenderer.SetPosition(1, hit.point);
-				lineRenderer.SetColors(Color.cyan, Color.blue);
+				lineRenderer.SetPosition (1, hit.point);
 			}
 		}
 		else{
@@ -56,10 +55,8 @@ public class LaserShooter{
 			//Draw the laser shot
 			if(draw){
 				lineRenderer.SetVertexCount (2);
-				lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
 				lineRenderer.SetPosition (0, ray.origin);
 				lineRenderer.SetPosition(1, (ray.direction * distance) + ray.origin);
-				lineRenderer.SetColors(Color.cyan, Color.red);
 			}
 		}
 		
@@ -67,31 +64,37 @@ public class LaserShooter{
 		if(justHit != null){
 			LaserTarget justHitLaserTarget = justHit.GetComponent<LaserTarget>();
 			if(justHitLaserTarget != null){
-				if(justHitLaserTarget.Equals(storedObject)){
+				if(justHitLaserTarget == storedObject){
 					storedObject.onLaserStay(LaserUtils.toLaserHitInfo(hit, ray.origin));
 				}
 				else{
 					justHitLaserTarget.onLaserShot(LaserUtils.toLaserHitInfo(hit, ray.origin));
 					if(storedObject != null){
+						//Debug.Log ("not the same object.");
 						storedObject.onLaserLeave();
 					}
 					storedObject = justHitLaserTarget;
 				}
 			}
 			else{
+				//Debug.Log("Not a laser target");
 				endFire();
 			}
 		}
 		else{
+			//Debug.Log ("Didn't hit anything");
 			endFire();
 		}
 	}
 	
 	public void endFire(){
-		lineRenderer.SetVertexCount (0);
 		if(storedObject != null){
+			//Debug.Log ("End fire called for " + storedObject.name);
 			storedObject.onLaserLeave();
 			storedObject = null;
+		}
+		else{
+			//Debug.Log ("End fire called. No impact");
 		}
 	}
 	
