@@ -338,8 +338,8 @@ public class OVRMainMenu : MonoBehaviour
 		if(CameraController != null)
 		{
 			// Add a GridCube component to this object
-			GridCube = gameObject.AddComponent<OVRGridCube>();
-			GridCube.SetOVRCameraController(ref CameraController);
+			//GridCube = gameObject.AddComponent<OVRGridCube>(); No idea why the oculus devs put this here -Mitch
+			//GridCube.SetOVRCameraController(ref CameraController);
 
 			// Add a VisionGuide component to this object
 			VisionGuide = gameObject.AddComponent<OVRVisionGuide>();

@@ -18,6 +18,7 @@ public class LaserButton : LaserTarget {
 		beingShot = true;
 		if(target != null) target.onTrigger(this);
 		changeMaterial.color = Color.blue;
+		Debug.Log ("LaserButton shot");
 	}
 	override public void onLaserStay(LaserHitInfo laserHitInfo){}
 	override public void onLaserLeave(){

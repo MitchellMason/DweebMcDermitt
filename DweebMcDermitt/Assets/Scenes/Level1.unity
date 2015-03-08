@@ -775,6 +775,7 @@ GameObject:
   - 64: {fileID: 234261581}
   - 114: {fileID: 234261583}
   - 114: {fileID: 234261582}
+  - 120: {fileID: 234261584}
   m_Layer: 0
   m_Name: A_Mirror
   m_TagString: Untagged
@@ -863,6 +864,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884258e9c50af2c47872418c41f89098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!120 &234261584
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 234261577}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    startWidth: 1
+    endWidth: 1
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4294967295
+  m_UseWorldSpace: 1
 --- !u!43 &258710232
 Mesh:
   m_ObjectHideFlags: 0

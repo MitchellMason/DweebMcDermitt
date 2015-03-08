@@ -27,6 +27,7 @@ public class LaserEmitter : MonoBehaviour {
 				if(justHitLaserTarget != null){
 					//have we hit this thing already?
 					if(justHitLaserTarget == storedLaserTarget){
+						if(hit.point.Equals(CenterEyeAnchor.position)) Debug.LogError("hitpoint and pos the same");
 						storedLaserTarget.onLaserStay(LaserUtils.toLaserHitInfo(hit, CenterEyeAnchor.position));
 					} 
 					else{
