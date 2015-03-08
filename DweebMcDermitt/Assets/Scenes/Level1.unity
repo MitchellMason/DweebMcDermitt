@@ -76,6 +76,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &15826783
 GameObject:
@@ -6392,6 +6393,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 8239992, guid: 9c8bf404195348d418e02ef5f0c6cb58, type: 2}
+      propertyPath: m_Volume
+      value: .416999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 419994, guid: 9c8bf404195348d418e02ef5f0c6cb58, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.35000002
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c8bf404195348d418e02ef5f0c6cb58, type: 2}
   m_RootGameObject: {fileID: 1793209850}
@@ -8038,7 +8047,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: d719f7c96c7e14867b53e7290e92ad3b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .416999996
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8910,7 +8919,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 27b30ec4e8cec44ea9723636b445e0aa, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .270999998
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -8969,7 +8978,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 5ad602256b7794d0ea4f9b9b91f4d7d4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .400000006
+  m_Volume: .194000006
   m_Pitch: 1
   Loop: 0
   Mute: 0

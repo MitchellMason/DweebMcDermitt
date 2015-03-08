@@ -17,23 +17,35 @@ public class LaserEmitter : MonoBehaviour {
 	//Raycast information
 	private RaycastHit hit;
 
-	void Start(){
-		lineRenderer = this.gameObject.AddComponent<LineRenderer> ();
-		laser = new Ray ();
-		shooter = new LaserShooter (lineRenderer);
-		lineRenderer.enabled = false;
-	}
+	float timer = LaserUtils.LASER_DURATION;
+	bool okayToFire = false;
 
 	void Update () {
+		if (timer > 0) {
+			okayToFire = true;
+		} else {
+			okayToFire = false;
+		}
+
 		//If we're firing the laser
-		if (Input.GetAxis("FireLaser") >= 0.1f) {
+		if (Input.GetAxis("FireLaser") >= 0.1f && okayToFire) {
 			laser.origin = CenterEyeAnchor.position;
 			laser.direction = transform.position - CenterEyeAnchor.position;
 			shooter.fireLaser(laser, laserClipDistance, false);
+
+			timer -= Time.deltaTime;
+
+			if (timer <= 0) {
+				okayToFire = false;
+			}
 		}
 		//if we aren't firing the laser, call laserleave on the stored object, if it exists
 		else{
 			shooter.endFire();
+
+			if (Input.GetMouseButtonUp (0)) {
+				timer = LaserUtils.LASER_DURATION;
+			}
 		}
 	}
 }
