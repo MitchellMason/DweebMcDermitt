@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using ConstructiveSolidGeometry;
@@ -106,3 +107,4 @@ namespace LevelEditor
 	}
 
 }
+#endif

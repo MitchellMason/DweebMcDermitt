@@ -3,6 +3,6 @@ using System.Collections;
 
 //Used in the prototype. So far, the script exists to receive laser fire and
 //act on it in some way. For this example, we change the color
-public abstract class PositionTarget : MonoBehaviour {
+public abstract class PositionTarget : Target {
 	public abstract void onPosition();
 }

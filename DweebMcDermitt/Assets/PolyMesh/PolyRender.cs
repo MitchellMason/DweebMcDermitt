@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -40,3 +41,4 @@ namespace LevelEditor
 	}
 
 }
+#endif

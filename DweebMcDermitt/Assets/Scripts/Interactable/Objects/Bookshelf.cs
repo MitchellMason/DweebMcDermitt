@@ -41,4 +41,8 @@ public class Bookshelf : InteractionTarget{
 		//prevent starting over
 		interactedOn = true;
 	}
+	
+	override public bool isTriggered(){
+		return interactedOn;
+	}
 }

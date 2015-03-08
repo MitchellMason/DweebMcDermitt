@@ -18,4 +18,8 @@ public class Missile : LaserTarget {
 	override public void onLaserLeave(){
 		Destroy (this.gameObject);
 	}
+	
+	override public bool isTriggered(){
+		return false;
+	}
 }

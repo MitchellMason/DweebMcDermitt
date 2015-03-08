@@ -18,4 +18,9 @@ public class Prism : LaserTarget {
 		t1.onLaserLeave();
 		t2.onLaserLeave();
 	}
+	
+	//TODO
+	override public bool isTriggered(){
+		return false;
+	}
 }
