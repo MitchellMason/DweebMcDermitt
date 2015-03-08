@@ -36,7 +36,7 @@ public class Bookshelf : InteractionTarget{
 		if (!interactedOn) {
 			startTime = Time.time;
 			doorAudio.Play ();
-			dweebAudio.PlayDelayed(2f);
+			if(dweebAudio != null) dweebAudio.PlayDelayed(2f);
 		}
 		//prevent starting over
 		interactedOn = true;
