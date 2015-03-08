@@ -96,11 +96,14 @@ public class OVRPlayerController : MonoBehaviour
 	private float SimulationRate = 60f;
 
 	public AudioClip runningSound;
+	public float runningSoundVolume;
 	private AudioSource source;
 
 	void Awake()
 	{
 		source = GetComponent<AudioSource> ();
+		source.volume = runningSoundVolume;
+		source.clip = runningSound;
 		Controller = gameObject.GetComponent<CharacterController>();
 
 		if(Controller == null)
@@ -238,7 +241,7 @@ public class OVRPlayerController : MonoBehaviour
 
 		if (moveForward) {
 			MoveThrottle += ort * (transform.lossyScale.z * moveInfluence * Vector3.forward);
-			//source.PlayOneShot (runningSound, 1f);
+			if(!source.isPlaying) source.Play();
 		}
 		if (moveBack)
 			MoveThrottle += ort * (transform.lossyScale.z * moveInfluence * BackAndSideDampen * Vector3.back);
@@ -246,6 +249,11 @@ public class OVRPlayerController : MonoBehaviour
 			MoveThrottle += ort * (transform.lossyScale.x * moveInfluence * BackAndSideDampen * Vector3.left);
 		if (moveRight)
 			MoveThrottle += ort * (transform.lossyScale.x * moveInfluence * BackAndSideDampen * Vector3.right);
+
+		//If we aren't moving, stop the sound
+		if (!moveForward && !moveBack && !moveLeft && !moveRight) {
+			source.Stop();
+		}
 
 		bool curHatLeft = OVRGamepadController.GPC_GetButton(OVRGamepadController.Button.LeftShoulder);
 
@@ -263,12 +271,14 @@ public class OVRPlayerController : MonoBehaviour
 
 		prevHatRight = curHatRight;
 
+#if UNITY_EDITOR
 		//Use keys to ratchet rotation
 		if (Input.GetKeyDown(KeyCode.Q))
 			euler.y -= RotationRatchet;
 
 		if (Input.GetKeyDown(KeyCode.E))
 			euler.y += RotationRatchet;
+#endif
 
 		float rotateInfluence = SimulationRate * Time.deltaTime * RotationAmount * RotationScaleMultiplier;
 

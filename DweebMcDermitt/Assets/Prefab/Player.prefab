@@ -492,10 +492,10 @@ MonoBehaviour:
   usePositionTracking: 1
   eyeTextureFormat: 7
   eyeTextureDepth: 24
-  timeWarp: 0
+  timeWarp: 1
   freezeTimeWarp: 0
   resetTrackerOnLoad: 1
-  monoscopic: 0
+  monoscopic: 1
 --- !u!114 &11415076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -563,7 +563,8 @@ MonoBehaviour:
   HmdRotatesY: 1
   GravityModifier: 1
   useProfileHeight: 1
-  runningSound: {fileID: 0}
+  runningSound: {fileID: 8300000, guid: 17bf69ebc97414cb2b24eaceaafc410d, type: 3}
+  runningSoundVolume: 2
 --- !u!114 &11415084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -650,7 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73379c900b9a62438affc22999715aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserClipDistance: 10
+  laserClipDistance: 100
   CenterEyeAnchor: {fileID: 415070}
 --- !u!143 &14315070
 CharacterController:

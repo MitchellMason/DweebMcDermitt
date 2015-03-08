@@ -10,36 +10,56 @@ public static class LaserUtils{
 		LaserHitInfo l = new LaserHitInfo ();
 		l.hitPoint = r.point;
 		l.hitSurfaceNormal = r.normal;
-		l.laserEmitter = pos;
+		l.EmitterPosition = pos;
 		l.remainingDistance = Vector3.Distance (pos, r.collider.transform.position);
 		return l;
 	}
 }
 
 public class LaserShooter{
-	LaserTarget storedObject;
+	LaserTarget storedObject; //The laser target we're in the process of shooting
 	LineRenderer lineRenderer;
 	
 	public LaserShooter(LineRenderer renderer){
 		lineRenderer = renderer;
-	}
-	
-	public void fireLaser(Vector3 start, Vector3 dir, float distance){
-		//Draw the laser shot
-		lineRenderer.enabled = true;
+		lineRenderer.castShadows = false;
+		lineRenderer.receiveShadows = false;
 		lineRenderer.SetVertexCount (2);
-		lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
-		lineRenderer.SetPosition (0, start);
-		lineRenderer.SetPosition (1, start * distance);
+	}
+	public void fireLaser(Ray ray, float distance){
+		fireLaser (ray, distance, true);
+	}
+
+	public void fireLaser(Ray ray, float distance, bool draw){
+		//Debug.Log ("Firing with origin: " + ray.origin + " direction: " + ray.direction + " distance: " + distance);
 		
 		//Perform the shot
 		RaycastHit hit;
 		GameObject justHit;
-		if (Physics.Raycast (start, dir, out hit, distance)) {
+		if (Physics.Raycast (ray.origin, ray.direction, out hit, distance)) {
+			//Debug.Log ("Mirror: Hit " + hit.collider.gameObject.name);
 			justHit = hit.collider.gameObject;
+
+			//Draw the laser shot
+			if(draw){
+				lineRenderer.SetVertexCount (2);
+				lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
+				lineRenderer.SetPosition (0, ray.origin);
+				lineRenderer.SetPosition(1, hit.point);
+				lineRenderer.SetColors(Color.cyan, Color.blue);
+			}
 		}
 		else{
+			//Debug.Log("Mirror: Nothing hit.");
 			justHit = null;
+			//Draw the laser shot
+			if(draw){
+				lineRenderer.SetVertexCount (2);
+				lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
+				lineRenderer.SetPosition (0, ray.origin);
+				lineRenderer.SetPosition(1, (ray.direction * distance) + ray.origin);
+				lineRenderer.SetColors(Color.cyan, Color.red);
+			}
 		}
 		
 		//Handle the results
@@ -47,10 +67,13 @@ public class LaserShooter{
 			LaserTarget justHitLaserTarget = justHit.GetComponent<LaserTarget>();
 			if(justHitLaserTarget != null){
 				if(justHitLaserTarget.Equals(storedObject)){
-					justHitLaserTarget.onLaserStay(LaserUtils.toLaserHitInfo(hit, start));
+					storedObject.onLaserStay(LaserUtils.toLaserHitInfo(hit, ray.origin));
 				}
 				else{
-					justHitLaserTarget.onLaserShot(LaserUtils.toLaserHitInfo(hit, start));
+					justHitLaserTarget.onLaserShot(LaserUtils.toLaserHitInfo(hit, ray.origin));
+					if(storedObject != null){
+						storedObject.onLaserLeave();
+					}
 					storedObject = justHitLaserTarget;
 				}
 			}
@@ -64,7 +87,7 @@ public class LaserShooter{
 	}
 	
 	public void endFire(){
-		lineRenderer.enabled = false;
+		lineRenderer.SetVertexCount (0);
 		if(storedObject != null){
 			storedObject.onLaserLeave();
 			storedObject = null;
@@ -77,7 +100,7 @@ public class LaserShooter{
 }
 
 public class LaserHitInfo{
-	public Vector3 laserEmitter;
+	public Vector3 EmitterPosition;
 	public Vector3 hitPoint;
 	public Vector3 hitSurfaceNormal;
 	public float remainingDistance;

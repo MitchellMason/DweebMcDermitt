@@ -24,12 +24,15 @@ public class Mirror : LaserTarget {
 	}
 
 	void shoot(LaserHitInfo laserHitInfo){
-		Vector3 inDir = (laserHitInfo.laserEmitter-laserHitInfo.hitPoint).normalized;
-		newDir = Vector3.Reflect(laserHitInfo.laserEmitter - laserHitInfo.hitPoint, laserHitInfo.hitSurfaceNormal).normalized;
-		laserEndPoint = laserHitInfo.hitPoint + (newDir * laserHitInfo.remainingDistance);
-		Debug.Log ("in: " + laserHitInfo.laserEmitter + " hit: " + laserHitInfo.hitPoint + " normal: " + laserHitInfo.hitSurfaceNormal + " outDir: " + newDir + " end: " + laserEndPoint);
-		
-		shooter.fireLaser(laserHitInfo.hitPoint, newDir, laserHitInfo.remainingDistance);
+		Debug.DrawRay (laserHitInfo.hitPoint, laserHitInfo.hitSurfaceNormal, Color.green);
+		Vector3 inDir = -(laserHitInfo.EmitterPosition-laserHitInfo.hitPoint).normalized;
+		Debug.DrawRay (laserHitInfo.EmitterPosition, inDir * laserHitInfo.remainingDistance, Color.red);
+		newDir = Vector3.Reflect(inDir, laserHitInfo.hitSurfaceNormal).normalized;
+		//Debug.Log ("in: " + laserHitInfo.EmitterPosition + " hit: " + laserHitInfo.hitPoint + " normal: " + laserHitInfo.hitSurfaceNormal + " outDir: " + newDir + " end: " + laserEndPoint);
+
+		Ray ray = new Ray (laserHitInfo.hitPoint, newDir);
+		Debug.DrawRay (ray.origin, ray.direction, Color.blue);
+		shooter.fireLaser(ray, laserHitInfo.remainingDistance);
 	}
 	
 	override public bool isTriggered(){
