@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: defaultMat
+  m_Name: Dark reapeating Wood
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 5
@@ -85,7 +85,7 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .190258443
+        second: .157054693
       data:
         first:
           name: _SrcBlend
@@ -105,11 +105,11 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .308999985
+        second: .0549999997
       data:
         first:
           name: _BumpScale
-        second: .300000012
+        second: .100000001
       data:
         first:
           name: _OcclusionStrength
@@ -142,11 +142,11 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .759083033, g: .82071799, b: .882352948, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _SpecColor
-        second: {r: .20588237, g: .20588237, b: .20588237, a: 1}
+        second: {r: .110294104, g: .110294104, b: .110294104, a: 1}
       data:
         first:
           name: _EmissionColorUI

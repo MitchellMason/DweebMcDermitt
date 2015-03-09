@@ -10,7 +10,7 @@ public class WeightedButton : PositionTarget {
 		if(col.GetComponent<Rigidbody>() != null && col.GetComponent<Rigidbody>().mass > weightThreshold){
 			pressed = true;
 		}
-		if(col.GetComponent<Player>() != null){
+		if(col.gameObject.tag.Equals("Player")){
 			pressed = true;
 		}
 	}
@@ -20,6 +20,7 @@ public class WeightedButton : PositionTarget {
 	}
 	
 	override public bool isTriggered(){
+		Debug.Log (this.gameObject.name + " is " + pressed);
 		return pressed;
 	}
 	

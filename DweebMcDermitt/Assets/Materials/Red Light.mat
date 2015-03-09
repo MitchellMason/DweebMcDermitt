@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Bookshelf
+  m_Name: Red Light
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _NORMALMAP
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -18,14 +18,14 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: a95f89f26f58e6a409c7f251454e358f, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: c4e69682be2e28b438ddca0c006073c2, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -84,10 +84,6 @@ Material:
         second: .5
       data:
         first:
-          name: _Shininess
-        second: .157054693
-      data:
-        first:
           name: _SrcBlend
         second: 1
       data:
@@ -105,11 +101,11 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .0549999997
+        second: .5
       data:
         first:
           name: _BumpScale
-        second: .100000001
+        second: 1
       data:
         first:
           name: _OcclusionStrength
@@ -138,15 +134,11 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 0}
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _SpecColor
-        second: {r: .110294104, g: .110294104, b: .110294104, a: 1}
       data:
         first:
           name: _EmissionColorUI

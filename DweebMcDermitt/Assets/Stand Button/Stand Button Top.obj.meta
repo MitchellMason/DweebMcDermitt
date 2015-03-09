@@ -1,25 +1,15 @@
 fileFormatVersion: 2
-guid: cf013332bd5a84f4db37a20109cf0112
+guid: 5a316784e6f114583abdd566f480301f
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: Box001
-    100002: Box003
-    100004: //RootNode
-    100006: Line001
-    400000: Box001
-    400002: Box003
-    400004: //RootNode
-    400006: Line001
-    2300000: Box001
-    2300002: Box003
-    2300004: Line001
-    3300000: Box001
-    3300002: Box003
-    3300004: Line001
-    4300000: Box001
-    4300002: Box003
-    4300004: Line001
+    100000: polySurface5_polySurface3
+    100002: //RootNode
+    400000: polySurface5_polySurface3
+    400002: //RootNode
+    2300000: polySurface5_polySurface3
+    3300000: polySurface5_polySurface3
+    4300000: polySurface5_polySurface3
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -60,7 +50,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []

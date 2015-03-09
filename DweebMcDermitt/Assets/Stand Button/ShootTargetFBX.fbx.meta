@@ -1,25 +1,36 @@
 fileFormatVersion: 2
-guid: cf013332bd5a84f4db37a20109cf0112
+guid: c879ae83181d74e039a4a8497d1e1464
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: Box001
-    100002: Box003
-    100004: //RootNode
-    100006: Line001
-    400000: Box001
-    400002: Box003
-    400004: //RootNode
-    400006: Line001
-    2300000: Box001
-    2300002: Box003
-    2300004: Line001
-    3300000: Box001
-    3300002: Box003
-    3300004: Line001
-    4300000: Box001
-    4300002: Box003
-    4300004: Line001
+    100000: ShootTarget:pCylinder1
+    100002: ShootTarget:pTorus1
+    100004: ShootTarget:pTorus2
+    100006: ShootTarget:pTorus3
+    100008: ShootTarget:pTorus4
+    100010: //RootNode
+    400000: ShootTarget:pCylinder1
+    400002: ShootTarget:pTorus1
+    400004: ShootTarget:pTorus2
+    400006: ShootTarget:pTorus3
+    400008: ShootTarget:pTorus4
+    400010: //RootNode
+    2300000: ShootTarget:pCylinder1
+    2300002: ShootTarget:pTorus1
+    2300004: ShootTarget:pTorus2
+    2300006: ShootTarget:pTorus3
+    2300008: ShootTarget:pTorus4
+    3300000: ShootTarget:pCylinder1
+    3300002: ShootTarget:pTorus1
+    3300004: ShootTarget:pTorus2
+    3300006: ShootTarget:pTorus3
+    3300008: ShootTarget:pTorus4
+    4300000: ShootTarget:pCylinder1
+    4300002: ShootTarget:pTorus1
+    4300004: ShootTarget:pTorus2
+    4300006: ShootTarget:pTorus3
+    4300008: ShootTarget:pTorus4
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -40,7 +51,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -60,7 +71,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []
