@@ -7,7 +7,7 @@ public static class LaserUtils{
 	public static Color LASER_COLOR = new Color(255f,255f,255f);
 	public static float LASER_DURATION = 6;
 
-	public static float LASER_DISTANCE = 10.0f;
+	public static float LASER_DISTANCE = 30.0f;
 	
 	public static LaserHitInfo toLaserHitInfo(RaycastHit r, Vector3 pos){
 		LaserHitInfo l = new LaserHitInfo ();
