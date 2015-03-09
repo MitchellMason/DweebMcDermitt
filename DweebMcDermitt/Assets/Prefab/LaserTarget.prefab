@@ -170,8 +170,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153532}
-  m_LocalRotation: {x: 0, y: 6.4354623e-08, z: -.70710659, w: -.707107008}
-  m_LocalPosition: {x: 8.35200024, y: -.912, z: .884000003}
+  m_LocalRotation: {x: -.49999994, y: -.500000179, z: .499999851, w: .50000006}
+  m_LocalPosition: {x: 22.5403156, y: 1.10937095, z: .129999548}
   m_LocalScale: {x: .128177628, y: .128177688, z: .128177658}
   m_Children:
   - {fileID: 453530}
@@ -191,7 +191,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: c6f0580e6435dc84992b05439bc3f146, type: 2}
+  - {fileID: 2100000, guid: 2c5f2f8bd3f916a49ad8693cb9e84cfe, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -215,7 +215,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: c6f0580e6435dc84992b05439bc3f146, type: 2}
+  - {fileID: 2100000, guid: 2c5f2f8bd3f916a49ad8693cb9e84cfe, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -239,7 +239,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: c6f0580e6435dc84992b05439bc3f146, type: 2}
+  - {fileID: 2100000, guid: 2c5f2f8bd3f916a49ad8693cb9e84cfe, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -263,7 +263,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: c6f0580e6435dc84992b05439bc3f146, type: 2}
+  - {fileID: 2100000, guid: 2c5f2f8bd3f916a49ad8693cb9e84cfe, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -287,7 +287,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: c6f0580e6435dc84992b05439bc3f146, type: 2}
+  - {fileID: 2100000, guid: c8426422e9341764481da4aa5766202a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
