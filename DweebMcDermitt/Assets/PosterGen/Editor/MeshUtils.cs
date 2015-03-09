@@ -120,14 +120,14 @@ namespace PosterGen
 			
 			Material m = new Material(ShaderToUse);
 			
-			mr.renderer.material = m;
+			mr.GetComponent<Renderer>().material = m;
 
 			for (int i = 0; i < textureNames.Count; ++i)
 			{
 				if (texturesToUse[i].width > 1 || texturesToUse[i].height > 1)
 				{
-					mr.renderer.sharedMaterial.SetTexture(textureNames[i], texturesToUse[i]);
-					mr.renderer.sharedMaterial.SetTextureScale(textureNames[i], new Vector2(scalemaps,scalemaps));
+					mr.GetComponent<Renderer>().sharedMaterial.SetTexture(textureNames[i], texturesToUse[i]);
+					mr.GetComponent<Renderer>().sharedMaterial.SetTextureScale(textureNames[i], new Vector2(scalemaps,scalemaps));
 				}
 			} 
 			
@@ -150,17 +150,17 @@ namespace PosterGen
 			
 			Material m = new Material(ShaderToUse);
 			
-			mr.renderer.material = m;
+			mr.GetComponent<Renderer>().material = m;
 			
-			mr.renderer.sharedMaterial.SetTexture("_MainTex",tex);
+			mr.GetComponent<Renderer>().sharedMaterial.SetTexture("_MainTex",tex);
 			for (int i = 0; i < textureNames.Count; ++i)
 			{
 				if (textureNames[i] == "_MainTex")
 					continue;
 				if (texturesToUse[i].width > 1 || texturesToUse[i].height > 1)
 				{
-					mr.renderer.sharedMaterial.SetTexture(textureNames[i], texturesToUse[i]);
-					mr.renderer.sharedMaterial.SetTextureScale(textureNames[i], new Vector2(scalemaps*(scaler.x*2.0f),scalemaps*(scaler.y*2.0f)));
+					mr.GetComponent<Renderer>().sharedMaterial.SetTexture(textureNames[i], texturesToUse[i]);
+					mr.GetComponent<Renderer>().sharedMaterial.SetTextureScale(textureNames[i], new Vector2(scalemaps*(scaler.x*2.0f),scalemaps*(scaler.y*2.0f)));
 				}
 			} 
 			

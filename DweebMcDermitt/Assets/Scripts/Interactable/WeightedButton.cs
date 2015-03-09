@@ -7,7 +7,7 @@ public class WeightedButton : PositionTarget {
 	
 	void OnTriggerEnter(Collider col){
 		pressed = false;
-		if(col.rigidbody != null && col.rigidbody.mass > weightThreshold){
+		if(col.GetComponent<Rigidbody>() != null && col.GetComponent<Rigidbody>().mass > weightThreshold){
 			pressed = true;
 		}
 		if(col.GetComponent<Player>() != null){

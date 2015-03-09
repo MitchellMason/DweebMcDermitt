@@ -10,7 +10,7 @@ public class LaserEffectControl : MonoBehaviour {
 	bool okayToFire = false;
 	
 	void Start(){
-		laser = this.gameObject.particleSystem;
+		laser = this.gameObject.GetComponent<ParticleSystem>();
 	}
 	void Update () {
 

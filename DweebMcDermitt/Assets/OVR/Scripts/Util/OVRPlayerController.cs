@@ -339,7 +339,7 @@ public class OVRPlayerController : MonoBehaviour
 		Controller.Move(Vector3.zero);
 		MoveThrottle = Vector3.zero;
 		FallSpeed = 0.0f;
-		audio.Stop ();
+		GetComponent<AudioSource>().Stop ();
 	}
 
 	/// <summary>

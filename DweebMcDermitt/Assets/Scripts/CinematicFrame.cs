@@ -35,9 +35,9 @@ public class CinematicFrame : MonoBehaviour {
 		foreground = GameObject.Find ("fg");
 
 		//Set the textures
-		foreground.renderer.material.mainTexture = foregroundTexture;
-		midground.renderer.material.mainTexture = midgroundTexure;
-		background.renderer.material.mainTexture = backgroundTexure;
+		foreground.GetComponent<Renderer>().material.mainTexture = foregroundTexture;
+		midground.GetComponent<Renderer>().material.mainTexture = midgroundTexure;
+		background.GetComponent<Renderer>().material.mainTexture = backgroundTexure;
 	}
 	
 	// Update is called once per frame

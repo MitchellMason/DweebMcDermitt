@@ -160,7 +160,7 @@ namespace PosterGen
 						{
 							picture.transform.Translate(new Vector3(transform,options.rise,0));
 						}
-						FrameGen fg = picture.AddComponent("FrameGen") as FrameGen;
+						FrameGen fg = picture.AddComponent<FrameGen>() as FrameGen;
 						
 						fg.scaler = scaler;
 						fg.rotate = new Vector3(0,0,0);
@@ -177,7 +177,7 @@ namespace PosterGen
 							picture.transform.Translate(new Vector3(0,options.rise,transform));
 						}
 						picture.transform.Rotate(new Vector3(0,90,0));
-						FrameGen fg = picture.AddComponent("FrameGen") as FrameGen;
+						FrameGen fg = picture.AddComponent<FrameGen>() as FrameGen;
 						
 						fg.scaler = scaler;
 						fg.rotate = new Vector3(0,90,0);
@@ -192,7 +192,7 @@ namespace PosterGen
 						}
 						picture.transform.Rotate(new Vector3(-90,0,0));
 
-						FrameGen fg = picture.AddComponent("FrameGen") as FrameGen;
+						FrameGen fg = picture.AddComponent<FrameGen>() as FrameGen;
 
 						fg.scaler = scaler;
 						fg.rotate = new Vector3(-90,0,0);
