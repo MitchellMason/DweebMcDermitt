@@ -3,13 +3,15 @@ using System.Collections;
 
 public class WeightedButton : PositionTarget {
 	private bool pressed = false;
+	private float weightThreshold = 10.0f;
 	
 	void OnTriggerEnter(Collider col){
-		if(col.collider.tag.Equals("Player")){
+		pressed = false;
+		if(col.rigidbody != null && col.rigidbody.mass > weightThreshold){
 			pressed = true;
 		}
-		else{
-			pressed = false;
+		if(col.GetComponent<Player>() != null){
+			pressed = true;
 		}
 	}
 	
