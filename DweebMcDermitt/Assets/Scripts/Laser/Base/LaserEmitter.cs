@@ -45,9 +45,10 @@ public class LaserEmitter : MonoBehaviour {
 		//if we aren't firing the laser, call laserleave on the stored object, if it exists
 		else{
 			shooter.endFire();
+		}
 
-			timer += Time.deltaTime;
-			timer = Mathf.Min(timer, LaserUtils.LASER_DURATION);
+		if (Input.GetMouseButtonUp (0)) {
+			timer = LaserUtils.LASER_DURATION;
 		}
 	}
 }
