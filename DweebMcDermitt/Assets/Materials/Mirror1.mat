@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: lambert1
-  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: Mirror1
+  m_Shader: {fileID: 4800000, guid: b455db02a54abda45bb21eb04a5f2d99, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -79,7 +79,7 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _SpecGlossMap
+          name: _ReflectionTex
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -108,7 +108,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .481999993
+        second: .5
       data:
         first:
           name: _BumpScale
@@ -136,20 +136,16 @@ Material:
       data:
         first:
           name: _Metallic
-        second: .156000003
+        second: 0
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 0}
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Color
-        second: {r: .691573203, g: .188581303, b: .801470578, a: 1}
-      data:
-        first:
-          name: _SpecColor
-        second: {r: .397058845, g: .397058845, b: .397058845, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _EmissionColorUI
