@@ -11,17 +11,14 @@ public class WeightedButton : PositionTarget {
 		if(col.GetComponent<Rigidbody>() != null && col.GetComponent<Rigidbody>().mass > weightThreshold){
 			pressed = true;
 			buttonAudio.Play ();
-			Debug.Log ("weighted button on");
 		}
 		if(col.gameObject.tag.Equals("Player")){
 			pressed = true;
 			buttonAudio.Play ();
-			Debug.Log ("weighted button on");
 		}
 	}
 	
 	void OnTriggerExit(Collider col){
-		Debug.Log ("weighted button off");
 		pressed = false;
 	}
 	
