@@ -331,7 +331,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonAudio: {fileID: 8243700}
   engadgedColor: {r: 1, g: 0, b: 0, a: 0}
-  topPiece: {fileID: 184802}
+  topPiece: {fileID: 180348}
+  optionalTarget: {fileID: 0}
 --- !u!135 &13589102
 SphereCollider:
   m_ObjectHideFlags: 1
