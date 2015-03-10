@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TargetEnabledMultiplexor : MonoBehaviour{
 
-	[SerializeField] private InteractionTarget target;
+	[SerializeField] private TriggerTarget target;
 	[SerializeField] private Target[] conditions;
 	
 	// Update is called once per frame
@@ -11,9 +11,7 @@ public class TargetEnabledMultiplexor : MonoBehaviour{
 		for(int i=0; i<conditions.Length; i++){
 			if(!conditions[i].isTriggered()) return;
 		}
-		if(!target.isTriggered()){ 
-			target.onInteract();
-			Debug.Log("Firing event for " + target.name);
-		};
+		Debug.Log("Firing event for " + target.name);
+		target.onTrigger (this);
 	}
 }

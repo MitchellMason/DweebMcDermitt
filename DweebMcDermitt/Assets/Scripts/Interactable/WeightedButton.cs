@@ -2,28 +2,38 @@ using UnityEngine;
 using System.Collections;
 
 public class WeightedButton : PositionTarget {
+	[SerializeField] private AudioSource buttonAudio;
+	[SerializeField] private Color engadgedColor;
+	[SerializeField] GameObject topPiece;
+	[SerializeField] TriggerTarget optionalTarget;
 	private bool pressed = false;
 	private float weightThreshold = 10.0f;
-	[SerializeField] private AudioSource buttonAudio;
-	
+	private Color swap;
+
+	void Start(){
+		swap = topPiece.GetComponent<MeshRenderer> ().material.color;
+	}
+
 	void OnTriggerEnter(Collider col){
 		pressed = false;
-		if(col.GetComponent<Rigidbody>() != null && col.GetComponent<Rigidbody>().mass > weightThreshold){
+		if((col.GetComponent<Rigidbody>() != null && col.GetComponent<Rigidbody>().mass > weightThreshold) 
+		   		|| col.gameObject.tag.Equals("Player")){
 			pressed = true;
 			buttonAudio.Play ();
-		}
-		if(col.gameObject.tag.Equals("Player")){
-			pressed = true;
-			buttonAudio.Play ();
+			if(optionalTarget != null) 
+				optionalTarget.onTrigger(this);
+			topPiece.GetComponent<MeshRenderer>().material.color = engadgedColor;
+			return;
 		}
 	}
 	
 	void OnTriggerExit(Collider col){
+		topPiece.GetComponent<MeshRenderer>().material.color = swap;
 		pressed = false;
 	}
 	
 	override public bool isTriggered(){
-		Debug.Log (this.gameObject.name + " is " + pressed);
+		//Debug.Log (this.gameObject.name + " is " + pressed);
 		return pressed;
 	}
 	

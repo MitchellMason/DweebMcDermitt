@@ -3,31 +3,22 @@ using System.Collections;
 
 public class Door : TriggerTarget {
 	
-	Animation anim;
+	[SerializeField] Animation anim;
 	bool hasAnimated = false;
-	string animationOpenDoor = "Take 001";
-	string animationCloseDoor = "";
-	
+
 	void Start(){
-		anim = this.GetComponent<Animation>();
+		anim.wrapMode = WrapMode.ClampForever;
 	}
 
-	void Update() {
-		if (!hasAnimated) {
-			hasAnimated = !hasAnimated;
-		}
-	}
-	
 	override public void onTrigger(MonoBehaviour t) {
+		Debug.Log ("Playing");
 		if (!hasAnimated) {
-			this.PlayAnimation (animationOpenDoor);
+			anim.Play (AnimationPlayMode.Stop);
+			hasAnimated = true;
 		}
-		//else {
-		//this.PlayAnimation (animationCloseDoor);
-		//}
-	}
-
-	public void PlayAnimation(string s) {
-		anim.Blend(s);
+		else{
+			//reverse the animation
+			hasAnimated = false;
+		}
 	}
 }
