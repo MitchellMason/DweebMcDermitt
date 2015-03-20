@@ -1,8 +1,9 @@
+
 #if UNITY_EDITOR
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using ConstructiveSolidGeometry;
+using System.Xml;
 
 namespace LevelEditor
 {
@@ -10,173 +11,84 @@ namespace LevelEditor
 	{
 		public float gfloor = 0.0f, gceil = 3.0f;
 		public MeshCollider meshCollider;
+		public int type = 0;
 		public void BuildMesh()
 		{
-			int count = 0;
-			CSG s = new CSG();
-			bool init = false;
-			List<SubMaterial> subs = new List<SubMaterial> ();
-			for (int j = 0; j < transform.childCount; ++j)
-			{
-				GameObject gobj1 = transform.GetChild (j).gameObject;
-
-				if (gobj1.GetComponent<PolyMesh>() == null)
-					continue;
-				
-				PolyMesh smesh = gobj1.GetComponent<PolyMesh>();
-				if (!init)
-				{
-					smesh.matindex = count++;
-					subs.Add(smesh.getSubMat());
-					s = smesh.getSub().getSolid();
-					init = true;
-				}
-				else
-				{
-					smesh.matindex = count++;
-					subs.Add(smesh.getSubMat());
-					CSG s2 = smesh.getSub().getSolid();
-					var tmp = s.union(s2);
-					s = tmp;
-				}
-				for (int i = 0; i < gobj1.transform.childCount; ++i)
-				{
-					GameObject gobj = gobj1.transform.GetChild (i).gameObject;
-					if (gobj.GetComponent<PolyAdjust>() != null)
-					{
-						PolyAdjust adj = gobj.GetComponent<PolyAdjust>();
-						
-						subs.Add(adj.getSubMat());
-						CSG s2 = adj.getSub().getSolid();
-						if (adj.addMode == 0)
-						{
-							var tmp = s.subtract(s2);//modeller.getDifference();
-							s = tmp;
-						}
-						else if (adj.addMode == 1)
-						{
-							var tmp = s.union(s2);//modeller.getUnion();
-							s = tmp;
-						}
-						else if (adj.addMode == 2)
-						{
-							var tmp = s.intersect(s2);
-							s = s.subtract(tmp);
-							tmp.setZone(adj.matindex);
-							s = s.subtract(tmp);
-							s = s.union(tmp);
-						}
-					}
-				}
-			}
+			Clean ();
+			var meshes = new List<PolyMesh> ();
 			for (int i = 0; i < transform.childCount; ++i)
 			{
-				GameObject gobj = transform.GetChild (i).gameObject;
-				if (gobj.GetComponent<PolyAdjust>() != null)
+				if (transform.GetChild(i).GetComponent<PolyMesh>() != null)
 				{
-					PolyAdjust adj = gobj.GetComponent<PolyAdjust>();
-					adj.matindex = count++;
-					subs.Add(adj.getSubMat());
-					CSG s2 = adj.getSub().getSolid();
-					if (adj.addMode == 0)
-					{
-						var tmp = s.subtract(s2);//modeller.getDifference();
-						s = tmp;
-					}
-					else if (adj.addMode == 1)
-					{
-						var tmp = s.union(s2);//modeller.getUnion();
-						s = tmp;
-					}
-					else if (adj.addMode == 2)
-					{
-						var tmp = s2.intersect(s);
-						//s = s.subtract (tmp);
-						s = s.overwrite(tmp, adj.matindex);
-						//s = s.subtract(tmp);
-						//s = s.union(tmp);
-					}
+					meshes.Add(transform.GetChild(i).GetComponent<PolyMesh>());
 				}
 			}
-			List<Vector3> vertices = new List<Vector3>();
-			SubMesh sub = new SubMesh (s);
-			vertices = sub.verts;
-			//Find the mesh (create it if it doesn't exist)
-			//var meshRenderer = GetComponent<MeshRenderer> ();
-			//var meshFilter = GetComponent<MeshFilter>();
-			var mesh = new Mesh ();
-			mesh.name = "RoomRender";
-			//Update the mesh
-			mesh.Clear();
-			mesh.vertices = vertices.ToArray();
-
-			//mesh.colors = colors;
-			//mesh.uv = sub.uvs.ToArray();
-			int[] ind = sub.inds.ToArray();
-			PolyUtils.revAr(ind);
-			mesh.triangles = ind;
-			//mesh.subMeshCount = subs.Count;
-			//Material[] sharedMats = new Material[subs.Count];
-			List<int> contains = new List<int>(ind);
-			for (int i = 0; i < subs.Count; ++i)
+			for (int i = 0; i < meshes.Count; ++i)
 			{
-				List<int> subinds = new List<int>();
-				for (int j = 0; j < ind.Length; ++j)
+				meshes[i].Clean();
+			}
+			
+			Mesh m = GetComponent<MeshFilter> ().sharedMesh;
+			if (m == null)
+				m = new Mesh();
+			m.name = "Mesh";
+			m.Clear ();
+			for (int i = 0; i < meshes.Count; ++i)
+			{
+				if (meshes[i].transform.parent == transform)
+					meshes[i].Construct();
+			}
+			List<GameObject> gobjs = new List<GameObject>();
+			List<CsgOperation.ECsgOperation> addModes = new List<CsgOperation.ECsgOperation>();
+			for (int i = 0; i < meshes.Count; ++i)
+			{
+				//if (meshes[i].transform.parent == transform)
 				{
-					int index = ind[j];
-					if ((int)Mathf.Round(sub.zones[index]) == i)
-					{
-						subinds.Add(index);
-						contains.Remove(index);
-					}
+				gobjs.Add(meshes[i].gameObject);
+				addModes.Add(meshes[i].getAddMode());
 				}
-				//mesh.SetIndices(subinds.ToArray(), MeshTopology.Triangles, i);
-				//sharedMats[i] = subs[i].mat;
-				subs[i].uvs = sub.uvs;
-				subs[i].verts = sub.verts;
-				subs[i].indices = subinds;
+			}
+			CSGObject csg = GetComponent<CSGObject> ();
+			if (csg == null)
+				csg = gameObject.AddComponent<CSGObject>();
 
-			}
-			for (int i = 0; i < contains.Count; ++i)
+			csg.PerformCSG (addModes, gobjs.ToArray());
+			//if (m != null)
 			{
-				Debug.Log(sub.zones[contains[i]]);
+				for (int i = 0; i < m.subMeshCount; ++i)
+				{
+					int[] spots = m.GetIndices(i);
+					PolyUtils.revAr (spots);
+					m.SetIndices(spots, MeshTopology.Triangles, i);
+				}
+				m.RecalculateBounds ();
+				m.RecalculateNormals ();
+				MeshUtils.calculateMeshTangents (m);
+				MeshCollider col = GetComponent<MeshCollider> ();
+				if (col == null)
+				{
+					col = gameObject.AddComponent<MeshCollider>();
+				}
+				col.sharedMesh = GetComponent<MeshFilter>().sharedMesh;
+				for (int i = 0; i < meshes.Count; ++i)
+				{
+					//if (meshes[i].transform.parent == transform)
+					meshes[i].Clean();
+				}
 			}
-			PolyRender[] renders = gameObject.GetComponentsInChildren<PolyRender> ();
-			for (int i = 0; i < renders.Length; ++i)
-			{
-				DestroyImmediate(renders[i].gameObject);
-			}
-			PolyRender.CreatePolyRender (gameObject, subs);
-			//meshRenderer.sharedMaterials = sharedMats;
-			mesh.RecalculateNormals();
-			mesh.Optimize();
-			//MeshUtils.calculateMeshTangents(mesh);
-			
-			if (meshCollider == null)
-			{
-				meshCollider = gameObject.AddComponent<MeshCollider>();
-			}
-			Mesh collider = meshCollider.sharedMesh;
-			if (collider == null)
-			{
-				collider = new Mesh();
-				collider.name = "PolySprite_Collider";
-			}
-			collider.vertices = mesh.vertices ;
-			collider.triangles = mesh.triangles ;
-			collider.RecalculateBounds();
-			collider.RecalculateNormals();
-			collider.Optimize();
-			meshCollider.sharedMesh = null;
-			meshCollider.sharedMesh = collider;
-			
-
-
+			UnityEditor.Unwrapping.GenerateSecondaryUVSet (m);
 		}
 		
 		public void BuildFinishedMesh()
 		{
-			BuildMesh ();
+			if (transform.parent == null)
+			{
+				BuildMesh ();
+			}
+			else
+			{
+				transform.parent.gameObject.GetComponent<PolyTree>().BuildFinishedMesh();
+			}
 		}
 		public void AddRoom()
 		{
@@ -184,27 +96,156 @@ namespace LevelEditor
 		}
 		public void AddAdj()
 		{
-			PolyAdjust.CreatePolyAdjust(gameObject);
 		}
-		public void Export(string fileName)
+		/*
+		public JSONClass Output()
 		{
-			List<string> lines = new List<string> ();
-			var meshFilter = GetComponent<MeshFilter>();
-			var mesh = meshFilter.sharedMesh;
-			Vector3[] verts = mesh.vertices;
-			for (int i = 0; i < verts.Length; ++i)
-			{
-				lines.Add("v " + verts[i].x + " " + verts[i].y + " " + verts[i].z);
-			}
-			int[] inds = mesh.triangles;
+			var output = new JSONClass();
+			output ["version"].AsFloat = 1.0f;
+			for (int i = 0; i < 3; ++i)
+				output ["PolyTree"]["Rotation"][-1].AsFloat = transform.localEulerAngles[i];
 			
-			for (int i = 0; i < inds.Length/3; ++i)
+			for (int i = 0; i < 3; ++i)
+				output ["PolyTree"]["Position"][-1].AsFloat = transform.localPosition[i];
+			for (int i = 0; i < transform.childCount; ++i)
 			{
-				int index = i*3;
-				lines.Add("f " + (inds[index]+1) + " " + (inds[index+1]+1) + " " + (inds[index+2]+1));
+				GameObject gobj = transform.GetChild(i).gameObject;
+				if (gobj.GetComponent<PolyMesh>() != null)
+				{
+					output["PolyTree"]["Children"][-1] = (gobj.GetComponent<PolyMesh>().Output());
+				}
 			}
+			return output;
+		}
+		*/
+		public string toStr(Vector3 input)
+		{
+			string str = "(";
+			float scale = 100000.0f;
+			input = input * scale;
+			str += Mathf.Round(input.x)/scale + ", ";
+			str += Mathf.Round(input.y)/scale + ", ";
+			str += Mathf.Round(input.z)/scale + ")";
+			return str;
+		}
+		public virtual void Clean()
+		{
+
+			MeshFilter m = GetComponent<MeshFilter> ();
+			if (m == null)
+				m = gameObject.AddComponent<MeshFilter>();
+
+			
+			MeshRenderer mr = gameObject.GetComponent<MeshRenderer> ();
+			if (mr == null)
+				mr = gameObject.AddComponent<MeshRenderer>();
+			var mesh = m.sharedMesh;
+			if (mesh == null)
+				mesh = new Mesh();
+			else
+			{
+				mesh.Clear ();
+				mesh = new Mesh();
+			}
+			mesh.name = "Mesh";
+			m.sharedMesh = mesh;
+			m.sharedMesh.name = "Mesh";
+			CSGObject csg = GetComponent<CSGObject> ();
+			if (csg == null)
+				csg = gameObject.AddComponent<CSGObject>();
+		}
+		public virtual XmlElement Output(XmlDocument xml)
+		{
+			XmlElement element = xml.CreateElement("PolyTree");
+			element.SetAttribute ("rotate", toStr(transform.localRotation.eulerAngles));
+			element.SetAttribute ("translate", toStr(transform.localPosition));
+			
+			//var meshes = new List<PolyMesh> ();//gameObject.GetComponentsInChildren<PolyMesh> ();
+			for (int i = 0; i < transform.childCount; ++i)
+			{
+				if (transform.GetChild(i).GetComponent<PolyMesh>() != null)
+				{
+					element.AppendChild(transform.GetChild(i).GetComponent<PolyMesh>().Output(xml));
+				}
+			}
+			return element;
+		}
+		public static Vector3 strV3(string blockDataString) {
+			//gets and returns the vector3 from a blockDataString
+			string returnstring;
+			var startChar = 0;
+			
+			returnstring = blockDataString;
+			//Debug.Log (returnstring);
+			
+			startChar = 1;
+			var endChar = returnstring.IndexOf(",");
+			var lastEnd = endChar;
+			var returnx = System.Convert.ToDecimal(returnstring.Substring(startChar,endChar-1));
+			
+			startChar = lastEnd+1;
+			endChar = returnstring.IndexOf(",", startChar);
+			lastEnd = endChar;
+			var returny = System.Convert.ToDecimal(returnstring.Substring(startChar,endChar-startChar));
+			
+			startChar = lastEnd+1;
+			endChar = returnstring.Length-startChar;
+			var returnz = System.Convert.ToDecimal(returnstring.Substring(startChar,endChar-1));
+			
+			//print(returnx + "  " + returny + "  " + returnz);
+			
+			var returnVector3 = new Vector3((float)returnx,(float)returny,(float)returnz);
+			
+			return returnVector3;
+		}
+
+		public virtual void Import(XmlNode n)
+		{
+			transform.localEulerAngles = strV3(n.Attributes [0].Value);
+			transform.localPosition = strV3(n.Attributes [1].Value);
+			//Debug.Log (transform.localPosition);
+			foreach(XmlNode child in n.ChildNodes)
+			{
+				if (child.Name == "PolyMesh")
+				{
+					var obj = new GameObject("PolyMesh");
+					obj.transform.parent = transform;
+					
+					var polyMesh = obj.AddComponent<PolyMesh>();
+					polyMesh.Import(child);
+				}
+			}
+			BuildFinishedMesh ();
+		}
+		public virtual void Export(string fileName)
+		{
 			string path = System.IO.Path.GetFullPath(fileName);
-			System.IO.File.WriteAllLines(fileName, lines.ToArray());
+			XmlDocument xml = new XmlDocument();
+			xml.AppendChild(Output(xml));
+			string str = xml.OuterXml;
+			str = str.Replace ("><", ">\n<");
+
+			string[] lines = str.Split ('\n');
+			int indents = 0;
+			for (int i = 0; i < lines.Length; ++i)
+			{
+				int counter = indents;
+				if (lines[i].StartsWith("</"))
+				{
+					--indents;
+					--counter;
+				}
+				else if (lines[i].StartsWith("<"))
+					++indents;
+				if (lines[i].EndsWith("/>"))
+					--indents;
+				for (int j = 0; j < counter; ++j)
+				{
+					lines[i] = "\t" + lines[i];
+				}
+			}
+
+			System.IO.File.WriteAllLines(path, lines);
 			Debug.Log ("File written to " + path);
 		}
 	}

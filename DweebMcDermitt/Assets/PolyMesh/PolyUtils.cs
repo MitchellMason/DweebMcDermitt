@@ -1,11 +1,10 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using ConstructiveSolidGeometry;
 using Poly2Tri;
-
 namespace LevelEditor
 {
+	/*
 	using Path = List<Vector2>;
 	using Paths = List<List<Vector2>>;
 
@@ -32,125 +31,6 @@ namespace LevelEditor
 		}
 		public bool hasNeighbor = false;
 	}
-	public class PlaneEdges
-	{
-		public float div = 1.0f;
-		public Vector3 b0, b1, n, offset;
-		public float dist = 0.0f;
-		public List<Poly> polys = new List<Poly>();
-		public UnityEngine.Plane p;
-		public PlaneEdges(){}
-		public PlaneEdges(Vector3 v0, Vector3 v1, Vector3 v2)
-		{
-			p = new UnityEngine.Plane (v0, v1, v2);
-			n = p.normal;
-			b0 = new Vector3 (0.0f, 1.0f, 0.0f).normalized; b1 = new Vector3 (0.0f, 0.0f, 1.0f).normalized;
-			if (Mathf.Abs(n.z) > 0.001f)
-			{
-				b0 = new Vector3(1.0f,0.0f,n.y/n.z).normalized;
-				b1 = new Vector3(0.0f,1.0f,n.x/n.z).normalized;
-			}
-			else if (Mathf.Abs(n.y) > 0.001f)
-			{
-				b0 = new Vector3 (1.0f, -n.x/n.y, 0.0f).normalized;
-				b1 = new Vector3 (0.0f, 0.0f, 1.0f).normalized;
-			}
-			else
-				n = new Vector3(Mathf.Sign(n.x),0.0f,0.0f);
-			dist = p.distance;
-			offset = n * p.distance;
-		}
-		public void RemoveDuplicates()
-		{
-			for (int i = 0; i < polys.Count; ++i)
-			{
-				Poly poly = polys[i];
-				for (int j = i+1; j < polys.Count; ++j)
-				{
-					Poly test = polys[j];
-					int matches = 0;
-					for (int l = 0; l < test.boundary.Count; ++l)
-					{
-						Vector3 testsam = test.boundary[l];
-						for (int m = 0; m < poly.boundary.Count; ++m)
-						{
-							Vector3 sample = poly.boundary[m];
-							if (Vector3.Distance(testsam, sample) < 0.01f)
-								++matches;
-						}
-					}
-					if (matches >= 3)
-					{
-						polys.RemoveAt(j);
-						--j;
-					}
-				}
-			}
-		}
-		public Paths polysToPaths()
-		{
-			Paths paths = new Paths ();
-			for (int i = 0; i < polys.Count; ++i)
-			{
-				Path path = new Path();
-				for (int j = 0; j < polys[i].boundary.Count/3; ++j)
-				{
-					int index = j * 3;
-					
-					List<Vector3> pts = new List<Vector3>();
-					for (int k = 0; k < 3; ++k)
-					{
-						//Vector3 pt = new Vector3(, trig.Points[j].Yf, 0.0f);
-						Vector3 pt = (polys[i].boundary[index+k]);
-						pts.Add(pt);
-					}
-
-					if (Vector3.Distance(Vector3.Cross(pts[2]-pts[0], pts[1]-pts[0]).normalized, n) > 0.0001f)
-					{
-						Vector3 temp = pts[0];
-						pts[0] = pts[1];
-						pts[1] = temp;
-					}
-					for (int k = 0; k < pts.Count; ++k)
-					{
-						Vector3 sam = pts[k];
-						Vector3 sam1 = sam + offset;
-						float u = Vector3.Dot(b0, sam1);
-						float v = Vector3.Dot(b1, sam1);
-						Vector3 sam2 = (u * b0 + v * b1);
-						path.Add(new Vector2(u,v));
-					}
-				}
-				paths.Add(path);
-			}
-			return paths;
-		}
-		public List<Vector3> pathsToPolys(Poly2Tri.Polygon poly)
-		{
-			List<Vector3> path = new List<Vector3> ();
-			for (int i = 0; i < poly.Triangles.Count; ++i)
-			{
-				DelaunayTriangle trig = poly.Triangles[i];
-				List<Vector3> pts = new List<Vector3>();
-				for (int j = 0; j < 3; ++j)
-				{
-					//Vector3 pt = new Vector3(, trig.Points[j].Yf, 0.0f);
-					Vector3 pt = (trig.Points[j].Xf * b0 + trig.Points[j].Yf * b1) - offset;
-
-
-					pts.Add(pt);
-				}
-				if (Vector3.Distance(Vector3.Cross(pts[1]-pts[0], pts[2]-pts[0]).normalized, n) > 0.0001f)
-				{
-					Vector3 temp = pts[0];
-					pts[0] = pts[1];
-					pts[1] = temp;
-				}
-				path.AddRange(pts);
-			}
-			return path;
-		}
-	}
 	public class SubMesh
 	{
 
@@ -159,10 +39,9 @@ namespace LevelEditor
 		public List<Vector2> uvs = new List<Vector2>();
 		public List<float> zones = new List<float>();
 		public List<int> inds = new List<int>();
-		List<PlaneEdges> planes = new List<PlaneEdges> ();
-		public CSG getSolid()
+		public CSGObject getSolid()
 		{
-			CSG s = new CSG ();
+			CSGObject s = new CSGObject ();
 			if (inds.Count <= 0)
 				return s;
 			//List<Vector3> pts = new List<Vector3> ();
@@ -206,7 +85,6 @@ namespace LevelEditor
 				m.normals = norms.ToArray();
 				m.colors = cols.ToArray();
 				m.uv = uvs.ToArray();
-				s = CSG.fromMeshNT(m);
 			}
 			return s;
 		}
@@ -228,15 +106,11 @@ namespace LevelEditor
 		public SubMesh()
 		{
 		}
-		public SubMesh(CSG s)
+		public SubMesh(CSGObject s)
 		{
 			Mesh m = s.toMesh ();
 			inds.AddRange(m.triangles);
 			//Point3d[] pts = s.getVertices ();
-			/*for (int i = 0; i < pts.Length; ++i)
-			{
-				verts.Add(new Vector3((float)pts[i].x,(float)pts[i].y,(float)pts[i].z));
-			}*/
 			verts.AddRange (m.vertices);
 			uvs.AddRange (m.uv);
 			for (int i = 0; i < m.vertexCount; ++i)
@@ -247,6 +121,7 @@ namespace LevelEditor
 		}
 
 	}
+*/
 	public static class PolyUtils
 	{
 		static bool intersects(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4) {
@@ -258,9 +133,8 @@ namespace LevelEditor
 			float alphaNumerator = b.y*c.x - b.x*c.y;
 			float alphaDenominator = a.y*b.x - a.x*b.y;
 			float betaNumerator  = a.x*c.y - a.y*c.x;
-			float betaDenominator  = alphaDenominator; /*2013/07/05, fix by Deniz*/
-
-			float epsilon = 0.00001f;
+			float betaDenominator  = alphaDenominator;
+			float epsilon = 0.0001f;
 
 			bool doIntersect = true;
 			
@@ -315,33 +189,79 @@ namespace LevelEditor
 			}
 			return true;
 		}
-
-		public static SubMesh makeSub(List<Vector3> points, float height, float floor)
+		
+		static float winding(List<Vector3> test)
+		{
+			float total = 0;
+			//(x2-x1)(y2+y1)
+			for (int i = 0; i < test.Count; ++i)
+			{
+				int i0 = i;
+				int i1 = (i+1)%test.Count;
+				Vector2 p0 = new Vector2(test[i0].x,test[i0].y);
+				Vector2 p1 = new Vector2(test[i1].x,test[i1].y);
+				total += (p1.x-p0.x)*(p1.y+p0.y);
+			}
+			return total;
+			
+		}
+		public static Mesh makeMesh(List<Vector3> points, float height, float floor, Transform transform)
 		{
 			if (!testPoints (points))
 			{
 				Debug.Log("Warning: Self-intersecting polygon detected.");
-				return new SubMesh();
+				return new Mesh();
 			}
 
-
+			Transform t = transform;
+			for (int i = 0; i < points.Count; ++i)
+			{
+				points[i] = t.localToWorldMatrix.MultiplyPoint(points[i]);
+			}
+			List<Vector3> npoints = new List<Vector3> ();
+			for (int i = 0; i < points.Count; ++i)
+			{
+				int ind0 = i;
+				int ind1 = (i+1)%points.Count;
+				int ind2 = (i+2)%points.Count;
+				Vector3 v0 = points[ind0];
+				Vector3 v1 = points[ind1];
+				Vector3 v2 = points[ind2];
+				Vector3 e0 = (v1-v0).normalized;
+				Vector3 e1 = (v2-v0).normalized;
+				if (Vector3.Distance(e0, e1) > 0.0001f)
+					npoints.Add(points[ind1]);
+			}
+			points = npoints;
 			float total = 0;
 			float perimeter = 0;
 			List<float> traverse = new List<float> ();
 			traverse.Add(0.0f);
 			for (int i = 0; i < points.Count; ++i)
 			{
-				Vector2 sample = points[i];
+				Vector3 sample = points[i];
 				int ind = (i+1)%points.Count;
-				total += (points[ind].x-sample.x) * (points[ind].y + sample.y);
-				perimeter += Vector2.Distance(points[ind], sample);
+				total += (points[ind].x-sample.x) * (points[ind].z + sample.z);
+				perimeter += Vector3.Distance(points[ind], sample);
 				traverse.Add(perimeter);
+				//Debug.Log(sample);
 			}
-			float scalingfact = (perimeter - Mathf.Floor(perimeter));
-			if (total < 0)
+			if (total > 0)
 			{
 				points.Reverse();
+				traverse.Clear();
+				perimeter = 0;
+				traverse.Add(0.0f);
+				for (int i = 0; i < points.Count; ++i)
+				{
+					Vector3 sample = points[i];
+					int ind = (i+1)%points.Count;
+					perimeter += Vector3.Distance(points[ind], sample);
+					traverse.Add(perimeter);
+					//Debug.Log(sample);
+				}
 			}
+			float scalingfact = (perimeter - Mathf.Floor(perimeter));
 			//var vertices = points.ToArray();
 			
 			List<Vector3> vertices = new List<Vector3> ();
@@ -351,12 +271,12 @@ namespace LevelEditor
 			List<Poly2Tri.PolygonPoint> _points = new List<Poly2Tri.PolygonPoint> ();
 			for (int i = 0; i < points.Count; ++i)
 			{
-				Vector2 sample = points[i];
-				_points.Add (new Poly2Tri.PolygonPoint(sample.x, sample.y));
-				vertices.Add (new Vector3(sample.x, sample.y, -height));
-				vertices.Add (new Vector3(sample.x, sample.y, floor));
-				uvs.Add(new Vector2(sample.x, sample.y));
-				uvs.Add(new Vector2(sample.x, sample.y));
+				Vector3 sample = points[i];
+				_points.Add (new Poly2Tri.PolygonPoint(sample.x, sample.z));
+				vertices.Add (new Vector3(sample.x,height, sample.z));
+				vertices.Add (new Vector3(sample.x,-floor, sample.z));
+				uvs.Add(new Vector2(sample.x, sample.z));
+				uvs.Add(new Vector2(sample.x, sample.z));
 				//uvs.Add (sample);
 				//uvs.Add (sample);
 			}
@@ -368,11 +288,11 @@ namespace LevelEditor
 			List<int> indices = new List<int> ();
 			for (int i = 0; i < trigs.Count; ++i)
 			{
-				for (int j = 2; j >= 0; --j)
+				for (int j = 0; j < 3; ++j)
 				{
 					Vector2 v = new Vector2(trigs[i].Points[j].Xf, trigs[i].Points[j].Yf);
 					
-					Vector3 vert = new Vector3(v.x, v.y, floor);
+					Vector3 vert = new Vector3(v.x, -floor, v.y);
 					for (int k = 0; k < vertices.Count; ++k)
 					{
 						if (Vector3.Distance(vertices[k], vert) < 0.0001f)
@@ -385,11 +305,11 @@ namespace LevelEditor
 			}
 			for (int i = 0; i < trigs.Count; ++i)
 			{
-				for (int j = 0; j < 3; ++j)
+				for (int j = 2; j >= 0; --j)
 				{
 					Vector2 v = new Vector2(trigs[i].Points[j].Xf, trigs[i].Points[j].Yf);
 					
-					Vector3 vert =new Vector3(v.x, v.y, -height);
+					Vector3 vert =new Vector3(v.x, height, v.y);
 					for (int k = 0; k < vertices.Count; ++k)
 					{
 						if (Vector3.Distance(vertices[k], vert) < 0.0001f)
@@ -404,15 +324,15 @@ namespace LevelEditor
 			{
 				int ind1 = (i+1)%points.Count;
 				Vector3[] v = {
-					new Vector3(points[i].x, points[i].y, floor),
-					new Vector3(points[i].x, points[i].y, -height),
-					new Vector3(points[ind1].x, points[ind1].y, floor),
-					new Vector3(points[ind1].x, points[ind1].y, -height)};
+					new Vector3(points[i].x,-floor, points[i].z),
+					new Vector3(points[i].x,height, points[i].z),
+					new Vector3(points[ind1].x,-floor, points[ind1].z),
+					new Vector3(points[ind1].x,height, points[ind1].z)};
 				Vector2[] u = {
-					new Vector2(traverse[i], floor),
-					new Vector2(traverse[i], -height),
-					new Vector2(traverse[i+1], floor),
-					new Vector2(traverse[i+1], -height)
+					new Vector2(traverse[i], -floor),
+					new Vector2(traverse[i], height),
+					new Vector2(traverse[i+1], -floor),
+					new Vector2(traverse[i+1], height)
 				};
 				//uvs.Add(new Vector2(curLen, 0.0f+floor));
 				//uvs.Add(new Vector2(curLen, 0.0f-height));
@@ -431,19 +351,16 @@ namespace LevelEditor
 					indices.Add (inds[j] + curind);
 				}
 			}
-			indices = revL (indices);			
-			SubMesh sub = new SubMesh ();
-			sub.inds = indices;
-			sub.verts = vertices;
-			sub.uvs = uvs;
-			return sub;
-		}
-
-		public static CSG reducePolys(CSG input)
-		{
-			SubMesh sub = new SubMesh(input);
-			//sub.Reduce ();
-			return sub.getSolid ();
+			indices = revL (indices);		
+			Mesh mesh = new Mesh ();
+			for (int i = 0; i < vertices.Count; ++i)
+			{
+				vertices[i] = t.worldToLocalMatrix.MultiplyPoint(vertices[i]);
+			}
+			mesh.vertices = vertices.ToArray();
+			mesh.uv = uvs.ToArray();
+			mesh.triangles = revL(indices).ToArray ();
+			return mesh;
 		}
 
 		public static List<int> revL(List<int> indices)

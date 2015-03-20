@@ -2,45 +2,66 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using ConstructiveSolidGeometry;
+using System.Xml;
 
 namespace LevelEditor
 {
-	public class PolyMesh : MonoBehaviour
+	public class PolyMesh : PolyTree
 	{
 		public Shader ShaderToUse;
 		
 		public List<string> textureNames = new List<string>();
 		public List<Texture2D> texturesToUse = new List<Texture2D>();
-
+		public Mesh mesh;
 		public List<Vector3> keyPoints = new List<Vector3>();
 		public float height = 3;
 		public float floor = 0;
 		public float zIndex = 0;
-		public MeshCollider meshCollider;
-		public float colliderDepth = 1;
-		public bool buildColliderEdges = true;
-		public bool buildColliderFront;
-		public Vector2 uvPosition;
-		public float uvScale = 1;
 		public int matindex = 0;
-		public float uvRotation;
-		
+		public int addMode = 0;
+
 		static public void CreatePolyMesh(GameObject parent)
 		{
-			var obj = new GameObject("PolyMesh");
+			var obj = new GameObject("PolyMesh", typeof(MeshFilter), typeof(MeshRenderer));
+			UnityEditor.Undo.RegisterCreatedObjectUndo(obj, "Created PolyMesh");
 			obj.transform.parent = parent.transform;
 			obj.transform.localPosition = new Vector3 (0,0,0);
 			obj.transform.localRotation = Quaternion.identity;
 			var polyMesh = obj.AddComponent<PolyMesh>();
 			polyMesh.CreateSquare (0.5f);
 		}
+		public PolyMesh()
+		{
+		}
+		public override void Clean()
+		{
+			MeshFilter m = gameObject.GetComponent<MeshFilter> ();
+			if (m == null)
+				m = gameObject.AddComponent<MeshFilter>();
+			MeshRenderer mr = gameObject.GetComponent<MeshRenderer> ();
+			if (mr == null)
+				mr = gameObject.AddComponent<MeshRenderer>();
+			mr.enabled = false;
+			mesh = m.sharedMesh;
+			if (mesh != null)
+				mesh.Clear ();
+			m.sharedMesh = mesh;
+			
+			CSGObject csg = gameObject.GetComponent<CSGObject> ();
+			if (csg == null)
+				csg = gameObject.AddComponent<CSGObject>();
+			if (csg.faces != null)
+			{
+				csg.faces.Clear ();
+				csg.rootNode = new BspNode ();
+			}
+		}
 
 		public SubMaterial getSubMat()
 		{
 			if (ShaderToUse == null)
 			{
-				ShaderToUse = Shader.Find("Bumped Diffuse");
+				ShaderToUse = Shader.Find("Legacy Shaders/Bumped Diffuse");
 				Material mat = new Material(ShaderToUse);
 				textureNames = MeshUtils.getTextures(mat);
 				texturesToUse = new List<Texture2D>();
@@ -56,8 +77,8 @@ namespace LevelEditor
 		public void CreateSquare(float size)
 		{
 			keyPoints.AddRange(new Vector3[] { new Vector3(size, size), new Vector3(size, -size), new Vector3(-size, -size), new Vector3(-size, size)} );
-			
-			BuildFinishedMesh();
+			type = 1;
+			//BuildFinishedMesh();
 		}
 		public List<Vector3> GetEdgePoints()
 		{
@@ -65,56 +86,193 @@ namespace LevelEditor
 			var points = new List<Vector3>();
 			for (int i = 0; i < keyPoints.Count; i++)
 			{
-				points.Add(transform.parent.InverseTransformPoint(transform.TransformPoint(keyPoints[i])));
+				points.Add(keyPoints[i]);
 			}
 			return points;
 		}
 
-
-		public SubMesh getSub()
+		public void Construct()
 		{
+			Clean ();
+			CSGObject csg = GetComponent<CSGObject> ();
+			if (csg == null)
+				csg = gameObject.AddComponent<CSGObject>();
 			
-			var points = GetEdgePoints();
-			SubMesh sub = PolyUtils.makeSub (points, height, floor);
-			for (int i = 0; i < sub.verts.Count; ++i)
+			csg.trans = transform.parent;
+
+			MeshFilter m = gameObject.GetComponent<MeshFilter> ();
+			if (m == null)
+				m = gameObject.AddComponent<MeshFilter>();
+			
+			MeshRenderer mr = gameObject.GetComponent<MeshRenderer> ();
+			if (mr == null)
+				mr = gameObject.AddComponent<MeshRenderer>();
+			mr.sharedMaterial = getSubMat ().mat;
+			mesh = m.sharedMesh;
+			if (mesh == null)
+				mesh = new Mesh();
+			mesh.name = "Mesh";
+			mesh.Clear ();
+			var meshes = new List<PolyMesh> ();//gameObject.GetComponentsInChildren<PolyMesh> ();
+			for (int i = 0; i < transform.childCount; ++i)
 			{
-				sub.zones.Add(matindex);
+				if (transform.GetChild(i).GetComponent<PolyMesh>() != null && transform.GetChild(i).parent == transform)
+				{
+					meshes.Add(transform.GetChild(i).GetComponent<PolyMesh>());
+				}
 			}
-			return sub;
+			for (int i = 0; i < meshes.Count; ++i)
+			{
+				if (meshes[i].transform.parent == transform)
+					meshes[i].Clean();
+			}
+			for (int i = 0; i < meshes.Count; ++i)
+			{
+				if (meshes[i].transform.parent == transform)
+					meshes[i].Construct();
+			}
+			List<GameObject> gobjs = new List<GameObject>();
+			List<CsgOperation.ECsgOperation> addModes = new List<CsgOperation.ECsgOperation>();
+			for (int i = 0; i < meshes.Count; ++i)
+			{
+				if (meshes[i].transform.parent == transform)
+				{
+					gobjs.Add(meshes[i].gameObject);
+					addModes.Add(meshes[i].getAddMode());
+				}
+			}
+			mesh = PolyUtils.makeMesh (GetEdgePoints (), height, floor, transform);
+			mesh.RecalculateNormals ();
+			MeshUtils.calculateMeshTangents (mesh);
+			m.sharedMesh = mesh;
+			if (gobjs.Count > 0)
+				csg.PerformCSGDef (addModes, gobjs.ToArray());
+			for (int i = 0; i < meshes.Count; ++i)
+			{
+				if (meshes[i].transform.parent == transform)
+					meshes[i].Clean();
+			}
+
+
+		}
+		public CsgOperation.ECsgOperation getAddMode()
+		{
+			switch( addMode )
+			{
+			
+				case 0:
+				return CsgOperation.ECsgOperation.CsgOper_Additive;
+				case 1:
+				return CsgOperation.ECsgOperation.CsgOper_Subtractive;
+				//case 2:
+				//	return CsgOperation.ECsgOperation.CsgOper_Intersect;
+			}
+			return CsgOperation.ECsgOperation.CsgOper_Additive;
 		}
 
 		
-		public void BuildFinishedMesh()
+		public override XmlElement Output(XmlDocument xml)
 		{
-
-			GameObject parent = transform.parent.gameObject;
-			if (parent.GetComponents<PolyTree>().Length > 0)
+			XmlElement element = xml.CreateElement("PolyMesh");
+			element.SetAttribute ("rotate", toStr(transform.localRotation.eulerAngles));
+			element.SetAttribute ("translate", toStr(transform.localPosition));
+			element.SetAttribute ("add", addMode.ToString ());
+			element.SetAttribute("height", height.ToString());
+			element.SetAttribute("floor", floor.ToString());
+			XmlElement shad = xml.CreateElement ("Material");
+			shad.SetAttribute ("shader", ShaderToUse.name);
+			for (int i = 0; i < textureNames.Count; ++i)
 			{
-				parent.GetComponent<PolyTree>().BuildFinishedMesh();
+				string path = UnityEditor.AssetDatabase.GetAssetPath(texturesToUse[i]);
+				XmlElement texnode = xml.CreateElement("Texture");
+				texnode.SetAttribute("name", textureNames[i]);
+				texnode.SetAttribute("path", path);
+				shad.AppendChild(texnode);
 			}
+			element.AppendChild (shad);
 
+			XmlElement points = xml.CreateElement ("KeyPoints");
+			
+			for (int i = 0; i < keyPoints.Count; ++i)
+			{
+				Vector3 pt = keyPoints[i];
+				
+				XmlElement keypt = xml.CreateElement("Point");
+				keypt.SetAttribute("value",toStr(pt));
+				points.AppendChild(keypt);
+			}
+			element.AppendChild (points);
+			for (int i = 0; i < transform.childCount; ++i)
+			{
+				if (transform.GetChild(i).GetComponent<PolyMesh>() != null)
+				{
+					element.AppendChild(transform.GetChild(i).GetComponent<PolyMesh>().Output(xml));
+				}
+			}
+			return element;
 		}
-		void UpdateCollider(List<Vector3> points, List<int> tris)
+		public override void Import(XmlNode n)
 		{
-			if (meshCollider == null)
-			{
-				meshCollider = gameObject.AddComponent<MeshCollider>();
-			}
-			Mesh collider = meshCollider.sharedMesh;
-			if (collider == null)
-			{
-				collider = new Mesh();
-				collider.name = "PolySprite_Collider";
-			}
-			collider.vertices = points.ToArray ();
-			collider.triangles = tris.ToArray ();
-			collider.RecalculateBounds();
-			collider.RecalculateNormals();
-			collider.Optimize();
-			meshCollider.sharedMesh = null;
-			meshCollider.sharedMesh = collider;
+			transform.localEulerAngles = strV3(n.Attributes [0].Value);
+			transform.localPosition = strV3(n.Attributes [1].Value);
+			addMode = int.Parse(n.Attributes [2].Value);
+			height = float.Parse(n.Attributes [3].Value);
+			floor = float.Parse(n.Attributes [4].Value);
+			XmlNode keypts = n.LastChild;
 
+			if (keypts.Name != "KeyPoints")
+			{
+				foreach(XmlNode child in n.ChildNodes)
+				{
+					if (child.Name == "KeyPoints")
+					{
+						keypts = child;
+						break;
+					}
+				}
+			}
+			
+			foreach(XmlNode child in keypts.ChildNodes)
+			{
+				if (child.Name == "Point")
+					keyPoints.Add(strV3(child.Attributes[0].Value));
+			}
+			XmlNode shad = n.FirstChild;
+			if (shad.Name != "Material")
+			{
+				foreach(XmlNode child in n.ChildNodes)
+				{
+					if (child.Name == "Material")
+					{
+						shad = child;
+						break;
+					}
+				}
+			}
+			ShaderToUse = Shader.Find (shad.Attributes [0].Value);
+			
+			foreach(XmlNode child in shad.ChildNodes)
+			{
+				textureNames.Add(child.Attributes[0].Value);
 
+				Texture2D tex = Resources.LoadAssetAtPath(child.Attributes[1].Value, typeof(Texture2D)) as Texture2D;
+				if (tex != null)
+				texturesToUse.Add(tex);
+				else
+					texturesToUse.Add(new Texture2D(1,1));
+			}
+			
+			foreach(XmlNode child in n.ChildNodes)
+			{
+				if (child.Name == "PolyMesh")
+				{
+					var obj = new GameObject("PolyMesh");
+					obj.transform.parent = transform;
+					
+					var polyMesh = obj.AddComponent<PolyMesh>();
+					polyMesh.Import(child);
+				}
+			}
 		}
 
 	}

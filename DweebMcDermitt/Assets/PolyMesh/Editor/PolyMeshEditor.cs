@@ -88,7 +88,7 @@ namespace LevelEditor
 					polyMesh.height = EditorGUILayout.FloatField("Height", polyMesh.height);
 					polyMesh.floor = EditorGUILayout.FloatField("Floor", polyMesh.floor);
 					polyMesh.zIndex = EditorGUILayout.FloatField("Z-Index", polyMesh.zIndex);
-					polyMesh.zIndex = EditorGUILayout.FloatField("Z-Index", polyMesh.zIndex);
+					polyMesh.addMode = EditorGUILayout.IntField("AddMode", polyMesh.addMode);
 					
 					if (polyMesh.ShaderToUse == null)
 					{
@@ -130,12 +130,9 @@ namespace LevelEditor
 						polyMesh.texturesToUse[i] = EditorGUILayout.ObjectField(polyMesh.texturesToUse[i], typeof(Texture2D), true) as Texture2D;
 					}
 					EditorGUILayout.Space();
-					if (GUILayout.Button("Add PolyAdjust"))
+					if (GUILayout.Button("Add Room"))
 					{
-						
-						GameObject obj = new GameObject("Adjustor", typeof(MeshFilter), typeof(MeshRenderer));
-						var polyAdjust = obj.AddComponent<PolyAdjust>();
-						polyAdjust.CreateSquare(0.5f, polyMesh.transform);
+						polyMesh.AddRoom();
 					}
 					EditorGUILayout.Space();
 					if (GUILayout.Button("Build Mesh"))
