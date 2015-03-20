@@ -3,20 +3,38 @@ using System.Collections;
 
 public class Prism : LaserTarget {
 
-	[SerializeField] private LaserTarget t1;
-	[SerializeField] private LaserTarget t2;
-
+	LaserShooter lShooter;
+	LaserShooter rShooter;
+	
 	override public void onLaserShot (LaserHitInfo laserHitInfo){
-		t1.onLaserShot (laserHitInfo);
-		t2.onLaserShot (laserHitInfo);
+		RayCastHitInfo hit;
+		Vector3 direction = laserHitInfo.EmitterPosition - laserHitInfo.hitPoint;
+		
 	}
 	override public void onLaserStay(LaserHitInfo laserHitInfo){
-		t1.onLaserStay(laserHitInfo);
-		t2.onLaserStay(laserHitInfo);
+		
 	}
 	override public void onLaserLeave(){
-		t1.onLaserLeave();
-		t2.onLaserLeave();
+		
+	}
+	
+	//Get the mesh positions of the new origins for the lasers.
+	private Vec3Tuple getNewOnMeshPosition(LaserHitInfo info){
+		
+	}
+	
+	//Get the directions for the lasers. 
+	private Vec3Tuple getNewLaserDirections(LaserHitInfo info){
+		
+	}
+	
+	private class Vec3Tuple{
+		public Vector3 left;
+		public Vector3 right;
+		public Vec3Tuple(Vector3 l, Vector3 r){
+			this.left = l;
+			this.right = r;
+		}
 	}
 	
 	//TODO
