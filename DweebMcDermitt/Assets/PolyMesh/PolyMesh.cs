@@ -93,7 +93,25 @@ namespace LevelEditor
 
 		public void Construct()
 		{
-			Clean ();
+			//Clean ();
+			var meshes = new List<PolyMesh> ();//gameObject.GetComponentsInChildren<PolyMesh> ();
+			for (int i = 0; i < transform.childCount; ++i)
+			{
+				if (transform.GetChild(i).GetComponent<PolyMesh>() != null && transform.GetChild(i).parent == transform)
+				{
+					meshes.Add(transform.GetChild(i).GetComponent<PolyMesh>());
+				}
+			}
+			for (int i = 0; i < meshes.Count; ++i)
+			{
+				if (meshes[i].transform.parent == transform)
+					meshes[i].Clean();
+			}
+			for (int i = 0; i < meshes.Count; ++i)
+			{
+				if (meshes[i].transform.parent == transform)
+					meshes[i].Construct();
+			}
 			CSGObject csg = GetComponent<CSGObject> ();
 			if (csg == null)
 				csg = gameObject.AddComponent<CSGObject>();
@@ -113,24 +131,6 @@ namespace LevelEditor
 				mesh = new Mesh();
 			mesh.name = "Mesh";
 			mesh.Clear ();
-			var meshes = new List<PolyMesh> ();//gameObject.GetComponentsInChildren<PolyMesh> ();
-			for (int i = 0; i < transform.childCount; ++i)
-			{
-				if (transform.GetChild(i).GetComponent<PolyMesh>() != null && transform.GetChild(i).parent == transform)
-				{
-					meshes.Add(transform.GetChild(i).GetComponent<PolyMesh>());
-				}
-			}
-			for (int i = 0; i < meshes.Count; ++i)
-			{
-				if (meshes[i].transform.parent == transform)
-					meshes[i].Clean();
-			}
-			for (int i = 0; i < meshes.Count; ++i)
-			{
-				if (meshes[i].transform.parent == transform)
-					meshes[i].Construct();
-			}
 			List<GameObject> gobjs = new List<GameObject>();
 			List<CsgOperation.ECsgOperation> addModes = new List<CsgOperation.ECsgOperation>();
 			for (int i = 0; i < meshes.Count; ++i)
@@ -164,8 +164,6 @@ namespace LevelEditor
 				return CsgOperation.ECsgOperation.CsgOper_Additive;
 				case 1:
 				return CsgOperation.ECsgOperation.CsgOper_Subtractive;
-				//case 2:
-				//	return CsgOperation.ECsgOperation.CsgOper_Intersect;
 			}
 			return CsgOperation.ECsgOperation.CsgOper_Additive;
 		}

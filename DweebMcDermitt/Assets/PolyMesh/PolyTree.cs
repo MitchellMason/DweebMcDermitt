@@ -97,27 +97,6 @@ namespace LevelEditor
 		public void AddAdj()
 		{
 		}
-		/*
-		public JSONClass Output()
-		{
-			var output = new JSONClass();
-			output ["version"].AsFloat = 1.0f;
-			for (int i = 0; i < 3; ++i)
-				output ["PolyTree"]["Rotation"][-1].AsFloat = transform.localEulerAngles[i];
-			
-			for (int i = 0; i < 3; ++i)
-				output ["PolyTree"]["Position"][-1].AsFloat = transform.localPosition[i];
-			for (int i = 0; i < transform.childCount; ++i)
-			{
-				GameObject gobj = transform.GetChild(i).gameObject;
-				if (gobj.GetComponent<PolyMesh>() != null)
-				{
-					output["PolyTree"]["Children"][-1] = (gobj.GetComponent<PolyMesh>().Output());
-				}
-			}
-			return output;
-		}
-		*/
 		public string toStr(Vector3 input)
 		{
 			string str = "(";
