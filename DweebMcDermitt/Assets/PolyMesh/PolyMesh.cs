@@ -28,7 +28,7 @@ namespace LevelEditor
 			obj.transform.localPosition = new Vector3 (0,0,0);
 			obj.transform.localRotation = Quaternion.identity;
 			var polyMesh = obj.AddComponent<PolyMesh>();
-			polyMesh.CreateSquare (0.5f);
+			polyMesh.CreateSquare (2.0f);
 		}
 		public PolyMesh()
 		{
@@ -76,7 +76,9 @@ namespace LevelEditor
 		}
 		public void CreateSquare(float size)
 		{
-			keyPoints.AddRange(new Vector3[] { new Vector3(size, size), new Vector3(size, -size), new Vector3(-size, -size), new Vector3(-size, size)} );
+			keyPoints.AddRange(new Vector3[] { new Vector3(size,0, size),
+				new Vector3(size,0, -size), new Vector3(-size,0, -size),
+				new Vector3(-size,0, size)} );
 			type = 1;
 			//BuildFinishedMesh();
 		}
@@ -86,9 +88,24 @@ namespace LevelEditor
 			var points = new List<Vector3>();
 			for (int i = 0; i < keyPoints.Count; i++)
 			{
-				points.Add(keyPoints[i]);
+				Vector3 transPt = (keyPoints[i]);
+				
+				points.Add(transPt);
 			}
 			return points;
+		}
+
+		public bool test()
+		{
+			
+			MeshFilter m = gameObject.GetComponent<MeshFilter> ();
+			if (m == null)
+				return false;
+			if (m.sharedMesh == null)
+				return false;
+			if (m.sharedMesh.triangles.Length == 0)
+				return false;
+			return true;
 		}
 
 		public void Construct()
@@ -116,7 +133,7 @@ namespace LevelEditor
 			if (csg == null)
 				csg = gameObject.AddComponent<CSGObject>();
 			
-			csg.trans = transform.parent;
+			csg.trans = transform;
 
 			MeshFilter m = gameObject.GetComponent<MeshFilter> ();
 			if (m == null)

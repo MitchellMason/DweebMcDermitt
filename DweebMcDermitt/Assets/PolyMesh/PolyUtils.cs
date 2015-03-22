@@ -165,7 +165,7 @@ namespace LevelEditor
 		{
 			List<Vector2> pts = new List<Vector2> ();
 			for (int i = 0; i < points.Count; ++i)
-				pts.Add(new Vector2(points[i].x, points[i].y));
+				pts.Add(new Vector2(points[i].x, points[i].z));
 			for (int i = 0; i < pts.Count; ++i)
 			{
 				for (int j = i+1; j < pts.Count; ++j)
@@ -198,8 +198,8 @@ namespace LevelEditor
 			{
 				int i0 = i;
 				int i1 = (i+1)%test.Count;
-				Vector2 p0 = new Vector2(test[i0].x,test[i0].y);
-				Vector2 p1 = new Vector2(test[i1].x,test[i1].y);
+				Vector2 p0 = new Vector2(test[i0].x,test[i0].z);
+				Vector2 p1 = new Vector2(test[i1].x,test[i1].z);
 				total += (p1.x-p0.x)*(p1.y+p0.y);
 			}
 			return total;
@@ -207,17 +207,18 @@ namespace LevelEditor
 		}
 		public static Mesh makeMesh(List<Vector3> points, float height, float floor, Transform transform)
 		{
+			Transform t = transform;
+			for (int i = 0; i < points.Count; ++i)
+			{
+				Vector3 npt = t.worldToLocalMatrix.MultiplyPoint(points[i]);
+			}
+
 			if (!testPoints (points))
 			{
 				Debug.Log("Warning: Self-intersecting polygon detected.");
 				return new Mesh();
 			}
 
-			Transform t = transform;
-			for (int i = 0; i < points.Count; ++i)
-			{
-				points[i] = t.localToWorldMatrix.MultiplyPoint(points[i]);
-			}
 			List<Vector3> npoints = new List<Vector3> ();
 			for (int i = 0; i < points.Count; ++i)
 			{
@@ -353,10 +354,6 @@ namespace LevelEditor
 			}
 			indices = revL (indices);		
 			Mesh mesh = new Mesh ();
-			for (int i = 0; i < vertices.Count; ++i)
-			{
-				vertices[i] = t.worldToLocalMatrix.MultiplyPoint(vertices[i]);
-			}
 			mesh.vertices = vertices.ToArray();
 			mesh.uv = uvs.ToArray();
 			mesh.triangles = revL(indices).ToArray ();

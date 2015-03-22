@@ -37,6 +37,11 @@ namespace LevelEditor
 			{
 				if (meshes[i].transform.parent == transform)
 					meshes[i].Construct();
+				if (!meshes[i].test())
+				{
+					meshes.RemoveAt(i);
+					--i;
+				}
 			}
 			List<GameObject> gobjs = new List<GameObject>();
 			List<CsgOperation.ECsgOperation> addModes = new List<CsgOperation.ECsgOperation>();
@@ -44,14 +49,15 @@ namespace LevelEditor
 			{
 				//if (meshes[i].transform.parent == transform)
 				{
-				gobjs.Add(meshes[i].gameObject);
-				addModes.Add(meshes[i].getAddMode());
+					gobjs.Add(meshes[i].gameObject);
+					addModes.Add(meshes[i].getAddMode());
 				}
 			}
 			CSGObject csg = GetComponent<CSGObject> ();
 			if (csg == null)
 				csg = gameObject.AddComponent<CSGObject>();
-
+			if (gobjs.Count <= 0)
+				return;
 			csg.PerformCSG (addModes, gobjs.ToArray());
 			//if (m != null)
 			{
