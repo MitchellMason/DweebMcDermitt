@@ -1,4 +1,4 @@
- using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Prism : LaserTarget {
@@ -7,7 +7,7 @@ public class Prism : LaserTarget {
 	LaserShooter rShooter;
 	
 	override public void onLaserShot (LaserHitInfo laserHitInfo){
-		RayCastHitInfo hit;
+		//RayCastHitInfo hit;
 		Vector3 direction = laserHitInfo.EmitterPosition - laserHitInfo.hitPoint;
 		
 	}
@@ -20,12 +20,12 @@ public class Prism : LaserTarget {
 	
 	//Get the mesh positions of the new origins for the lasers.
 	private Vec3Tuple getNewOnMeshPosition(LaserHitInfo info){
-		
+		return new Vec3Tuple (new Vector3(), new Vector3());
 	}
 	
 	//Get the directions for the lasers. 
 	private Vec3Tuple getNewLaserDirections(LaserHitInfo info){
-		
+		return new Vec3Tuple (new Vector3(), new Vector3());
 	}
 	
 	private class Vec3Tuple{

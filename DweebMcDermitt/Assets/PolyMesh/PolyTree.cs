@@ -39,6 +39,7 @@ namespace LevelEditor
 					meshes[i].Construct();
 				if (!meshes[i].test())
 				{
+					Debug.Log(i);
 					meshes.RemoveAt(i);
 					--i;
 				}

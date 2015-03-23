@@ -82,7 +82,7 @@ namespace LevelEditor
 				new Vector3(size,0, -size), new Vector3(-size,0, -size),
 				new Vector3(-size,0, size)} );
 			type = 1;
-			//BuildFinishedMesh();
+			BuildFinishedMesh();
 		}
 		public List<Vector3> GetEdgePoints()
 		{

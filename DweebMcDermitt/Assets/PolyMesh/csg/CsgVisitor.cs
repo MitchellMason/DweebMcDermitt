@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using System.Collections;
 
@@ -9,3 +10,4 @@ public interface CsgVisitor {
 	void ProcessSlave( CsgOperation inOperation, Face inFace, CsgOperation.EPolySide inSide, CsgOperation.OperationInfo info );
 	
 }
+#endif

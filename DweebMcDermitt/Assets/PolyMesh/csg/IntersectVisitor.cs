@@ -1,3 +1,5 @@
+#if UNITY_EDITOR
+
 using UnityEngine;
 using System.Collections;
 
@@ -41,3 +43,4 @@ public class IntersectVisitor : CsgVisitor {
 	}
 	
 }
+#endif

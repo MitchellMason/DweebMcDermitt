@@ -1,0 +1,119 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 525M    (ID=0xdec)
+    Vendor:   NVIDIA
+    VRAM:     971 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.172 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initialized touch support.
+Platform assembly: C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\System.Core.dll (this message is harmless)
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 176 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 224 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 128 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 56 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 128 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at OVRScreenFade.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
+  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
+  at OVRScreenFade.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+

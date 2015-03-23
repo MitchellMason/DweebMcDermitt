@@ -54,7 +54,7 @@ public class OVRMainMenu : MonoBehaviour
 	/// <summary>
 	/// The amount of time in seconds that it takes for the menu to fade in.
 	/// </summary>
-	public float 	FadeInTime    	= 2.0f;
+	public float 	FadeInTime    	= 0.0f;
 
 	/// <summary>
 	/// An optional texture that appears before the menu fades in.
