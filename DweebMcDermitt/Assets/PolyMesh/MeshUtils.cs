@@ -17,23 +17,6 @@ namespace LevelEditor
 {
 	public class MeshUtils{
 
-		public class HalfEdge
-		{
-			public int[] index = new int[2];
-			public int neighbor = -1;
-		}
-		public class Quad
-		{
-			public int[] edges = new int[4];
-			public Color[] colors = new Color[4];
-		}
-		public class QuadMesh
-		{
-			public List<Quad> quads;
-			public List<Vector3> vertices;
-			public List<HalfEdge> edges;
-		}
-
 		public static Mesh createWall(Vector2 scaler, List<Vector2> divides, string name)
 		{
 			int numdiv = divides.Count;
@@ -46,7 +29,6 @@ namespace LevelEditor
 			int countind = 0;
 			int countvert = 0;
 
-			HalfEdge[] edges = new HalfEdge[numdiv*4];
 			Vector3 [] points = new Vector3[numdiv * 4];
 
 			//floor

@@ -83,6 +83,7 @@ namespace LevelEditor
 				}
 			}
 			UnityEditor.Unwrapping.GenerateSecondaryUVSet (m);
+
 		}
 		
 		public void BuildFinishedMesh()
@@ -103,14 +104,19 @@ namespace LevelEditor
 		public void AddAdj()
 		{
 		}
-		public string toStr(Vector3 input)
+		public static string fStr(float input)
+		{
+			string test = input.ToString ("G16");
+			if (test.IndexOf("E") >= 0)
+				return input.ToString("F14");
+			return test;
+		}
+		public static string toStr(Vector3 input)
 		{
 			string str = "(";
-			float scale = 100000.0f;
-			input = input * scale;
-			str += Mathf.Round(input.x)/scale + ", ";
-			str += Mathf.Round(input.y)/scale + ", ";
-			str += Mathf.Round(input.z)/scale + ")";
+			str += fStr(input.x) + ", ";
+			str += fStr(input.y) + ", ";
+			str += fStr(input.z) + ")";
 			return str;
 		}
 		public virtual void Clean()

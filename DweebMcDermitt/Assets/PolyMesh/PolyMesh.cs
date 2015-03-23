@@ -13,12 +13,14 @@ namespace LevelEditor
 		public List<string> textureNames = new List<string>();
 		public List<Texture2D> texturesToUse = new List<Texture2D>();
 		public Mesh mesh;
+		public Mesh meshToUse;
 		public List<Vector3> keyPoints = new List<Vector3>();
 		public float height = 3;
 		public float floor = 0;
 		public float zIndex = 0;
 		public int matindex = 0;
 		public int addMode = 0;
+		public bool additive = true;
 
 		static public void CreatePolyMesh(GameObject parent)
 		{
@@ -61,7 +63,7 @@ namespace LevelEditor
 		{
 			if (ShaderToUse == null)
 			{
-				ShaderToUse = Shader.Find("Legacy Shaders/Bumped Diffuse");
+				ShaderToUse = Shader.Find("Standard");
 				Material mat = new Material(ShaderToUse);
 				textureNames = MeshUtils.getTextures(mat);
 				texturesToUse = new List<Texture2D>();
@@ -192,8 +194,8 @@ namespace LevelEditor
 			element.SetAttribute ("rotate", toStr(transform.localRotation.eulerAngles));
 			element.SetAttribute ("translate", toStr(transform.localPosition));
 			element.SetAttribute ("add", addMode.ToString ());
-			element.SetAttribute("height", height.ToString());
-			element.SetAttribute("floor", floor.ToString());
+			element.SetAttribute("height", fStr(height));
+			element.SetAttribute("floor", fStr(floor));
 			XmlElement shad = xml.CreateElement ("Material");
 			shad.SetAttribute ("shader", ShaderToUse.name);
 			for (int i = 0; i < textureNames.Count; ++i)
@@ -226,6 +228,7 @@ namespace LevelEditor
 			}
 			return element;
 		}
+
 		public override void Import(XmlNode n)
 		{
 			transform.localEulerAngles = strV3(n.Attributes [0].Value);
