@@ -16,7 +16,7 @@ Platform assembly: C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermit
 Loading C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\akemp1\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\main_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.172 seconds
+- Completed reload, in  0.275 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
@@ -48,9 +48,33 @@ The referenced script on this Behaviour is missing!
 
 The referenced script on this Behaviour is missing!
  
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
 (Filename:  Line: 1713)
 
-A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 176 bytes)
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
 Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
  
 (Filename:  Line: 1603)
@@ -59,11 +83,7 @@ The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1713)
 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1713)
-
-A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 224 bytes)
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
 Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
  
 (Filename:  Line: 1603)
@@ -72,7 +92,7 @@ The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1713)
 
-A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 128 bytes)
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
 Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
  
 (Filename:  Line: 1603)
@@ -90,11 +110,7 @@ The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1713)
 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1713)
-
-A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 128 bytes)
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
 Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
  
 (Filename:  Line: 1603)
@@ -103,6 +119,65 @@ The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1713)
 
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 488 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 488 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
 NullReferenceException
   at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
   at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
@@ -116,4 +191,66 @@ NullReferenceException
   at OVRScreenFade.Awake () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LaserShooter..ctor (UnityEngine.LineRenderer renderer) [0x00000] in <filename unknown>:0 
+  at LaserEmitter.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LaserShooter..ctor (UnityEngine.LineRenderer renderer) [0x00000] in <filename unknown>:0 
+  at Mirror.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LaserShooter..ctor (UnityEngine.LineRenderer renderer) [0x00000] in <filename unknown>:0 
+  at Mirror.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LaserShooter..ctor (UnityEngine.LineRenderer renderer) [0x00000] in <filename unknown>:0 
+  at Mirror.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LaserShooter..ctor (UnityEngine.LineRenderer renderer) [0x00000] in <filename unknown>:0 
+  at Mirror.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LaserShooter..ctor (UnityEngine.LineRenderer renderer) [0x00000] in <filename unknown>:0 
+  at Mirror.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LaserShooter..ctor (UnityEngine.LineRenderer renderer) [0x00000] in <filename unknown>:0 
+  at Mirror.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LaserShooter..ctor (UnityEngine.LineRenderer renderer) [0x00000] in <filename unknown>:0 
+  at Mirror.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LaserShooter..ctor (UnityEngine.LineRenderer renderer) [0x00000] in <filename unknown>:0 
+  at Mirror.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Looking for interaction targets
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Nothing close enough
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
