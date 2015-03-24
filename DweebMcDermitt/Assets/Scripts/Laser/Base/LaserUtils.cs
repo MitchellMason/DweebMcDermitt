@@ -25,6 +25,11 @@ public class LaserShooter{
 	
 	public LaserShooter(LineRenderer renderer){
 		lineRenderer = renderer;
+		Shader ShaderToUse = Shader.Find("Standard");
+		Material mat = new Material(ShaderToUse);
+		mat.color = new Color (1.0f, 0.0f, 0.0f, 0.9f);
+		lineRenderer.material = mat;
+		lineRenderer.useWorldSpace = true;
 		lineRenderer.castShadows = false;
 		lineRenderer.receiveShadows = false;
 		lineRenderer.SetVertexCount (2);

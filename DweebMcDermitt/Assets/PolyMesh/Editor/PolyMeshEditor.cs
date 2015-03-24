@@ -268,8 +268,8 @@ namespace LevelEditor
 					snap = gridSnap;
 					
 					//Update mouse position
-					screenMousePosition = new Vector3(e.mousePosition.x, Camera.current.pixelHeight - e.mousePosition.y);
-					var plane = new Plane(-polyMesh.transform.forward, polyMesh.transform.position);
+					screenMousePosition = new Vector3(e.mousePosition.x, Camera.current.pixelHeight - e.mousePosition.y,0.0f);
+					var plane = new Plane(-polyMesh.transform.up, polyMesh.transform.position);
 					var ray = Camera.current.ScreenPointToRay(screenMousePosition);
 					float hit;
 					if (plane.Raycast(ray, out hit))
@@ -461,8 +461,8 @@ namespace LevelEditor
 		{
 			Handles.color = Color.red;
 			var size = HandleUtility.GetHandleSize(Vector3.zero) * 0.1f;
-			Handles.DrawLine(new Vector3(-size, 0), new Vector3(size, 0));
-			Handles.DrawLine(new Vector3(0, -size), new Vector2(0, size));
+			Handles.DrawLine(new Vector3(-size,0, 0), new Vector3(size,0, 0));
+			Handles.DrawLine(new Vector3(0,0, -size), new Vector3(0,0, size));
 		}
 
 		void DrawKeyPoint(int index)
@@ -671,7 +671,7 @@ namespace LevelEditor
 		Vector3 Snap(Vector3 value)
 		{
 			value.x = Mathf.Round(value.x / snap) * snap;
-			value.y = Mathf.Round(value.y / snap) * snap;
+			value.z = Mathf.Round(value.z / snap) * snap;
 			return value;
 		}
 

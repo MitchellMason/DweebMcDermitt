@@ -13,12 +13,14 @@ namespace LevelEditor
 		public List<string> textureNames = new List<string>();
 		public List<Texture2D> texturesToUse = new List<Texture2D>();
 		public Mesh mesh;
+		public Mesh meshToUse;
 		public List<Vector3> keyPoints = new List<Vector3>();
 		public float height = 3;
 		public float floor = 0;
 		public float zIndex = 0;
 		public int matindex = 0;
 		public int addMode = 0;
+		public bool additive = true;
 
 		static public void CreatePolyMesh(GameObject parent)
 		{
@@ -28,7 +30,7 @@ namespace LevelEditor
 			obj.transform.localPosition = new Vector3 (0,0,0);
 			obj.transform.localRotation = Quaternion.identity;
 			var polyMesh = obj.AddComponent<PolyMesh>();
-			polyMesh.CreateSquare (0.5f);
+			polyMesh.CreateSquare (2.0f);
 		}
 		public PolyMesh()
 		{
@@ -61,7 +63,7 @@ namespace LevelEditor
 		{
 			if (ShaderToUse == null)
 			{
-				ShaderToUse = Shader.Find("Legacy Shaders/Bumped Diffuse");
+				ShaderToUse = Shader.Find("Standard");
 				Material mat = new Material(ShaderToUse);
 				textureNames = MeshUtils.getTextures(mat);
 				texturesToUse = new List<Texture2D>();
@@ -76,9 +78,11 @@ namespace LevelEditor
 		}
 		public void CreateSquare(float size)
 		{
-			keyPoints.AddRange(new Vector3[] { new Vector3(size, size), new Vector3(size, -size), new Vector3(-size, -size), new Vector3(-size, size)} );
+			keyPoints.AddRange(new Vector3[] { new Vector3(size,0, size),
+				new Vector3(size,0, -size), new Vector3(-size,0, -size),
+				new Vector3(-size,0, size)} );
 			type = 1;
-			//BuildFinishedMesh();
+			BuildFinishedMesh();
 		}
 		public List<Vector3> GetEdgePoints()
 		{
@@ -86,33 +90,29 @@ namespace LevelEditor
 			var points = new List<Vector3>();
 			for (int i = 0; i < keyPoints.Count; i++)
 			{
-				points.Add(keyPoints[i]);
+				Vector3 transPt = (keyPoints[i]);
+				
+				points.Add(transPt);
 			}
 			return points;
 		}
 
-		public void Construct()
+		public bool test()
 		{
-			Clean ();
-			CSGObject csg = GetComponent<CSGObject> ();
-			if (csg == null)
-				csg = gameObject.AddComponent<CSGObject>();
 			
-			csg.trans = transform.parent;
-
 			MeshFilter m = gameObject.GetComponent<MeshFilter> ();
 			if (m == null)
-				m = gameObject.AddComponent<MeshFilter>();
-			
-			MeshRenderer mr = gameObject.GetComponent<MeshRenderer> ();
-			if (mr == null)
-				mr = gameObject.AddComponent<MeshRenderer>();
-			mr.sharedMaterial = getSubMat ().mat;
-			mesh = m.sharedMesh;
-			if (mesh == null)
-				mesh = new Mesh();
-			mesh.name = "Mesh";
-			mesh.Clear ();
+				return false;
+			if (m.sharedMesh == null)
+				return false;
+			if (m.sharedMesh.triangles.Length == 0)
+				return false;
+			return true;
+		}
+
+		public void Construct()
+		{
+			//Clean ();
 			var meshes = new List<PolyMesh> ();//gameObject.GetComponentsInChildren<PolyMesh> ();
 			for (int i = 0; i < transform.childCount; ++i)
 			{
@@ -131,6 +131,25 @@ namespace LevelEditor
 				if (meshes[i].transform.parent == transform)
 					meshes[i].Construct();
 			}
+			CSGObject csg = GetComponent<CSGObject> ();
+			if (csg == null)
+				csg = gameObject.AddComponent<CSGObject>();
+			
+			csg.trans = transform;
+
+			MeshFilter m = gameObject.GetComponent<MeshFilter> ();
+			if (m == null)
+				m = gameObject.AddComponent<MeshFilter>();
+			
+			MeshRenderer mr = gameObject.GetComponent<MeshRenderer> ();
+			if (mr == null)
+				mr = gameObject.AddComponent<MeshRenderer>();
+			mr.sharedMaterial = getSubMat ().mat;
+			mesh = m.sharedMesh;
+			if (mesh == null)
+				mesh = new Mesh();
+			mesh.name = "Mesh";
+			mesh.Clear ();
 			List<GameObject> gobjs = new List<GameObject>();
 			List<CsgOperation.ECsgOperation> addModes = new List<CsgOperation.ECsgOperation>();
 			for (int i = 0; i < meshes.Count; ++i)
@@ -164,8 +183,6 @@ namespace LevelEditor
 				return CsgOperation.ECsgOperation.CsgOper_Additive;
 				case 1:
 				return CsgOperation.ECsgOperation.CsgOper_Subtractive;
-				//case 2:
-				//	return CsgOperation.ECsgOperation.CsgOper_Intersect;
 			}
 			return CsgOperation.ECsgOperation.CsgOper_Additive;
 		}
@@ -177,8 +194,8 @@ namespace LevelEditor
 			element.SetAttribute ("rotate", toStr(transform.localRotation.eulerAngles));
 			element.SetAttribute ("translate", toStr(transform.localPosition));
 			element.SetAttribute ("add", addMode.ToString ());
-			element.SetAttribute("height", height.ToString());
-			element.SetAttribute("floor", floor.ToString());
+			element.SetAttribute("height", fStr(height));
+			element.SetAttribute("floor", fStr(floor));
 			XmlElement shad = xml.CreateElement ("Material");
 			shad.SetAttribute ("shader", ShaderToUse.name);
 			for (int i = 0; i < textureNames.Count; ++i)
@@ -211,6 +228,7 @@ namespace LevelEditor
 			}
 			return element;
 		}
+
 		public override void Import(XmlNode n)
 		{
 			transform.localEulerAngles = strV3(n.Attributes [0].Value);

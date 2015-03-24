@@ -18,6 +18,10 @@ obj/
 *.user
 *.unityproj
 *.booproj
+# Added by Andrew - binies
+*.dll
+*.exe
+*.assets
 
 # ============ #
 # OS generated #
@@ -35,3 +39,4 @@ Thumbs.db
 # ================ #
 Build/
 /*.blend1
+

@@ -37,6 +37,12 @@ namespace LevelEditor
 			{
 				if (meshes[i].transform.parent == transform)
 					meshes[i].Construct();
+				if (!meshes[i].test())
+				{
+					Debug.Log(i);
+					meshes.RemoveAt(i);
+					--i;
+				}
 			}
 			List<GameObject> gobjs = new List<GameObject>();
 			List<CsgOperation.ECsgOperation> addModes = new List<CsgOperation.ECsgOperation>();
@@ -44,14 +50,15 @@ namespace LevelEditor
 			{
 				//if (meshes[i].transform.parent == transform)
 				{
-				gobjs.Add(meshes[i].gameObject);
-				addModes.Add(meshes[i].getAddMode());
+					gobjs.Add(meshes[i].gameObject);
+					addModes.Add(meshes[i].getAddMode());
 				}
 			}
 			CSGObject csg = GetComponent<CSGObject> ();
 			if (csg == null)
 				csg = gameObject.AddComponent<CSGObject>();
-
+			if (gobjs.Count <= 0)
+				return;
 			csg.PerformCSG (addModes, gobjs.ToArray());
 			//if (m != null)
 			{
@@ -77,6 +84,7 @@ namespace LevelEditor
 				}
 			}
 			UnityEditor.Unwrapping.GenerateSecondaryUVSet (m);
+
 		}
 		
 		public void BuildFinishedMesh()
@@ -97,35 +105,19 @@ namespace LevelEditor
 		public void AddAdj()
 		{
 		}
-		/*
-		public JSONClass Output()
+		public static string fStr(float input)
 		{
-			var output = new JSONClass();
-			output ["version"].AsFloat = 1.0f;
-			for (int i = 0; i < 3; ++i)
-				output ["PolyTree"]["Rotation"][-1].AsFloat = transform.localEulerAngles[i];
-			
-			for (int i = 0; i < 3; ++i)
-				output ["PolyTree"]["Position"][-1].AsFloat = transform.localPosition[i];
-			for (int i = 0; i < transform.childCount; ++i)
-			{
-				GameObject gobj = transform.GetChild(i).gameObject;
-				if (gobj.GetComponent<PolyMesh>() != null)
-				{
-					output["PolyTree"]["Children"][-1] = (gobj.GetComponent<PolyMesh>().Output());
-				}
-			}
-			return output;
+			string test = input.ToString ("G16");
+			if (test.IndexOf("E") >= 0)
+				return input.ToString("F14");
+			return test;
 		}
-		*/
-		public string toStr(Vector3 input)
+		public static string toStr(Vector3 input)
 		{
 			string str = "(";
-			float scale = 100000.0f;
-			input = input * scale;
-			str += Mathf.Round(input.x)/scale + ", ";
-			str += Mathf.Round(input.y)/scale + ", ";
-			str += Mathf.Round(input.z)/scale + ")";
+			str += fStr(input.x) + ", ";
+			str += fStr(input.y) + ", ";
+			str += fStr(input.z) + ")";
 			return str;
 		}
 		public virtual void Clean()

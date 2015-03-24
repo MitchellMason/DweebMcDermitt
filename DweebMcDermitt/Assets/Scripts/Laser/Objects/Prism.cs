@@ -23,7 +23,9 @@ public class Prism : LaserTarget {
 	}
 	
 	override public void onLaserShot (LaserHitInfo laserHitInfo){
-		onLaserStay(laserHitInfo);
+		//RayCastHitInfo hit;
+		Vector3 direction = laserHitInfo.EmitterPosition - laserHitInfo.hitPoint;
+		
 	}
 	
 	override public void onLaserStay(LaserHitInfo laserHitInfo){
@@ -43,13 +45,13 @@ public class Prism : LaserTarget {
 	override public void onLaserLeave(){}
 	
 	//Get the mesh positions of the new origins for the lasers.
-	Vec3Tuple getNewOnMeshPosition(LaserHitInfo info){
-		return new Vec3Tuple(Vector3.zero, Vector3.zero);
+	private Vec3Tuple getNewOnMeshPosition(LaserHitInfo info){
+		return new Vec3Tuple (new Vector3(), new Vector3());
 	}
 	
 	//Get the directions for the lasers. 
-	Vec3Tuple getNewLaserDirections(LaserHitInfo info){
-		return new Vec3Tuple(Vector3.zero, Vector3.zero);
+	private Vec3Tuple getNewLaserDirections(LaserHitInfo info){
+		return new Vec3Tuple (new Vector3(), new Vector3());
 	}
 	
 	private class Vec3Tuple{

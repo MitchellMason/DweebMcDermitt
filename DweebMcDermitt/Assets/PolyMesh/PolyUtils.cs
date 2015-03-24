@@ -4,124 +4,6 @@ using System.Collections.Generic;
 using Poly2Tri;
 namespace LevelEditor
 {
-	/*
-	using Path = List<Vector2>;
-	using Paths = List<List<Vector2>>;
-
-	public class Poly
-	{
-		public List<Vector3> boundary = new List<Vector3>();
-
-		public List<Poly> holes = new List<Poly>();
-		public Poly(){}
-		public Poly(Vector3[] verts)
-		{
-			boundary.AddRange (verts);
-		}
-	}
-
-	public class HalfEdge
-	{
-		public int i0, i1;
-		public HalfEdge(int e0, int e1)
-		{
-			i0 = e0;
-			i1 = e1;
-			hasNeighbor = false;
-		}
-		public bool hasNeighbor = false;
-	}
-	public class SubMesh
-	{
-
-		public List<Vector3> verts = new List<Vector3>();
-		public List<Vector3> norms = new List<Vector3>();
-		public List<Vector2> uvs = new List<Vector2>();
-		public List<float> zones = new List<float>();
-		public List<int> inds = new List<int>();
-		public CSGObject getSolid()
-		{
-			CSGObject s = new CSGObject ();
-			if (inds.Count <= 0)
-				return s;
-			//List<Vector3> pts = new List<Vector3> ();
-			for (int i = 0; i < verts.Count; ++i)
-			{
-				Vector3 sample = verts[i];
-				for (int j = i + 1; j < verts.Count; ++j)
-				{
-					if (Vector3.Distance(verts[j], sample) < 0.001f)
-						verts[j] = sample;
-				}
-			}
-			norms.AddRange (verts);
-			List<Color> cols = new List<Color> ();
-			for (int i = 0; i < inds.Count/3; ++i)
-			{
-				int index = i*3;
-				int i0 = inds[index];
-				int i1 = inds[index+1];
-				int i2 = inds[index+2];
-				Vector3 e1 = verts[i1]-verts[i0];
-				Vector3 e2 = verts[i2]-verts[i0];
-				Vector3 n = Vector3.Cross(e1,e2).normalized;
-				norms[i0] = n;
-				norms[i1] = n;
-				norms[i2] = n;
-			}
-			for (int i = 0; i < zones.Count; ++i)
-			{
-				cols.Add(new Color((float)zones[i]/100.0f,0,0));
-			}
-
-			//for (int i = 0; i < verts.Count; ++i)
-			//	pts.Add(new Vector3(verts[i].x, verts[i].y, verts[i].z));
-			//s.setData(pts.ToArray(), inds.ToArray(), new Color3f(0.5,0.5,0.5));
-			//for (int i = 0; i < inds/3; ++i)
-			{
-				Mesh m = new Mesh();
-				m.vertices = verts.ToArray();
-				m.triangles = inds.ToArray();
-				m.normals = norms.ToArray();
-				m.colors = cols.ToArray();
-				m.uv = uvs.ToArray();
-			}
-			return s;
-		}
-		float winding(Path test)
-		{
-			float total = 0;
-			//(x2-x1)(y2+y1)
-			for (int i = 0; i < test.Count; ++i)
-			{
-				int i0 = i;
-				int i1 = (i+1)%test.Count;
-				Vector2 p0 = test[i0];
-				Vector2 p1 = test[i1];
-				total += (p1.x-p0.x)*(p1.y+p0.y);
-			}
-			return total;
-
-		}
-		public SubMesh()
-		{
-		}
-		public SubMesh(CSGObject s)
-		{
-			Mesh m = s.toMesh ();
-			inds.AddRange(m.triangles);
-			//Point3d[] pts = s.getVertices ();
-			verts.AddRange (m.vertices);
-			uvs.AddRange (m.uv);
-			for (int i = 0; i < m.vertexCount; ++i)
-			{
-				zones.Add(m.colors[i].r*100.0f);
-			}
-			//Reduce ();
-		}
-
-	}
-*/
 	public static class PolyUtils
 	{
 		static bool intersects(Vector2 p1, Vector2 p2, Vector2 p3, Vector2 p4) {
@@ -165,7 +47,7 @@ namespace LevelEditor
 		{
 			List<Vector2> pts = new List<Vector2> ();
 			for (int i = 0; i < points.Count; ++i)
-				pts.Add(new Vector2(points[i].x, points[i].y));
+				pts.Add(new Vector2(points[i].x, points[i].z));
 			for (int i = 0; i < pts.Count; ++i)
 			{
 				for (int j = i+1; j < pts.Count; ++j)
@@ -198,8 +80,8 @@ namespace LevelEditor
 			{
 				int i0 = i;
 				int i1 = (i+1)%test.Count;
-				Vector2 p0 = new Vector2(test[i0].x,test[i0].y);
-				Vector2 p1 = new Vector2(test[i1].x,test[i1].y);
+				Vector2 p0 = new Vector2(test[i0].x,test[i0].z);
+				Vector2 p1 = new Vector2(test[i1].x,test[i1].z);
 				total += (p1.x-p0.x)*(p1.y+p0.y);
 			}
 			return total;
@@ -207,17 +89,18 @@ namespace LevelEditor
 		}
 		public static Mesh makeMesh(List<Vector3> points, float height, float floor, Transform transform)
 		{
+			Transform t = transform;
+			for (int i = 0; i < points.Count; ++i)
+			{
+				Vector3 npt = t.worldToLocalMatrix.MultiplyPoint(points[i]);
+			}
+
 			if (!testPoints (points))
 			{
 				Debug.Log("Warning: Self-intersecting polygon detected.");
 				return new Mesh();
 			}
 
-			Transform t = transform;
-			for (int i = 0; i < points.Count; ++i)
-			{
-				points[i] = t.localToWorldMatrix.MultiplyPoint(points[i]);
-			}
 			List<Vector3> npoints = new List<Vector3> ();
 			for (int i = 0; i < points.Count; ++i)
 			{
@@ -353,10 +236,6 @@ namespace LevelEditor
 			}
 			indices = revL (indices);		
 			Mesh mesh = new Mesh ();
-			for (int i = 0; i < vertices.Count; ++i)
-			{
-				vertices[i] = t.worldToLocalMatrix.MultiplyPoint(vertices[i]);
-			}
 			mesh.vertices = vertices.ToArray();
 			mesh.uv = uvs.ToArray();
 			mesh.triangles = revL(indices).ToArray ();

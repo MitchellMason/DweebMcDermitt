@@ -73,7 +73,7 @@ public class CSGObject : MonoBehaviour {
 		bool init = false;
 		// create bsp generator
 		
-			texMode = 0;
+		texMode = 0;
 		//rootNode = gen.GenerateBspTree( faces );
 		
 		// 
@@ -84,12 +84,11 @@ public class CSGObject : MonoBehaviour {
 			
 			// if we have a csg object and we are not our self
 			// and intersecting
-			if( !init || (slave && g != gameObject && intersect(slave) ))
+			if( (!init || slave && g != gameObject ))
 			{	
 				faces.Clear();
 				//Debug.Log(g.name);
 				slave.CreateFromMesh();
-				
 				BspGen genSlave = new BspGen( GlobalSettings.BspOptimization );
 				
 				
@@ -119,9 +118,6 @@ public class CSGObject : MonoBehaviour {
 					break;
 				case CsgOperation.ECsgOperation.CsgOper_Subtractive:
 					visitor = new SubtractiveVisitor();
-					break;
-				case CsgOperation.ECsgOperation.CsgOper_Intersect:
-					visitor = new IntersectVisitor();
 					break;
 				/*case CsgOperation.ECsgOperation.CsgOper_DeIntersect:
 					visitor = new DeIntersectVisitor();
