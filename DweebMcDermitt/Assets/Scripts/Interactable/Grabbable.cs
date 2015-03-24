@@ -24,12 +24,13 @@ public class Grabbable : InteractionTarget {
 		playerPosition = playerTransform.position;
 		if (interactedOn) {
 			transform.parent = Camera.main.transform;
+			col.attachedRigidbody.useGravity = false;
 
-			col.attachedRigidbody.isKinematic = true;
+			// Stop out of control collision
+			col.attachedRigidbody.velocity = new Vector3(0,0,0);
 		} else {
 			transform.parent = null;
-			//transform.position = new Vector3(transform.position.x, 1, transform.position.z);
-			col.attachedRigidbody.isKinematic = false;
+			col.attachedRigidbody.useGravity = true;
 		}
 	}
 	

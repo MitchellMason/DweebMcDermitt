@@ -4924,7 +4924,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.78000021
+      value: 5.84000015
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4932,7 +4932,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -8.14999962
+      value: -8.03999996
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4940,7 +4940,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .707106829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalRotation.z
@@ -4948,7 +4948,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106709
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_RootOrder
@@ -4981,6 +4981,14 @@ Prefab:
     - target: {fileID: 11415074, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: usePositionTracking
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 115086, guid: 660271135b3984be19620204b3f63bef, type: 2}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 115070, guid: 660271135b3984be19620204b3f63bef, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11429836, guid: 660271135b3984be19620204b3f63bef, type: 2}
@@ -5209,6 +5217,7 @@ GameObject:
   - 65: {fileID: 1220917657}
   - 23: {fileID: 1220917656}
   - 114: {fileID: 1220917655}
+  - 54: {fileID: 1220917659}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -5223,7 +5232,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1220917653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.37, y: -.949999988, z: 1.53999996}
+  m_LocalPosition: {x: 1.34000003, y: -1.00999999, z: 1.50999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 610873777}
@@ -5282,6 +5291,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1220917653}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1220917659
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1220917653}
+  serializedVersion: 2
+  m_Mass: 15
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!28 &1227904604
 Texture2D:
   m_ObjectHideFlags: 0
