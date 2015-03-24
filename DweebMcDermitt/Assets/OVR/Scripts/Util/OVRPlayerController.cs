@@ -284,10 +284,9 @@ public class OVRPlayerController : MonoBehaviour
 
 		if (!SkipMouseRotation){
 			euler.y += Input.GetAxis("Mouse X") * rotateInfluence * 3.25f;
-#if UNITY_EDITOR
 			//If we're in the Unity editor, allow the mouse to rotate both X and "Y" axis. 
-			euler.x -= Input.GetAxis("Mouse Y") * rotateInfluence * 1.25f;
-#endif
+			//if(OVRDevice.isSensorPresent())
+			//	euler.x -= Input.GetAxis("Mouse Y") * rotateInfluence * 1.25f;
 		}
 
 		moveInfluence = SimulationRate * Time.deltaTime * Acceleration * 0.1f * MoveScale * MoveScaleMultiplier;

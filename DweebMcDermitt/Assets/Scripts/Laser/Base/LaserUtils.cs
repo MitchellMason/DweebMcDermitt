@@ -33,6 +33,13 @@ public class LaserShooter{
 	public void fireLaser(Ray ray, float distance){
 		fireLaser (ray, distance, true);
 	}
+	
+	//fire two laser beams, useful for prisms
+	public void splitLaser(Ray first, Ray second, float distance1, float distance2){
+		//let the logic do it's thing
+		fireLaser(first, distance1, true);
+		fireLaser(second, distance2, true);
+	}
 
 	public void fireLaser(Ray ray, float distance, bool draw){
 		//Debug.Log ("Firing with origin: " + ray.origin + " direction: " + ray.direction + " distance: " + distance);
@@ -48,6 +55,10 @@ public class LaserShooter{
 			if(draw){
 				lineRenderer.SetVertexCount (2);
 				lineRenderer.SetPosition (0, ray.origin);
+				lineRenderer.SetWidth(
+					1/Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, ray.origin),
+					1/Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, (ray.direction * distance) + ray.origin)
+					); 
 				lineRenderer.SetPosition (1, hit.point);
 			}
 		}
@@ -72,19 +83,16 @@ public class LaserShooter{
 				else{
 					justHitLaserTarget.onLaserShot(LaserUtils.toLaserHitInfo(hit, ray.origin));
 					if(storedObject != null){
-						//Debug.Log ("not the same object.");
 						storedObject.onLaserLeave();
 					}
 					storedObject = justHitLaserTarget;
 				}
 			}
 			else{
-				//Debug.Log("Not a laser target");
 				endFire();
 			}
 		}
 		else{
-			//Debug.Log ("Didn't hit anything");
 			endFire();
 		}
 	}

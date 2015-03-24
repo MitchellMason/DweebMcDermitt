@@ -10,7 +10,9 @@ public class LaserEmitter : MonoBehaviour {
 	[SerializeField] private Transform CenterEyeAnchor;
 	//View for debug reasons
 	[SerializeField]float timer = LaserUtils.LASER_DURATION;
-
+	//The prefab used to visualize the laserfire
+	[SerializeField] GameObject LaserCylinder;
+	
 	//the object the laser is firing on
 	private LaserShooter shooter;
 	private LineRenderer lineRenderer;
@@ -18,7 +20,7 @@ public class LaserEmitter : MonoBehaviour {
 
 	//Raycast information
 	private RaycastHit hit;
-
+	
 
 	bool okayToFire = false;
 
