@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class CinematicFrame : MonoBehaviour {
-	[Tooltip("reflects the position of the player so the slides know where to look")]
-	[SerializeField] private Transform playerPosition;
+	private Transform playerPosition;
 	[Tooltip("The sound that plays on Start() (whenever the object is first loaded into the scene)")]
 	[SerializeField] private AudioSource voice;
 	[Tooltip("After this time interval, the next slide is displayed or the next scene is loaded")]
@@ -19,24 +18,23 @@ public class CinematicFrame : MonoBehaviour {
 	[Tooltip("A link to the next prefab to load when time runs out")]
 	[SerializeField] private CinematicFrame nextFramePrefab;
 	
-	GameObject background;
-	GameObject midground;
-	GameObject foreground;
+	[SerializeField] GameObject foreground;
+	[SerializeField] GameObject midground;
+	[SerializeField] GameObject background;
 
+	
 	Vector3 playerScaledPosition;
 
 	// Use this for initialization
 	void Start () {
+		playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
 		if (voice != null) {
 			voice.Play();
 		}
-		background = GameObject.Find ("bg");
-		midground = GameObject.Find ("mg");
-		foreground = GameObject.Find ("fg");
 
 		//Set the textures
 		foreground.GetComponent<Renderer>().material.mainTexture = foregroundTexture;
-		midground.GetComponent<Renderer>().material.mainTexture = midgroundTexure;
+		midground.GetComponent<Renderer>().material.mainTexture  = midgroundTexure;
 		background.GetComponent<Renderer>().material.mainTexture = backgroundTexure;
 	}
 	
@@ -62,6 +60,8 @@ public class CinematicFrame : MonoBehaviour {
 		if(secondsUntilNext < 0f){
 			if(nextFramePrefab != null){
 				Instantiate(nextFramePrefab, transform.position, transform.rotation);
+				Destroy(this.gameObject);
+				return;
 			}
 			else{
 				//I'm presuming we'll want to load the next level
