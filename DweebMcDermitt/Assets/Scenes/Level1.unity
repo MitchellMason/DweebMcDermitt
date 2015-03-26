@@ -4019,8 +4019,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61d9b35dc2e96f45bf48c2fc57aa347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mov: {fileID: 15200000, guid: 573a7c38ec1cfa44a9febc297d6f368d, type: 3}
-  triggered: 0
 --- !u!23 &929797269
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5443,6 +5441,10 @@ Prefab:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 11490534, guid: 660271135b3984be19620204b3f63bef, type: 2}
+      propertyPath: mattouse
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ddfb1c1611720442a1eca9e5cbfc644, type: 2}
     m_RemovedComponents:
     - {fileID: 11429836, guid: 660271135b3984be19620204b3f63bef, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 660271135b3984be19620204b3f63bef, type: 2}
@@ -6906,6 +6908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884258e9c50af2c47872418c41f89098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineRenderer: {fileID: 0}
 --- !u!1 &1471046742
 GameObject:
   m_ObjectHideFlags: 0
@@ -7323,7 +7326,7 @@ Transform:
   - {fileID: 2003415084}
   - {fileID: 1732312404}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1001 &1562540720
 Prefab:
   m_ObjectHideFlags: 0
@@ -8301,6 +8304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884258e9c50af2c47872418c41f89098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineRenderer: {fileID: 0}
 --- !u!114 &1790095382
 MonoBehaviour:
   m_ObjectHideFlags: 0

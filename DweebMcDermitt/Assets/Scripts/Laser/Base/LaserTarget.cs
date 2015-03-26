@@ -8,5 +8,4 @@ public abstract class LaserTarget : Target {
 	public abstract void onLaserShot(LaserHitInfo laserHitInfo);
 	public abstract void onLaserStay(LaserHitInfo laserHitInfo);
 	public abstract void onLaserLeave();
-
 }

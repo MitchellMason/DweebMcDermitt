@@ -21,32 +21,30 @@ public class LaserEmitter : MonoBehaviour {
 	//Raycast information
 	private RaycastHit hit;
 
-	public Material mattouse;
 
 	bool okayToFire = false;
+	void startUp()
+	{
+		if (gameObject.GetComponents<LineRenderer> ().Length <= 0) {
+			lineRenderer = gameObject.AddComponent<LineRenderer> ();
+			lineRenderer.material = new Material (Shader.Find ("Custom/LaserShad"));
+		}
+		else
+		{
+			lineRenderer = GetComponent<LineRenderer> ();
+		}
+		shooter = new LaserShooter (lineRenderer);
+	}
 	void Start()
 	{
 		startUp ();
 	}
-	void Awake(){
+	void Awake()
+	{
 		startUp ();
 	}
-	void startUp()
-	{
-		if (gameObject.GetComponents<LineRenderer>().Length <= 0)
-			lineRenderer = gameObject.AddComponent<LineRenderer> ();
-		else
-			
-			lineRenderer = GetComponent<LineRenderer> ();
-		if (mattouse != null) {
-			lineRenderer.material = mattouse;
-		}
-		shooter = new LaserShooter (lineRenderer);
-	}
-
 	void Update () {
 		okayToFire = timer > 0;
-
 		//If we're firing the laser
 		if (Input.GetAxis("FireLaser") >= 0.1f && okayToFire) {
 			laser.origin = CenterEyeAnchor.position;

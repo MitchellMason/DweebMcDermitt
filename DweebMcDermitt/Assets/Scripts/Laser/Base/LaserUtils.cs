@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public static class LaserUtils{
-	public const float LASER_WIDTH = 0.025f;
+	public const float LASER_WIDTH = 0.25f;
 	public static Color LASER_COLOR = new Color(255f,255f,255f);
 	public static float LASER_DURATION = 6;
 
@@ -25,16 +25,14 @@ public class LaserShooter{
 	
 	public LaserShooter(LineRenderer renderer){
 		lineRenderer = renderer;
-		if (lineRenderer.materials.Length <= 0) {
-			Shader ShaderToUse = Shader.Find ("Standard");
-			Material mat = new Material (ShaderToUse);
-		
-			mat.color = new Color (1.0f, 0.0f, 0.0f, 0.5f);
-
+		Material mat = lineRenderer.material;
+		if (mat.name != "Custom/LaserMat"){
+			Shader ShaderToUse = Shader.Find ("Custom/LaserShad");
+			mat = new Material(ShaderToUse);
 			lineRenderer.material = mat;
 		}
 		lineRenderer.useWorldSpace = true;
-		lineRenderer.castShadows = false;
+		lineRenderer.castShadows = true;
 		lineRenderer.receiveShadows = false;
 		lineRenderer.SetVertexCount (2);
 		lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
@@ -62,6 +60,10 @@ public class LaserShooter{
 
 			//Draw the laser shot
 			if(draw){
+				Material mat = lineRenderer.material;
+				mat.SetFloat ("_Width", LaserUtils.LASER_WIDTH/2.0f);
+				mat.SetVector ("_Start", ray.origin);
+				mat.SetVector ("_End", hit.point);
 				lineRenderer.SetVertexCount (2);
 				lineRenderer.SetPosition (0, ray.origin);
 				/*lineRenderer.SetWidth(
@@ -110,7 +112,7 @@ public class LaserShooter{
 		if(storedObject != null){
 			//Debug.Log ("End fire called for " + storedObject.name);
 			storedObject.onLaserLeave();
-			//storedObject = null;
+			storedObject = null;
 		}
 		else{
 			//Debug.Log ("End fire called. No impact");
