@@ -260,8 +260,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 10423d64cd999024193f3035b8c3d113, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voice: {fileID: 8232236}
-  secondsUntilNext: 5
+  secondsUntilNext: 10
   foregroundTexture: {fileID: 2800000, guid: e04492159bf8446efb33d888c56b58ea, type: 3}
   midgroundTexure: {fileID: 2800000, guid: 08486a4c6e0914bf0af24a12cb270191, type: 3}
   backgroundTexure: {fileID: 2800000, guid: de850a037bf5947b0a93380bf7ab45f3, type: 3}
@@ -340,6 +340,7 @@ MonoBehaviour:
   foreground: {fileID: 139880}
   midground: {fileID: 191172}
   background: {fileID: 154244}
+  autoPlay: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
