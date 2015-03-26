@@ -7,10 +7,23 @@ public class Mirror : LaserTarget {
 	Vector3 newDir;
 	Vector3 laserEndPoint;
 	bool justLeft = false;
-
-	void Start(){
-		lineRenderer = this.gameObject.AddComponent<LineRenderer>();
+	
+	public Material mattouse;
+	
+	void startUp()
+	{
+		if (gameObject.GetComponents<LineRenderer>().Length <= 0)
+			lineRenderer = gameObject.AddComponent<LineRenderer> ();
+		else
+			
+			lineRenderer = GetComponent<LineRenderer> ();
+		if (mattouse != null) {
+			lineRenderer.material = mattouse;
+		}
 		shooter = new LaserShooter (lineRenderer);
+	}
+	void Start(){
+		startUp ();
 	}
 	
 	override public void onLaserShot(LaserHitInfo laserHitInfo){

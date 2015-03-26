@@ -20,12 +20,27 @@ public class LaserEmitter : MonoBehaviour {
 
 	//Raycast information
 	private RaycastHit hit;
-	
+
+	public Material mattouse;
 
 	bool okayToFire = false;
-
+	void Start()
+	{
+		startUp ();
+	}
 	void Awake(){
-		lineRenderer = this.gameObject.AddComponent<LineRenderer> ();
+		startUp ();
+	}
+	void startUp()
+	{
+		if (gameObject.GetComponents<LineRenderer>().Length <= 0)
+			lineRenderer = gameObject.AddComponent<LineRenderer> ();
+		else
+			
+			lineRenderer = GetComponent<LineRenderer> ();
+		if (mattouse != null) {
+			lineRenderer.material = mattouse;
+		}
 		shooter = new LaserShooter (lineRenderer);
 	}
 

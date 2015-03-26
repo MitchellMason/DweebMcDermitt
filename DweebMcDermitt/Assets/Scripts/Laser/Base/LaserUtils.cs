@@ -29,7 +29,8 @@ public class LaserShooter{
 			Shader ShaderToUse = Shader.Find ("Standard");
 			Material mat = new Material (ShaderToUse);
 		
-			mat.color = new Color (1.0f, 0.0f, 0.0f, 0.9f);
+			mat.color = new Color (1.0f, 0.0f, 0.0f, 0.5f);
+
 			lineRenderer.material = mat;
 		}
 		lineRenderer.useWorldSpace = true;
