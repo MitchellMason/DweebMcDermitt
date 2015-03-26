@@ -1,3 +1,6 @@
+using UnityEngine;
+using System.Collections;
+
 //when interacted upon, moves to the new position in specified time interval
 public class Lift : InteractionTarget{
 	[SerializeField] private Vector3 newPositionRelative;
