@@ -30,6 +30,11 @@ public class Grabbable : InteractionTarget {
 		center = camera.ScreenToWorldPoint(new Vector3(Screen.height/2, Screen.width/2, camera.nearClipPlane));
 		cameraPosition = camera.transform.position;
 		playerPosition = playerTransform.position;
+
+		if (Input.GetKeyUp ("r")) {
+			interactedOn = false;
+		}
+
 		if (interactedOn) {
 
 			transform.parent = camera.transform;
@@ -42,7 +47,7 @@ public class Grabbable : InteractionTarget {
 				col.attachedRigidbody.velocity = new Vector3(0,0,0);
 				col.attachedRigidbody.angularVelocity = new Vector3(0,0,0);
 				transform.rotation = Quaternion.LookRotation(-Camera.main.transform.forward, Camera.main.transform.up);
-				transform.position = camera.transform.position + camera.transform.forward * 1.5f;
+				transform.position = camera.transform.position + camera.transform.forward * 1.3f + -camera.transform.up * 0.9f;
 			}
 		} else {
 			transform.parent = null;

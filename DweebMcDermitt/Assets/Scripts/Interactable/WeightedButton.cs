@@ -15,14 +15,12 @@ public class WeightedButton : PositionTarget {
 	}
 
 	void OnTriggerEnter(Collider col){
-		pressed = false;
-		if((col.GetComponent<Rigidbody>() != null && col.GetComponent<Rigidbody>().mass > weightThreshold) 
-		   		|| col.gameObject.tag.Equals("Player")){
+		if ((col.GetComponent<Rigidbody> () != null && col.GetComponent<Rigidbody> ().mass > weightThreshold) || col.gameObject.tag.Equals ("Player")) {
 			pressed = true;
 			buttonAudio.Play ();
-			if(optionalTarget != null) 
-				optionalTarget.onTrigger(this);
-			topPiece.GetComponent<MeshRenderer>().material.color = engadgedColor;
+			if (optionalTarget != null) 
+				optionalTarget.onTrigger (this);
+			topPiece.GetComponent<MeshRenderer> ().material.color = engadgedColor;
 			return;
 		}
 	}
