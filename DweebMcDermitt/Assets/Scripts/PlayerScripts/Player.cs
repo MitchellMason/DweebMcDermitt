@@ -8,9 +8,14 @@ public class Player : LaserTarget {
 	GameObject ui;
 	UIBox uibox;
 
+	GameObject glass;
+	PlayMoviePlane glassMov;
+
 	void Start() {
 		ui = GameObject.Find ("GUI");
 		uibox = ui.GetComponent<UIBox>();
+		glass = GameObject.Find ("Plane");
+		glassMov = glass.GetComponent<PlayMoviePlane>();
 		if (uibox) {
 			print ("got it");
 		}
@@ -19,6 +24,9 @@ public class Player : LaserTarget {
 	override public void onLaserShot(LaserHitInfo laserHitInfo){
 		HP -= 1;
 		print (HP);
+
+		glassMov.triggered = true;
+
 		if (HP <= 0) {
 			dead = true;
 			uibox.dead = true;
