@@ -15,6 +15,8 @@ public class Player : LaserTarget {
 		ui = GameObject.Find ("GUI");
 		uibox = ui.GetComponent<UIBox>();
 		glass = GameObject.Find ("Plane");
+		if (glass == null)
+			return;
 		glassMov = glass.GetComponent<PlayMoviePlane>();
 		if (uibox) {
 			print ("got it");
@@ -22,16 +24,18 @@ public class Player : LaserTarget {
 	}
 
 	override public void onLaserShot(LaserHitInfo laserHitInfo){
-		HP -= 1;
-		print (HP);
+		if (glass != null) {
+			HP -= 1;
+			print (HP);
 
-		glassMov.triggered = true;
+			glassMov.triggered = true;
 
-		if (HP <= 0) {
-			dead = true;
-			uibox.dead = true;
-			print ("dead");
-			GetComponent<CharacterController>().enabled = false;
+			if (HP <= 0) {
+				dead = true;
+				uibox.dead = true;
+				print ("dead");
+				GetComponent<CharacterController> ().enabled = false;
+			}
 		}
 	}
 

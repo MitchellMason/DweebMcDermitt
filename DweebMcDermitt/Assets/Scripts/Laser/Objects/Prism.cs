@@ -38,8 +38,8 @@ public class Prism : LaserTarget {
 		rRay.origin = start.Two;
 		lRay.direction = dir.Two;
 		
-		lShooter.fireLaser(lRay);
-		rShooter.fireLaser(rRay);
+		//lShooter.fireLaser(lRay);
+		//rShooter.fireLaser(rRay);
 	}
 	
 	override public void onLaserLeave(){}
@@ -48,6 +48,7 @@ public class Prism : LaserTarget {
 	private Vec3Tuple getNewOnMeshPosition(LaserHitInfo info){
 		Vector3 hitPoint = info.hitPoint;
 		Vec3Tuple result = new Vec3Tuple(Vector3.zero, Vector3.zero);
+		return result;
 		
 	}
 	

@@ -25,10 +25,13 @@ public class LaserShooter{
 	
 	public LaserShooter(LineRenderer renderer){
 		lineRenderer = renderer;
-		Shader ShaderToUse = Shader.Find("Standard");
-		Material mat = new Material(ShaderToUse);
-		mat.color = new Color (1.0f, 0.0f, 0.0f, 0.9f);
-		lineRenderer.material = mat;
+		if (lineRenderer.materials.Length <= 0) {
+			Shader ShaderToUse = Shader.Find ("Standard");
+			Material mat = new Material (ShaderToUse);
+		
+			mat.color = new Color (1.0f, 0.0f, 0.0f, 0.9f);
+			lineRenderer.material = mat;
+		}
 		lineRenderer.useWorldSpace = true;
 		lineRenderer.castShadows = false;
 		lineRenderer.receiveShadows = false;
@@ -60,10 +63,10 @@ public class LaserShooter{
 			if(draw){
 				lineRenderer.SetVertexCount (2);
 				lineRenderer.SetPosition (0, ray.origin);
-				lineRenderer.SetWidth(
+				/*lineRenderer.SetWidth(
 					1/Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, ray.origin),
 					1/Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, (ray.direction * distance) + ray.origin)
-					); 
+					); */
 				lineRenderer.SetPosition (1, hit.point);
 			}
 		}
@@ -106,7 +109,7 @@ public class LaserShooter{
 		if(storedObject != null){
 			//Debug.Log ("End fire called for " + storedObject.name);
 			storedObject.onLaserLeave();
-			storedObject = null;
+			//storedObject = null;
 		}
 		else{
 			//Debug.Log ("End fire called. No impact");

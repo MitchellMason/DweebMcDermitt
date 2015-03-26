@@ -6,6 +6,7 @@ public class Mirror : LaserTarget {
 	private LineRenderer lineRenderer;
 	Vector3 newDir;
 	Vector3 laserEndPoint;
+	bool justLeft = false;
 
 	void Start(){
 		lineRenderer = this.gameObject.AddComponent<LineRenderer>();
@@ -21,11 +22,15 @@ public class Mirror : LaserTarget {
 	}
 	
 	override public void onLaserLeave(){
-		shooter.endFire();
+		/*if (!justLeft) {
+			shooter.endFire ();
+			justLeft = true;
+		}*/
 		lineRenderer.SetWidth (0, 0);
 	}
 
 	void shoot(LaserHitInfo laserHitInfo){
+		justLeft = false;
 		Debug.DrawRay (laserHitInfo.hitPoint, laserHitInfo.hitSurfaceNormal, Color.green);
 		Vector3 inDir = -(laserHitInfo.EmitterPosition-laserHitInfo.hitPoint).normalized;
 		Debug.DrawRay (laserHitInfo.EmitterPosition, inDir * laserHitInfo.remainingDistance, Color.red);
