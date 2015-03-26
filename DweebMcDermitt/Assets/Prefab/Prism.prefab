@@ -10,8 +10,9 @@ GameObject:
   - 4: {fileID: 477680}
   - 33: {fileID: 3377680}
   - 23: {fileID: 2377680}
-  - 114: {fileID: 11477680}
   - 64: {fileID: 6477680}
+  - 114: {fileID: 11477680}
+  - 120: {fileID: 12095044}
   m_Layer: 0
   m_Name: Prism
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177680}
-  m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.05999994, y: -.00200000009, z: -6.8579998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,7 +45,7 @@ MeshRenderer:
   - {fileID: 2100000, guid: 3750c78ba8619214f875fd7e8c6cce73, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
+  m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
@@ -61,7 +62,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177680}
-  m_Mesh: {fileID: 4300000, guid: 8eee4eb2591a741e7a43cb2a6b68e42d, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a85897a58573942ab822c345a9573883, type: 3}
 --- !u!64 &6477680
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -72,8 +73,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 8eee4eb2591a741e7a43cb2a6b68e42d, type: 3}
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: a85897a58573942ab822c345a9573883, type: 3}
 --- !u!114 &11477680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,8 +86,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f335e17dfa23a4c029b88b6c4184f156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  t1: {fileID: 0}
-  t2: {fileID: 0}
+--- !u!120 &12095044
+LineRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177680}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions: []
+  m_Parameters:
+    startWidth: 1
+    endWidth: 1
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4294967295
+  m_UseWorldSpace: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
