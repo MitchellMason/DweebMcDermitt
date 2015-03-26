@@ -2,44 +2,49 @@
 using System.Collections;
 
 public class Prism : LaserTarget {
-	LineRenderer first;
-	LineRenderer second;
+	[SerializeField] LineRenderer first;
+	[SerializeField] LineRenderer second;
 	
 	LaserShooter lShooter;
 	LaserShooter rShooter;
 	
-	Vec3Tuple start;
+	Vec3Tuple onMesh;
 	Vec3Tuple dir;
 	Ray lRay;
 	Ray rRay;
 	
 	void Start(){
-		first    = this.GetComponent<LineRenderer>();
-		second   = this.GetComponent<LineRenderer>();
 		lRay     = new Ray();
 		rRay     = new Ray();
-		lShooter = new LaserShooter(first);
-		rShooter = new LaserShooter(second);
+		lShooter = new LaserShooter(first.GetComponent<LineRenderer>());
+		rShooter = new LaserShooter(second.GetComponent<LineRenderer>());
 	}
 	
 	override public void onLaserShot (LaserHitInfo laserHitInfo){
-		//RayCastHitInfo hit;
-		Vector3 direction = laserHitInfo.EmitterPosition - laserHitInfo.hitPoint;
-		
+		this.onLaserStay (laserHitInfo);
 	}
 	
 	override public void onLaserStay(LaserHitInfo laserHitInfo){
-		start = getNewOnMeshPosition(laserHitInfo);
+		onMesh = getNewOnMeshPosition(laserHitInfo);
 		dir  = getNewLaserDirections(laserHitInfo);
-		
-		lRay.origin = start.One;
-		lRay.direction = dir.One;
-		
-		rRay.origin = start.Two;
-		lRay.direction = dir.Two;
-		
-		//lShooter.fireLaser(lRay);
-		//rShooter.fireLaser(rRay);
+
+		Vector3 planePosition = this.transform.position;
+		planePosition.y = laserHitInfo.hitPoint.y;
+
+		lRay.origin = onMesh.One;
+		lRay.direction = onMesh.One - planePosition;
+
+		rRay.origin = onMesh.Two;
+		rRay.direction = onMesh.Two - planePosition;
+
+		Debug.DrawRay (lRay.origin, lRay.direction, Color.yellow);
+		Debug.DrawRay (rRay.origin, rRay.direction, Color.green);
+
+		Debug.DrawLine (lRay.origin, laserHitInfo.hitPoint, Color.yellow);
+		Debug.DrawLine (rRay.origin, laserHitInfo.hitPoint, Color.green);
+
+		lShooter.fireLaser(lRay, laserHitInfo.remainingDistance);
+		rShooter.fireLaser(rRay, laserHitInfo.remainingDistance);
 	}
 	
 	override public void onLaserLeave(){}
@@ -48,13 +53,18 @@ public class Prism : LaserTarget {
 	private Vec3Tuple getNewOnMeshPosition(LaserHitInfo info){
 		Vector3 hitPoint = info.hitPoint;
 		Vec3Tuple result = new Vec3Tuple(Vector3.zero, Vector3.zero);
+		result.One = RotateAroundPoint (hitPoint, this.transform.position, Quaternion.AngleAxis ( 120.0f, Vector3.up));
+		result.Two = RotateAroundPoint (hitPoint, this.transform.position, Quaternion.AngleAxis (-120.0f, Vector3.up));
 		return result;
-		
 	}
 	
 	//Get the directions for the lasers. 
 	private Vec3Tuple getNewLaserDirections(LaserHitInfo info){
-		return new Vec3Tuple (new Vector3(), new Vector3());
+		Vector3 hitNorm = info.hitSurfaceNormal;
+		Vec3Tuple result = new Vec3Tuple(Vector3.zero, Vector3.zero);
+		result.One = (RotateAroundPoint (hitNorm, this.transform.position, Quaternion.AngleAxis ( 120.0f, Vector3.up))).normalized;
+		result.Two = (RotateAroundPoint (hitNorm, this.transform.position, Quaternion.AngleAxis (-120.0f, Vector3.up))).normalized;
+		return result;
 	}
 	
 	//utility method that rotates a vector3 around some other point

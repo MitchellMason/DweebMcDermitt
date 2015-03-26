@@ -24,6 +24,7 @@ public class LaserShooter{
 	LineRenderer lineRenderer;
 	
 	public LaserShooter(LineRenderer renderer){
+		renderer.enabled = true;
 		lineRenderer = renderer;
 		Material mat = lineRenderer.material;
 		if (mat.name != "Custom/LaserMat"){
