@@ -25,6 +25,8 @@ public class Prism : LaserTarget {
 	}
 	
 	override public void onLaserStay(LaserHitInfo laserHitInfo){
+		first.enabled = true;
+		second.enabled = true;
 		onMesh = getNewOnMeshPosition(laserHitInfo);
 		dir  = getNewLaserDirections(laserHitInfo);
 
@@ -47,7 +49,12 @@ public class Prism : LaserTarget {
 		rShooter.fireLaser(rRay, laserHitInfo.remainingDistance);
 	}
 	
-	override public void onLaserLeave(){}
+	override public void onLaserLeave(){
+		first.enabled = false;
+		second.enabled = false;
+		lShooter.endFire ();
+		rShooter.endFire ();
+	}
 	
 	//Get the mesh positions of the new origins for the lasers.
 	private Vec3Tuple getNewOnMeshPosition(LaserHitInfo info){
