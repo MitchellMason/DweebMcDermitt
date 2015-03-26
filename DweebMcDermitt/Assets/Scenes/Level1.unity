@@ -3140,6 +3140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dead: 0
+  depth: 5
 --- !u!4 &809640522
 Transform:
   m_ObjectHideFlags: 0
