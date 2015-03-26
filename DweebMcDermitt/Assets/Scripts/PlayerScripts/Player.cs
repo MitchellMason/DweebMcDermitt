@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player : LaserTarget {
 
-	float HP = 3;
+	int HP = 3;
 	bool dead = false;
 	GameObject ui;
 	UIBox uibox;
@@ -12,9 +12,9 @@ public class Player : LaserTarget {
 	PlayMoviePlane glassMov;
 
 	void Start() {
-		ui = GameObject.Find ("GUI");
+		ui = GameObject.Find ("rekt");
 		uibox = ui.GetComponent<UIBox>();
-		glass = GameObject.Find ("Plane");
+		glass = GameObject.Find ("GlassesPlane");
 		if (glass == null)
 			return;
 		glassMov = glass.GetComponent<PlayMoviePlane>();
@@ -28,6 +28,7 @@ public class Player : LaserTarget {
 			HP -= 1;
 			print (HP);
 
+			glassMov.HP -=1;
 			glassMov.triggered = true;
 
 			if (HP <= 0) {

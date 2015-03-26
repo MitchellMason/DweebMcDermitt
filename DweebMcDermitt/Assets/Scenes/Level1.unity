@@ -88,34 +88,6 @@ NavMeshSettings:
     cellSize: .166666657
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!28 &10283647
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _MetallicGlossMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &15826783
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +448,7 @@ MonoBehaviour:
   gceil: 3
   meshCollider: {fileID: 0}
   type: 1
-  ShaderToUse: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  ShaderToUse: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
   textureNames:
   - _MainTex
   - _MetallicGlossMap
@@ -489,14 +461,14 @@ MonoBehaviour:
   - _DetailNormalMap
   texturesToUse:
   - {fileID: 2800000, guid: 031c61dba9cee4a4284b8b14f478d101, type: 3}
-  - {fileID: 1010229495}
+  - {fileID: 0}
   - {fileID: 2800000, guid: 024816786dcc01f408a0a19c74db686c, type: 3}
-  - {fileID: 1631422938}
-  - {fileID: 527006955}
-  - {fileID: 2128560823}
-  - {fileID: 638544681}
-  - {fileID: 743066640}
-  - {fileID: 1646292705}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mesh: {fileID: 1313232656}
   meshToUse: {fileID: 0}
   keyPoints:
@@ -601,34 +573,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1033639166}
   m_RootOrder: 16
---- !u!28 &225363149
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _ParallaxMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!114 &230521017
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11406206, guid: dd9dd4130968eaf469287ee30f2a0249,
@@ -865,34 +809,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: f546dfabc39314659a28dd3f4eb82f23, type: 3}
---- !u!28 &308749314
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _EmissionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!4 &315727743
 Transform:
   m_PrefabParentObject: {fileID: 419952, guid: 3b9f5f4677827f1478d7ddd67e9ad4c5, type: 2}
@@ -1051,68 +967,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1881260553}
   m_Script: {fileID: 11500000, guid: b3911a908b655489c930e00e33ed3f81, type: 3}
---- !u!28 &343166749
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailMask
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!114 &344924008
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11406206, guid: dd9dd4130968eaf469287ee30f2a0249,
     type: 2}
   m_PrefabInternal: {fileID: 1897941018}
   m_Script: {fileID: 11500000, guid: b5b33250093290648bb319c3d3431134, type: 3}
---- !u!28 &349786920
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailMask
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!21 &349821071
 Material:
   serializedVersion: 5
@@ -1476,34 +1336,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 743782684}
   m_RootOrder: 13
---- !u!28 &466650825
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _MetallicGlossMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1001 &514585650
 Prefab:
   m_ObjectHideFlags: 0
@@ -1578,62 +1410,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 403874, guid: 23f069d5fcbfb4d60ab3902b1c2f12ef, type: 2}
   m_PrefabInternal: {fileID: 514585650}
---- !u!28 &527006955
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _OcclusionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
---- !u!28 &529302755
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailAlbedoMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!4 &530865825
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: de985a59d9e8f4289ac0b1d84fefce25, type: 3}
@@ -1982,6 +1758,7 @@ Transform:
   - {fileID: 844461367}
   - {fileID: 1496607459}
   - {fileID: 1220917654}
+  - {fileID: 1142163318}
   m_Father: {fileID: 0}
   m_RootOrder: 7
 --- !u!1 &638426419
@@ -2044,34 +1821,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1033639166}
   m_RootOrder: 21
---- !u!28 &638544681
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailMask
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &649125954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,34 +1881,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!28 &649576777
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailNormalMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &661121410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,34 +2003,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 281089297}
   m_RootOrder: 1
---- !u!28 &670014590
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailNormalMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &685789243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,34 +2207,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!28 &743066640
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailAlbedoMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &743782683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,11 +2375,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1acebd82c752ef94790181c0254c44ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: .280000091
+      value: -.550000012
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1acebd82c752ef94790181c0254c44ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -.336999893
+      value: -.340000004
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1acebd82c752ef94790181c0254c44ff, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2982,47 +2647,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c596a943adbf39942ba10de6738d4799, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &809640520
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 809640522}
-  - 114: {fileID: 809640521}
-  m_Layer: 0
-  m_Name: GUI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &809640521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 809640520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41951d3fa7d5a28458f4ec2f7fe7db5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dead: 0
-  depth: 5
---- !u!4 &809640522
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 809640520}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.84000015, y: 1.38000011, z: -7.78999996}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
 --- !u!1001 &811301558
 Prefab:
   m_ObjectHideFlags: 0
@@ -3199,7 +2823,7 @@ MonoBehaviour:
   gceil: 3
   meshCollider: {fileID: 0}
   type: 1
-  ShaderToUse: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  ShaderToUse: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
   textureNames:
   - _MainTex
   - _MetallicGlossMap
@@ -3212,14 +2836,14 @@ MonoBehaviour:
   - _DetailNormalMap
   texturesToUse:
   - {fileID: 2800000, guid: 0a86ca6ae4071ad46babd42ea2471f7a, type: 3}
-  - {fileID: 10283647}
+  - {fileID: 0}
   - {fileID: 2800000, guid: d093634f756117c4ba9e34f058a3c807, type: 3}
-  - {fileID: 1259020205}
-  - {fileID: 1290800893}
-  - {fileID: 1423257767}
-  - {fileID: 343166749}
-  - {fileID: 1859986490}
-  - {fileID: 649576777}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mesh: {fileID: 2006119869}
   meshToUse: {fileID: 0}
   keyPoints:
@@ -3331,7 +2955,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1acebd82c752ef94790181c0254c44ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: .280000001
+      value: -.370000005
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1acebd82c752ef94790181c0254c44ff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3430,34 +3054,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 437148, guid: 0de3099bb2487614497684ec75ddde4e, type: 2}
   m_PrefabInternal: {fileID: 844461366}
---- !u!28 &857566562
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _ParallaxMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &859968951
 GameObject:
   m_ObjectHideFlags: 0
@@ -3711,34 +3307,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!28 &907338594
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _OcclusionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &907841254
 GameObject:
   m_ObjectHideFlags: 0
@@ -3886,20 +3454,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 929797267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b61d9b35dc2e96f45bf48c2fc57aa347, type: 3}
+  m_Script: {fileID: 11500000, guid: aa9222b078ae5d84a9d1e74d71638ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mov: {fileID: 0}
+  triggered: 0
+  HP: 3
+  textures:
+  - {fileID: 2800000, guid: aa9159b11eb598e45a46c12f8c522f77, type: 3}
+  - {fileID: 2800000, guid: 8dc60f28f8b731944b9061c428812e49, type: 3}
+  - {fileID: 2800000, guid: 822edc0753f500548aff9bb1cb2803e0, type: 3}
+  - {fileID: 2800000, guid: dd250f8e5c232fd43b3b8605f9576a84, type: 3}
 --- !u!23 &929797269
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 929797267}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: a47a604720b95c448a149e6ffa66dd30, type: 2}
+  - {fileID: 2100000, guid: 2aedcc4a2b3b1a84583368c5bde650b6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -3940,10 +3516,10 @@ Transform:
   m_GameObject: {fileID: 929797267}
   m_LocalRotation: {x: -1.15202326e-07, y: -.707106829, z: .707106709, w: -1.15202312e-07}
   m_LocalPosition: {x: 5.38000011, y: 1.47000003, z: -9.52999973}
-  m_LocalScale: {x: .0500000007, y: .0500000007, z: .0500000007}
+  m_LocalScale: {x: .0399999991, y: .0399999991, z: .0399999991}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!21 &937329129
 Material:
   serializedVersion: 5
@@ -4161,7 +3737,7 @@ MonoBehaviour:
   gceil: 3
   meshCollider: {fileID: 0}
   type: 1
-  ShaderToUse: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  ShaderToUse: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
   textureNames:
   - _MainTex
   - _MetallicGlossMap
@@ -4174,14 +3750,14 @@ MonoBehaviour:
   - _DetailNormalMap
   texturesToUse:
   - {fileID: 2800000, guid: 27b3a9ede502547c0a0570ead71a40ff, type: 3}
-  - {fileID: 466650825}
-  - {fileID: 1837316154}
-  - {fileID: 857566562}
-  - {fileID: 1759741393}
-  - {fileID: 1800646341}
-  - {fileID: 349786920}
-  - {fileID: 1785079935}
-  - {fileID: 1633443323}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mesh: {fileID: 335668215}
   meshToUse: {fileID: 0}
   keyPoints:
@@ -4548,34 +4124,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1033639166}
   m_RootOrder: 4
---- !u!28 &1010229495
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _MetallicGlossMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &1033639165
 GameObject:
   m_ObjectHideFlags: 0
@@ -5008,34 +4556,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07a94e3fd2ae645b0a4440a11a042cb1, type: 2}
   m_IsPrefabParent: 0
---- !u!28 &1076538790
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailMask
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &1080177967
 GameObject:
   m_ObjectHideFlags: 0
@@ -5338,6 +4858,164 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1033639166}
   m_RootOrder: 3
+--- !u!1 &1142163317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1142163318}
+  - 33: {fileID: 1142163323}
+  - 64: {fileID: 1142163322}
+  - 23: {fileID: 1142163321}
+  - 114: {fileID: 1142163320}
+  - 82: {fileID: 1142163319}
+  m_Layer: 0
+  m_Name: Lift Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1142163318
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1142163317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.6099999, y: -1.85000002, z: 1.23999977}
+  m_LocalScale: {x: .253249764, y: 1, z: .356498718}
+  m_Children: []
+  m_Father: {fileID: 610873777}
+  m_RootOrder: 13
+--- !u!82 &1142163319
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1142163317}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 771ba448ae6df42adb9f1162160cddd2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!114 &1142163320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1142163317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62dd0405d1e5f3946b1dfb7f395410c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newPositionRelative: {x: 0, y: 3, z: 0}
+  moveSpeed: .200000003
+  cubeAudio: {fileID: 1142163319}
+--- !u!23 &1142163321
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1142163317}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &1142163322
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1142163317}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1142163323
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1142163317}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1179368955
 Transform:
   m_PrefabParentObject: {fileID: 419952, guid: 3b9f5f4677827f1478d7ddd67e9ad4c5, type: 2}
@@ -5590,90 +5268,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!28 &1227904604
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _OcclusionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
---- !u!28 &1259020205
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _ParallaxMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
---- !u!28 &1262774326
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _EmissionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &1277328247
 GameObject:
   m_ObjectHideFlags: 0
@@ -5726,7 +5320,7 @@ MonoBehaviour:
   gceil: 3
   meshCollider: {fileID: 0}
   type: 1
-  ShaderToUse: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  ShaderToUse: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
   textureNames:
   - _MainTex
   - _MetallicGlossMap
@@ -5739,14 +5333,14 @@ MonoBehaviour:
   - _DetailNormalMap
   texturesToUse:
   - {fileID: 2800000, guid: ffe1ebbe1bbd34c808489a99c7be1eb3, type: 3}
-  - {fileID: 1486229836}
+  - {fileID: 0}
   - {fileID: 2800000, guid: 2bcb7f0dc3e4e4b27936e177993072f4, type: 3}
-  - {fileID: 1296356063}
-  - {fileID: 907338594}
-  - {fileID: 1262774326}
-  - {fileID: 1076538790}
-  - {fileID: 529302755}
-  - {fileID: 1419060995}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mesh: {fileID: 2113657846}
   meshToUse: {fileID: 0}
   keyPoints:
@@ -5807,62 +5401,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 568667439}
   m_RootOrder: 2
---- !u!28 &1290800893
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _OcclusionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
---- !u!28 &1296356063
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _ParallaxMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!43 &1313232656
 Mesh:
   m_ObjectHideFlags: 0
@@ -6457,90 +5995,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 7f8d50eeed6bacf40a4651d6d8bb4255, type: 3}
   m_PrefabInternal: {fileID: 1411729976}
---- !u!28 &1419060995
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailNormalMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
---- !u!28 &1423257767
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _EmissionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
---- !u!28 &1436500377
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _MetallicGlossMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &1443173440
 GameObject:
   m_ObjectHideFlags: 0
@@ -6798,34 +6252,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1033639166}
   m_RootOrder: 15
---- !u!28 &1486229836
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _MetallicGlossMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &1496607458
 GameObject:
   m_ObjectHideFlags: 0
@@ -7057,7 +6483,7 @@ MonoBehaviour:
   gceil: 3
   meshCollider: {fileID: 0}
   type: 1
-  ShaderToUse: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  ShaderToUse: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
   textureNames:
   - _MainTex
   - _MetallicGlossMap
@@ -7070,14 +6496,14 @@ MonoBehaviour:
   - _DetailNormalMap
   texturesToUse:
   - {fileID: 2800000, guid: 92dbb32691ff6054ea5ce147a70e6864, type: 3}
-  - {fileID: 1436500377}
+  - {fileID: 0}
   - {fileID: 2800000, guid: 67c1ff7783166f747859cc0906d40cd3, type: 3}
-  - {fileID: 225363149}
-  - {fileID: 1227904604}
-  - {fileID: 308749314}
-  - {fileID: 1690799572}
-  - {fileID: 2107056550}
-  - {fileID: 670014590}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mesh: {fileID: 232017546}
   meshToUse: {fileID: 0}
   keyPoints:
@@ -7523,118 +6949,6 @@ MonoBehaviour:
   conditions:
   - {fileID: 269215041}
   - {fileID: 943238473}
---- !u!28 &1631422938
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _ParallaxMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
---- !u!28 &1633443323
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailNormalMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
---- !u!28 &1646292705
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailNormalMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
---- !u!28 &1690799572
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailMask
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1001 &1702187782
 Prefab:
   m_ObjectHideFlags: 0
@@ -7871,34 +7185,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1732312403}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!28 &1759741393
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _OcclusionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1001 &1762511315
 Prefab:
   m_ObjectHideFlags: 0
@@ -8025,34 +7311,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!28 &1785079935
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailAlbedoMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!4 &1785560346
 Transform:
   m_PrefabParentObject: {fileID: 403874, guid: 23f069d5fcbfb4d60ab3902b1c2f12ef, type: 2}
@@ -8174,90 +7432,94 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 838822153}
   m_Script: {fileID: 11500000, guid: f60fce8e74c0c1c43bda6e08a919e3ab, type: 3}
---- !u!28 &1800646341
-Texture2D:
+--- !u!1 &1842238286
+GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _EmissionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
---- !u!28 &1837316154
-Texture2D:
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1842238290}
+  - 23: {fileID: 1842238289}
+  - 102: {fileID: 1842238288}
+  - 114: {fileID: 1842238287}
+  m_Layer: 0
+  m_Name: rekt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1842238287
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _BumpMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
---- !u!28 &1859986490
-Texture2D:
+  m_GameObject: {fileID: 1842238286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41951d3fa7d5a28458f4ec2f7fe7db5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dead: 0
+  depth: 5
+--- !u!102 &1842238288
+TextMesh:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailAlbedoMap
-  m_ImageContentsHash:
+  m_GameObject: {fileID: 1842238286}
+  m_Text: Hello World
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
+    rgba: 4294967295
+--- !u!23 &1842238289
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1842238286}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!4 &1842238290
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1842238286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.84000015, y: 1.38000011, z: -7.78999996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
 --- !u!1 &1876362315
 GameObject:
   m_ObjectHideFlags: 0
@@ -9112,34 +8374,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 743782684}
   m_RootOrder: 4
---- !u!28 &2107056550
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _DetailAlbedoMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &2110141794
 GameObject:
   m_ObjectHideFlags: 0
@@ -9341,34 +8575,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!28 &2128560823
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Click to set _EmissionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_TextureFormat: 5
-  m_MipMap: 1
-  m_IsReadable: 1
-  m_ReadAllowed: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 4
-  _typelessdata: cdcdcdcd
 --- !u!1 &2143614631
 GameObject:
   m_ObjectHideFlags: 0

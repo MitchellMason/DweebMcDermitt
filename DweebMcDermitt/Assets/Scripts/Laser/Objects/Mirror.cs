@@ -23,17 +23,19 @@ public class Mirror : LaserTarget {
 	void Start(){
 		startUp ();
 	}
-	
 	override public void onLaserShot(LaserHitInfo laserHitInfo){
+		lineRenderer.enabled = true;
 		shoot (laserHitInfo);
 	}
 	
 	override public void onLaserStay(LaserHitInfo laserHitInfo){
+		lineRenderer.enabled = true;
 		shoot (laserHitInfo);
 	}
 	
 	override public void onLaserLeave(){
-		lineRenderer.SetWidth (0, 0);
+		lineRenderer.enabled = false;
+		shooter.endFire ();
 	}
 
 	void shoot(LaserHitInfo laserHitInfo){

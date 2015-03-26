@@ -64,14 +64,10 @@ public class LaserShooter{
 				Material mat = lineRenderer.material;
 				mat.SetFloat ("_Width", LaserUtils.LASER_WIDTH/2.0f);
 				mat.SetVector ("_Start", ray.origin);
-				mat.SetVector ("_End", hit.point);
+				mat.SetVector ("_End", (ray.direction * hit.distance) + ray.origin);
 				lineRenderer.SetVertexCount (2);
 				lineRenderer.SetPosition (0, ray.origin);
-				/*lineRenderer.SetWidth(
-					1/Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, ray.origin),
-					1/Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, (ray.direction * distance) + ray.origin)
-					); */
-				lineRenderer.SetPosition (1, hit.point);
+				lineRenderer.SetPosition (1, (ray.direction * hit.distance) + ray.origin);
 			}
 		}
 		else{
@@ -79,9 +75,16 @@ public class LaserShooter{
 			justHit = null;
 			//Draw the laser shot
 			if(draw){
+				
+				Material mat = lineRenderer.material;
+				mat.SetFloat ("_Width", LaserUtils.LASER_WIDTH/2.0f);
+				mat.SetVector ("_Start", ray.origin);
+				mat.SetVector ("_End", (ray.direction * distance) + ray.origin);
+
 				lineRenderer.SetVertexCount (2);
 				lineRenderer.SetPosition (0, ray.origin);
 				lineRenderer.SetPosition(1, (ray.direction * distance) + ray.origin);
+
 			}
 		}
 		
