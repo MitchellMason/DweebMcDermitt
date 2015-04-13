@@ -9,6 +9,8 @@ public static class LaserUtils{
 
 	public static float LASER_DISTANCE = 30.0f;
 	
+
+
 	public static LaserHitInfo toLaserHitInfo(RaycastHit r, Vector3 pos){
 		LaserHitInfo l = new LaserHitInfo ();
 		l.hitPoint = r.point;
@@ -22,6 +24,8 @@ public static class LaserUtils{
 public class LaserShooter{
 	LaserTarget storedObject; //The laser target we're in the process of shooting
 	LineRenderer lineRenderer;
+
+	[SerializeField] public static GameObject bulletHole;
 	
 	public LaserShooter(LineRenderer renderer){
 		renderer.enabled = true;
@@ -58,6 +62,8 @@ public class LaserShooter{
 		if (Physics.Raycast (ray.origin, ray.direction, out hit, distance)) {
 			//Debug.Log ("Mirror: Hit " + hit.collider.gameObject.name);
 			justHit = hit.collider.gameObject;
+			Debug.Log ("Firing at a Prop");
+			GameObject.Instantiate(Resources.Load("bulletHole"), hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
 
 			//Draw the laser shot
 			if(draw){

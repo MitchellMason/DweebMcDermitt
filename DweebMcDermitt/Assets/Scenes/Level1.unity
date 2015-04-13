@@ -4860,6 +4860,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11490534, guid: 660271135b3984be19620204b3f63bef, type: 2}
+      propertyPath: bulletHole
+      value: 
+      objectReference: {fileID: 150576, guid: 05566fe2f7e6a45eba8262cb8af11bc2, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 660271135b3984be19620204b3f63bef, type: 2}
   m_IsPrefabParent: 0
@@ -5247,7 +5251,7 @@ GameObject:
   - 54: {fileID: 1220917659}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
