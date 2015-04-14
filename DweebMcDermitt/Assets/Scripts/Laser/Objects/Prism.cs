@@ -50,10 +50,12 @@ public class Prism : LaserTarget {
 	}
 	
 	override public void onLaserLeave(){
-		first.enabled = false;
-		second.enabled = false;
-		lShooter.endFire ();
-		rShooter.endFire ();
+		if (first.enabled) {
+			first.enabled = false;
+			second.enabled = false;
+			lShooter.endFire ();
+			rShooter.endFire ();
+		}
 	}
 	
 	//Get the mesh positions of the new origins for the lasers.
