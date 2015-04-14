@@ -39,7 +39,7 @@ public class LaserShooter{
 		lineRenderer.receiveShadows = false;
 		lineRenderer.SetVertexCount (2);
 		lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
-		bulletHole = 
+		//bulletHole = not sure how to get this object here cleanly
 	}
 
 	public void fireLaser(Ray ray, float distance){
