@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -39,7 +39,7 @@ public class LaserShooter{
 		lineRenderer.receiveShadows = false;
 		lineRenderer.SetVertexCount (2);
 		lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
-		//bulletHole = not sure how to get this object here cleanly
+		bulletHole = 
 	}
 
 	public void fireLaser(Ray ray, float distance){
@@ -63,6 +63,11 @@ public class LaserShooter{
 			//Debug.Log ("Mirror: Hit " + hit.collider.gameObject.name);
 			justHit = hit.collider.gameObject;
 
+			// make a burn mark on burnable stuff
+			if (hit.transform.tag == "burnable") {
+				Debug.Log ("Firing at a burnable object");
+				GameObject.Instantiate(Resources.Load("bulletHole"), hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+			}
 			//Draw the laser shot
 			if(draw){
 				Material mat = lineRenderer.material;

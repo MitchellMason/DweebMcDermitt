@@ -41,9 +41,7 @@ public class Grabbable : InteractionTarget {
 			col.attachedRigidbody.useGravity = false;
 
 			// Stop out of control collision
-			if (colliding) {
-				print ("colliding");
-			} else {
+			if (!colliding) {
 				col.attachedRigidbody.velocity = new Vector3(0,0,0);
 				col.attachedRigidbody.angularVelocity = new Vector3(0,0,0);
 				transform.rotation = Quaternion.LookRotation(-Camera.main.transform.forward, Camera.main.transform.up);
