@@ -519,7 +519,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5ad602256b7794d0ea4f9b9b91f4d7d4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .757000029
+  m_Volume: .170000002
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3867,7 +3867,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8229836, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: BypassListenerEffects
@@ -3885,8 +3885,20 @@ Prefab:
       propertyPath: BypassReverbZones
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8210122, guid: 660271135b3984be19620204b3f63bef, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9519db8f700f14af197664701d577927, type: 3}
+    - target: {fileID: 8210122, guid: 660271135b3984be19620204b3f63bef, type: 2}
+      propertyPath: BypassListenerEffects
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11429836, guid: 660271135b3984be19620204b3f63bef, type: 2}
+    - {fileID: 8212142, guid: 660271135b3984be19620204b3f63bef, type: 2}
+    - {fileID: 11476734, guid: 660271135b3984be19620204b3f63bef, type: 2}
+    - {fileID: 8272046, guid: 660271135b3984be19620204b3f63bef, type: 2}
+    - {fileID: 11487826, guid: 660271135b3984be19620204b3f63bef, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 660271135b3984be19620204b3f63bef, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1102304570
