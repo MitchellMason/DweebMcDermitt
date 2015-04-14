@@ -12,7 +12,7 @@ GameObject:
   - 64: {fileID: 6409748}
   - 23: {fileID: 2359414}
   m_Layer: 0
-  m_Name: bullethole
+  m_Name: burnMarks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,8 +24,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150576}
-  m_LocalRotation: {x: 0, y: 8.72664677e-05, z: 0, w: 1}
-  m_LocalPosition: {x: 1.61199999, y: .90200001, z: -5.13500023}
+  m_LocalRotation: {x: 0, y: .000261799432, z: 0, w: 1}
+  m_LocalPosition: {x: 2.80699992, y: 1.77600002, z: -5.58199978}
   m_LocalScale: {x: .0299999993, y: .0299999993, z: .0299999993}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40,7 +40,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1a067ffeb827b40c3954a21353211c51, type: 2}
+  - {fileID: 2100000, guid: 484ffb0fba31a4e75adc354eb0be4e2c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1

@@ -23,7 +23,7 @@ public class LaserShooter{
 	LaserTarget storedObject; //The laser target we're in the process of shooting
 	LineRenderer lineRenderer;
 
-//	Decal bulletHole;
+//	GameObject burnMarks;
 	
 	public LaserShooter(LineRenderer renderer){
 		renderer.enabled = true;
@@ -65,7 +65,9 @@ public class LaserShooter{
 			// make a burn mark on burnable stuff
 			if (hit.transform.tag == "burnable") {
 				Debug.Log ("Firing at a burnable object");
-				GameObject.Instantiate(Resources.Load("burnMarks"), hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+				GameObject burnClone = (GameObject)GameObject.Instantiate(Resources.Load("burnMarks"), hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+//				GameObject.Instantiate(Resources.Load("burnMarks"), hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+				GameObject.Destroy(burnClone.gameObject, 5);
 			}
 			//Draw the laser shot
 			if(draw){
@@ -111,7 +113,7 @@ public class LaserShooter{
 					}
 					storedObject = justHitLaserTarget;
 				}
-//				Decal burn = GameObject.Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal)) as Decal;
+//				Decal burn = GameObject.Instantiate(burnMarks, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal)) as Decal;
 //				burn.init(hitInfo.hitPoint, hitInfo.hitSurfaceNormal);
 			}
 			else{

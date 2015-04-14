@@ -6707,6 +6707,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a82653330795eed448d34179e0533b83, type: 2}
+    - target: {fileID: 199032, guid: 659de39414255b743a9d0a50ebf50ba8, type: 2}
+      propertyPath: m_TagString
+      value: burnable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 659de39414255b743a9d0a50ebf50ba8, type: 2}
   m_IsPrefabParent: 0
