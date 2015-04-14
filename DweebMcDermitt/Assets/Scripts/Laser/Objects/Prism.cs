@@ -45,8 +45,8 @@ public class Prism : LaserTarget {
 		Debug.DrawLine (lRay.origin, laserHitInfo.hitPoint, Color.yellow);
 		Debug.DrawLine (rRay.origin, laserHitInfo.hitPoint, Color.green);
 
-		lShooter.fireLaser(lRay, laserHitInfo.remainingDistance);
-		rShooter.fireLaser(rRay, laserHitInfo.remainingDistance);
+		lShooter.fireLaser(lRay, 50.0f);
+		rShooter.fireLaser(rRay, 50.0f);
 	}
 	
 	override public void onLaserLeave(){
