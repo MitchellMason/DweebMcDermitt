@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Prism_mat
-  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHABLEND_ON _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: 3000
@@ -31,13 +31,6 @@ Material:
       data:
         first:
           name: _DetailNormalMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _MetallicGlossMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -79,6 +72,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _MetallicGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _SpecGlossMap
         second:
           m_Texture: {fileID: 0}
@@ -99,24 +99,20 @@ Material:
         second: 10
       data:
         first:
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
           name: _ZWrite
         second: 0
       data:
         first:
           name: _Glossiness
-        second: .850000024
-      data:
-        first:
-          name: _Metallic
-        second: 0
+        second: 1
       data:
         first:
           name: _BumpScale
         second: 1
-      data:
-        first:
-          name: _Parallax
-        second: .0199999996
       data:
         first:
           name: _OcclusionStrength
@@ -137,6 +133,10 @@ Material:
         first:
           name: _Mode
         second: 2
+      data:
+        first:
+          name: _Metallic
+        second: 1
     m_Colors:
       data:
         first:
@@ -145,7 +145,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .775120258, g: .112941168, b: .800000012, a: .517647088}
+        second: {r: 1, g: 1, b: 1, a: .650980413}
       data:
         first:
           name: _SpecColor
