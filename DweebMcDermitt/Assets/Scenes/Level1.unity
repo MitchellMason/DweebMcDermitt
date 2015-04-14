@@ -1556,7 +1556,7 @@ GameObject:
   - 64: {fileID: 568667440}
   m_Layer: 0
   m_Name: PolyTree
-  m_TagString: Untagged
+  m_TagString: burnable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4741,6 +4741,10 @@ Prefab:
       propertyPath: m_Name
       value: WoodenDoor 1
       objectReference: {fileID: 0}
+    - target: {fileID: 189480, guid: 0de3099bb2487614497684ec75ddde4e, type: 2}
+      propertyPath: m_TagString
+      value: burnable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0de3099bb2487614497684ec75ddde4e, type: 2}
   m_IsPrefabParent: 0
@@ -4942,7 +4946,7 @@ GameObject:
   - 82: {fileID: 1142163319}
   m_Layer: 0
   m_Name: Lift Plane
-  m_TagString: Untagged
+  m_TagString: burnable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5251,7 +5255,7 @@ GameObject:
   - 54: {fileID: 1220917659}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Prop
+  m_TagString: burnable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6208,6 +6212,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f546dfabc39314659a28dd3f4eb82f23, type: 3}
+      propertyPath: m_TagString
+      value: burnable
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: f546dfabc39314659a28dd3f4eb82f23, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: f546dfabc39314659a28dd3f4eb82f23, type: 3}
@@ -6333,7 +6341,7 @@ GameObject:
   - 23: {fileID: 1496607460}
   m_Layer: 0
   m_Name: EyeHeartOptometryPoster 1
-  m_TagString: Untagged
+  m_TagString: burnable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

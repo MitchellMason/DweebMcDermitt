@@ -62,9 +62,12 @@ public class LaserShooter{
 		if (Physics.Raycast (ray.origin, ray.direction, out hit, distance)) {
 			//Debug.Log ("Mirror: Hit " + hit.collider.gameObject.name);
 			justHit = hit.collider.gameObject;
-			Debug.Log ("Firing at a Prop");
-			GameObject.Instantiate(Resources.Load("bulletHole"), hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
 
+			// make a burn mark on burnable stuff
+			if (hit.transform.tag == "burnable") {
+				Debug.Log ("Firing at a burnable object");
+				GameObject.Instantiate(Resources.Load("bulletHole"), hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+			}
 			//Draw the laser shot
 			if(draw){
 				Material mat = lineRenderer.material;
