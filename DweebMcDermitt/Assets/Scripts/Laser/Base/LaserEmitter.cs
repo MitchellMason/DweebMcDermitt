@@ -18,8 +18,6 @@ public class LaserEmitter : MonoBehaviour {
 	private LineRenderer lineRenderer;
 	private Ray laser;
 
-	[SerializeField] private GameObject bulletHole;
-
 	//Raycast information
 	private RaycastHit hit;
 
@@ -37,14 +35,17 @@ public class LaserEmitter : MonoBehaviour {
 		}
 		shooter = new LaserShooter (lineRenderer);
 	}
+
 	void Start()
 	{
 		startUp ();
 	}
+
 	void Awake()
 	{
 		startUp ();
 	}
+
 	void Update () {
 		okayToFire = timer > 0;
 		//If we're firing the laser
@@ -52,8 +53,6 @@ public class LaserEmitter : MonoBehaviour {
 			laser.origin = CenterEyeAnchor.position;
 			laser.direction = transform.position - CenterEyeAnchor.position;
 			shooter.fireLaser(laser, laserClipDistance, false);
-			Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
-
 			timer -= Time.deltaTime;
 
 			if (timer <= 0) {

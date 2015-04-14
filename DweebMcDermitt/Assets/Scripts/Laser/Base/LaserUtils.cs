@@ -8,8 +8,6 @@ public static class LaserUtils{
 	public static float LASER_DURATION = 6;
 
 	public static float LASER_DISTANCE = 30.0f;
-	
-
 
 	public static LaserHitInfo toLaserHitInfo(RaycastHit r, Vector3 pos){
 		LaserHitInfo l = new LaserHitInfo ();
@@ -25,7 +23,7 @@ public class LaserShooter{
 	LaserTarget storedObject; //The laser target we're in the process of shooting
 	LineRenderer lineRenderer;
 
-	[SerializeField] public static GameObject bulletHole;
+	Decal bulletHole;
 	
 	public LaserShooter(LineRenderer renderer){
 		renderer.enabled = true;
@@ -41,7 +39,9 @@ public class LaserShooter{
 		lineRenderer.receiveShadows = false;
 		lineRenderer.SetVertexCount (2);
 		lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
+		bulletHole = 
 	}
+
 	public void fireLaser(Ray ray, float distance){
 		fireLaser (ray, distance, true);
 	}
@@ -62,8 +62,6 @@ public class LaserShooter{
 		if (Physics.Raycast (ray.origin, ray.direction, out hit, distance)) {
 			//Debug.Log ("Mirror: Hit " + hit.collider.gameObject.name);
 			justHit = hit.collider.gameObject;
-			Debug.Log ("Firing at a Prop");
-			GameObject.Instantiate(Resources.Load("bulletHole"), hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
 
 			//Draw the laser shot
 			if(draw){
@@ -88,7 +86,7 @@ public class LaserShooter{
 				mat.SetVector ("_End", (ray.direction * distance) + ray.origin);
 
 				lineRenderer.SetVertexCount (2);
-				lineRenderer.SetPosition (0, ray.origin);
+				lineRenderer.SetPosition(0, ray.origin);
 				lineRenderer.SetPosition(1, (ray.direction * distance) + ray.origin);
 
 			}
@@ -98,16 +96,19 @@ public class LaserShooter{
 		if(justHit != null){
 			LaserTarget justHitLaserTarget = justHit.GetComponent<LaserTarget>();
 			if(justHitLaserTarget != null){
+				LaserHitInfo hitInfo = LaserUtils.toLaserHitInfo(hit, ray.origin);
 				if(justHitLaserTarget == storedObject){
-					storedObject.onLaserStay(LaserUtils.toLaserHitInfo(hit, ray.origin));
+					storedObject.onLaserStay(hitInfo);
 				}
 				else{
-					justHitLaserTarget.onLaserShot(LaserUtils.toLaserHitInfo(hit, ray.origin));
+					justHitLaserTarget.onLaserShot(hitInfo);
 					if(storedObject != null){
 						storedObject.onLaserLeave();
 					}
 					storedObject = justHitLaserTarget;
 				}
+				Decal burn = GameObject.Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal)) as Decal;
+				burn.init(hitInfo.hitPoint, hitInfo.hitSurfaceNormal);
 			}
 			else{
 				endFire();
