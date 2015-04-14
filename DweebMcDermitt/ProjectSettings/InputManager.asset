@@ -42,7 +42,7 @@ InputManager:
     descriptiveName: Fire Laser
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: tab
+    positiveButton: joystick button 0
     altNegativeButton: 
     altPositiveButton: mouse 0
     gravity: 1000
@@ -170,7 +170,7 @@ InputManager:
     descriptiveName: Interact with objects in the world
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: r
+    positiveButton: joystick button 1
     altNegativeButton: 
     altPositiveButton: mouse 1
     gravity: 1000
