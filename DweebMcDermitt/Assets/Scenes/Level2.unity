@@ -44,7 +44,7 @@ LevelGameManager:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -834,7 +834,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Standard
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -844,14 +844,14 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 0a86ca6ae4071ad46babd42ea2471f7a, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: d093634f756117c4ba9e34f058a3c807, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -960,7 +960,7 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 0}
       data:
         first:
           name: _Color
@@ -1478,7 +1478,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &498788234
 Transform:
@@ -2622,7 +2622,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &789320814
 Transform:
@@ -3063,7 +3063,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!108 &872780660
 Light:
@@ -3672,7 +3672,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &977874686
 MonoBehaviour:
@@ -3809,7 +3809,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &979996692
 Transform:
@@ -4059,7 +4059,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1027376771
 Transform:
@@ -4118,7 +4118,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1033639166
 Transform:
@@ -4840,7 +4840,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1178882730
 Transform:
@@ -5414,7 +5414,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1348845213
 Transform:
@@ -6374,7 +6374,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!108 &1522755019
 Light:
@@ -6677,19 +6677,19 @@ Prefab:
     m_Modifications:
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.7679996
+      value: -21.7700005
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -29.4000015
+      value: -34.5200005
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 26.7280006
+      value: 26.7299995
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.707106888
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.y
@@ -6697,11 +6697,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106769
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_RootOrder
@@ -6727,19 +6727,19 @@ Prefab:
     m_Modifications:
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.7679996
+      value: -21.7700005
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -29.4000015
+      value: -34.5200005
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 16.7280006
+      value: 16.7299995
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.707106888
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.y
@@ -6747,11 +6747,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106769
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_RootOrder
@@ -6778,7 +6778,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 0a86ca6ae4071ad46babd42ea2471f7a, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -6894,7 +6894,7 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 0}
       data:
         first:
           name: _Color
@@ -7012,7 +7012,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1702150751
 Transform:
@@ -7457,7 +7457,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1827042651
 Transform:
@@ -7514,12 +7514,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 846076703}
-  - {fileID: 766900207}
-  - {fileID: 241313331}
-  - {fileID: 1626334587}
-  - {fileID: 720935759}
-  - {fileID: 544861419}
+  - {fileID: 2100000, guid: fee730de01a95f440913ef28ee9b03ba, type: 2}
+  - {fileID: 2100000, guid: fee730de01a95f440913ef28ee9b03ba, type: 2}
+  - {fileID: 2100000, guid: fee730de01a95f440913ef28ee9b03ba, type: 2}
+  - {fileID: 2100000, guid: fee730de01a95f440913ef28ee9b03ba, type: 2}
+  - {fileID: 2100000, guid: fee730de01a95f440913ef28ee9b03ba, type: 2}
+  - {fileID: 2100000, guid: fee730de01a95f440913ef28ee9b03ba, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7769,19 +7769,19 @@ Prefab:
     m_Modifications:
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -26.7679996
+      value: -26.7700005
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -29.4000015
+      value: -34.5200005
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 21.7280006
+      value: 21.7299995
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.707106888
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.y
@@ -7789,11 +7789,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106769
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
       propertyPath: m_RootOrder
@@ -8429,7 +8429,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &2129572508
 MonoBehaviour:
