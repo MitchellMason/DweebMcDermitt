@@ -24,7 +24,7 @@ public class Player : LaserTarget {
 	}
 
 	override public void onLaserShot(LaserHitInfo laserHitInfo){
-		if (glass != null) {
+		if (glass != null && glassMov != null && HP != null) {
 			HP -= 1;
 			print (HP);
 
