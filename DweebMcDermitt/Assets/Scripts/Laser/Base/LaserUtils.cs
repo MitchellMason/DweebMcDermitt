@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public static class LaserUtils{
-	public const float LASER_WIDTH = 0.25f;
+	public const float LASER_WIDTH = 1.0f;
 	public static Color LASER_COLOR = new Color(255f,255f,255f);
 	public static float LASER_DURATION = 6;
 
@@ -65,7 +65,7 @@ public class LaserShooter{
 			// make a burn mark on burnable stuff
 			if (hit.transform.tag == "burnable") {
 				Debug.Log ("Firing at a burnable object");
-				GameObject burnClone = (GameObject)GameObject.Instantiate(Resources.Load("burnMarks"), hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+				GameObject burnClone = (GameObject)GameObject.Instantiate(Resources.Load("burnMarks"), hit.point + hit.normal/100.0f, Quaternion.FromToRotation(Vector3.up, hit.normal));
 //				GameObject.Instantiate(Resources.Load("burnMarks"), hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
 				GameObject.Destroy(burnClone.gameObject, 5);
 			}
