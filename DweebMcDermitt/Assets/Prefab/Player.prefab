@@ -846,7 +846,6 @@ MonoBehaviour:
   CenterEyeAnchor: {fileID: 415070}
   timer: 6
   LaserCylinder: {fileID: 148116, guid: 921a4c4fe650c4dbf8278ab1065b7ba1, type: 2}
-  bulletHole: {fileID: 11447166, guid: ad644bdb4f2d1ed4a8a28c415c8aa151, type: 2}
 --- !u!143 &14315070
 CharacterController:
   m_ObjectHideFlags: 1
