@@ -5732,8 +5732,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa77ac975e831f74e8be43b596585f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 360
+  rotSpeed: 10
+  lineRenderer: {fileID: 1283503046}
   target: {fileID: 409336688}
+--- !u!120 &1283503046
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1283503044}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 5ffad250eb07e4840834db40507ec309, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    startWidth: 1
+    endWidth: 1
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4294967295
+  m_UseWorldSpace: 1
 --- !u!28 &1284637275
 Texture2D:
   m_ObjectHideFlags: 0
@@ -9463,11 +9501,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 993c9225a982b6f4d959e630267d6679, type: 3}
       propertyPath: m_LocalRotation.y
-      value: .0461554267
+      value: .04615549
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 993c9225a982b6f4d959e630267d6679, type: 3}
       propertyPath: m_LocalRotation.w
-      value: .998934329
+      value: .998934269
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 993c9225a982b6f4d959e630267d6679, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9480,6 +9518,14 @@ Prefab:
     - target: {fileID: 100056, guid: 993c9225a982b6f4d959e630267d6679, type: 3}
       propertyPath: m_Name
       value: spiked_turret_with_script
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 993c9225a982b6f4d959e630267d6679, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 993c9225a982b6f4d959e630267d6679, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 993c9225a982b6f4d959e630267d6679, type: 3}
