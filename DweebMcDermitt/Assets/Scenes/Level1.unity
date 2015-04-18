@@ -2539,7 +2539,7 @@ MonoBehaviour:
   - {fileID: 1797008518}
   - {fileID: 342715349}
   successSound: {fileID: 779781047}
-  needSuccessSound: 0
+  needSuccessSound: 1
 --- !u!4 &779781046
 Transform:
   m_ObjectHideFlags: 0
@@ -6106,6 +6106,10 @@ Prefab:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 8239992, guid: 9c8bf404195348d418e02ef5f0c6cb58, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 24020dd8a83f44b569b3063ba2bf9512, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c8bf404195348d418e02ef5f0c6cb58, type: 2}
   m_IsPrefabParent: 0
@@ -7418,7 +7422,7 @@ MonoBehaviour:
   - {fileID: 269215041}
   - {fileID: 943238473}
   successSound: {fileID: 1596909483}
-  needSuccessSound: 0
+  needSuccessSound: 1
 --- !u!82 &1596909483
 AudioSource:
   m_ObjectHideFlags: 0
