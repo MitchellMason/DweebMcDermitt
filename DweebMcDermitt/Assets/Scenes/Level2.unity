@@ -6968,6 +6968,10 @@ Prefab:
       propertyPath: conditions.Array.data[0]
       value: 
       objectReference: {fileID: 941635013}
+    - target: {fileID: 11455220, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1384732484}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
   m_IsPrefabParent: 0
