@@ -4,11 +4,12 @@ using System.Collections;
 public class TurretHorizontalRotate : MonoBehaviour {
 
 	// fast rotation
-	public float rotSpeed;
-	public LaserShooter gun;
-	public LineRenderer lineRenderer;
+	[SerializeField] LineRenderer lineRenderer;
+	[SerializeField] float rotSpeed;
+	[SerializeField] Transform laserOrigin;
 
-	public Transform target;
+	private LaserShooter gun;
+	private Transform target;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +21,7 @@ public class TurretHorizontalRotate : MonoBehaviour {
 	void Update () {
 
 		
-		// distance between target and the actual rotating object
+		// direction between target and the actual rotating object
 		Vector3 D = target.position - transform.position;  
 
 		
@@ -33,6 +34,6 @@ public class TurretHorizontalRotate : MonoBehaviour {
 		// put 0 on the axys you do not want for the rotation object to rotate
 		transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 	
-		gun.fireLaser (new Ray (new Vector3 (transform.position.x + 0f, transform.position.y + 0.5f, transform.position.z + 0f), target.position - transform.position), 20f);
+		gun.fireLaser (new Ray (laserOrigin.transform.position, target.position - transform.position), 20f);
 	}
 }
