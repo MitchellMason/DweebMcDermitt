@@ -2,12 +2,12 @@
 using System.Collections;
 
 //when interacted upon, moves to the new position in specified time interval
-public class OneWayLift : InteractionTarget{
+public class OneWayLift : TriggerTarget{
 	[SerializeField] private Vector3 newPositionRelative;
 	[SerializeField] private float moveSpeed;
 	
 	private Vector3	newPosition;
-	private bool interactedOn = false;
+	private bool isTriggered = false;
 	private float startTime;
 	private float journeyDistance;
 	
@@ -22,24 +22,24 @@ public class OneWayLift : InteractionTarget{
 	
 	// If we're interacted upon, start moving the object to victory
 	void Update () {
-		if (interactedOn) {
+		if (isTriggered) {
 			transform.position = Vector3.Lerp(transform.position, 
 			                                  newPosition, 
 			                                  (Time.time - startTime) * moveSpeed / journeyDistance);
 		}
 	}
 	
-	public override void onInteract(){
+	public override void onTrigger(MonoBehaviour trigger){
 		Debug.Log ("Bookshelf triggered");
-		if (!interactedOn) {
+		if (!isTriggered) {
 			startTime = Time.time;
 			liftAudio.Play ();
 		}
 		//prevent starting over
-		interactedOn = true;
+		isTriggered = true;
 	}
 	
-	override public bool isTriggered(){
-		return interactedOn;
-	}
+//	override public bool isTriggered(){
+//		return interactedOn;
+//	}
 }
