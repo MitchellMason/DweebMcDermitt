@@ -35,4 +35,8 @@ public class Interactor : MonoBehaviour {
 		}
 		interactLastFrame = interactThisFrame;
 	}
+
+	public float getClipDistance(){
+				return interactionClipDistance;
+		}
 }

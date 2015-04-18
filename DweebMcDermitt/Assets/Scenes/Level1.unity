@@ -5263,18 +5263,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11490534, guid: 660271135b3984be19620204b3f63bef, type: 2}
-      propertyPath: bulletHole
-      value: 
-      objectReference: {fileID: 150576, guid: 05566fe2f7e6a45eba8262cb8af11bc2, type: 2}
-    - target: {fileID: 8210122, guid: 660271135b3984be19620204b3f63bef, type: 2}
-      propertyPath: m_Volume
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8210122, guid: 660271135b3984be19620204b3f63bef, type: 2}
-      propertyPath: m_PlayOnAwake
+    - target: {fileID: 132736, guid: 660271135b3984be19620204b3f63bef, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
