@@ -47,12 +47,12 @@ public class MagnifyingGlass : LaserTarget {
 		float angle = Vector3.Dot (inDir, transform.forward);
 
 		{
-			float ratio = (1.0f-Mathf.Abs (angle));
-
-			Ray ray = new Ray (laserHitInfo.hitPoint, Mathf.Sign(angle)*transform.forward*ratio + inDir * (1.0f-ratio));
+			float ratio = Mathf.Min(Mathf.Pow((1.0f-Mathf.Abs (angle))*2.0f,2.0f),1.0f);
+			Vector3 outdir = Mathf.Sign(angle)*transform.forward*ratio + inDir * (1.0f-ratio);
+			Ray ray = new Ray (laserHitInfo.hitPoint, outdir);
 			//Debug.DrawRay (ray.origin, ray.direction, Color.blue);
 			//shooter.fireLaser(ray, laserHitInfo.remainingDistance);
-			shooter.fireLaser (ray, LaserUtils.LASER_DISTANCE);
+			shooter.fireLaser (ray, laserHitInfo.remainingDistance);
 		}
 	}
 	
