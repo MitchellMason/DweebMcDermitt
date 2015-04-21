@@ -7,7 +7,7 @@ public class CameraChoiceEditor : Editor {
 	public override void OnInspectorGUI () {
 		serializedObject.Update();
 		EditorGUI.BeginChangeCheck();
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("No_Occulus"), true);
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("No_Oculus"), true);
 		serializedObject.ApplyModifiedProperties();
 		if (GUI.changed)
 		{

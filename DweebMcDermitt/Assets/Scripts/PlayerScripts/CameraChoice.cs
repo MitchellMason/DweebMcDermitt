@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraChoice : MonoBehaviour {
 
-	public bool No_Occulus = false;
+	public bool No_Oculus = true;
 
 	// Use this for initialization
 	void Start () {
@@ -22,11 +22,11 @@ public class CameraChoice : MonoBehaviour {
 			GameObject gobj = transform.GetChild(i).gameObject;
 			if (gobj.name == "FirstPersonCam")
 			{
-				gobj.SetActive(No_Occulus);
+				gobj.SetActive(No_Oculus);
 			}
 			else if (gobj.name == "OVRCam")
 			{
-				gobj.SetActive(!No_Occulus);
+				gobj.SetActive(!No_Oculus);
 			}
 		}
 		
