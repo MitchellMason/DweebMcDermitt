@@ -4,22 +4,26 @@ using System.Collections;
 public class TurretHorizontalRotate : MonoBehaviour {
 
 	// fast rotation
-	public float rotSpeed = 360f;
+	[SerializeField] LineRenderer lineRenderer;
+	[SerializeField] float rotSpeed;
+	[SerializeField] Transform laserOrigin;
 
-	public Transform target;
+	private LaserShooter gun;
+	private Transform target;
 
 	// Use this for initialization
 	void Start () {
 		target = GameObject.FindGameObjectWithTag ("Player").transform;
+		gun = new LaserShooter (lineRenderer);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		
-		// distance between target and the actual rotating object
+		// direction between target and the actual rotating object
 		Vector3 D = target.position - transform.position;  
-		
+
 		
 		// calculate the Quaternion for the rotation
 		Quaternion rot = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(D), rotSpeed * Time.deltaTime);
@@ -30,5 +34,6 @@ public class TurretHorizontalRotate : MonoBehaviour {
 		// put 0 on the axys you do not want for the rotation object to rotate
 		transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 	
+		gun.fireLaser (new Ray (laserOrigin.transform.position, target.position - transform.position), 20f);
 	}
 }

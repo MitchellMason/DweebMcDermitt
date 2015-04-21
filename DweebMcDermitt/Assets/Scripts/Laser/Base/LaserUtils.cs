@@ -42,23 +42,31 @@ public class LaserShooter{
 	}
 
 	public void fireLaser(Ray ray, float distance){
+		
+		if (distance <= 0.0f)
+			return;
 		fireLaser (ray, distance, true);
 	}
 	
 	//fire two laser beams, useful for prisms
 	public void splitLaser(Ray first, Ray second, float distance1, float distance2){
 		//let the logic do it's thing
-		fireLaser(first, distance1, true);
-		fireLaser(second, distance2, true);
+		if (distance1 > 0.0f)
+			fireLaser(first, distance1-1.0f, true);
+		if (distance2 > 0.0f)
+			fireLaser(second, distance2-1.0f, true);
 	}
 
 	public void fireLaser(Ray ray, float distance, bool draw){
+		distance -= 1.0f;
+		if (distance <= 0)
+			return;
 		//Debug.Log ("Firing with origin: " + ray.origin + " direction: " + ray.direction + " distance: " + distance);
 		lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
 		//Perform the shot
 		RaycastHit hit;
 		GameObject justHit;
-		if (Physics.Raycast (ray.origin, ray.direction, out hit, distance)) {
+		if (Physics.Raycast (ray.origin, ray.direction, out hit, 100.0f)) {
 			//Debug.Log ("Mirror: Hit " + hit.collider.gameObject.name);
 			justHit = hit.collider.gameObject;
 
@@ -103,6 +111,7 @@ public class LaserShooter{
 			LaserTarget justHitLaserTarget = justHit.GetComponent<LaserTarget>();
 			if(justHitLaserTarget != null){
 				LaserHitInfo hitInfo = LaserUtils.toLaserHitInfo(hit, ray.origin);
+				hitInfo.remainingDistance = distance;
 				if(justHitLaserTarget == storedObject){
 					storedObject.onLaserStay(hitInfo);
 				}

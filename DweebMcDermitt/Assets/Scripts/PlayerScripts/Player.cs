@@ -13,6 +13,8 @@ public class Player : LaserTarget {
 
 	void Start() {
 		ui = GameObject.Find ("rekt");
+		if (ui == null)
+			return;
 		uibox = ui.GetComponent<UIBox>();
 		glass = GameObject.Find ("GlassesPlane");
 		if (glass == null)

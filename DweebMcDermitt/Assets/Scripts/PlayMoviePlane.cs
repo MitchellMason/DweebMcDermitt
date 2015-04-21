@@ -10,6 +10,11 @@ public class PlayMoviePlane : MonoBehaviour
 	//public Texture final;
 	public bool triggered = false;
 
+	[SerializeField] private AudioSource hit1;
+	[SerializeField] private AudioSource hit2;
+	[SerializeField] private AudioSource hit3;
+	[SerializeField] private AudioSource myFace;
+
 	Renderer rend;
 
 	public int HP = 3;
@@ -29,12 +34,19 @@ public class PlayMoviePlane : MonoBehaviour
 			if (HP == 2) {
 				rend.material.mainTexture = textures[0];
 				print ("texture set to first");
+				if (!hit1.isPlaying) 
+					hit1.Play ();
 			} else if (HP == 1) {
 				rend.material.mainTexture = textures[2];
 				print ("texture set to third");
+				if (!hit2.isPlaying) 
+					hit2.Play ();
 			} else if (HP <= 0) {
 				rend.material.mainTexture = textures[3];
 				print ("texture set to last");
+				if (!hit3.isPlaying) 
+					hit3.Play ();
+				if(myFace != null) myFace.PlayDelayed(1f);
 			}
 			//GetComponent<Renderer> ().material.mainTexture = mov;
 

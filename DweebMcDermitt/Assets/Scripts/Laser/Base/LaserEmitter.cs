@@ -5,7 +5,7 @@ using System.Collections;
 public class LaserEmitter : MonoBehaviour {
 	
 	//The distance after which the laser doesn't hit anything.
-	[SerializeField] private float laserClipDistance = 10.0f;
+	[SerializeField] private float laserClipDistance = 20.0f;
 	//The origin for out shots
 	[SerializeField] private Transform CenterEyeAnchor;
 	//View for debug reasons
@@ -52,7 +52,7 @@ public class LaserEmitter : MonoBehaviour {
 		if (Input.GetAxis("FireLaser") >= 0.1f && okayToFire) {
 			laser.origin = CenterEyeAnchor.position;
 			laser.direction = transform.position - CenterEyeAnchor.position;
-			shooter.fireLaser(laser, laserClipDistance, false);
+			shooter.fireLaser(laser, 30.0f, false);
 			timer -= Time.deltaTime;
 
 			if (timer <= 0) {

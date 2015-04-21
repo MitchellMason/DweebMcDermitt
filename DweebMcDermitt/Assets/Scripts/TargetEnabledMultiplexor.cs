@@ -5,6 +5,11 @@ public class TargetEnabledMultiplexor : MonoBehaviour{
 
 	[SerializeField] private TriggerTarget target;
 	[SerializeField] private Target[] conditions;
+	[SerializeField] private AudioSource successSound;
+	[SerializeField] private bool needSuccessSound;
+
+	private bool soundHasPlayed = false;
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -12,6 +17,12 @@ public class TargetEnabledMultiplexor : MonoBehaviour{
 			if(!conditions[i].isTriggered()) return;
 		}
 		Debug.Log("Firing event for " + target.name);
+		if (needSuccessSound) {
+			if (!successSound.isPlaying && !soundHasPlayed) {
+				successSound.Play ();
+			}
+			soundHasPlayed = true;
+		}
 		target.onTrigger (this);
 	}
 }

@@ -12,10 +12,11 @@
 	
 	Tags { "Queue"="Transparent" "RenderType"="Transparent" }
 	     Blend SrcAlpha OneMinusSrcAlpha
-	     Cull Off Lighting Off ZWrite Off Fog { Color (0,0,0,0) }
+	     Cull Off Lighting Off ZWrite Off
 		CGPROGRAM
+		#pragma target 3.0
 		#pragma surface surf Lambert noforwardadd alpha
-
+		
 		sampler2D _MainTex;
 
 		float3 _Start;
@@ -40,17 +41,21 @@
 			float alpha = 1.0-(length(cross(q,n))/(width/4.0));
 			if (alpha <= 0)
 				discard;
-			alpha *= min(min(distance(pt,start), distance(pt, end))*10.0-1.0,1.0);
+			float td = distance(start,end);
+			float pts = distance(pt,start);
+			float pte = distance(pt,end);
+			alpha *= min(min(pts, pte)*10.0-1.0,1.0);
 			
 			if (alpha <= 0)
 				discard;
+			
 			float t = distance(pt, start)*32.0;
 			
 			float f1 = max(cos(-_Time.x*500.0+t),0.1);
 			float f2 = max(sin(_Time.x*150.9+t),0.1);
 			
-			float f3 = min(distance(pt,start)/distance(start,end),1.0);
-			float f4 = min(distance(end,start)/distance(start,end),1.0);
+			float f3 = min(pts/td,1.0);
+			float f4 = min(pte/td,1.0);
 			
 			f3 = (sin(_Time.x*3000.0+f3*9.0)+1.0)/2.0;
 			f4 = (cos(-_Time.x*2010.5+f4*2.0)+1.0)/2.0;

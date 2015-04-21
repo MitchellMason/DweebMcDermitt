@@ -34,6 +34,8 @@ public class Mirror : LaserTarget {
 	}
 	
 	override public void onLaserLeave(){
+		if (!lineRenderer.enabled)
+			return;
 		lineRenderer.enabled = false;
 		shooter.endFire ();
 	}
@@ -48,7 +50,7 @@ public class Mirror : LaserTarget {
 		Ray ray = new Ray (laserHitInfo.hitPoint, newDir);
 		//Debug.DrawRay (ray.origin, ray.direction, Color.blue);
 		//shooter.fireLaser(ray, laserHitInfo.remainingDistance);
-		shooter.fireLaser(ray, LaserUtils.LASER_DISTANCE);
+		shooter.fireLaser(ray, laserHitInfo.remainingDistance-1.0f);
 	}
 	
 	override public bool isTriggered(){

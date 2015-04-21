@@ -6,11 +6,19 @@ public class Crosshair : MonoBehaviour {
 
 	[SerializeField] private Transform FocalPoint;
 	[SerializeField] private float DistanceFromPlayer = 2.0f;
+	[SerializeField] private GameObject grabbableIcon;
+
 	private Vector3 originalScale;
-	
+
+	private float InteractionThreshold;
+
+	MeshRenderer grabbablerenderer;
 
 	void Start(){
 		originalScale = transform.localScale;
+		grabbablerenderer = grabbableIcon.GetComponent<MeshRenderer> ();
+		Interactor interactor = this.GetComponent<Interactor> ();
+		InteractionThreshold = interactor.getClipDistance ();
 	}
 
 	// Simply look at the camera
@@ -21,9 +29,17 @@ public class Crosshair : MonoBehaviour {
 		                            FocalPoint.rotation * Vector3.forward),
 		                    		out hit)){
 			distance = hit.distance;
+			Debug.Log ("Object crosshair hit is " + hit.collider.gameObject.name);
+			if(hit.collider.GetComponent<InteractionTarget> ()!= null && hit.distance < InteractionThreshold){
+				grabbablerenderer.enabled = true;
+			}
+			else{;
+				grabbablerenderer.enabled = false;
+			}
 		}
 		else{
 			distance = DistanceFromPlayer;
+			grabbablerenderer.enabled = false;
 		}
 
 		this.gameObject.transform.position = FocalPoint.position + FocalPoint.rotation * Vector3.forward * distance;
