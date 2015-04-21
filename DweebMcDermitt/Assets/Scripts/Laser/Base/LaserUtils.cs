@@ -52,12 +52,13 @@ public class LaserShooter{
 	public void splitLaser(Ray first, Ray second, float distance1, float distance2){
 		//let the logic do it's thing
 		if (distance1 > 0.0f)
-			fireLaser(first, distance1, true);
+			fireLaser(first, distance1-1.0f, true);
 		if (distance2 > 0.0f)
-			fireLaser(second, distance2, true);
+			fireLaser(second, distance2-1.0f, true);
 	}
 
 	public void fireLaser(Ray ray, float distance, bool draw){
+		distance -= 1.0f;
 		if (distance <= 0)
 			return;
 		//Debug.Log ("Firing with origin: " + ray.origin + " direction: " + ray.direction + " distance: " + distance);
@@ -110,7 +111,7 @@ public class LaserShooter{
 			LaserTarget justHitLaserTarget = justHit.GetComponent<LaserTarget>();
 			if(justHitLaserTarget != null){
 				LaserHitInfo hitInfo = LaserUtils.toLaserHitInfo(hit, ray.origin);
-				hitInfo.remainingDistance = distance - 1.0f;
+				hitInfo.remainingDistance = distance;
 				if(justHitLaserTarget == storedObject){
 					storedObject.onLaserStay(hitInfo);
 				}

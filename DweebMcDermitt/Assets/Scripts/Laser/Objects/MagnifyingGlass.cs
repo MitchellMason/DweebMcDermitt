@@ -29,11 +29,16 @@ public class MagnifyingGlass : LaserTarget {
 	}
 	
 	override public void onLaserStay(LaserHitInfo laserHitInfo){
-		lineRenderer.enabled = true;
-		shoot (laserHitInfo);
+		if (laserHitInfo.remainingDistance > 0) {
+			laserHitInfo.remainingDistance -= 1.0f;
+			lineRenderer.enabled = true;
+			shoot (laserHitInfo);
+		}
 	}
 	
 	override public void onLaserLeave(){
+		if (!lineRenderer.enabled)
+			return;
 		lineRenderer.enabled = false;
 		shooter.endFire ();
 	}
@@ -45,14 +50,14 @@ public class MagnifyingGlass : LaserTarget {
 		//newDir = Vector3.Reflect(inDir, laserHitInfo.hitSurfaceNormal).normalized;
 		//Debug.Log ("in: " + laserHitInfo.EmitterPosition + " hit: " + laserHitInfo.hitPoint + " normal: " + laserHitInfo.hitSurfaceNormal + " outDir: " + newDir + " end: " + laserEndPoint);
 		float angle = Vector3.Dot (inDir, transform.forward);
-
+		if (laserHitInfo.remainingDistance > 0)
 		{
 			float ratio = Mathf.Min((Mathf.Abs (angle)),1.0f);
 			Vector3 outdir = Mathf.Sign(angle)*transform.forward*ratio + inDir * (1.0f-ratio);
 			Ray ray = new Ray (laserHitInfo.hitPoint * (1.0f-ratio) + transform.position * ratio, outdir);
 			//Debug.DrawRay (ray.origin, ray.direction, Color.blue);
 			//shooter.fireLaser(ray, laserHitInfo.remainingDistance);
-			shooter.fireLaser (ray, laserHitInfo.remainingDistance);
+			shooter.fireLaser (ray, laserHitInfo.remainingDistance-1.0f);
 		}
 	}
 	

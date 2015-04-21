@@ -44,6 +44,7 @@ GameObject:
   - 114: {fileID: 11443636}
   - 114: {fileID: 11481038}
   - 114: {fileID: 11491522}
+  - 114: {fileID: 11472162}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -407,7 +408,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1099999, y: 1.64999998, z: -7.05999994}
+  m_LocalPosition: {x: 5, y: 1.64999998, z: -7.05999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 412700}
@@ -1441,6 +1442,17 @@ MonoBehaviour:
   freezeTimeWarp: 0
   resetTrackerOnLoad: 1
   monoscopic: 1
+--- !u!114 &11472162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b2746958602449a8a02fc128b4b5b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11475022
 MonoBehaviour:
   m_ObjectHideFlags: 1
