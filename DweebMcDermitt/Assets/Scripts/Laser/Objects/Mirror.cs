@@ -48,7 +48,7 @@ public class Mirror : LaserTarget {
 		Ray ray = new Ray (laserHitInfo.hitPoint, newDir);
 		//Debug.DrawRay (ray.origin, ray.direction, Color.blue);
 		//shooter.fireLaser(ray, laserHitInfo.remainingDistance);
-		shooter.fireLaser(ray, LaserUtils.LASER_DISTANCE);
+		shooter.fireLaser(ray, laserHitInfo.remainingDistance);
 	}
 	
 	override public bool isTriggered(){

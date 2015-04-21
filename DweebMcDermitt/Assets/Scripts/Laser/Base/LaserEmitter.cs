@@ -5,7 +5,7 @@ using System.Collections;
 public class LaserEmitter : MonoBehaviour {
 	
 	//The distance after which the laser doesn't hit anything.
-	[SerializeField] private float laserClipDistance = 10.0f;
+	[SerializeField] private float laserClipDistance = 2.0f;
 	//The origin for out shots
 	[SerializeField] private Transform CenterEyeAnchor;
 	//View for debug reasons

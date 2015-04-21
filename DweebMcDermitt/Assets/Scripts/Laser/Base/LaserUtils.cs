@@ -58,7 +58,9 @@ public class LaserShooter{
 		//Perform the shot
 		RaycastHit hit;
 		GameObject justHit;
-		if (Physics.Raycast (ray.origin, ray.direction, out hit, distance)) {
+		if (distance <= 0.0f)
+			return;
+		if (Physics.Raycast (ray.origin, ray.direction, out hit, 100.0f)) {
 			//Debug.Log ("Mirror: Hit " + hit.collider.gameObject.name);
 			justHit = hit.collider.gameObject;
 
@@ -103,6 +105,7 @@ public class LaserShooter{
 			LaserTarget justHitLaserTarget = justHit.GetComponent<LaserTarget>();
 			if(justHitLaserTarget != null){
 				LaserHitInfo hitInfo = LaserUtils.toLaserHitInfo(hit, ray.origin);
+				hitInfo.remainingDistance = distance - 1.0f;
 				if(justHitLaserTarget == storedObject){
 					storedObject.onLaserStay(hitInfo);
 				}
