@@ -42,24 +42,29 @@ public class LaserShooter{
 	}
 
 	public void fireLaser(Ray ray, float distance){
+		
+		if (distance <= 0.0f)
+			return;
 		fireLaser (ray, distance, true);
 	}
 	
 	//fire two laser beams, useful for prisms
 	public void splitLaser(Ray first, Ray second, float distance1, float distance2){
 		//let the logic do it's thing
-		fireLaser(first, distance1, true);
-		fireLaser(second, distance2, true);
+		if (distance1 > 0.0f)
+			fireLaser(first, distance1, true);
+		if (distance2 > 0.0f)
+			fireLaser(second, distance2, true);
 	}
 
 	public void fireLaser(Ray ray, float distance, bool draw){
+		if (distance <= 0)
+			return;
 		//Debug.Log ("Firing with origin: " + ray.origin + " direction: " + ray.direction + " distance: " + distance);
 		lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
 		//Perform the shot
 		RaycastHit hit;
 		GameObject justHit;
-		if (distance <= 0.0f)
-			return;
 		if (Physics.Raycast (ray.origin, ray.direction, out hit, 100.0f)) {
 			//Debug.Log ("Mirror: Hit " + hit.collider.gameObject.name);
 			justHit = hit.collider.gameObject;
