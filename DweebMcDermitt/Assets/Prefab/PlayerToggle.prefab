@@ -229,7 +229,7 @@ GameObject:
   - 114: {fileID: 11478776}
   - 114: {fileID: 11410932}
   m_Layer: 0
-  m_Name: First Person Controller
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433029c3dccaff34fb7be535e6ae042f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useFPS: 1
+  No_Occulus: 1
 --- !u!114 &11470244
 MonoBehaviour:
   m_ObjectHideFlags: 1

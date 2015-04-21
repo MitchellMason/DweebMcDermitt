@@ -20,7 +20,7 @@ public class CameraChoice : MonoBehaviour {
 		for (int i = 0; i < transform.childCount; ++i)
 		{
 			GameObject gobj = transform.GetChild(i).gameObject;
-			if (gobj.name == "FirstPersonCam")
+			if (gobj.name == "Player")
 			{
 				gobj.SetActive(No_Occulus);
 			}
