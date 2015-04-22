@@ -8,4 +8,19 @@ public abstract class LaserTarget : Target {
 	public abstract void onLaserShot(LaserHitInfo laserHitInfo);
 	public abstract void onLaserStay(LaserHitInfo laserHitInfo);
 	public abstract void onLaserLeave();
+	
+	public float timer = 0;
+
+	void Update()
+	{
+		if (GetComponent<LineRenderer> () != null)
+		{
+			
+			if (GetComponent<LineRenderer> ().enabled && timer <= 0.0f)
+			{
+				onLaserLeave();
+			}
+			timer -= Time.deltaTime;
+		}
+	}
 }

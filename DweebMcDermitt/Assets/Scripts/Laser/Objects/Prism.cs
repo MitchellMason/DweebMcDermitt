@@ -22,6 +22,7 @@ public class Prism : LaserTarget {
 	
 	override public void onLaserShot (LaserHitInfo laserHitInfo){
 		this.onLaserStay (laserHitInfo);
+		timer = 6.0f;
 	}
 	
 	override public void onLaserStay(LaserHitInfo laserHitInfo){

@@ -23,9 +23,12 @@ public class MagnifyingGlass : LaserTarget {
 	void Start(){
 		startUp ();
 	}
+
+
 	override public void onLaserShot(LaserHitInfo laserHitInfo){
 		lineRenderer.enabled = true;
 		shoot (laserHitInfo);
+		timer = 6.0f;
 	}
 	
 	override public void onLaserStay(LaserHitInfo laserHitInfo){

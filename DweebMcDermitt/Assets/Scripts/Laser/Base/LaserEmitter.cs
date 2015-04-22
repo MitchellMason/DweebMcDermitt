@@ -52,7 +52,7 @@ public class LaserEmitter : MonoBehaviour {
 		if (Input.GetAxis("FireLaser") >= 0.1f && okayToFire) {
 			laser.origin = CenterEyeAnchor.position;
 			laser.direction = transform.position - CenterEyeAnchor.position;
-			shooter.fireLaser(laser, 30.0f, false);
+			shooter.fireLaser(laser, 100.0f, false);
 			timer -= Time.deltaTime;
 
 			if (timer <= 0) {

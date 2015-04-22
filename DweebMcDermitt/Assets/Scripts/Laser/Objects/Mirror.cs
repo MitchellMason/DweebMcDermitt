@@ -25,6 +25,7 @@ public class Mirror : LaserTarget {
 	}
 	override public void onLaserShot(LaserHitInfo laserHitInfo){
 		lineRenderer.enabled = true;
+		timer = 6.0f;
 		shoot (laserHitInfo);
 	}
 	
