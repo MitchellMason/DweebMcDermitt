@@ -6278,6 +6278,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1295777580}
   m_Script: {fileID: 11500000, guid: f60fce8e74c0c1c43bda6e08a919e3ab, type: 3}
+--- !u!114 &1296392770
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11400950, guid: 766425365f3de4c32a20b783c3b14170,
+    type: 2}
+  m_PrefabInternal: {fileID: 941635012}
+  m_Script: {fileID: 11500000, guid: f60fce8e74c0c1c43bda6e08a919e3ab, type: 3}
 --- !u!43 &1312105601
 Mesh:
   m_ObjectHideFlags: 0
@@ -8562,7 +8568,7 @@ Prefab:
     - target: {fileID: 11455220, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
       propertyPath: conditions.Array.data[0]
       value: 
-      objectReference: {fileID: 2012916990}
+      objectReference: {fileID: 1296392770}
     - target: {fileID: 11455220, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
       propertyPath: target
       value: 
@@ -9570,12 +9576,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 477680, guid: 7810f6ef5b276490bbe8950361c20b34, type: 2}
   m_PrefabInternal: {fileID: 921534483}
---- !u!114 &2012916990
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11400950, guid: 766425365f3de4c32a20b783c3b14170,
-    type: 2}
-  m_PrefabInternal: {fileID: 521002052}
-  m_Script: {fileID: 11500000, guid: f60fce8e74c0c1c43bda6e08a919e3ab, type: 3}
 --- !u!1001 &2017340834
 Prefab:
   m_ObjectHideFlags: 0
