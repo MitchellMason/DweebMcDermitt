@@ -44,8 +44,12 @@ public class PlayMoviePlane : MonoBehaviour
 			} else if (HP <= 0) {
 				rend.material.mainTexture = textures[3];
 				print ("texture set to last");
-				if (!hit3.isPlaying) 
+				if (!hit3.isPlaying) {
 					hit3.Play ();
+					Debug.Log("Level should be fading");
+					RestartLevel();
+				}
+
 				if(myFace != null) myFace.PlayDelayed(1f);
 			}
 			//GetComponent<Renderer> ().material.mainTexture = mov;
@@ -54,6 +58,12 @@ public class PlayMoviePlane : MonoBehaviour
 			GetComponent<MeshRenderer> ().enabled = true;
 			triggered = false;
 		}
+	}
+
+	IEnumerator RestartLevel() {
+		float fadeTime = GameObject.Find ("PlayerToggle").GetComponent<LevelFader> ().BeginFade (1);
+		yield return new WaitForSeconds(fadeTime);
+		Application.LoadLevel (1);
 	}
 
 }

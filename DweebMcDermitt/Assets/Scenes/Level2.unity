@@ -5070,6 +5070,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2032099510}
   m_Script: {fileID: 11500000, guid: b3911a908b655489c930e00e33ed3f81, type: 3}
+--- !u!114 &1091684159
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11400950, guid: 766425365f3de4c32a20b783c3b14170,
+    type: 2}
+  m_PrefabInternal: {fileID: 521002052}
+  m_Script: {fileID: 11500000, guid: f60fce8e74c0c1c43bda6e08a919e3ab, type: 3}
 --- !u!1 &1096001365
 GameObject:
   m_ObjectHideFlags: 0
@@ -5477,6 +5483,12 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &1175947059
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11400950, guid: 766425365f3de4c32a20b783c3b14170,
+    type: 2}
+  m_PrefabInternal: {fileID: 862093318}
+  m_Script: {fileID: 11500000, guid: f60fce8e74c0c1c43bda6e08a919e3ab, type: 3}
 --- !u!4 &1177915415
 Transform:
   m_PrefabParentObject: {fileID: 472892, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
@@ -8529,6 +8541,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11455220, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
+      propertyPath: conditions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 473166, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
       propertyPath: m_LocalPosition.x
       value: 14.144434
@@ -8564,11 +8580,11 @@ Prefab:
     - target: {fileID: 11455220, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
       propertyPath: conditions.Array.data[1]
       value: 
-      objectReference: {fileID: 1295777581}
+      objectReference: {fileID: 1175947059}
     - target: {fileID: 11455220, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
       propertyPath: conditions.Array.data[0]
       value: 
-      objectReference: {fileID: 1296392770}
+      objectReference: {fileID: 1091684159}
     - target: {fileID: 11455220, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
       propertyPath: target
       value: 
@@ -8581,6 +8597,14 @@ Prefab:
       propertyPath: successSound
       value: 
       objectReference: {fileID: 1706512065}
+    - target: {fileID: 11455220, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
+      propertyPath: conditions.Array.data[2]
+      value: 
+      objectReference: {fileID: 1296392770}
+    - target: {fileID: 11455220, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
+      propertyPath: conditions.Array.data[3]
+      value: 
+      objectReference: {fileID: 1295777581}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18a5268aafe9345b984dd941159f6bfc, type: 2}
   m_IsPrefabParent: 0
