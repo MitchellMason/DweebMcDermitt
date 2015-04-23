@@ -29,7 +29,6 @@ public class Crosshair : MonoBehaviour {
 		                            FocalPoint.rotation * Vector3.forward),
 		                    		out hit)){
 			distance = hit.distance;
-			Debug.Log ("Object crosshair hit is " + hit.collider.gameObject.name);
 			if(hit.collider.GetComponent<InteractionTarget> ()!= null && hit.distance < InteractionThreshold){
 				grabbablerenderer.enabled = true;
 			}

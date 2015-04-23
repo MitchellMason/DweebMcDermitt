@@ -47,7 +47,6 @@ public class PlayMoviePlane : MonoBehaviour
 				if (!hit3.isPlaying) {
 					hit3.Play ();
 					Debug.Log("Level should be fading");
-					RestartLevel();
 				}
 
 				if(myFace != null) myFace.PlayDelayed(1f);
@@ -59,12 +58,5 @@ public class PlayMoviePlane : MonoBehaviour
 			triggered = false;
 		}
 	}
-
-	IEnumerator RestartLevel() {
-		float fadeTime = GameObject.Find ("PlayerToggle").GetComponent<LevelFader> ().BeginFade (1);
-		yield return new WaitForSeconds(fadeTime);
-		Application.LoadLevel (1);
-	}
-
 }
 

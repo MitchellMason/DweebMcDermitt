@@ -119,4 +119,25 @@ public class OVRScreenFade : MonoBehaviour
 			GL.PopMatrix();
 		}
 	}
+	
+	/// <summary>
+	/// Starts a fade out sequence for player death or level changing
+	/// </summary>
+	public void BeginFadeOut(){
+		StartCoroutine(FadeOut());
+	}
+	
+	IEnumerator FadeOut(){
+		float elapsedTime = 0.0f;
+		Color color = fadeMaterial.color = fadeColor;
+		isFading = true;
+		while (elapsedTime < fadeTime)
+		{
+			yield return new WaitForEndOfFrame();
+			elapsedTime += Time.deltaTime;
+			color.a = 0.0f + Mathf.Clamp01(elapsedTime / fadeTime);
+			fadeMaterial.color = color;
+		}
+		isFading = false;
+	}
 }
