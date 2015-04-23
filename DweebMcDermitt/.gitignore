@@ -22,7 +22,7 @@ obj/
 *.dll
 *.exe
 *.assets
-*.meta
+#*.meta
 
 # ============ #
 # OS generated #
