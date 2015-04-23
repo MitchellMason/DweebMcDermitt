@@ -5139,11 +5139,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.59000015
+      value: 6.3499999
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -12.1599998
+      value: -11.5200005
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5163,7 +5163,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8229836, guid: 660271135b3984be19620204b3f63bef, type: 2}
       propertyPath: BypassListenerEffects
