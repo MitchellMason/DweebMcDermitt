@@ -15,13 +15,13 @@ EditorBuildSettings:
     path: Assets/Scenes/LaserEffectDemo.unity
   - enabled: 0
     path: Assets/Scenes/Level1Map.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IntroCinematics.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level1.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level2.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartScreen.unity
   - enabled: 0
     path: Assets/Scenes/Level1.unity
