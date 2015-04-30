@@ -5159,15 +5159,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11493274, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: No_Oculus
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 138250, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112206, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460172, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_LocalPosition.x
@@ -8113,19 +8113,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 437148, guid: 0de3099bb2487614497684ec75ddde4e, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -.000633008371
       objectReference: {fileID: 0}
     - target: {fileID: 437148, guid: 0de3099bb2487614497684ec75ddde4e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: .999961913
       objectReference: {fileID: 0}
     - target: {fileID: 437148, guid: 0de3099bb2487614497684ec75ddde4e, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: .00870474614
       objectReference: {fileID: 0}
     - target: {fileID: 437148, guid: 0de3099bb2487614497684ec75ddde4e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -1.62920685e-07
+      value: -1.89168986e-07
       objectReference: {fileID: 0}
     - target: {fileID: 437148, guid: 0de3099bb2487614497684ec75ddde4e, type: 2}
       propertyPath: m_RootOrder
@@ -13760,7 +13760,7 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 24020dd8a83f44b569b3063ba2bf9512, type: 3}
     - target: {fileID: 119994, guid: 9c8bf404195348d418e02ef5f0c6cb58, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967294
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2319994, guid: 9c8bf404195348d418e02ef5f0c6cb58, type: 2}
       propertyPath: m_ImportantGI
@@ -21124,7 +21124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c622bbc7a1daae149997a113ced32522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 2
+  levelNumber: 1
 --- !u!65 &2012449219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21279,7 +21279,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967294
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2017847213
 Transform:

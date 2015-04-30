@@ -1,0 +1,2329 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   NVIDIA
+    VRAM:     3994 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.061 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 3840x2160 30Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+Platform assembly: C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\System.Core.dll (this message is harmless)
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 56 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 488 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 488 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+Platform assembly: C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Builds\Alpha1_Data\Managed\System.dll (this message is harmless)
+Looking for interaction targets
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:22)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 22)
+
+hit something Bookshelf
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:25)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 25)
+
+Triggering
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:28)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 28)
+
+Bookshelf triggered
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Bookshelf:onInteract() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Objects\Bookshelf.cs:35)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:29)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Objects/Bookshelf.cs Line: 35)
+
+Firing at a burnable object
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:75)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Base/LaserUtils.cs Line: 75)
+
+Firing at a burnable object
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:75)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Base/LaserUtils.cs Line: 75)
+
+Firing at a burnable object
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:75)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Base/LaserUtils.cs Line: 75)
+
+Firing at a burnable object
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:75)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Base/LaserUtils.cs Line: 75)
+
+Firing at a burnable object
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:75)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Base/LaserUtils.cs Line: 75)
+
+Firing at a burnable object
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:75)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Base/LaserUtils.cs Line: 75)
+
+Firing at a burnable object
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:75)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Base/LaserUtils.cs Line: 75)
+
+Firing at a burnable object
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:75)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Base/LaserUtils.cs Line: 75)
+
+Firing at a burnable object
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:75)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Base/LaserUtils.cs Line: 75)
+
+Firing at a burnable object
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:75)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Base/LaserUtils.cs Line: 75)
+
+Looking for interaction targets
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:22)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 22)
+
+hit something Bookshelf
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:25)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 25)
+
+Triggering
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:28)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 28)
+
+Bookshelf triggered
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Bookshelf:onInteract() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Objects\Bookshelf.cs:35)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:29)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Objects/Bookshelf.cs Line: 35)
+
+Looking for interaction targets
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:22)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 22)
+
+hit something Bookshelf
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:25)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 25)
+
+Triggering
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:28)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 28)
+
+Bookshelf triggered
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Bookshelf:onInteract() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Objects\Bookshelf.cs:35)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:29)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Objects/Bookshelf.cs Line: 35)
+
+LaserButton shot
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserButton:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\LaserButton.cs:22)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:29)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Objects/LaserButton.cs Line: 22)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing at a burnable object
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:75)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserStay(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:34)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:116)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Base/LaserUtils.cs Line: 75)
+
+Looking for interaction targets
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:22)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 22)
+
+hit something A_Mirror
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:25)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 25)
+
+Triggering
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Interactor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Base\Interactor.cs:28)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Base/Interactor.cs Line: 28)
+
+LaserButton shot
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserButton:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\LaserButton.cs:22)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:29)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+MagnifyingGlass:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:63)
+MagnifyingGlass:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:30)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:29)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:29)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+MagnifyingGlass:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:63)
+MagnifyingGlass:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:30)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:29)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:29)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+MagnifyingGlass:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:63)
+MagnifyingGlass:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:30)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Objects/LaserButton.cs Line: 22)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+LaserButton shot
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LaserButton:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\LaserButton.cs:22)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:29)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+MagnifyingGlass:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:63)
+MagnifyingGlass:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:30)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:29)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:29)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+MagnifyingGlass:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:63)
+MagnifyingGlass:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:30)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:29)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+Mirror:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:54)
+Mirror:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\Mirror.cs:29)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserShooter:fireLaser(Ray, Single) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:48)
+MagnifyingGlass:shoot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:63)
+MagnifyingGlass:onLaserShot(LaserHitInfo) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Objects\MagnifyingGlass.cs:30)
+LaserShooter:fireLaser(Ray, Single, Boolean) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserUtils.cs:119)
+LaserEmitter:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Laser\Base\LaserEmitter.cs:55)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Laser/Objects/LaserButton.cs Line: 22)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Firing event for TriggerDoor
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:19)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/TargetEnabledMultiplexor.cs Line: 19)
+
+Playing
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Door:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\Door.cs:14)
+TargetEnabledMultiplexor:Update() (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\TargetEnabledMultiplexor.cs:26)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/Interactable/Door.cs Line: 14)
+
+Loading Level 2
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LevelAdvancer:OnTriggerEnter(Collider) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\LevelAdvancer.cs:14)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/LevelAdvancer.cs Line: 14)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 536 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 488 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 488 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 728 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 56 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 488 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 620 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Serialize/SerializedFile.cpp Line: 1603)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.305868 ms
+System memory in use before: 105.1 MB.
+System memory in use after: 104.4 MB.
+
+Unloading 402 unused Assets to reduce memory usage. Loaded Objects now: 3294.
+Total: 0.662829 ms (FindLiveObjects: 0.086331 ms CreateObjectMapping: 0.038146 ms MarkObjects: 0.184135 ms  DeleteObjects: 0.353929 ms)
+
+Bookshelf triggered
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+OneWayLift:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\OneWayLift.cs:33)
+WeightedButton:OnTriggerEnter(Collider) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\WeightedButton.cs:22)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/OneWayLift.cs Line: 33)
+
+Bookshelf triggered
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+OneWayLift:onTrigger(MonoBehaviour) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\OneWayLift.cs:33)
+WeightedButton:OnTriggerEnter(Collider) (at C:\Users\thefr_000\Documents\DweebMcDermitt\DweebMcDermitt\Assets\Scripts\Interactable\WeightedButton.cs:22)
+ 
+(Filename: C:/Users/thefr_000/Documents/DweebMcDermitt/DweebMcDermitt/Assets/Scripts/OneWayLift.cs Line: 33)
+
