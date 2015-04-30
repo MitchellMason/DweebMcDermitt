@@ -26,10 +26,12 @@ public class TurretHorizontalRotate : TriggerTarget {
 	// Update is called once per frame
 	void Update () {
 		if (dead) {
+			gun.endFire();
 			return;
 		}
 		Physics.Raycast(transform.position, target.position - transform.position, out hit, range);
 		if (!hit.collider.gameObject.name.Equals("Player") && !hit.collider.gameObject.name.Equals("PlayerToggle")) {
+			gun.endFire();
 			return;
 		}
 		// distance between target and the actual rotating object
