@@ -1,0 +1,227 @@
+newmtl TheGlassesOBJ:phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Dweeb_glassesColorandBake.png
+Ni 1.00
+Ks 0.51 0.51 0.51
+Ns 92.06
+newmtl dweebfacetxt_2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd dweebfacetxt.jpg
+Ni 1.00
+newmtl dweebfacetxt_3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd dweebfacetxt.jpg
+Ni 1.00
+newmtl dweebhairtxt_1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd dweebhairtxt.jpg
+Ni 1.00
+newmtl dweebpantstxt_1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd dweebpantstxt.jpg
+Ni 1.00
+newmtl guess_2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert10SG
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert18SG
+illum 4
+Kd 0.39 0.21 0.03
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert20SG
+illum 4
+Kd 0.96 0.68 0.55
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:dweebcolormaster1:lambert3SG
+illum 4
+Kd 0.85 0.82 0.82
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:dweebcolormaster1:lambert5SG
+illum 4
+Kd 0.50 0.11 0.11
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:dweebcolormaster1:lambert6SG
+illum 4
+Kd 0.78 0.67 0.43
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:dweebcolormaster1:lambert7SG
+illum 4
+Kd 0.24 0.17 0.02
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:dweebcolormaster1:lambert8SG
+illum 4
+Kd 0.01 0.01 0.01
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:dweebcolormaster1:lambert9SG
+illum 4
+Kd 1.00 0.83 0.68
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:dweebcolormaster1:lambert10SG
+illum 4
+Kd 0.65 0.50 0.36
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:dweebcolormaster1:phong4SG
+illum 4
+Kd 0.64 0.90 0.90
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl lips_and_glasses_color_on:bodyone:lambert3SG
+illum 4
+Kd 0.85 0.82 0.82
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:lambert5SG
+illum 4
+Kd 0.50 0.11 0.11
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:lambert6SG
+illum 4
+Kd 0.78 0.67 0.43
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:lambert7SG
+illum 4
+Kd 0.24 0.17 0.02
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:lambert8SG
+illum 4
+Kd 0.01 0.01 0.01
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:lambert9SG
+illum 4
+Kd 0.93 0.79 0.67
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:bodyone:lambert10SG
+illum 4
+Kd 0.65 0.50 0.36
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:hair_export:lambert2SG
+illum 4
+Kd 0.95 0.87 0.76
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:hair_export:lambert3SG
+illum 4
+Kd 0.68 0.53 0.39
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:hair_export:lambert4SG
+illum 4
+Kd 0.17 0.41 0.49
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:hair_export1:lambert2SG
+illum 4
+Kd 0.95 0.87 0.76
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:hair_export1:lambert3SG
+illum 4
+Kd 0.68 0.53 0.39
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:mergehair2:lambert2SG
+illum 4
+Kd 0.95 0.87 0.76
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lips_and_glasses_color_on:mergehair2:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd images.jpg
+Ni 1.00
+newmtl mergehair2:lambert2SG
+illum 4
+Kd 0.95 0.87 0.76
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl mergehair2:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd images.jpg
+Ni 1.00
+newmtl mergehair2:lambert4SG
+illum 4
+Kd 0.17 0.41 0.49
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl pantstexture__1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
