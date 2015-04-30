@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: .720588207, g: .720588207, b: .720588207, a: 0}
+  m_AmbientSkyColor: {r: .352941155, g: .352941155, b: .352941155, a: 0}
   m_AmbientEquatorColor: {r: .200000003, g: .200000003, b: .200000003, a: 1}
   m_AmbientGroundColor: {r: .200000003, g: .200000003, b: .200000003, a: 1}
   m_AmbientIntensity: 1
@@ -31,9 +31,9 @@ RenderSettings:
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 1
-  m_DefaultReflectionResolution: 512
-  m_ReflectionBounces: 1
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 1024
+  m_ReflectionBounces: 3
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
@@ -50,23 +50,23 @@ LightmapSettings:
     serializedVersion: 2
     m_BounceScale: 1
     m_IndirectOutputScale: 1
-    m_AlbedoBoost: 1
+    m_AlbedoBoost: 2
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 3
-    m_Resolution: 5
+    m_Resolution: 15
     m_BakeResolution: 100
     m_TextureWidth: 2048
     m_TextureHeight: 1024
     m_AOMaxDistance: 1
-    m_Padding: 2
-    m_CompAOExponent: 0
+    m_Padding: 5
+    m_CompAOExponent: 1
     m_LightmapParameters: {fileID: 0}
     m_TextureCompression: 0
-    m_FinalGather: 0
+    m_FinalGather: 1
     m_FinalGatherRayCount: 1024
   m_LightmapSnapshot: {fileID: 112000000, guid: e86fb1b4fd58fe74db5482dd998050c7,
     type: 2}
@@ -2931,7 +2931,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 413352543}
   m_LocalRotation: {x: .151645496, y: .667724133, z: -.714903355, w: -.14163807}
-  m_LocalPosition: {x: -.0999999717, y: 3.17999983, z: .150000125}
+  m_LocalPosition: {x: -.100000001, y: 2.75999999, z: .150000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1033639166}
@@ -4116,15 +4116,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11493274, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: No_Oculus
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 138250, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 112206, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 460172, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_LocalPosition.x
@@ -8042,7 +8042,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: .7046929, g: .955327511, b: .977941155, a: 1}
-  m_Intensity: 2
+  m_Intensity: .5
   m_Range: 5
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -12017,7 +12017,7 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 24020dd8a83f44b569b3063ba2bf9512, type: 3}
     - target: {fileID: 119994, guid: 9c8bf404195348d418e02ef5f0c6cb58, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2319994, guid: 9c8bf404195348d418e02ef5f0c6cb58, type: 2}
       propertyPath: m_ImportantGI
@@ -12871,7 +12871,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: aa737170992e041b6a3016bfafdad822, type: 2}
     - target: {fileID: 100000, guid: f546dfabc39314659a28dd3f4eb82f23, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967294
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f546dfabc39314659a28dd3f4eb82f23, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13728,7 +13728,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1522755018}
   m_LocalRotation: {x: -.0682280585, y: .745825052, z: -.662558019, w: -.0103390347}
-  m_LocalPosition: {x: -5.26999998, y: 4.11999989, z: 2.29999995}
+  m_LocalPosition: {x: -5.26999998, y: 3.19000006, z: 2.29999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1033639166}
@@ -18243,15 +18243,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 158524, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 162748, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 135108, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
@@ -19134,15 +19134,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 158524, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 162748, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 135108, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
@@ -19195,7 +19195,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2017847213
 Transform:
