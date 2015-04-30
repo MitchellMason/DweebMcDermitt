@@ -215,11 +215,13 @@ namespace PosterGen
 								Undo.RecordObject(fgtemp.gameObject.transform, "Created Frame");
 								fgtemp.obj.transform.parent = fgtemp.gameObject.transform;
 								fgtemp.obj.transform.position = fgtemp.gameObject.transform.position;
+								fgtemp.obj.transform.localRotation = fgtemp.gameObject.transform.localRotation;
 
-								Vector3 displace = new Vector3(0,0,-0.015f);
-								displace = Quaternion.Euler(fgtemp.rotate) * displace;
+								Vector3 displace = new Vector3(0,0,0.015f);
+								//displace = Quaternion.Euler(fgtemp.rotate) * displace;
 								fgtemp.obj.transform.Translate(displace);
-								fgtemp.obj.transform.Rotate (fgtemp.rotate);
+								fgtemp.obj.transform.localRotation = new Quaternion();
+								//fgtemp.obj.transform.Rotate (fgtemp.rotate);
 								//fgtemp.gameObject.transform.Translate(-displace*4.0f);
 								
 								Undo.RegisterCreatedObjectUndo(fgtemp.obj, "Created Frame");
@@ -233,7 +235,8 @@ namespace PosterGen
 									                                      fgtemp.textureNames, fgtemp.texturesToUse,
 									                                      fgtemp.tile);
 									fgtemp.obj2.transform.parent = fgtemp.obj.transform;
-									fgtemp.obj2.transform.position = fgtemp.obj.transform.position;
+									fgtemp.obj2.transform.localPosition = new Vector3(0,0,0);;
+									fgtemp.obj2.transform.localRotation = new Quaternion();//fgtemp.obj.transform.localRotation;
 									Undo.RegisterCreatedObjectUndo(fgtemp.obj2, "Created Frame");
 								}
 							}

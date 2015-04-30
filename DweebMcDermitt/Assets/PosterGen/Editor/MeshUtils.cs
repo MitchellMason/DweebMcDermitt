@@ -16,6 +16,23 @@ namespace PosterGen
 {
 	public static class MeshUtils{
 
+        public class HalfEdge
+        {
+            public int[] index = new int[2];
+            public int neighbor = -1;
+        }
+        public class Quad
+        {
+            public int[] edges = new int[4];
+            public Color[] colors = new Color[4];
+        }
+        public class QuadMesh
+        {
+            public List<Quad> quads;
+            public List<Vector3> vertices;
+            public List<HalfEdge> edges;
+        }
+
 		public static void calculateMeshTangents(Mesh mesh)
 		{
 			//speed up math by copying the mesh arrays
@@ -107,6 +124,7 @@ namespace PosterGen
 			mesh.RecalculateNormals();
 			mesh.RecalculateBounds();
 			calculateMeshTangents(mesh);
+			Unwrapping.GenerateSecondaryUVSet (mesh);
 			return mesh;
 		}
 		public static GameObject createObjFrame(Mesh mesh, Texture2D tex, Shader ShaderToUse,
@@ -260,198 +278,257 @@ namespace PosterGen
 			return mesh;
 		}
 
+        public static QuadMesh generateQuads(Vector2 scaler, List<Vector2> divides)
+        {
+            QuadMesh quads = new QuadMesh();
+
+            for (int i = 0; i < divides.Count; ++i)
+            {
+                Vector3 x0y0 = new Vector3(-scaler.x - divides[i].x, -divides[i].x - scaler.y, divides[i].y);
+                Vector3 x0y1 = new Vector3(-scaler.x - divides[i].x, divides[i].x + scaler.y, divides[i].y);
+                Vector3 x1y0 = new Vector3(scaler.x + divides[i].x, -divides[i].x - scaler.y, divides[i].y);
+                Vector3 x1y1 = new Vector3(scaler.x + divides[i].x, divides[i].x + scaler.y, divides[i].y);
+                quads.vertices.Add(x0y0);
+                quads.vertices.Add(x0y1);
+                quads.vertices.Add(x1y0);
+                quads.vertices.Add(x1y1);
+
+                HalfEdge e0 = new HalfEdge();
+                HalfEdge e1 = new HalfEdge();
+                HalfEdge e2 = new HalfEdge();
+                HalfEdge e3 = new HalfEdge();
+
+                e0.index[0] = i * 4 + 1;
+                e0.index[1] = i * 4 + 3;
+
+                e1.index[0] = i * 4 + 0;
+                e1.index[1] = i * 4 + 2;
+
+                e2.index[0] = i * 4 + 2;
+                e2.index[1] = i * 4 + 3;
+
+                e3.index[0] = i * 4 + 0;
+                e3.index[1] = i * 4 + 1;
+
+
+                quads.edges.Add(e0);
+                quads.edges.Add(e1);
+                quads.edges.Add(e2);
+                quads.edges.Add(e3);
+
+                Quad q0 = new Quad();
+                Quad q1 = new Quad();
+                Quad q2 = new Quad();
+                Quad q3 = new Quad();
+            }
+            return quads;
+        }
 		public static Mesh createFrame(Vector2 scaler, List<Vector2> divides, string name)
 		{
 			if (divides[divides.Count-1].y != 0)
 			{
 				divides.Add(new Vector2(divides[divides.Count-1].x,0));
 			}
-
+			
 			int numdiv = divides.Count;
 			int numsegs = divides.Count;
 			Vector3 [] verts = new Vector3[4*numsegs*4+4];
 			Vector2 [] uvs = new Vector2[4*numsegs*4+4];
+			Color[] colors = new Color[4 * numsegs * 4 + 4];
 			
-			Vector3 [] overts = new Vector3[4*numsegs];
-			Vector2 [] ouvs = new Vector2[4*numsegs];
-
 			int[] inds = new int[6*numsegs*4+6];
-			Vector2 last = new Vector2(0,0);
 			int countind = 0;
 			int countvert = 0;
-
-
-			Vector2 totaddl = new Vector2(-scaler.x,0);
-			Vector2 totaddr = new Vector2(scaler.x,0);
-
-			float len = 0;
-
-			for (int i = 0; i < numdiv; ++i)
-			{
-				inds[0+countind] = 0+countvert;
-				inds[1+countind] = 1+countvert;
-				inds[2+countind] = 2+countvert;
-				inds[3+countind] = 2+countvert;
-				inds[4+countind] = 3+countvert;
-				inds[5+countind] = 0+countvert;
-
-				
-				verts[0+countvert] = new Vector3(-scaler.x-divides[i].x,divides[i].x+scaler.y,divides[i].y);
-				verts[1+countvert] = new Vector3(-scaler.x-last.x,last.x+scaler.y,last.y);
-				verts[2+countvert] = new Vector3(scaler.x+last.x,last.x+scaler.y,last.y);
-				verts[3+countvert] = new Vector3(scaler.x+divides[i].x,divides[i].x+scaler.y,divides[i].y);
-
-				Vector3 origl = verts[1+countvert];
-				Vector3 origr = verts[2+countvert];
-
-				Vector3 vecl = verts[0+countvert] - origl;
-				Vector3 vecr = verts[3+countvert] - origr;
-
-
-				Vector2 addl = new Vector2(vecl.x, new Vector2(vecl.y,vecl.z).magnitude);
-
-				Vector2 addr = new Vector2(vecr.x, new Vector2(vecr.y,vecr.z).magnitude);
-
-				uvs[0+countvert] = totaddl + addl;
-				uvs[1+countvert] = totaddl;
-				uvs[2+countvert] = totaddr;
-				uvs[3+countvert] = totaddr + addr;
-				totaddl += addl;
-				totaddr += addr;
-
-				countind += 6;
-				countvert += 4;
-				last = divides[i];
-			}
-			len = last.x;
-			last = new Vector2(0,0);
-			totaddl = new Vector2(-scaler.x+0.5f,0.1f);
-			totaddr = new Vector2(scaler.x+0.5f,0.1f);
-			for (int i = 0; i < numdiv; ++i)
-			{
-				inds[0+countind] = 2+countvert;
-				inds[1+countind] = 1+countvert;
-				inds[2+countind] = 0+countvert;
-				inds[3+countind] = 0+countvert;
-				inds[4+countind] = 3+countvert;
-				inds[5+countind] = 2+countvert;
-				
-				
-				verts[0+countvert] = new Vector3(-scaler.x-divides[i].x,divides[i].x+scaler.y,divides[i].y);
-				verts[1+countvert] = new Vector3(-scaler.x-last.x,last.x+scaler.y,last.y);
-				verts[2+countvert] = new Vector3(scaler.x+last.x,last.x+scaler.y,last.y);
-				verts[3+countvert] = new Vector3(scaler.x+divides[i].x,divides[i].x+scaler.y,divides[i].y);
-
-				for (int j = 0; j < 4; ++j)
-					verts[j+countvert].y = -verts[j+countvert].y;
-
-				Vector3 origl = verts[1+countvert];
-				Vector3 origr = verts[2+countvert];
-				
-				Vector3 vecl = verts[0+countvert] - origl;
-				Vector3 vecr = verts[3+countvert] - origr;
-				
-				
-				Vector2 addl = new Vector2(vecl.x, new Vector2(vecl.y,vecl.z).magnitude);
-				
-				Vector2 addr = new Vector2(vecr.x, new Vector2(vecr.y,vecr.z).magnitude);
-				
-				uvs[0+countvert] = totaddl + addl;
-				uvs[1+countvert] = totaddl;
-				uvs[2+countvert] = totaddr;
-				uvs[3+countvert] = totaddr + addr;
-				totaddl += addl;
-				totaddr += addr;
-				
-				countind += 6;
-				countvert += 4;
-				last = divides[i];
-			}
-
+			HalfEdge[] edges = new HalfEdge[numdiv*4];
+			Vector3 [] points = new Vector3[numdiv * 4];
 			
-			last = new Vector2(0,0);
-			totaddl = new Vector2(-scaler.y+0.65f,0.32f);
-			totaddr = new Vector2(scaler.y+0.65f,0.32f);
 			for (int i = 0; i < numdiv; ++i)
 			{
-				inds[0+countind] = 2+countvert;
-				inds[1+countind] = 1+countvert;
-				inds[2+countind] = 0+countvert;
-				inds[3+countind] = 0+countvert;
-				inds[4+countind] = 3+countvert;
-				inds[5+countind] = 2+countvert;
+				Vector3 x0y0 = new Vector3(-scaler.x-divides[i].x,-divides[i].x-scaler.y,divides[i].y);
+				Vector3 x0y1 = new Vector3(-scaler.x-divides[i].x,divides[i].x+scaler.y,divides[i].y);
+				Vector3 x1y0 = new Vector3(scaler.x+divides[i].x,-divides[i].x-scaler.y,divides[i].y);
+				Vector3 x1y1 = new Vector3(scaler.x+divides[i].x,divides[i].x+scaler.y,divides[i].y);
+				points[i*4+0] = x0y0;
+				points[i*4+1] = x0y1;
+				points[i*4+2] = x1y0;
+				points[i*4+3] = x1y1;
 				
+				edges[i*4] = new HalfEdge();
+				edges[i*4].index[0] = i*4+1;
+				edges[i*4].index[1] = i*4+3;
 				
-				verts[0+countvert] = new Vector3(scaler.x+divides[i].x,-divides[i].x-scaler.y,divides[i].y);
-				verts[1+countvert] = new Vector3(scaler.x+last.x,-last.x-scaler.y,last.y);
-				verts[2+countvert] = new Vector3(scaler.x+last.x,last.x+scaler.y,last.y);
-				verts[3+countvert] = new Vector3(scaler.x+divides[i].x,divides[i].x+scaler.y,divides[i].y);
-
+				edges[i*4+1] = new HalfEdge();
+				edges[i*4+1].index[0] = i*4+0;
+				edges[i*4+1].index[1] = i*4+2;
 				
-				Vector3 origl = verts[1+countvert];
-				Vector3 origr = verts[2+countvert];
+				edges[i*4+2] = new HalfEdge();
+				edges[i*4+2].index[0] = i*4+2;
+				edges[i*4+2].index[1] = i*4+3;
 				
-				Vector3 vecl = verts[0+countvert] - origl;
-				Vector3 vecr = verts[3+countvert] - origr;
-				
-
-				Vector2 addl = new Vector2(vecl.y, new Vector2(vecl.x,vecl.z).magnitude);
-				
-				Vector2 addr = new Vector2(vecr.y, new Vector2(vecr.x,vecr.z).magnitude);
-				
-				uvs[0+countvert] = totaddl + addl;
-				uvs[1+countvert] = totaddl;
-				uvs[2+countvert] = totaddr;
-				uvs[3+countvert] = totaddr + addr;
-				totaddl += addl;
-				totaddr += addr;
-				
-				countind += 6;
-				countvert += 4;
-				last = divides[i];
+				edges[i*4+3] = new HalfEdge();
+				edges[i*4+3].index[0] = i*4+0;
+				edges[i*4+3].index[1] = i*4+1;
 			}
 			
-			last = new Vector2(0,0);
-			totaddl = new Vector2(-scaler.y+0.65f,0.32f);
-			totaddr = new Vector2(scaler.y+0.65f,0.32f);
-			for (int i = 0; i < numdiv; ++i)
-			{
-				inds[0+countind] = 0+countvert;
-				inds[1+countind] = 1+countvert;
-				inds[2+countind] = 2+countvert;
-				inds[3+countind] = 2+countvert;
-				inds[4+countind] = 3+countvert;
-				inds[5+countind] = 0+countvert;
-				
-				
-				verts[0+countvert] = new Vector3(-scaler.x-divides[i].x,-divides[i].x-scaler.y,divides[i].y);
-				verts[1+countvert] = new Vector3(-scaler.x-last.x,-last.x-scaler.y,last.y);
-				verts[2+countvert] = new Vector3(-scaler.x-last.x,last.x+scaler.y,last.y);
-				verts[3+countvert] = new Vector3(-scaler.x-divides[i].x,divides[i].x+scaler.y,divides[i].y);
-				
-				
-				Vector3 origl = verts[1+countvert];
-				Vector3 origr = verts[2+countvert];
-				
-				Vector3 vecl = verts[0+countvert] - origl;
-				Vector3 vecr = verts[3+countvert] - origr;
-				
-				
-				Vector2 addl = new Vector2(vecl.y, new Vector2(vecl.x,vecl.z).magnitude);
-				
-				Vector2 addr = new Vector2(vecr.y, new Vector2(vecr.x,vecr.z).magnitude);
-				
-				uvs[0+countvert] = totaddl + addl;
-				uvs[1+countvert] = totaddl;
-				uvs[2+countvert] = totaddr;
-				uvs[3+countvert] = totaddr + addr;
-				totaddl += addl;
-				totaddr += addr;
-				
-				countind += 6;
-				countvert += 4;
-				last = divides[i];
-			}
+			float len = divides[divides.Count-1].x;
+			Vector2 totaddl = new Vector2(-scaler.x - divides[0].x,0);
+			Vector2 totaddr = new Vector2(scaler.x + divides[0].x,0);
+            for (int i = 1; i < numdiv; ++i)
+            {
+                inds[0 + countind] = 0 + countvert;
+                inds[1 + countind] = 1 + countvert;
+                inds[2 + countind] = 2 + countvert;
+                inds[3 + countind] = 2 + countvert;
+                inds[4 + countind] = 3 + countvert;
+                inds[5 + countind] = 0 + countvert;
+
+                verts[0 + countvert] = points[edges[i * 4].index[0]];//new Vector3(-scaler.x-divides[i].x,divides[i].x+scaler.y,divides[i].y);
+                verts[1 + countvert] = points[edges[(i - 1) * 4].index[0]];//new Vector3(-scaler.x-last.x,last.x+scaler.y,last.y);
+                verts[2 + countvert] = points[edges[(i - 1) * 4].index[1]];//new Vector3(scaler.x+last.x,last.x+scaler.y,last.y);
+                verts[3 + countvert] = points[edges[i * 4].index[1]];//new Vector3(scaler.x+divides[i].x,divides[i].x+scaler.y,divides[i].y);
+
+                Vector3 origl = verts[1 + countvert];
+                Vector3 origr = verts[2 + countvert];
+
+                Vector3 vecl = verts[0 + countvert] - origl;
+                Vector3 vecr = verts[3 + countvert] - origr;
+
+
+                Vector2 addl = new Vector2(vecl.x, new Vector2(vecl.y, vecl.z).magnitude);
+                Vector2 addr = new Vector2(vecr.x, new Vector2(vecr.y, vecr.z).magnitude);
+
+                uvs[0 + countvert] = totaddl + addl;
+                uvs[1 + countvert] = totaddl;
+                uvs[2 + countvert] = totaddr;
+                uvs[3 + countvert] = totaddr + addr;
+                totaddl += addl;
+                totaddr += addr;
+
+                countind += 6;
+                countvert += 4;
+            }
+
+            totaddl = new Vector2(-scaler.x - divides[0].x, 0.0f);
+            totaddr = new Vector2(scaler.x + divides[0].x, 0.0f);
+            for (int i = 1; i < numdiv; ++i)
+            {
+                inds[0 + countind] = 2 + countvert;
+                inds[1 + countind] = 1 + countvert;
+                inds[2 + countind] = 0 + countvert;
+                inds[3 + countind] = 0 + countvert;
+                inds[4 + countind] = 3 + countvert;
+                inds[5 + countind] = 2 + countvert;
+
+
+
+                verts[0 + countvert] = points[edges[i * 4 + 1].index[0]];//new Vector3(-scaler.x-divides[i].x,divides[i].x+scaler.y,divides[i].y);
+                verts[1 + countvert] = points[edges[(i - 1) * 4 + 1].index[0]];//new Vector3(-scaler.x-last.x,last.x+scaler.y,last.y);
+                verts[2 + countvert] = points[edges[(i - 1) * 4 + 1].index[1]];//new Vector3(scaler.x+last.x,last.x+scaler.y,last.y);
+                verts[3 + countvert] = points[edges[i * 4 + 1].index[1]];//new Vector3(scaler.x+divides[i].x,divides[i].x+scaler.y,divides[i].y);
+
+
+
+                Vector3 origl = verts[1 + countvert];
+                Vector3 origr = verts[2 + countvert];
+
+                Vector3 vecl = verts[0 + countvert] - origl;
+                Vector3 vecr = verts[3 + countvert] - origr;
+
+
+                Vector2 addl = new Vector2(vecl.x, new Vector2(vecl.y, vecl.z).magnitude);
+                Vector2 addr = new Vector2(vecr.x, new Vector2(vecr.y, vecr.z).magnitude);
+
+                uvs[0 + countvert] = totaddl + addl;
+                uvs[1 + countvert] = totaddl;
+                uvs[2 + countvert] = totaddr;
+                uvs[3 + countvert] = totaddr + addr;
+                totaddl += addl;
+                totaddr += addr;
+
+                countind += 6;
+                countvert += 4;
+            }
+
+
+            totaddl = new Vector2(-scaler.y - divides[0].x, 0.0f);
+            totaddr = new Vector2(scaler.y + divides[0].x, 0.0f);
+
+            for (int i = 1; i < numdiv; ++i)
+            {
+                inds[0 + countind] = 2 + countvert;
+                inds[1 + countind] = 1 + countvert;
+                inds[2 + countind] = 0 + countvert;
+                inds[3 + countind] = 0 + countvert;
+                inds[4 + countind] = 3 + countvert;
+                inds[5 + countind] = 2 + countvert;
+
+
+                verts[0 + countvert] = points[edges[i * 4 + 2].index[0]];//new Vector3(-scaler.x-divides[i].x,divides[i].x+scaler.y,divides[i].y);
+                verts[1 + countvert] = points[edges[(i - 1) * 4 + 2].index[0]];//new Vector3(-scaler.x-last.x,last.x+scaler.y,last.y);
+                verts[2 + countvert] = points[edges[(i - 1) * 4 + 2].index[1]];//new Vector3(scaler.x+last.x,last.x+scaler.y,last.y);
+                verts[3 + countvert] = points[edges[i * 4 + 2].index[1]];//new Vector3(scaler.x+divides[i].x,divides[i].x+scaler.y,divides[i].y);
+
+
+                Vector3 origl = verts[1 + countvert];
+                Vector3 origr = verts[2 + countvert];
+
+                Vector3 vecl = verts[0 + countvert] - origl;
+                Vector3 vecr = verts[3 + countvert] - origr;
+
+
+                Vector2 addl = new Vector2(vecl.y, new Vector2(vecl.x, vecl.z).magnitude);
+
+                Vector2 addr = new Vector2(vecr.y, new Vector2(vecr.x, vecr.z).magnitude);
+
+                uvs[0 + countvert] = totaddl + addl;
+                uvs[1 + countvert] = totaddl;
+                uvs[2 + countvert] = totaddr;
+                uvs[3 + countvert] = totaddr + addr;
+                totaddl += addl;
+                totaddr += addr;
+
+                countind += 6;
+                countvert += 4;
+            }
+
+            totaddl = new Vector2(-scaler.y - divides[0].x, 0.0f);
+            totaddr = new Vector2(scaler.y + divides[0].x, 0.0f);
+            for (int i = 1; i < numdiv; ++i)
+            {
+                inds[0 + countind] = 0 + countvert;
+                inds[1 + countind] = 1 + countvert;
+                inds[2 + countind] = 2 + countvert;
+                inds[3 + countind] = 2 + countvert;
+                inds[4 + countind] = 3 + countvert;
+                inds[5 + countind] = 0 + countvert;
+
+
+
+                verts[0 + countvert] = points[edges[i * 4 + 3].index[0]];//new Vector3(-scaler.x-divides[i].x,divides[i].x+scaler.y,divides[i].y);
+                verts[1 + countvert] = points[edges[(i - 1) * 4 + 3].index[0]];//new Vector3(-scaler.x-last.x,last.x+scaler.y,last.y);
+                verts[2 + countvert] = points[edges[(i - 1) * 4 + 3].index[1]];//new Vector3(scaler.x+last.x,last.x+scaler.y,last.y);
+                verts[3 + countvert] = points[edges[i * 4 + 3].index[1]];//new Vector3(scaler.x+divides[i].x,divides[i].x+scaler.y,divides[i].y);
+
+                Vector3 origl = verts[1 + countvert];
+                Vector3 origr = verts[2 + countvert];
+
+                Vector3 vecl = verts[0 + countvert] - origl;
+                Vector3 vecr = verts[3 + countvert] - origr;
+
+
+                Vector2 addl = new Vector2(vecl.y, new Vector2(vecl.x, vecl.z).magnitude);
+                Vector2 addr = new Vector2(vecr.y, new Vector2(vecr.x, vecr.z).magnitude);
+
+                uvs[0 + countvert] = totaddl + addl;
+                uvs[1 + countvert] = totaddl;
+                uvs[2 + countvert] = totaddr;
+                uvs[3 + countvert] = totaddr + addr;
+                totaddl += addl;
+                totaddr += addr;
+
+                countind += 6;
+                countvert += 4;
+            }
 
 			{
 				

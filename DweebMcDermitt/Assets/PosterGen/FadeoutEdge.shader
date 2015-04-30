@@ -7,7 +7,7 @@ Properties {
 }
 
 SubShader {
-	Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
+	Tags {"Queue"="Transparent" "IgnoreProjector"="False" "RenderType"="Transparent"}
 	LOD 300
 	
 CGPROGRAM
