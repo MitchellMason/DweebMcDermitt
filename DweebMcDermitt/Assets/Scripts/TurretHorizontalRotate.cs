@@ -12,9 +12,12 @@ public class TurretHorizontalRotate : TriggerTarget {
 	[SerializeField] Transform laserStartPoint;
 	[SerializeField] Transform laserEndPoint;
 	[SerializeField] float range;
+
+	[SerializeField] private AudioSource shutdownSound;
+
 	RaycastHit hit;
 	bool dead;
-	
+	bool soundHasPlayed = false;
 	// Use this for initialization
 	void Start () {
 		target = GameObject.FindGameObjectWithTag ("Player").transform;
@@ -57,5 +60,8 @@ public class TurretHorizontalRotate : TriggerTarget {
 
 	public override void onTrigger(MonoBehaviour trigger) {
 		die ();
+		if (!shutdownSound.isPlaying && !soundHasPlayed)
+			shutdownSound.Play ();
+		soundHasPlayed = true;
 	}
 }
