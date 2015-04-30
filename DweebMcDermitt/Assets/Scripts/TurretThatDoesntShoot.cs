@@ -5,6 +5,7 @@ public class TurretThatDoesntShoot : TriggerTarget {
 	
 	// fast rotation
 	[SerializeField] float rotSpeed;
+	[SerializeField] float xRotation;
 
 	
 	[SerializeField] Transform target;
@@ -39,7 +40,7 @@ public class TurretThatDoesntShoot : TriggerTarget {
 		transform.rotation = rot; 
 		
 		// put 0 on the axys you do not want for the rotation object to rotate
-		transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+		transform.eulerAngles = new Vector3(xRotation, transform.eulerAngles.y, 0);
 		
 		//gun.fireLaser (new Ray (laserStartPoint.position, laserEndPoint.position - laserStartPoint.position), range);
 		
