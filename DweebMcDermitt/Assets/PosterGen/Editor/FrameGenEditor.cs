@@ -217,9 +217,9 @@ namespace PosterGen
 								fgtemp.obj.transform.position = fgtemp.gameObject.transform.position;
 								fgtemp.obj.transform.localRotation = fgtemp.gameObject.transform.localRotation;
 
-								//Vector3 displace = new Vector3(0,0,0.015f);
+								Vector3 displace = new Vector3(0,0,-0.015f);
 								//displace = Quaternion.Euler(fgtemp.rotate) * displace;
-								fgtemp.obj.transform.localPosition = new Vector3(0,0,0);
+								fgtemp.obj.transform.localPosition = displace;//new Vector3(0,0,0);
 								fgtemp.obj.transform.localRotation = new Quaternion();
 								//fgtemp.obj.transform.Rotate (fgtemp.rotate);
 								//fgtemp.gameObject.transform.Translate(-displace*4.0f);
