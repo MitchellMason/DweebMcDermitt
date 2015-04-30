@@ -217,10 +217,10 @@ namespace PosterGen
 			
 			
 			
-			verts[0] = new Vector3(-scaler.x,-scaler.y,0);
-			verts[1] = new Vector3(-scaler.x,scaler.y,0);
-			verts[2] = new Vector3(scaler.x,scaler.y,0);
-			verts[3] = new Vector3(scaler.x,-scaler.y,0);
+			verts[0] = new Vector3(-scaler.x,-scaler.y,-0.005f);
+			verts[1] = new Vector3(-scaler.x,scaler.y,-0.005f);
+			verts[2] = new Vector3(scaler.x,scaler.y,-0.005f);
+			verts[3] = new Vector3(scaler.x,-scaler.y,-0.005f);
 			
 			
 			
@@ -233,10 +233,10 @@ namespace PosterGen
 			
 			
 			
-			verts[4] = new Vector3(-scaler.x,-scaler.y,0);
-			verts[5] = new Vector3(-scaler.x,scaler.y,0);
-			verts[6] = new Vector3(scaler.x,scaler.y,0);
-			verts[7] = new Vector3(scaler.x,-scaler.y,0);
+			verts[4] = new Vector3(-scaler.x,-scaler.y,-0.005f);
+			verts[5] = new Vector3(-scaler.x,scaler.y,-0.005f);
+			verts[6] = new Vector3(scaler.x,scaler.y,-0.005f);
+			verts[7] = new Vector3(scaler.x,-scaler.y,-0.005f);
 			
 			
 			Mesh mesh = MeshUtils.makeMesh(name + "_picture", verts, uvs, inds);
@@ -262,10 +262,10 @@ namespace PosterGen
 			
 			
 			
-			verts[0] = new Vector3(-scaler.x,-scaler.y,0);
-			verts[1] = new Vector3(-scaler.x,scaler.y,0);
-			verts[2] = new Vector3(scaler.x,scaler.y,0);
-			verts[3] = new Vector3(scaler.x,-scaler.y,0);
+			verts[0] = new Vector3(-scaler.x,-scaler.y,-0.005f);
+			verts[1] = new Vector3(-scaler.x,scaler.y,-0.005f);
+			verts[2] = new Vector3(scaler.x,scaler.y,-0.005f);
+			verts[3] = new Vector3(scaler.x,-scaler.y,-0.005f);
 			
 			uvs[0] = new Vector2(verts[0].x,verts[0].y);
 			uvs[1] = new Vector2(verts[1].x,verts[1].y);
@@ -540,10 +540,10 @@ namespace PosterGen
 				inds[5+countind] = 2+countvert;
 				
 				
-				verts[0+countvert] = new Vector3(scaler.x+len,scaler.y+len,0);
-				verts[1+countvert] = new Vector3(-scaler.x-len,scaler.y+len,0);
-				verts[2+countvert] = new Vector3(-scaler.x-len,-scaler.y-len,0);
-				verts[3+countvert] = new Vector3(scaler.x+len,-scaler.y-len,0);
+				verts[0+countvert] = new Vector3(scaler.x+len,scaler.y+len,-0.005f);
+				verts[1+countvert] = new Vector3(-scaler.x-len,scaler.y+len,-0.005f);
+				verts[2+countvert] = new Vector3(-scaler.x-len,-scaler.y-len,-0.005f);
+				verts[3+countvert] = new Vector3(scaler.x+len,-scaler.y-len,-0.005f);
 
 				for (int j = 0; j < 4; ++j)
 				{
