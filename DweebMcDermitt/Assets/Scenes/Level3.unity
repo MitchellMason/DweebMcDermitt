@@ -731,6 +731,7 @@ MonoBehaviour:
   laserStartPoint: {fileID: 554061440}
   laserEndPoint: {fileID: 571474917}
   range: 80
+  shutdownSound: {fileID: 0}
 --- !u!23 &33270286
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10469,7 +10470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.74118221, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &541229032
 GameObject:
   m_ObjectHideFlags: 0
@@ -11648,6 +11649,7 @@ MonoBehaviour:
   laserStartPoint: {fileID: 906117288}
   laserEndPoint: {fileID: 605236289}
   range: 80
+  shutdownSound: {fileID: 0}
 --- !u!23 &596461306
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22661,7 +22663,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.74118221, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 10
 --- !u!1 &1231588688
 GameObject:
   m_ObjectHideFlags: 0
@@ -23411,6 +23413,7 @@ MonoBehaviour:
   laserStartPoint: {fileID: 1381589167}
   laserEndPoint: {fileID: 1761304245}
   range: 80
+  shutdownSound: {fileID: 0}
 --- !u!23 &1253857589
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24036,6 +24039,7 @@ MonoBehaviour:
   laserStartPoint: {fileID: 1852384360}
   laserEndPoint: {fileID: 1813495720}
   range: 80
+  shutdownSound: {fileID: 0}
 --- !u!23 &1275135657
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26695,6 +26699,7 @@ GameObject:
   - 23: {fileID: 1389433516}
   - 114: {fileID: 1389433515}
   - 120: {fileID: 1389433518}
+  - 82: {fileID: 1389433519}
   m_Layer: 0
   m_Name: horizontal
   m_TagString: Untagged
@@ -26735,6 +26740,7 @@ MonoBehaviour:
   laserStartPoint: {fileID: 996966706}
   laserEndPoint: {fileID: 1740337001}
   range: 80
+  shutdownSound: {fileID: 1389433519}
 --- !u!23 &1389433516
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26807,6 +26813,75 @@ LineRenderer:
       serializedVersion: 2
       rgba: 4294967295
   m_UseWorldSpace: 1
+--- !u!82 &1389433519
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1389433513}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3396396e24ff94bc6a28bec72085ecba, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1390264157
 GameObject:
   m_ObjectHideFlags: 0
@@ -28836,6 +28911,7 @@ MonoBehaviour:
   laserStartPoint: {fileID: 2075210296}
   laserEndPoint: {fileID: 662990377}
   range: 80
+  shutdownSound: {fileID: 0}
 --- !u!23 &1478082789
 MeshRenderer:
   m_ObjectHideFlags: 0
