@@ -2163,7 +2163,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 20b20186efe8b2840be9de1f5b264120, type: 2}
+  - {fileID: 2100000, guid: c3c667c50232f472eae5764ab1bbc7bb, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -2203,7 +2203,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 101726484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.57999992, y: 5.82999992, z: -.289999992}
+  m_LocalPosition: {x: 3.57999992, y: 6.01999998, z: -.289999992}
   m_LocalScale: {x: 12, y: 2, z: .25}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3325,7 +3325,7 @@ Transform:
   - {fileID: 613266103}
   m_Father: {fileID: 467789302}
   m_RootOrder: 0
---- !u!1 &173686898
+--- !u!1 &173686898 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 115074, guid: 660271135b3984be19620204b3f63bef, type: 2}
   m_PrefabInternal: {fileID: 1098923122}
@@ -6902,7 +6902,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1578680830}
   m_RootOrder: 0
---- !u!4 &345035974
+--- !u!4 &345035974 stripped
 Transform:
   m_PrefabParentObject: {fileID: 415078, guid: 660271135b3984be19620204b3f63bef, type: 2}
   m_PrefabInternal: {fileID: 1098923122}
@@ -18288,7 +18288,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &982122387
+--- !u!114 &982122387 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11406206, guid: dd9dd4130968eaf469287ee30f2a0249,
     type: 2}
@@ -27926,7 +27926,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 20b20186efe8b2840be9de1f5b264120, type: 2}
+  - {fileID: 2100000, guid: c3c667c50232f472eae5764ab1bbc7bb, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -28309,7 +28309,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 398eafa50958d8448800cff391c45a8f, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1458169885
+--- !u!114 &1458169885 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11416404, guid: 398eafa50958d8448800cff391c45a8f,
     type: 2}
@@ -37209,7 +37209,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 766425365f3de4c32a20b783c3b14170, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1896154247
+--- !u!114 &1896154247 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11400950, guid: 766425365f3de4c32a20b783c3b14170,
     type: 2}
