@@ -16,7 +16,7 @@ Platform assembly: C:\Users\James\Documents\GitHub\DweebMcDermitt\DweebMcDermitt
 Loading C:\Users\James\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\EndingTestBuild_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\James\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\EndingTestBuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\James\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\EndingTestBuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.161 seconds
+- Completed reload, in  0.256 seconds
 <RI> Initializing input.
 XInput1_3.dll not found.
 <RI> Input initialized.
@@ -57,6 +57,62 @@ The referenced script on this Behaviour is missing!
 
 The referenced script on this Behaviour is missing!
  
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1560)
+
+The referenced script on this Behaviour is missing!
+ 
 (Filename:  Line: 1713)
 
 A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
@@ -104,7 +160,16 @@ The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1713)
 
-A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 464 bytes)
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
 Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
  
 (Filename:  Line: 1603)
@@ -127,27 +192,122 @@ Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of yo
  
 (Filename:  Line: 1603)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at OVRScreenFade.Awake () [0x00000] in <filename unknown>:0 
+The referenced script on this Behaviour is missing!
  
-(Filename:  Line: -1)
+(Filename:  Line: 1713)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at OVRScreenFade.Awake () [0x00000] in <filename unknown>:0 
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
  
-(Filename:  Line: -1)
+(Filename:  Line: 1603)
 
-NullReferenceException
-  at (wrapper managed-to-native) UnityEngine.Material:Internal_CreateWithShader (UnityEngine.Material,UnityEngine.Shader)
-  at UnityEngine.Material..ctor (UnityEngine.Shader shader) [0x00000] in <filename unknown>:0 
-  at LaserEmitter.startUp () [0x00000] in <filename unknown>:0 
-  at LaserEmitter.Awake () [0x00000] in <filename unknown>:0 
+The referenced script on this Behaviour is missing!
  
-(Filename:  Line: -1)
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 488 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 488 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 68 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1713)
+
+A script behaviour has a different serialization layout when loading. (Read 32 bytes but expected 440 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1603)
 
 Platform assembly: C:\Users\James\Documents\GitHub\DweebMcDermitt\DweebMcDermitt\EndingTestBuild_Data\Managed\System.dll (this message is harmless)
 Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
@@ -155,74 +315,6 @@ Parent of RectTransform is being set with parent property. Consider using the Se
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
 Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
-
-Bookshelf triggered
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 

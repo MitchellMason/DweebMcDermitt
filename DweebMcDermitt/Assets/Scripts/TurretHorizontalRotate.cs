@@ -32,13 +32,13 @@ public class TurretHorizontalRotate : TriggerTarget {
 	void Update () {
 		if (dead) {
 			detected = false;
-			//gun.endFire();
+			gun.stopShooting();
 			return;
 		}
 		Physics.Raycast(transform.position, target.position - transform.position, out hit, range);
 		if (!hit.collider.gameObject.name.Equals ("Player") && !hit.collider.gameObject.name.Equals ("PlayerToggle")) {
 			detected = false;
-			//gun.endFire();
+			gun.stopShooting();
 			return;
 		} else {
 			detected = true;
