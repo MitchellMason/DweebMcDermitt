@@ -35,7 +35,7 @@ public class LaserShooter{
 			lineRenderer.material = mat;
 		}
 		lineRenderer.useWorldSpace = true;
-		lineRenderer.castShadows = true;
+		lineRenderer.castShadows = false;
 		lineRenderer.receiveShadows = false;
 		lineRenderer.SetVertexCount (2);
 		lineRenderer.SetWidth(LaserUtils.LASER_WIDTH, LaserUtils.LASER_WIDTH);
@@ -143,6 +143,10 @@ public class LaserShooter{
 		else{
 			//Debug.Log ("End fire called. No impact");
 		}
+	}
+
+	public void stopShooting() {
+		lineRenderer.SetVertexCount (0);
 	}
 	
 	public LaserTarget getStoredLaserObject(){
