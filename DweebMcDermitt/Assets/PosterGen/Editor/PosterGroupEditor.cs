@@ -28,11 +28,6 @@ namespace PosterGen
 
 			}
 
-			if (options.ShaderToUse.name == "Custom/FadeoutEdge")
-			{
-				options.border = Mathf.Abs (EditorGUILayout.FloatField("Width of fade:", options.border));
-
-			}
 			
 			bool hasOtherTex = false;
 			for (int i = 0; i < options.textureNames.Count; ++i)
@@ -66,19 +61,22 @@ namespace PosterGen
 
 					Material temp = (gobj.GetComponent<MeshRenderer>() as MeshRenderer).sharedMaterial;
 					Undo.RecordObject(temp, "Adjusted posters");
-					if (temp.HasProperty("_Fade"))
+
+					for (int j = 1; j < options.textureNames.Count; ++j)
 					{
-						temp.SetFloat("_Fade", options.border);
-					}
-					
-					for (int j = 0; j < options.textureNames.Count; ++j)
-					{
-						if (options.texturesToUse[j].width > 1 || options.texturesToUse[j].height > 1)
+						if (options.texturesToUse[j] != null && options.texturesToUse[j].width > 1 && options.texturesToUse[j].height > 1)
 						{
 							temp.SetTexture(options.textureNames[j], options.texturesToUse[j]);
 							temp.SetTextureScale(options.textureNames[j], new Vector2(options.scalemaps*(fg.scaler.x*2.0f),options.scalemaps*(fg.scaler.y*2.0f)));
 						}
+						else
+						{
+							temp.SetTexture(options.textureNames[j], null);
+							temp.SetTextureScale(options.textureNames[j], new Vector2(options.scalemaps*(fg.scaler.x*2.0f),options.scalemaps*(fg.scaler.y*2.0f)));
+
+						}
 					} 
+
 					if (group.reposition)
 					{
 						Undo.RecordObject(t, "Adjusted posters");

@@ -124,7 +124,11 @@ namespace PosterGen
 			mesh.RecalculateNormals();
 			mesh.RecalculateBounds();
 			calculateMeshTangents(mesh);
-			Unwrapping.GenerateSecondaryUVSet (mesh);
+			var p = new UnwrapParam();
+			p.angleError = 1;
+			p.areaError = 1;
+			p.hardAngle = 60.0f;
+			Unwrapping.GenerateSecondaryUVSet (mesh, p);
 			return mesh;
 		}
 		public static GameObject createObjFrame(Mesh mesh, Texture2D tex, Shader ShaderToUse,
@@ -153,8 +157,7 @@ namespace PosterGen
 			
 			
 			MeshCollider  col = (MeshCollider)obj.gameObject.GetComponent(typeof(MeshCollider));
-			
-			col.sharedMesh = mesh;//
+			col.sharedMesh = null;
 			return obj;
 		}
 		public static GameObject createObj(Mesh mesh, Texture2D tex, Shader ShaderToUse,

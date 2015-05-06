@@ -27,11 +27,12 @@ namespace PosterGen
 			try {
 				fg = (FrameGen)target;
 
+
 				if (fg.ShaderToUseback == null || fg.ShaderToUse == null || fg.textureNames.Count <= 0)
 				{
 					
-					fg.ShaderToUse = Shader.Find("Bumped Diffuse");
-					fg.ShaderToUseback = Shader.Find("Bumped Diffuse");
+					fg.ShaderToUse = Shader.Find("Standard");
+					fg.ShaderToUseback = Shader.Find("Standard");
 					
 					
 					Material mat = new Material(fg.ShaderToUse);
@@ -43,6 +44,7 @@ namespace PosterGen
 						fg.texturesToUse[i].name = "Click to set " + fg.textureNames[i];
 						//buttontext.Add ("Select a texture and click here to set " + options.textureNames[i]);
 					}
+
 					mat = new Material(fg.ShaderToUseback);
 					
 					fg.textureNamesback = MeshUtils.getTextures(mat);
@@ -55,6 +57,7 @@ namespace PosterGen
 					}
 				}
 				EditorGUILayout.LabelField("Frame Properties", EditorStyles.boldLabel);
+				fg.lm = EditorGUILayout.Toggle("Lightmapping" ,fg.lm);
 				makeFrame = EditorGUILayout.Toggle("Generate frame: ",makeFrame);
 				if (makeFrame)
 				{
@@ -161,9 +164,10 @@ namespace PosterGen
 							fg.texturesToUseback[i].name = "Click to set " + fg.textureNamesback[i];
 							//buttontext.Add ("Select a texture and click here to set " + options.textureNames[i]);
 						}
+
 					}
 				}
-				
+
 				
 				for (int i = 0; i < fg.textureNamesback.Count; ++i)
 				{
@@ -183,6 +187,7 @@ namespace PosterGen
 								FrameGen fgtemp = place;
 								Undo.RecordObject(fgtemp, "Created Frame");
 								fgtemp.setValues(fg);
+
 								Vector2 scale = fgtemp.scaler;
 								scale += new Vector2(fgtemp.border,fgtemp.border);
 
@@ -206,20 +211,56 @@ namespace PosterGen
 									}
 								}
 
+								
+								Vector3 displace = new Vector3(0,0,-0.0015f);
 
 								fgtemp.obj = MeshUtils.createObjFrame(MeshUtils.createBacking(scale,
 								                                                  fgtemp.gameObject.name + "_Backing", true),
 								                          fgtemp.texturesToUseback[0], fgtemp.ShaderToUseback,
 								                          fgtemp.textureNamesback, fgtemp.texturesToUseback,
-								                                 fgtemp.tile);
+								                                      fgtemp.tile);
+
 								Undo.RecordObject(fgtemp.gameObject.transform, "Created Frame");
+
 								fgtemp.obj.transform.parent = fgtemp.gameObject.transform;
 								fgtemp.obj.transform.position = fgtemp.gameObject.transform.position;
+
+
+								
+								RaycastHit hit;
+								GameObject justHit;
+								Ray ray = new Ray();
+								ray.origin = fgtemp.obj.transform.position ;
+								ray.direction = fgtemp.obj.transform.localToWorldMatrix.MultiplyVector(fgtemp.obj.transform.forward);
+								
+								if (fgtemp.lm)
+								{
+									displace *= 50.0f;
+								}
+
+								if (Physics.Raycast (ray.origin, ray.direction, out hit, 0.1f))
+								{
+									if (hit.collider.gameObject.name != fgtemp.gameObject.name)
+									fgtemp.gameObject.transform.position = hit.point +displace.z
+											* ray.direction*2.0f;
+									else
+									{
+										if (Physics.Raycast (ray.origin + ray.direction, -ray.direction, out hit, 0.1f))
+										{
+											if (hit.collider.gameObject.name != fgtemp.gameObject.name)
+											fgtemp.gameObject.transform.position = hit.point +displace.z
+													* ray.direction*2.0f;
+										}
+									}
+
+								}
+
+								fgtemp.obj.transform.localPosition += displace;
+
 								fgtemp.obj.transform.localRotation = fgtemp.gameObject.transform.localRotation;
 
-								Vector3 displace = new Vector3(0,0,-0.015f);
 								//displace = Quaternion.Euler(fgtemp.rotate) * displace;
-								fgtemp.obj.transform.localPosition = displace;//new Vector3(0,0,0);
+								//fgtemp.obj.transform.localPosition = displace;//new Vector3(0,0,0);
 								fgtemp.obj.transform.localRotation = new Quaternion();
 								//fgtemp.obj.transform.Rotate (fgtemp.rotate);
 								//fgtemp.gameObject.transform.Translate(-displace*4.0f);
@@ -235,7 +276,7 @@ namespace PosterGen
 									                                      fgtemp.textureNames, fgtemp.texturesToUse,
 									                                      fgtemp.tile);
 									fgtemp.obj2.transform.parent = fgtemp.obj.transform;
-									fgtemp.obj2.transform.localPosition = new Vector3(0,0,0);
+									fgtemp.obj2.transform.localPosition = displace;
 									fgtemp.obj2.transform.localRotation = new Quaternion();//fgtemp.obj.transform.localRotation;
 									Undo.RegisterCreatedObjectUndo(fgtemp.obj2, "Created Frame");
 								}

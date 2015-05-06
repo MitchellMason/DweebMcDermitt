@@ -34,6 +34,7 @@ namespace LevelEditor
 		}
 		public PolyMesh()
 		{
+
 		}
 		public override void Clean()
 		{
@@ -275,7 +276,7 @@ namespace LevelEditor
 
 				Texture2D tex = Resources.LoadAssetAtPath(child.Attributes[1].Value, typeof(Texture2D)) as Texture2D;
 				if (tex != null)
-				texturesToUse.Add(tex);
+					texturesToUse.Add(tex);
 				else
 					texturesToUse.Add(new Texture2D(1,1));
 			}

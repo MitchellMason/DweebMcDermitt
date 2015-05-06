@@ -24,6 +24,9 @@ namespace PosterGen
 		
 		public float border = 0.1f;
 		public float tile = 0.25f;
+		public bool offset = false;
+
+		public bool lm = false;
 
 		public Shader ShaderToUseback;
 		
@@ -46,6 +49,8 @@ namespace PosterGen
 			
 			border = temp.border;
 			tile = temp.tile;
+
+			lm = temp.lm;
 			
 			ShaderToUseback = temp.ShaderToUseback;
 			

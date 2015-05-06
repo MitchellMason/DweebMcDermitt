@@ -83,6 +83,10 @@ namespace LevelEditor
 					meshes[i].Clean();
 				}
 			}
+			UnityEditor.UnwrapParam p = new UnityEditor.UnwrapParam();
+			p.angleError = 0.1f;
+			p.areaError = 1;
+			p.hardAngle = 60.0f;
 			UnityEditor.Unwrapping.GenerateSecondaryUVSet (m);
 
 		}

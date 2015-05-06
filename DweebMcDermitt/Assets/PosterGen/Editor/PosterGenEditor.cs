@@ -32,13 +32,13 @@ namespace PosterGen
 				{
 					options = new Options();
 					
-					options.ShaderToUse = Shader.Find ("Custom/FadeoutEdge");
+					options.ShaderToUse = Shader.Find ("Standard");
 					utils= new PosterGenUtils();
 					selectstring = "Select images from the Asset pane and click here";
 					run = false;
 				}
 				if (options.ShaderToUse == null)
-					options.ShaderToUse = Shader.Find ("Custom/FadeoutEdge");
+					options.ShaderToUse = Shader.Find ("Standard");
 				options.area = EditorGUILayout.FloatField("Area of each poster:", options.area);
 				
 				options.usemax = EditorGUILayout.Toggle("Limit dimensions:", options.usemax);
@@ -51,11 +51,6 @@ namespace PosterGen
 
 				options.rise = EditorGUILayout.FloatField("Lift posters up by:", options.rise);
 
-				if (options.ShaderToUse.name == "Custom/FadeoutEdge")
-				{
-					options.border = Mathf.Abs (EditorGUILayout.FloatField("Width of fade:", options.border));
-					//options.fades = true;
-				}
 
 				EditorGUILayout.LabelField("Create posters on:");
 
