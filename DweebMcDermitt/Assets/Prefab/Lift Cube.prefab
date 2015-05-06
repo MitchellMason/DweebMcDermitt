@@ -37,6 +37,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &144552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 485240}
+  - 215: {fileID: 21545394}
+  m_Layer: 0
+  m_Name: Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &146166
 GameObject:
   m_ObjectHideFlags: 1
@@ -168,6 +184,18 @@ Transform:
   - {fileID: 447472}
   m_Father: {fileID: 493070}
   m_RootOrder: 0
+--- !u!4 &485240
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6.23999977, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 493070}
+  m_RootOrder: 1
 --- !u!4 &493070
 Transform:
   m_ObjectHideFlags: 1
@@ -175,10 +203,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.96000004, y: .0599999987, z: 4.96999979}
-  m_LocalScale: {x: 2, y: .25, z: 2}
+  m_LocalPosition: {x: 4.94999981, y: 5, z: -8}
+  m_LocalScale: {x: 4, y: .25, z: 4}
   m_Children:
   - {fileID: 484772}
+  - {fileID: 485240}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &2306038
@@ -215,7 +244,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b48e65bb2d994c74e9872224f44ab472, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -474,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7b9327dd39a49c8820f91d964316e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newPositionRelative: {x: 0, y: 5, z: 0}
+  newPositionRelative: {x: 0, y: -5, z: 0}
   moveSpeed: .200000003
   liftAudio: {fileID: 8200160}
 --- !u!114 &11446478
@@ -491,7 +520,7 @@ MonoBehaviour:
   buttonAudio: {fileID: 8244812}
   engadgedColor: {r: 1, g: 0, b: 0, a: 0}
   topPiece: {fileID: 146166}
-  optionalTarget: {fileID: 0}
+  optionalTarget: {fileID: 11416404}
 --- !u!135 &13595440
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -504,6 +533,37 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 7.10383034
   m_Center: {x: 0, y: -2.3599999, z: 0}
+--- !u!215 &21545394
+ReflectionProbe:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144552}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 1
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_Importance: 1
+  m_BoxSize: {x: 10, y: 10, z: 10}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: .300000012
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_CustomBakedTexture: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

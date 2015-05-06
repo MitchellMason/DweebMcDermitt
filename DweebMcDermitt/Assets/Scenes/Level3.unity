@@ -28130,39 +28130,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 493070, guid: 398eafa50958d8448800cff391c45a8f, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 493070, guid: 398eafa50958d8448800cff391c45a8f, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11446478, guid: 398eafa50958d8448800cff391c45a8f, type: 2}
-      propertyPath: optionalTarget
-      value: 
-      objectReference: {fileID: 1458169885}
-    - target: {fileID: 11416404, guid: 398eafa50958d8448800cff391c45a8f, type: 2}
-      propertyPath: newPositionRelative.y
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2319298, guid: 398eafa50958d8448800cff391c45a8f, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b48e65bb2d994c74e9872224f44ab472, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 398eafa50958d8448800cff391c45a8f, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1458169885
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11416404, guid: 398eafa50958d8448800cff391c45a8f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1458169884}
-  m_Script: {fileID: 11500000, guid: bf7b9327dd39a49c8820f91d964316e1, type: 3}
---- !u!4 &1458169886
-Transform:
-  m_PrefabParentObject: {fileID: 493070, guid: 398eafa50958d8448800cff391c45a8f, type: 2}
-  m_PrefabInternal: {fileID: 1458169884}
 --- !u!1 &1458205264
 GameObject:
   m_ObjectHideFlags: 0
@@ -32355,22 +32325,6 @@ Prefab:
     - target: {fileID: 452014, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 439972, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 439972, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 460172, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 460172, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
@@ -37747,65 +37701,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1785086870}
   m_RootOrder: 0
---- !u!1 &1914939302
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1914939303}
-  - 215: {fileID: 1914939304}
-  m_Layer: 0
-  m_Name: Reflection Probe
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1914939303
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1914939302}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.23999977, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1458169886}
-  m_RootOrder: 1
---- !u!215 &1914939304
-ReflectionProbe:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1914939302}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Type: 0
-  m_Mode: 1
-  m_RefreshMode: 1
-  m_TimeSlicingMode: 0
-  m_Resolution: 1024
-  m_UpdateFrequency: 0
-  m_Importance: 1
-  m_BoxSize: {x: 10, y: 10, z: 10}
-  m_BoxOffset: {x: 0, y: 0, z: 0}
-  m_NearClip: .300000012
-  m_FarClip: 1000
-  m_ShadowDistance: 100
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: 0}
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IntensityMultiplier: 1
-  m_HDR: 1
-  m_BoxProjection: 0
-  m_RenderDynamicObjects: 0
-  m_UseOcclusionCulling: 1
-  m_CustomBakedTexture: {fileID: 0}
 --- !u!1 &1915095485
 GameObject:
   m_ObjectHideFlags: 0
