@@ -30,20 +30,24 @@ public class TurretHorizontalRotate : TriggerTarget {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (detected + " detected value");
 		if (dead) {
 			detected = false;
 			gun.stopShooting();
 			return;
 		}
 		Physics.Raycast(transform.position, target.position - transform.position, out hit, range);
-		if (!hit.collider.gameObject.name.Equals ("Player") && !hit.collider.gameObject.name.Equals ("PlayerToggle")) {
+		if (!hit.collider.gameObject.tag.Equals("Player")) {
+			Debug.Log ("Can't see it");
 			detected = false;
 			gun.stopShooting();
-			return;
 		} else {
+			Debug.Log ("detected was made true");
 			detected = true;
 		}
+		Debug.Log ("Rest of the control flow");
 		if (detected) {
+			Debug.Log ("detected yay!");
 			// distance between target and the actual rotating object
 			Vector3 D = target.position - transform.position;  
 
