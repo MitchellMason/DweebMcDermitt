@@ -8356,6 +8356,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11493274, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
+      propertyPath: No_Oculus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138250, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112206, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
   m_IsPrefabParent: 0

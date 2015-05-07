@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &108556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 448544}
+  - 215: {fileID: 21512424}
+  m_Layer: 9
+  m_Name: Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &135108
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +26,7 @@ GameObject:
   - 4: {fileID: 444612}
   - 111: {fileID: 11177558}
   - 114: {fileID: 11406206}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TriggerDoor
   m_TagString: burnable
   m_Icon: {fileID: 0}
@@ -28,7 +44,7 @@ GameObject:
   - 33: {fileID: 3370226}
   - 23: {fileID: 2363450}
   - 65: {fileID: 6560742}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCube6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +62,7 @@ GameObject:
   - 33: {fileID: 3349688}
   - 23: {fileID: 2363260}
   - 65: {fileID: 6567334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCube5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,14 +87,27 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135108}
-  m_LocalRotation: {x: -.639743328, y: .306912303, z: -.299975127, w: .637611389}
-  m_LocalPosition: {x: 7.30000019, y: -1.11500001, z: -5.29500008}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -.637610912, y: .302405864, z: -.304481417, w: .639760971}
+  m_LocalPosition: {x: 5.03000021, y: 1.37, z: 25.2299995}
+  m_LocalScale: {x: 2.0999999, y: 1, z: 2.0999999}
   m_Children:
   - {fileID: 426786}
   - {fileID: 499380}
+  - {fileID: 448544}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &448544
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 444612}
+  m_RootOrder: 2
 --- !u!4 &499380
 Transform:
   m_ObjectHideFlags: 1
@@ -204,6 +233,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 11177558}
+--- !u!215 &21512424
+ReflectionProbe:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108556}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_Importance: 1
+  m_BoxSize: {x: 10, y: 10, z: 10}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: .300000012
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294966783
+  m_IntensityMultiplier: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_CustomBakedTexture: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

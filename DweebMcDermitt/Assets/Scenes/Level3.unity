@@ -59,8 +59,8 @@ LightmapSettings:
     serializedVersion: 3
     m_Resolution: 1
     m_BakeResolution: 50
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
+    m_TextureWidth: 4096
+    m_TextureHeight: 4096
     m_AOMaxDistance: 1
     m_Padding: 2
     m_CompAOExponent: 0
@@ -282,7 +282,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: .786764741, g: 1, b: .933823586, a: 1}
-  m_Intensity: 1.26999998
+  m_Intensity: 1
   m_Range: 20
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2156,7 +2156,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 429336, guid: e86e6189e98a87f41a1bee5eaf12ab5e, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 160554, guid: e86e6189e98a87f41a1bee5eaf12ab5e, type: 2}
       propertyPath: m_Name
@@ -2290,7 +2290,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 429336, guid: e86e6189e98a87f41a1bee5eaf12ab5e, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 160554, guid: e86e6189e98a87f41a1bee5eaf12ab5e, type: 2}
       propertyPath: m_Name
@@ -4739,15 +4739,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444612, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
       propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 444612, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.0999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 444612, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2.0999999
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
@@ -5522,7 +5514,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!23 &1202820474
 MeshRenderer:
@@ -7635,7 +7627,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 429336, guid: e86e6189e98a87f41a1bee5eaf12ab5e, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 160554, guid: e86e6189e98a87f41a1bee5eaf12ab5e, type: 2}
       propertyPath: m_Name
@@ -9676,7 +9668,7 @@ MeshRenderer:
   m_UseLightProbes: 0
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: .899999976
   m_PreserveUVs: 0
   m_ImportantGI: 0
   m_AutoUVMaxDistance: .5
@@ -10498,15 +10490,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11493274, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: No_Oculus
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 138250, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 112206, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 460172, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_LocalPosition.x
@@ -11898,11 +11890,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 429336, guid: e86e6189e98a87f41a1bee5eaf12ab5e, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 160554, guid: e86e6189e98a87f41a1bee5eaf12ab5e, type: 2}
       propertyPath: m_Name
       value: SpikeyBeamTurret 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 10802726, guid: e86e6189e98a87f41a1bee5eaf12ab5e, type: 2}
+      propertyPath: m_Range
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e86e6189e98a87f41a1bee5eaf12ab5e, type: 2}
