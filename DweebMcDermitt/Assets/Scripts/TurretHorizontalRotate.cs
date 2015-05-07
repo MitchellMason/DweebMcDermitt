@@ -7,7 +7,8 @@ public class TurretHorizontalRotate : TriggerTarget {
 	[SerializeField] float rotSpeed;
 	[SerializeField] LaserShooter gun;
 	[SerializeField] LineRenderer lineRenderer;
-	
+
+	[SerializeField] private AudioSource turretMusic;
 	[SerializeField] Transform target;
 	[SerializeField] Transform laserStartPoint;
 	[SerializeField] Transform laserEndPoint;
@@ -18,32 +19,52 @@ public class TurretHorizontalRotate : TriggerTarget {
 	RaycastHit hit;
 	bool dead;
 	bool soundHasPlayed = false;
+	GameObject crosshair;
+	AudioSource bgMusic;
 	public bool detected;
+
 	// Use this for initialization
 	void Start () {
 		target = GameObject.FindGameObjectWithTag ("Player").transform;
 		gun = new LaserShooter (lineRenderer);
 		dead = false;
 		detected = false;
+		crosshair = GameObject.Find("Crosshair");
+		bgMusic = crosshair.GetComponent<AudioSource>();
 		//laserStartPoint = 
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (detected + " detected value");
 		if (dead) {
 			detected = false;
 			gun.stopShooting();
+			if (turretMusic.isPlaying) {
+				turretMusic.Stop();
+				bgMusic.Play();
+			}
 			return;
 		}
 		Physics.Raycast(transform.position, target.position - transform.position, out hit, range);
-		if (!hit.collider.gameObject.name.Equals ("Player") && !hit.collider.gameObject.name.Equals ("Player")) {
+		if (!hit.collider.gameObject.tag.Equals("Player")) {
 			detected = false;
 			gun.stopShooting();
-			return;
+			if (turretMusic.isPlaying) {
+				turretMusic.Stop();
+				bgMusic.Play();
+			}
 		} else {
+			Debug.Log ("detected was made true");
 			detected = true;
+			if (!turretMusic.isPlaying) {
+				bgMusic.Stop();
+				turretMusic.Play();
+			}
 		}
+		Debug.Log ("Rest of the control flow");
 		if (detected) {
+			Debug.Log ("detected yay!");
 			// distance between target and the actual rotating object
 			Vector3 D = target.position - transform.position;  
 
