@@ -75,7 +75,7 @@ public class LaserShooter{
 				Debug.Log ("Firing at a burnable object");
 				GameObject burnClone = (GameObject)GameObject.Instantiate(Resources.Load("burnMarks"), hit.point + hit.normal/100.0f, Quaternion.FromToRotation(Vector3.up, hit.normal));
 //				GameObject.Instantiate(Resources.Load("burnMarks"), hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
-				GameObject.Destroy(burnClone.gameObject, 5);
+				GameObject.Destroy(burnClone.gameObject, 15);
 			}
 			//Draw the laser shot
 			if(draw){

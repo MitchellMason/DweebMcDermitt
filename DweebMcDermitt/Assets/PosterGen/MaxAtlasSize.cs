@@ -2,8 +2,8 @@ using UnityEditor;
 
 public class MaxAtlasSize : EditorWindow
 {
-	int[] kSizeValues = { 512, 1024, 2048, 4096 };
-	string[] kSizeStrings = { "512", "1024", "2048", "4096" };
+	int[] kSizeValues = { 512, 1024, 2048, 4096, 8192 };
+	string[] kSizeStrings = { "512", "1024", "2048", "4096", "8192" };
 	
 	void OnGUI()
 	{

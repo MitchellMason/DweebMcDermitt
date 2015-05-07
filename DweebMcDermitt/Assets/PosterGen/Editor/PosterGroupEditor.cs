@@ -76,7 +76,9 @@ namespace PosterGen
 
 						}
 					} 
-
+					{
+						temp.SetTextureScale(options.textureNames[0], new Vector2(-1,1));
+					}
 					if (group.reposition)
 					{
 						Undo.RecordObject(t, "Adjusted posters");
@@ -85,32 +87,13 @@ namespace PosterGen
 						transform += options.offset;
 						t.transform.localPosition = new Vector3(0,0,0);
 						t.transform.localRotation = new Quaternion();
-						if (options.xy)
 						{
 							if (!options.overlap)
 							{
 								t.Translate(new Vector3(transform,options.rise,0));
 							}
 						}
-						
-						else if (options.yz)
-						{
-							if (!options.overlap)
-							{
-								t.Translate(new Vector3(0,options.rise,transform));
-							}
-							t.Rotate(new Vector3(0,90,0));
-							
-						}
-						else if (options.xz)
-						{
-							if (!options.overlap)
-							{
-								t.Translate(new Vector3(transform,0,options.rise));
-							}
-							t.Rotate(new Vector3(-90,0,0));
 
-						}
 						last = scaler;
 					}
 				}

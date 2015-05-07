@@ -57,7 +57,6 @@ namespace PosterGen
 					}
 				}
 				EditorGUILayout.LabelField("Frame Properties", EditorStyles.boldLabel);
-				fg.lm = EditorGUILayout.Toggle("Lightmapping" ,fg.lm);
 				makeFrame = EditorGUILayout.Toggle("Generate frame: ",makeFrame);
 				if (makeFrame)
 				{
@@ -230,28 +229,15 @@ namespace PosterGen
 								RaycastHit hit;
 								GameObject justHit;
 								Ray ray = new Ray();
-								ray.origin = fgtemp.obj.transform.position ;
-								ray.direction = fgtemp.obj.transform.localToWorldMatrix.MultiplyVector(fgtemp.obj.transform.forward);
-								
-								if (fgtemp.lm)
-								{
-									displace *= 50.0f;
-								}
+								ray.origin = fgtemp.gameObject.transform.position;
+								ray.direction = 
+									-fgtemp.gameObject.transform.forward;
 
-								if (Physics.Raycast (ray.origin, ray.direction, out hit, 0.1f))
+
+								if (Physics.Raycast (ray.origin, ray.direction, out hit, 5.0f))
 								{
-									if (hit.collider.gameObject.name != fgtemp.gameObject.name)
 									fgtemp.gameObject.transform.position = hit.point +displace.z
 											* ray.direction*2.0f;
-									else
-									{
-										if (Physics.Raycast (ray.origin + ray.direction, -ray.direction, out hit, 0.1f))
-										{
-											if (hit.collider.gameObject.name != fgtemp.gameObject.name)
-											fgtemp.gameObject.transform.position = hit.point +displace.z
-													* ray.direction*2.0f;
-										}
-									}
 
 								}
 
@@ -262,6 +248,7 @@ namespace PosterGen
 								//displace = Quaternion.Euler(fgtemp.rotate) * displace;
 								//fgtemp.obj.transform.localPosition = displace;//new Vector3(0,0,0);
 								fgtemp.obj.transform.localRotation = new Quaternion();
+								fgtemp.obj.transform.localPosition = -displace;
 								//fgtemp.obj.transform.Rotate (fgtemp.rotate);
 								//fgtemp.gameObject.transform.Translate(-displace*4.0f);
 								
@@ -276,7 +263,7 @@ namespace PosterGen
 									                                      fgtemp.textureNames, fgtemp.texturesToUse,
 									                                      fgtemp.tile);
 									fgtemp.obj2.transform.parent = fgtemp.obj.transform;
-									fgtemp.obj2.transform.localPosition = displace;
+									fgtemp.obj2.transform.localPosition = new Vector3(0,0,0);
 									fgtemp.obj2.transform.localRotation = new Quaternion();//fgtemp.obj.transform.localRotation;
 									Undo.RegisterCreatedObjectUndo(fgtemp.obj2, "Created Frame");
 								}

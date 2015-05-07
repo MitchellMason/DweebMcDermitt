@@ -54,9 +54,9 @@ namespace PosterGen
 
 				EditorGUILayout.LabelField("Create posters on:");
 
-				options.xy = EditorGUILayout.Toggle("XY plane (wall):", options.xy);
-				options.yz = EditorGUILayout.Toggle("YZ plane (wall):", options.yz);
-				options.xz = EditorGUILayout.Toggle("XZ plane (floor):", options.xz);
+				options.xy = false;
+				options.yz = true;
+				options.xz = false;
 
 				bool hasDiffuseTex = false;
 				bool hasOtherTex = false;
@@ -99,21 +99,7 @@ namespace PosterGen
 				{
 					if (GUILayout.Button( selectstring ))
 					{
-						if (!options.xy && !options.yz && !options.xz)
 						{
-							selectstring = "Please select one plane to create your posters on.";
-						}
-						else
-						{
-							if (options.xy)
-							{
-								options.xz = false;
-								options.yz = false;
-							}
-							else if (options.yz)
-							{
-								options.xz = false;
-							}
 							selectstring = "Select images from the Asset pane and click here.";
 							utils.options = options;
 							if (!utils.createPictures())

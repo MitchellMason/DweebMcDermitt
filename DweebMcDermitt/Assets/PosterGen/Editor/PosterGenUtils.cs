@@ -148,13 +148,10 @@ namespace PosterGen
 					                                         options.textureNames, options.texturesToUse,
 					                                         options.scalemaps, scaler); 
 					Material temp = (picture.GetComponent<MeshRenderer>() as MeshRenderer).sharedMaterial;
-					if (temp.HasProperty("_Fade"))
-					{
-						temp.SetFloat("_Fade", options.border);
-					}
+					
+					temp.SetTextureScale(options.textureNames[0], new Vector2(-1,1));
 					picture.transform.parent = root.transform;
 
-					if (options.xy)
 					{
 						if (!options.overlap)
 						{
@@ -168,36 +165,6 @@ namespace PosterGen
 
 					}
 
-					else if (options.yz)
-					{
-
-
-						if (!options.overlap)
-						{
-							picture.transform.Translate(new Vector3(0,options.rise,transform));
-						}
-						picture.transform.Rotate(new Vector3(0,90,0));
-						FrameGen fg = picture.AddComponent<FrameGen>() as FrameGen;
-						
-						fg.scaler = scaler;
-						fg.rotate = new Vector3(0,90,0);
-						
-					}
-					else if (options.xz)
-					{
-
-						if (!options.overlap)
-						{
-							picture.transform.Translate(new Vector3(transform,0,options.rise));
-						}
-						picture.transform.Rotate(new Vector3(-90,0,0));
-
-						FrameGen fg = picture.AddComponent<FrameGen>() as FrameGen;
-
-						fg.scaler = scaler;
-						fg.rotate = new Vector3(-90,0,0);
-						
-					}
 					last = scaler;
 				}
 				
