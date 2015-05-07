@@ -4744,7 +4744,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &982122387 stripped
+--- !u!114 &982122387
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11406206, guid: dd9dd4130968eaf469287ee30f2a0249,
     type: 2}
@@ -7123,7 +7123,7 @@ Material:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &1389433515 stripped
+--- !u!114 &1389433515
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11427714, guid: e86e6189e98a87f41a1bee5eaf12ab5e,
     type: 2}
@@ -10282,7 +10282,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 766425365f3de4c32a20b783c3b14170, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1896154247 stripped
+--- !u!114 &1896154247
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11400950, guid: 766425365f3de4c32a20b783c3b14170,
     type: 2}
@@ -10490,15 +10490,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11493274, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: No_Oculus
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 138250, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112206, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460172, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_LocalPosition.x
