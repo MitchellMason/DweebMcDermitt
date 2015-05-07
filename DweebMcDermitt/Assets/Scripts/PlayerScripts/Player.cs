@@ -40,7 +40,7 @@ public class Player : LaserTarget {
 	
 	IEnumerator RestartLevel() {
 		yield return new WaitForSeconds(fadeTime);
-		Application.LoadLevel (1);
+		Application.LoadLevel(Application.loadedLevel);
 	}
 	
 	//TODO
