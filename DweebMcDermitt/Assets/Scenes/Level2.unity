@@ -1058,6 +1058,10 @@ Prefab:
       propertyPath: m_ProbeAnchor
       value: 
       objectReference: {fileID: 2086675416}
+    - target: {fileID: 2372890, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
   m_IsPrefabParent: 0
@@ -2888,6 +2892,10 @@ Prefab:
       propertyPath: m_ProbeAnchor
       value: 
       objectReference: {fileID: 1357644752}
+    - target: {fileID: 2372890, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
   m_IsPrefabParent: 0
@@ -5206,15 +5214,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 472892, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.55749893
+      value: -2.74000001
       objectReference: {fileID: 0}
     - target: {fileID: 472892, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -32.1396484
+      value: -32.1399994
       objectReference: {fileID: 0}
     - target: {fileID: 472892, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -4.56038952
+      value: 1.40999997
       objectReference: {fileID: 0}
     - target: {fileID: 472892, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5248,6 +5256,10 @@ Prefab:
       propertyPath: m_ProbeAnchor
       value: 
       objectReference: {fileID: 1544667865}
+    - target: {fileID: 2372890, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
   m_IsPrefabParent: 0
@@ -9056,6 +9068,10 @@ Prefab:
       propertyPath: m_ProbeAnchor
       value: 
       objectReference: {fileID: 1778623504}
+    - target: {fileID: 2372890, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14299a180cd03463aa3cb73f07af8c3a, type: 2}
   m_IsPrefabParent: 0
