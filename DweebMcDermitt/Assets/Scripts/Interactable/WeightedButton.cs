@@ -21,12 +21,14 @@ public class WeightedButton : PositionTarget {
 			if (optionalTarget != null) 
 				optionalTarget.onTrigger (this);
 			topPiece.GetComponent<MeshRenderer> ().material.color = engadgedColor;
+			topPiece.GetComponent<MeshRenderer> ().material.SetColor("_EmissionColor", engadgedColor);
 			return;
 		}
 	}
 	
 	void OnTriggerExit(Collider col){
 		topPiece.GetComponent<MeshRenderer>().material.color = swap;
+		topPiece.GetComponent<MeshRenderer> ().material.SetColor("_EmissionColor", swap);
 		pressed = false;
 	}
 	
