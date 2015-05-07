@@ -10470,7 +10470,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452014, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.53000021
+      value: 6.23999977
       objectReference: {fileID: 0}
     - target: {fileID: 452014, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10494,7 +10494,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452014, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11493274, guid: cdeb85d6b6fa20f4bb84d939396b7de5, type: 2}
       propertyPath: No_Oculus
