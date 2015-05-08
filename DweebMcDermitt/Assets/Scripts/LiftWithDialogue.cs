@@ -15,6 +15,8 @@ public class LiftWithDialogue : TriggerTarget{
 	[SerializeField] private AudioSource liftAudio;
 	[SerializeField] private AudioSource endingDialogue;
 	
+	bool played = false;
+	
 	//store the distance between our location and the new one
 	void Start(){
 		newPosition = transform.position + newPositionRelative;
@@ -28,14 +30,21 @@ public class LiftWithDialogue : TriggerTarget{
 			                                  newPosition, 
 			                                  (Time.time - startTime) * moveSpeed / journeyDistance);
 		}
-	}
+		if (played && !endingDialogue.isPlaying) {
+			Debug.Log("trigger them credits");
+			Application.LoadLevel(Application.loadedLevel + 1);
+        }
+    }
 	
 	public override void onTrigger(MonoBehaviour trigger){
 		Debug.Log ("Bookshelf triggered");
 		if (!isTriggered) {
 			startTime = Time.time;
 			liftAudio.Play ();
-			if(liftAudio != null) endingDialogue.PlayDelayed(7f);
+			if (liftAudio != null) {
+				endingDialogue.PlayDelayed(7f);
+				played = true;
+			}
 		}
 		//prevent starting over
 		isTriggered = true;

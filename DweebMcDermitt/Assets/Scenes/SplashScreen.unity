@@ -330,8 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 554096302}
-  splash: {fileID: 15200000, guid: d26d80a07cec57a478ebc58ed5f13cdb, type: 3}
-  foreground: {fileID: 0}
+  splash: {fileID: 15200000, guid: 9ddc34bc569394f63bdd6c73c1b33b95, type: 3}
   autoPlay: 1
 --- !u!4 &554096304
 Transform:
