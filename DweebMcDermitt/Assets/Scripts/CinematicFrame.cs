@@ -21,15 +21,20 @@ public class CinematicFrame : MonoBehaviour {
 	[SerializeField] GameObject foreground;
 	[SerializeField] GameObject midground;
 	[SerializeField] GameObject background;
+	[SerializeField] MovieTexture movie;
 
 	/*
 	 * play on awake gets set each frame that it isn't already true
 	 * this is to allow the OVR health & saftey warning to 
 	 * dissappear before the slides begin playing. 
 	 */
+	 
 	[SerializeField] bool autoPlay = true;
+	[SerializeField] public bool isMovie = false;
 
 	Vector3 playerScaledPosition;
+	
+	bool played = false;
 
 	void attemptPlaySound(){
 		if (voice != null && autoPlay) {
@@ -40,15 +45,30 @@ public class CinematicFrame : MonoBehaviour {
 	void Start () {
 		attemptPlaySound ();
 		playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
-
+		//foreground = GameObject.Find("fg");
+		if (isMovie) {
+			foreground.GetComponent<Renderer>().material.mainTexture = movie;
+		} else {
+			foreground.GetComponent<Renderer>().material.mainTexture = foregroundTexture;
+		}
 		//Set the textures
-		foreground.GetComponent<Renderer>().material.mainTexture = foregroundTexture;
 		midground.GetComponent<Renderer>().material.mainTexture  = midgroundTexure;
 		background.GetComponent<Renderer>().material.mainTexture = backgroundTexure;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+	if (isMovie) {
+		if (!movie.isPlaying && !played) {
+			movie.Play ();
+			played = true;
+		}
+		if (!movie.isPlaying && played) {
+			Instantiate (nextFramePrefab, transform.position, transform.rotation);
+			Destroy (this.gameObject);
+			return;
+		}
+	} else {
 		playerScaledPosition = playerPosition.position;
 		playerScaledPosition.x *= 0.5f;
 		this.transform.LookAt (playerScaledPosition);
@@ -75,7 +95,7 @@ public class CinematicFrame : MonoBehaviour {
 				} else {
 					//I'm presuming we'll want to load the next level
 					Debug.Log ("Out of frames");
-					Application.LoadLevel (1); //Level 1
+					Application.LoadLevel (Application.loadedLevel + 1); //Level 1
 				}
 				Destroy (this.gameObject);
 			}
@@ -86,4 +106,5 @@ public class CinematicFrame : MonoBehaviour {
 			}
 		}
 	}
+}
 }

@@ -260,9 +260,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5d9bc5dbaaa8277428b5b378a50e2124, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -340,7 +340,9 @@ MonoBehaviour:
   foreground: {fileID: 152102}
   midground: {fileID: 152100}
   background: {fileID: 152098}
-  autoPlay: 0
+  movie: {fileID: 0}
+  autoPlay: 1
+  isMovie: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
