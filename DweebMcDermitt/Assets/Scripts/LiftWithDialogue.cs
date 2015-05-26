@@ -22,7 +22,7 @@ public class LiftWithDialogue : TriggerTarget{
 		newPosition = transform.position + newPositionRelative;
 		journeyDistance = Vector3.Distance (transform.position, newPosition);
 	}
-	
+
 	// If we're interacted upon, start moving the object to victory
 	void Update () {
 		if (isTriggered) {
@@ -44,6 +44,7 @@ public class LiftWithDialogue : TriggerTarget{
 			if (liftAudio != null) {
 				endingDialogue.PlayDelayed(7f);
 				played = true;
+				GameObject.Find("Hall Monitor 1").GetComponent<CinematicFrame>().autoPlay = true;
 			}
 		}
 		//prevent starting over

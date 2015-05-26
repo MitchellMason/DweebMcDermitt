@@ -479,5 +479,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 1975112502}
-  splash: {fileID: 15200000, guid: cdaa706eaa70b4953bb706fcf1db2695, type: 3}
+  splash: {fileID: 15200000, guid: 943c107ac9ed1154c8f1329875caaa1d, type: 3}
   autoPlay: 1

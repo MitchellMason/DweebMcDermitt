@@ -29,8 +29,9 @@ public class CinematicFrame : MonoBehaviour {
 	 * dissappear before the slides begin playing. 
 	 */
 	 
-	[SerializeField] bool autoPlay = true;
+	[SerializeField] public bool autoPlay = true;
 	[SerializeField] public bool isMovie = false;
+	[SerializeField] public bool adjust = true;
 
 	Vector3 playerScaledPosition;
 	
@@ -69,19 +70,21 @@ public class CinematicFrame : MonoBehaviour {
 			return;
 		}
 	} else {
-		playerScaledPosition = playerPosition.position;
-		playerScaledPosition.x *= 0.5f;
-		this.transform.LookAt (playerScaledPosition);
-		
-		//rotate the slides to look at the player
-		foreground.transform.LookAt (playerPosition.position);
-		midground.transform.LookAt (playerPosition.position);
-		background.transform.LookAt (playerPosition.position);
-		
-		foreground.transform.Rotate (0f, 180f, 0f);
-		midground.transform.Rotate (0f, 180f, 0f);
-		background.transform.Rotate (0f, 180f, 0f);
 
+		if (adjust) {
+			playerScaledPosition = playerPosition.position;
+			playerScaledPosition.x *= 0.5f;
+			this.transform.LookAt (playerScaledPosition);
+			
+			//rotate the slides to look at the player
+			foreground.transform.LookAt (playerPosition.position);
+			midground.transform.LookAt (playerPosition.position);
+			background.transform.LookAt (playerPosition.position);
+			
+			foreground.transform.Rotate (0f, 180f, 0f);
+			midground.transform.Rotate (0f, 180f, 0f);
+			background.transform.Rotate (0f, 180f, 0f);
+		}
 		if (autoPlay) {
 			//update the time interval
 			secondsUntilNext -= Time.deltaTime;
