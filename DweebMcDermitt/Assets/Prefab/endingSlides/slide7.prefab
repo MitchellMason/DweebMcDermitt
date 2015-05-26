@@ -332,10 +332,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voice: {fileID: 8275608}
-  secondsUntilNext: 5
-  foregroundTexture: {fileID: 2800000, guid: 558b1e793bac3434ba0a13f7ad02ef98, type: 3}
-  midgroundTexure: {fileID: 2800000, guid: 558b1e793bac3434ba0a13f7ad02ef98, type: 3}
-  backgroundTexure: {fileID: 2800000, guid: 558b1e793bac3434ba0a13f7ad02ef98, type: 3}
+  secondsUntilNext: 2.27999997
+  foregroundTexture: {fileID: 2800000, guid: a5495a2a08178a24da9616819aada70d, type: 3}
+  midgroundTexure: {fileID: 2800000, guid: a5495a2a08178a24da9616819aada70d, type: 3}
+  backgroundTexure: {fileID: 2800000, guid: a5495a2a08178a24da9616819aada70d, type: 3}
   nextFramePrefab: {fileID: 11450290, guid: fb8111fd3578add46ba518401adec5b6, type: 2}
   foreground: {fileID: 167664}
   midground: {fileID: 191856}

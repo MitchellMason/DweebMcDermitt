@@ -637,6 +637,10 @@ Prefab:
       propertyPath: adjust
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11429374, guid: 5d4535c0d1d5dac4883a9d9edf83889d, type: 2}
+      propertyPath: secondsUntilNext
+      value: 7.01999998
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d4535c0d1d5dac4883a9d9edf83889d, type: 2}
   m_IsPrefabParent: 0

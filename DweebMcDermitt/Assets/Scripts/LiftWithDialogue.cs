@@ -42,7 +42,7 @@ public class LiftWithDialogue : TriggerTarget{
 			startTime = Time.time;
 			liftAudio.Play ();
 			if (liftAudio != null) {
-				endingDialogue.PlayDelayed(7f);
+				endingDialogue.PlayDelayed(5f);
 				played = true;
 				GameObject.Find("Hall Monitor 1").GetComponent<CinematicFrame>().autoPlay = true;
 			}
