@@ -1886,7 +1886,7 @@ Transform:
   m_LocalScale: {x: 25.3287754, y: 25.3287888, z: 25.3287888}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
 --- !u!43 &295166663
 Mesh:
   m_ObjectHideFlags: 0
@@ -6245,7 +6245,7 @@ Transform:
   m_LocalScale: {x: 25.3287754, y: 25.3287888, z: 25.3287888}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 39
 --- !u!1001 &978177575
 Prefab:
   m_ObjectHideFlags: 0
@@ -6346,7 +6346,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd9dd4130968eaf469287ee30f2a0249, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &982122387
+--- !u!114 &982122387 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11406206, guid: dd9dd4130968eaf469287ee30f2a0249,
     type: 2}
@@ -6873,7 +6873,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0de3099bb2487614497684ec75ddde4e, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1084250674
+--- !u!1 &1084250674 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 189480, guid: 0de3099bb2487614497684ec75ddde4e, type: 2}
   m_PrefabInternal: {fileID: 1084250673}
@@ -7153,7 +7153,7 @@ Transform:
   m_LocalScale: {x: 25.3287754, y: 25.3287888, z: 25.3287888}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
 --- !u!28 &1140467788
 Texture2D:
   m_ObjectHideFlags: 0
@@ -9441,7 +9441,7 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!114 &1389433515
+--- !u!114 &1389433515 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11427714, guid: e86e6189e98a87f41a1bee5eaf12ab5e,
     type: 2}
@@ -12698,7 +12698,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 766425365f3de4c32a20b783c3b14170, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1896154247
+--- !u!114 &1896154247 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11400950, guid: 766425365f3de4c32a20b783c3b14170,
     type: 2}
